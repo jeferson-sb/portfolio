@@ -1,0 +1,35 @@
+.hasHeadline {
+  position: relative;
+  &:after {
+    content: "";
+    left: 0;
+    top: 70px;
+    width: 30%;
+    height: 4px;
+    background-color: lighten($primary-color, 25%);
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+.isDark {
+  color: $black !important;
+}
+
+@mixin text-color($background-text) {
+  @if (lightness($background-text) >= 50%) {
+    color: black;
+  } @else if (lightness($background-text) < 50%) {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .hasHeadline {
+    &:after {
+      content: "";
+      top: 50px;
+      width: 30%;
+    }
+  }
+}

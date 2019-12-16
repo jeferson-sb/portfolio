@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: $body-font;
+  -webkit-font-smoothing: antialiased !important;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: $secondary-color;
+  color: #f4f4f4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+#app {
+  overflow-x: hidden;
+}
+
+button {
+  display: inline-block;
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
