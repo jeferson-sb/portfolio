@@ -33,10 +33,10 @@ query Projects{
 </page-query>
 
 <script>
-import Hero from "@/components/Hero.vue";
-import AboutMe from "@/components/AboutMe.vue";
-import ProjectsGrid from "@/components/ProjectsGrid.vue";
-import Contact from "@/components/Contact.vue";
+import Hero from '@/components/Hero.vue';
+import AboutMe from '@/components/AboutMe.vue';
+import ProjectsGrid from '@/components/ProjectsGrid.vue';
+import Contact from '@/components/Contact.vue';
 
 export default {
   components: {
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_vars.scss";
+@import '~/assets/scss/_vars.scss';
 
 .container {
   display: flex;
@@ -65,7 +65,7 @@ export default {
 
   &:nth-of-type(1) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("../assets/img/bg-img-02.jpg");
+      url('../assets/img/bg-img-02.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -79,12 +79,18 @@ export default {
         rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.8)
       ),
-      url("../assets/img/bg-img-03.jpg");
+      url('../assets/img/bg-img-03.jpg');
     background-size: cover;
     background-position: center;
   }
   &:nth-of-type(4) {
     background-color: #f8f8f8;
+  }
+}
+
+@media screen and (max-width: $laptop-breakpoint) {
+  .section {
+    height: 100%;
   }
 }
 
@@ -95,7 +101,7 @@ export default {
   }
   .section:nth-of-type(1) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("../assets/img/bg-img-01.jpg");
+      url('../assets/img/bg-img-01.jpg');
     background-size: cover;
     background-position: 40%;
   }
