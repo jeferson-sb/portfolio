@@ -5,7 +5,9 @@
       data-aos="flip-left"
       data-aos-easing="ease-in-out"
       data-aos-duration="1000"
-    >Contato</h2>
+    >
+      Contato
+    </h2>
     <section
       class="contact"
       data-aos="flip-right"
@@ -14,7 +16,7 @@
     >
       <form
         class="contact-form"
-        name="contact"
+        name="contact-form"
         @submit.prevent="handleSubmit"
         method="POST"
         data-netlify="true"
@@ -22,11 +24,29 @@
       >
         <input type="hidden" name="form-name" value="contact-form" />
         <label for="name">Nome</label>
-        <input type="text" id="name" placeholder="Seu nome" autocomplete="off" required />
+        <input
+          type="text"
+          id="name"
+          placeholder="Seu nome"
+          autocomplete="off"
+          required
+        />
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Seu lindo e-mail" autocomplete="off" required />
+        <input
+          type="email"
+          id="email"
+          placeholder="Seu lindo e-mail"
+          autocomplete="off"
+          required
+        />
         <label for="message">Mensagem</label>
-        <textarea name="message" id="message" cols="60" rows="4" required></textarea>
+        <textarea
+          name="message"
+          id="message"
+          cols="60"
+          rows="4"
+          required
+        ></textarea>
         <button type="submit" class="contact-form-button">
           <fa-icon :icon="['fas', 'paper-plane']"></fa-icon>Enviar Mensagem
         </button>
@@ -34,7 +54,8 @@
     </section>
     <transition name="alert-in" v-if="showMessage">
       <p id="modal">
-        <strong>&check;</strong> Obrigado por entrar em contato! Responderei assim que possível.
+        <strong>&check;</strong> Obrigado por entrar em contato! Responderei
+        assim que possível.
       </p>
     </transition>
   </div>
@@ -56,7 +77,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_vars.scss";
+@import '~/assets/scss/_vars.scss';
 .container {
   position: relative;
 }
