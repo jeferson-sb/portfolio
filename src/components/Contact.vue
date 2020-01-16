@@ -11,8 +11,9 @@
     <section
       class="contact"
       data-aos="flip-right"
-      data-aos-easing="ease-in-out"
-      data-aos-duration="1000"
+      data-aos-easing="ease-in"
+      data-aos-duration="500"
+      data-aos-mirror="true"
     >
       <form
         class="contact-form"
