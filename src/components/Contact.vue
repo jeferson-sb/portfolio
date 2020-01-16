@@ -16,19 +16,21 @@
     >
       <form
         class="contact-form"
-        name="contact-form"
-        @submit.prevent="handleSubmit"
+        name="contact"
         method="POST"
+        @submit.prevent="handleSubmit"
+        action="/success/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input type="hidden" name="form-name" value="contact" />
         <label for="name">Nome</label>
         <input
           type="text"
           id="name"
           placeholder="Seu nome"
           autocomplete="off"
+          v-model="formData.name"
           required
         />
         <label for="email">E-mail</label>
@@ -37,6 +39,7 @@
           id="email"
           placeholder="Seu lindo e-mail"
           autocomplete="off"
+          v-model="formData.email"
           required
         />
         <label for="message">Mensagem</label>
@@ -45,6 +48,7 @@
           id="message"
           cols="60"
           rows="4"
+          v-model="formData.message"
           required
         ></textarea>
         <button type="submit" class="contact-form-button">
@@ -52,12 +56,6 @@
         </button>
       </form>
     </section>
-    <transition name="alert-in" v-if="showMessage">
-      <p id="modal">
-        <strong>&check;</strong> Obrigado por entrar em contato! Responderei
-        assim que possível.
-      </p>
-    </transition>
   </div>
 </template>
 
@@ -65,12 +63,28 @@
 export default {
   data() {
     return {
-      showMessage: false
+      formData: {}
     };
   },
   methods: {
-    handleSubmit() {
-      this.showMessage = true;
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData
+        })
+      })
+        .then(() => this.$router.push('/success'))
+        .catch(error => alert(error));
     }
   }
 };
@@ -149,33 +163,6 @@ export default {
         box-shadow: 0 0 0 0.19rem rgba(65, 170, 240, 0.466);
       }
     }
-  }
-}
-
-#modal {
-  position: absolute;
-  top: 20%;
-  right: 20px;
-  padding: 1rem 1rem;
-  background-color: #2ecc71;
-  color: $white;
-  font-size: 1rem;
-  border-radius: 40px;
-  opacity: 1;
-  animation-name: fadeIn;
-  animation-delay: 1.5s;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  animation-duration: 1s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 
