@@ -13,6 +13,7 @@
       data-aos="flip-right"
       data-aos-easing="ease-in"
       data-aos-duration="500"
+      data-aos-once="true"
       data-aos-mirror="true"
     >
       <form
