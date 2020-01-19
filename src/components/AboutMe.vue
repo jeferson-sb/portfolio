@@ -16,19 +16,41 @@
           data-aos="fade-left"
           data-aos-easing="ease-in-out"
           data-aos-delay="500"
-        >Sobre mim</h2>
+        >
+          Sobre mim
+        </h2>
         <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="700">
-          Sou desenvolvedor web, graduando em Análise e Desenvolvimento de
-          sistemas, apaixonado por novas tecnologias, especialmente JavaScript,
-          Python e UI / UX Design. Atualmente trabalho como FullStack Developer.
+          Sou desenvolvedor web, tenho
+          {{ getAge }} anos, graduando em Análise e Desenvolvimento de sistemas,
+          apaixonado por novas tecnologias, especialmente JavaScript, Python e
+          UI / UX Design. Atualmente trabalho como FullStack Developer.
         </p>
+        <div class="about-skills">
+          <g-image src="~/assets/img/skills.png" width="400" />
+        </div>
       </section>
     </article>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      birthday: '1999-04-18'
+    };
+  },
+  computed: {
+    getAge() {
+      const birthday = +new Date(this.birthday);
+      return ~~((Date.now() - birthday) / 31557600000);
+    }
+  }
+};
+</script>
+
 <style lang="scss" scoped>
-@import "~/assets/scss/_vars.scss";
+@import '~/assets/scss/_vars.scss';
 
 .about {
   display: grid;
@@ -53,6 +75,10 @@
     font-size: 1.1rem;
     line-height: 1.5;
     color: $black;
+  }
+  .about-skills img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
   }
 }
 
