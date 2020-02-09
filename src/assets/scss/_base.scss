@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro&display=swap');
 
 html,
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 ::selection {
-  background: $secondary-color;
+  background: $black;
   color: #f4f4f4;
 }
 

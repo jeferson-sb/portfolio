@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_vars.scss";
+@import '~/assets/scss/_vars.scss';
 
 .container h2 {
   font-size: 3rem;

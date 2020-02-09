@@ -8,14 +8,7 @@
     >
       Contato
     </h2>
-    <section
-      class="contact"
-      data-aos="flip-right"
-      data-aos-easing="ease-in"
-      data-aos-duration="500"
-      data-aos-once="true"
-      data-aos-mirror="true"
-    >
+    <section class="contact">
       <form
         class="contact-form"
         name="contact"

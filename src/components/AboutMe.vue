@@ -25,7 +25,12 @@
           apaixonado por novas tecnologias, especialmente JavaScript, Python e
           UI / UX Design. Atualmente trabalho como FullStack Developer.
         </p>
-        <div class="about-skills">
+        <div
+          class="about-skills"
+          data-aos="zoom-out"
+          data-aos-easing="ease"
+          data-aos-delay="1100"
+        >
           <g-image src="~/assets/img/skills.png" width="400" />
         </div>
       </section>
@@ -79,6 +84,7 @@ export default {
   .about-skills img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    user-select: none;
   }
 }
 
