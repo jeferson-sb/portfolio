@@ -1,0 +1,22 @@
+{
+  "title": "Hi, I'm",
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "aboutme": {
+    "about": "About me",
+    "desc1": "I'm web developer, I'm",
+    "desc2": "years old, studying Systems Analysis and Development, passionate about new technologies, especially JavaScript, Python and UI / UX Design. I currently work as FullStack Developer"
+  },
+  "projects": "Projects",
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "message": "Message",
+    "send": "Send Message",
+    "e_placeholder": "Your nice e-mail address",
+    "n_placeholder": "Your beautiful name"
+  }
+}

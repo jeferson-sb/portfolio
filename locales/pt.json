@@ -1,0 +1,22 @@
+{
+  "title": "Olá, Eu sou",
+  "navbar": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "aboutme": {
+    "about": "Sobre mim",
+    "desc1": "Sou desenvolvedor web, tenho",
+    "desc2": "anos, graduando em Análise e Desenvolvimento de sistemas, apaixonado por novas tecnologias, especialmente JavaScript, Python e UI / UX Design. Atualmente trabalho como FullStack Developer."
+  },
+  "projects": "Projetos",
+  "contact": {
+    "title": "Contato",
+    "name": "Nome",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "e_placeholder": "Seu lindo e-mail",
+    "n_placeholder": "Seu nome"
+  }
+}

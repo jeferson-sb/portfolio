@@ -6,7 +6,7 @@
       data-aos-easing="ease-in-out"
       data-aos-duration="1000"
     >
-      Contato
+      {{ $t('contact.title') }}
     </h2>
     <section class="contact">
       <form
@@ -19,11 +19,11 @@
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <label for="name">Nome</label>
+        <label for="name">{{ $t('contact.name') }}</label>
         <input
           type="text"
           id="name"
-          placeholder="Seu nome"
+          :placeholder="$t('contact.n_placeholder')"
           autocomplete="off"
           v-model="formData.name"
           required
@@ -32,12 +32,12 @@
         <input
           type="email"
           id="email"
-          placeholder="Seu lindo e-mail"
+          :placeholder="$t('contact.e_placeholder')"
           autocomplete="off"
           v-model="formData.email"
           required
         />
-        <label for="message">Mensagem</label>
+        <label for="message">{{ $t('contact.message') }}</label>
         <textarea
           name="message"
           id="message"
@@ -47,7 +47,8 @@
           required
         ></textarea>
         <button type="submit" class="contact-form-button">
-          <fa-icon :icon="['fas', 'paper-plane']"></fa-icon>Enviar Mensagem
+          <fa-icon :icon="['fas', 'paper-plane']"></fa-icon
+          >{{ $t('contact.send') }}
         </button>
       </form>
     </section>

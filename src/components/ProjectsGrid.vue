@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="hasHeadline" data-aos="zoom-in">Projetos</h2>
+    <h2 class="hasHeadline" data-aos="zoom-in">{{ $t('projects') }}</h2>
     <section class="projectGrid">
       <div
         class="projectGrid-item"

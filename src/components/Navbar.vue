@@ -21,7 +21,7 @@
               }
             ]"
             href="#Sobre"
-            >Sobre</a
+            >{{ $t('navbar.about') }}</a
           >
         </li>
         <li>
@@ -35,7 +35,7 @@
               }
             ]"
             href="#Projetos"
-            >Projetos</a
+            >{{ $t('navbar.projects') }}</a
           >
         </li>
         <li>
@@ -48,7 +48,7 @@
               }
             ]"
             href="#Contato"
-            >Contato</a
+            >{{ $t('navbar.contact') }}</a
           >
         </li>
       </ul>

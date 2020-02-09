@@ -17,13 +17,11 @@
           data-aos-easing="ease-in-out"
           data-aos-delay="500"
         >
-          Sobre mim
+          {{ $t('aboutme.about') }}
         </h2>
         <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="700">
-          Sou desenvolvedor web, tenho
-          {{ getAge }} anos, graduando em Análise e Desenvolvimento de sistemas,
-          apaixonado por novas tecnologias, especialmente JavaScript, Python e
-          UI / UX Design. Atualmente trabalho como FullStack Developer.
+          {{ $t('aboutme.desc1') }}
+          {{ getAge }} {{ $t('aboutme.desc2') }}
         </p>
         <div
           class="about-skills"

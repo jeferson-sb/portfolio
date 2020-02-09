@@ -6,7 +6,7 @@
       data-aos-easing="ease-in-out"
       data-aos-duration="1000"
     >
-      Olá, Eu sou
+      {{ $t('title') }}
       <strong>Jeferson Silva</strong>.
     </h1>
     <h2
@@ -14,7 +14,9 @@
       data-aos="fade-down"
       data-aos-delay="1050"
       data-aos-duration="500"
-    >Web Developer • UI Designer</h2>
+    >
+      Web Developer • UI Designer
+    </h2>
     <div
       class="hero-icons"
       data-aos="zoom-out"
@@ -51,7 +53,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_vars.scss";
+@import '~/assets/scss/_vars.scss';
 
 .hero-heading {
   font-size: 4rem;
