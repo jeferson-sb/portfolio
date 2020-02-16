@@ -17,6 +17,7 @@
     "message": "Message",
     "send": "Send Message",
     "e_placeholder": "Your nice e-mail address",
-    "n_placeholder": "Your beautiful name"
+    "n_placeholder": "Your beautiful name",
+    "reply": "Thank you for contacting me! I will reply as soon as possible."
   }
 }

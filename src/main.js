@@ -43,11 +43,12 @@ export default function(Vue, { appOptions, head }) {
     content: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN
   });
 
+  appOptions.i18n = i18n;
+
   if (process.isClient) {
-    AOS.init();
     const langString = navigator.languages || navigator.userLanguage;
     i18n.locale = langString[-1] || langString[0];
     head.htmlAttrs = { lang: langString[1], dir: 'ltr' };
-    appOptions.i18n = i18n;
+    AOS.init();
   }
 }

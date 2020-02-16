@@ -1,31 +1,26 @@
 <template>
-  <div class="container">
-    <p class="modal">
-      <strong>&check;</strong> Obrigado por entrar em contato! Responderei assim
-      que possível.
-    </p>
-    <div style="width:100%;height:0;padding-bottom:75%;position:relative;">
-      <iframe
-        src="https://giphy.com/embed/nEMmyUp4hl1QOzovKh"
-        width="100%"
-        height="100%"
-        style="position:absolute"
-        frameBorder="0"
-        class="giphy-embed"
-        allowFullScreen
-      ></iframe>
+  <Layout>
+    <div class="container">
+      <p class="modal"><strong>&check;</strong> {{ $t('contact.reply') }}</p>
+      <div style="width:100%;height:0;padding-bottom:75%;position:relative;">
+        <iframe
+          src="https://giphy.com/embed/nEMmyUp4hl1QOzovKh"
+          width="100%"
+          height="100%"
+          style="position:absolute"
+          frameBorder="0"
+          class="giphy-embed"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <p>
+        <a href="https://giphy.com/gifs/mrw-and-pain-nEMmyUp4hl1QOzovKh"
+          >via GIPHY</a
+        >
+      </p>
     </div>
-    <p>
-      <a href="https://giphy.com/gifs/mrw-and-pain-nEMmyUp4hl1QOzovKh"
-        >via GIPHY</a
-      >
-    </p>
-  </div>
+  </Layout>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style lang="scss" scoped>
 @import '~/assets/scss/_vars.scss';
