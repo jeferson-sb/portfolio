@@ -38,6 +38,10 @@ export default function(Vue, { appOptions, head }) {
     sizes: '32',
     href: '@/assets/icons/favicon-32x32.png'
   });
+  head.meta.push({
+    name: 'google-site-verification',
+    content: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN
+  });
 
   if (process.isClient) {
     AOS.init();

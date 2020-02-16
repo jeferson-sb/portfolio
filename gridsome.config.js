@@ -2,27 +2,27 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: "Fullstack Developer & Designer",
+  siteName: 'Fullstack Developer & Designer',
   siteUrl: `https://jefersonsilva.me`,
-  titleTemplate: "%s - Jeferson S. Brito",
+  titleTemplate: '%s - Jeferson S. Brito',
   siteDescription: "I'm a Fullstack Developer and UI Designer",
   plugins: [
     {
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/source-filesystem',
       options: {
-        path: "projects/**/*.md",
-        typeName: "ProjectPost",
+        path: 'projects/**/*.md',
+        typeName: 'ProjectPost',
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+          externalLinksTarget: '_blank',
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
         }
       }
     }
   ],
   transformers: {
     remark: {
-      plugins: ["@gridsome/remark-prismjs"]
+      plugins: ['@gridsome/remark-prismjs']
     }
   }
 };
