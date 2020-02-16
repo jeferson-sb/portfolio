@@ -28,11 +28,22 @@ export default function(Vue, { appOptions, head }) {
   Vue.component('fa-icon', FontAwesomeIcon);
   Vue.component('Layout', DefaultLayout);
 
+  head.link.push({
+    rel: 'icon',
+    sizes: '16',
+    href: '@/assets/icons/favicon-16x16.png'
+  });
+  head.link.push({
+    rel: 'icon',
+    sizes: '32',
+    href: '@/assets/icons/favicon-32x32.png'
+  });
+
   if (process.isClient) {
+    AOS.init();
     const langString = navigator.languages || navigator.userLanguage;
     i18n.locale = langString[-1] || langString[0];
-    head.htmlAttrs = { lang: langString[1] };
+    head.htmlAttrs = { lang: langString[1], dir: 'ltr' };
     appOptions.i18n = i18n;
-    AOS.init();
   }
 }

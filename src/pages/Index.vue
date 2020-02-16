@@ -64,8 +64,12 @@ export default {
   height: 100vh;
 
   &:nth-of-type(1) {
+    // Safari fallback
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('../assets/img/bg-img-02.jpg');
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../assets/img/bg-img-02.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -74,12 +78,20 @@ export default {
     }
   }
   &:nth-of-type(2) {
+    // Safari fallback
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.8)
       ),
       url('../assets/img/bg-img-03.jpg');
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url('../assets/img/bg-img-03.webp');
     background-size: cover;
     background-position: center;
   }
@@ -102,6 +114,8 @@ export default {
   .section:nth-of-type(1) {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('../assets/img/bg-img-01.jpg');
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../assets/img/bg-img-01.webp');
     background-size: cover;
     background-position: 40%;
   }

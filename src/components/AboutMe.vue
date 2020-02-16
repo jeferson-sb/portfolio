@@ -29,7 +29,7 @@
           data-aos-easing="ease"
           data-aos-delay="1100"
         >
-          <g-image src="~/assets/img/skills.png" width="400" />
+          <g-image src="~/assets/img/skills.png" width="400" alt="My skills" />
         </div>
       </section>
     </article>
