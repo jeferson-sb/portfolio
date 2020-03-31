@@ -1,9 +1,10 @@
 ---
-thumbnail: "/uploads/dogAI.jpg"
+thumbnail: '/uploads/dogAI.jpg'
 title: Dog AI
 type: Frontend
 demo: https://dogai.netlify.com/
 github: https://github.com/jeferson-sb/dogAI
+pinned: true
 ---
 
 ![](/uploads/dogAI.jpg)

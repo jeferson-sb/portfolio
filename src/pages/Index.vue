@@ -17,7 +17,7 @@
 
 <page-query>
 query Projects{
-	projects: allProjectPost {
+	projects: allProjectPost(filter: { pinned: { eq: true }}) {
     edges {
       node {
         id
@@ -53,6 +53,7 @@ export default {
 
 .container {
   display: flex;
+  place-items: center;
   align-items: center;
   justify-content: center;
   height: 80%;
@@ -78,7 +79,7 @@ export default {
     }
   }
   &:nth-of-type(2) {
-    // Safari fallback
+    /* // Safari fallback
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.7),
@@ -91,11 +92,17 @@ export default {
         rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.8)
       ),
-      url('../assets/img/bg-img-03.webp');
+      url('../assets/img/bg-img-03.webp'); */
     background-size: cover;
     background-position: center;
   }
+  &:nth-of-type(3) {
+    height: 100%;
+    background-color: #36393f;
+  }
   &:nth-of-type(4) {
+    height: 100%;
+    padding: 30px 0;
     background-color: #f8f8f8;
   }
 }
