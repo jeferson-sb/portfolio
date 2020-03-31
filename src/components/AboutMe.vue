@@ -7,7 +7,20 @@
         data-aos-easing="ease-in-out"
         data-aos-duration="1000"
       >
-        <g-image src="~/assets/img/me.jpg" width="300" alt="me" quality="100" />
+        <g-image
+          class="about-aside__author"
+          src="~/assets/img/me.jpg"
+          width="300"
+          alt="me"
+          quality="100"
+        />
+        <g-image
+          class="icon"
+          src="~/assets/img/code.svg"
+          alt="code icon"
+          data-aos="fade-down"
+          data-aos-delay="1200"
+        />
         <h3>Jeferson Silva Brito</h3>
       </aside>
       <section class="about-content">
@@ -56,12 +69,19 @@ export default {
 @import '~/assets/scss/_vars.scss';
 
 .about {
+  margin-top: 40px;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(2, 1fr);
-  .about-aside img {
-    margin: 0 auto;
+  .about-aside img.about-aside__author {
+    margin-left: 80px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  .about-aside img.icon {
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    width: 8vw;
   }
   .about-aside h3 {
     padding: 1em;
@@ -86,15 +106,45 @@ export default {
   }
 }
 
+@media screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+  .about {
+    img.about-aside__author {
+      max-width: 60%;
+    }
+    .about-aside img.icon {
+      top: 50%;
+      left: 15%;
+      width: 5vw;
+    }
+    .about-content {
+      h2 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    .about-skills img {
+      max-width: 70%;
+    }
+  }
+}
+
 @media screen and (max-width: $mobile-breakpoint) {
   .about {
     grid-template-columns: 1fr;
-    .about-aside img {
+    .about-aside img.about-aside__author {
       width: 40%;
       border-radius: 50%;
+      margin: 0 auto;
     }
     .about-content h2 {
       font-size: 2rem;
+    }
+    .about-aside img.icon {
+      left: 9%;
+      top: 74%;
+      width: 7vw;
     }
   }
 }

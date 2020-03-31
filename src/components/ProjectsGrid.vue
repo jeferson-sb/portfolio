@@ -50,18 +50,24 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/scss/_vars.scss';
-
+.container {
+  height: 100% !important;
+}
 .container h2 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: $primary-color;
+  color: $white;
   margin-top: 3rem;
+  &::after {
+    background-color: $white;
+  }
 }
 
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
+  grid-gap: 1.4em;
+  margin-bottom: 50px;
 
   &-item {
     &-header {
@@ -69,13 +75,13 @@ export default {
       justify-content: space-between;
     }
     &-header span {
-      color: #3030309e;
+      color: #ffffff9e;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: bold;
     }
     &-header p {
-      color: #4c4c4c;
+      color: $white;
     }
 
     img {
