@@ -1,4 +1,5 @@
 ---
+order: 6
 thumbnail: '/uploads/chatme.png'
 title: ChatMe
 type: Fullstack

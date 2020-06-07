@@ -17,7 +17,7 @@
 
 <page-query>
 query Projects{
-	projects: allProjectPost(filter: { pinned: { eq: true }}) {
+	projects: allProjectPost(sortBy: "order", order: ASC, filter: { pinned: { eq: true }}) {
     edges {
       node {
         id
@@ -43,8 +43,8 @@ export default {
     Hero,
     AboutMe,
     ProjectsGrid,
-    Contact
-  }
+    Contact,
+  },
 };
 </script>
 

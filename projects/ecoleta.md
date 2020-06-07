@@ -1,4 +1,5 @@
 ---
+order: 3
 thumbnail: '/uploads/ecoleta.png'
 title: Ecoleta
 type: Fullstack

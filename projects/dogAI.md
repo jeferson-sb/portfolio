@@ -1,4 +1,5 @@
 ---
+order: 5
 thumbnail: '/uploads/dogAI.jpg'
 title: Dog AI
 type: Frontend
