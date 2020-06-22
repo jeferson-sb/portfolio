@@ -544,7 +544,7 @@ h2 {
       margin-bottom: 10px;
     }
     li svg {
-      margin-right: 4px;
+      /* margin-right: 4px; */
     }
   }
 }
