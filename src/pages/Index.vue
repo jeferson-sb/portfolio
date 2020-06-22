@@ -93,6 +93,7 @@ export default {
         rgba(255, 255, 255, 0.8)
       ),
       url('../assets/img/bg-img-03.webp'); */
+    height: 100%;
     background-size: cover;
     background-position: center;
   }
