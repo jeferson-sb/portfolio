@@ -8,7 +8,12 @@
   "aboutme": {
     "about": "Sobre mim",
     "desc1": "Sou desenvolvedor web, tenho",
-    "desc2": "anos, graduando em Análise e Desenvolvimento de sistemas, apaixonado por novas tecnologias, especialmente JavaScript, Python e UI / UX Design. Atualmente trabalho como FullStack Developer."
+    "desc2": "anos, graduando em Análise e Desenvolvimento de sistemas, apaixonado por novas tecnologias, especialmente JavaScript, Python e UI / UX Design. Atualmente trabalho como FullStack Developer.",
+    "softskill1": "Foco no cliente",
+    "softskill2": "Trabalho em Equipe",
+    "softskill3": "Comunicação",
+    "softskill4": "Paixão por aprender coisas novas",
+    "softskill5": "Persistência"
   },
   "projects": "Projetos",
   "contact": {
