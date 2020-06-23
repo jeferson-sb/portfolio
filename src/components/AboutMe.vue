@@ -21,7 +21,7 @@
           data-aos="fade-down"
           data-aos-delay="1200"
         />
-        <h3>Jeferson Silva Brito</h3>
+        <h3>Jeferson Silva Brito, {{ getAge }}</h3>
       </aside>
       <section class="about-content">
         <h2
@@ -34,7 +34,9 @@
         </h2>
         <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="700">
           {{ $t('aboutme.desc1') }}
-          {{ getAge }} {{ $t('aboutme.desc2') }}
+        </p>
+        <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="700">
+          {{ $t('aboutme.desc2') }}
         </p>
       </section>
     </article>
@@ -481,6 +483,7 @@ export default {
     font-size: 1.1rem;
     line-height: 1.5;
     color: $black;
+    margin-top: 10px;
   }
 }
 
@@ -542,9 +545,6 @@ h2 {
       justify-content: center;
       align-items: center;
       margin-bottom: 10px;
-    }
-    li svg {
-      /* margin-right: 4px; */
     }
   }
 }
