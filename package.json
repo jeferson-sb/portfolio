@@ -14,13 +14,13 @@
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "@gridsome/remark-prismjs": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.0",
+    "@gridsome/transformer-remark": "^0.6.1",
     "aos": "^2.3.4",
-    "gridsome": "^0.7.17",
+    "gridsome": "^0.7.19",
     "vue-i18n": "^8.18.2"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.1"
+    "sass-loader": "^9.0.2"
   }
 }
