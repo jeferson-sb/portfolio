@@ -5,7 +5,7 @@
         class="about-aside"
         data-aos="fade-up"
         data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
+        data-aos-duration="600"
       >
         <g-image
           class="about-aside__author"
@@ -19,7 +19,7 @@
           src="~/assets/img/code.svg"
           alt="code icon"
           data-aos="fade-down"
-          data-aos-delay="1200"
+          data-aos-delay="300"
         />
         <h3>Jeferson Silva Brito, {{ getAge }}</h3>
       </aside>
@@ -28,14 +28,14 @@
           class="hasHeadline"
           data-aos="fade-left"
           data-aos-easing="ease-in-out"
-          data-aos-delay="500"
+          data-aos-delay="400"
         >
           {{ $t('aboutme.about') }}
         </h2>
-        <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="700">
+        <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="300">
           {{ $t('aboutme.desc1') }}
         </p>
-        <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="700">
+        <p data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="300">
           {{ $t('aboutme.desc2') }}
         </p>
       </section>

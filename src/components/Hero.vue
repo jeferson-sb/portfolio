@@ -4,7 +4,7 @@
       class="hero-heading"
       data-aos="fade-up"
       data-aos-easing="ease-in-out"
-      data-aos-duration="1000"
+      data-aos-duration="800"
     >
       {{ $t('title') }}
       <strong>Jeferson Silva</strong>.
@@ -12,15 +12,17 @@
     <h2
       class="hero-subheading"
       data-aos="fade-down"
-      data-aos-delay="1050"
-      data-aos-duration="500"
-    >Web Developer • UI Designer</h2>
+      data-aos-delay="1000"
+      data-aos-duration="600"
+    >
+      Web Developer • UI Designer
+    </h2>
     <div
       class="hero-icons"
       data-aos="zoom-out"
       data-aos-easing="ease-in-out"
       data-aos-duration="500"
-      data-aos-delay="1500"
+      data-aos-delay="1200"
     >
       <g-link
         to="https://github.com/jeferson-sb"
@@ -55,7 +57,7 @@
         <fa-icon :icon="['fab', 'dribbble-square']"></fa-icon>
       </g-link>
     </div>
-    <div id="mouse-scroll" data-aos="fade-down" data-aos-delay="2500">
+    <div id="mouse-scroll" data-aos="fade-down" data-aos-delay="1700">
       <div class="mouse">
         <div class="mouse-in"></div>
       </div>
@@ -64,7 +66,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_vars.scss";
+@import '~/assets/scss/_vars.scss';
 
 .hero-heading {
   font-size: 4rem;
