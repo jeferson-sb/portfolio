@@ -4,7 +4,7 @@
       class="hasHeadline"
       data-aos="flip-left"
       data-aos-easing="ease-in-out"
-      data-aos-duration="1000"
+      data-aos-duration="700"
     >
       {{ $t('contact.title') }}
     </h2>
@@ -59,14 +59,14 @@
 export default {
   data() {
     return {
-      formData: {}
+      formData: {},
     };
   },
   methods: {
     encode(data) {
       return Object.keys(data)
         .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
         )
         .join('&');
     },
@@ -76,13 +76,13 @@ export default {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
           'form-name': e.target.getAttribute('name'),
-          ...this.formData
-        })
+          ...this.formData,
+        }),
       })
         .then(() => this.$router.push('/success'))
-        .catch(error => alert(error));
-    }
-  }
+        .catch((error) => alert(error));
+    },
+  },
 };
 </script>
 

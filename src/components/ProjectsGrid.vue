@@ -8,8 +8,8 @@
         :key="item.node.id"
         data-aos="fade-up"
         data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
-        :data-aos-delay="index * 200"
+        data-aos-duration="600"
+        :data-aos-delay="index * 100"
       >
         <header class="projectGrid-item-header">
           <span>{{ item.node.type }}</span>
@@ -42,9 +42,9 @@ export default {
   props: {
     projects: {
       type: Array,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
