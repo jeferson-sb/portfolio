@@ -869,10 +869,10 @@
     sort-package-json "^1.15.0"
     update-notifier "^4.1.0"
 
-"@gridsome/remark-prismjs@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/remark-prismjs/-/remark-prismjs-0.3.0.tgz#3a0a6f67ab518ff9d42b75c1f97f834806181d04"
-  integrity sha512-kwVcz2K7wunzgHnFKeGr+bvNfN1Q1PbOpYwEWXG+yn+SokXfPKjsu4KW0FBKOWD8eTwMlkyE7aqPVTxnD6BOMw==
+"@gridsome/remark-prismjs@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/remark-prismjs/-/remark-prismjs-0.4.0.tgz#edcf5c6728e70f3fa0428ac31e79baa377a605a5"
+  integrity sha512-ZXfRcWaQvWMH7M1Q7zj5JdA0dTyEN6tz3yCZ/m914zv/IH3eS32uPutwGswoAzAfMBHA5voy+6mjkFv4Gft7UA==
   dependencies:
     escape-html "^1.0.3"
     hast-util-to-html "^6.0.2"
