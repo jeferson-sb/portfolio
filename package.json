@@ -14,7 +14,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "@gridsome/remark-prismjs": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.1",
+    "@gridsome/transformer-remark": "^0.6.3",
     "aos": "^2.3.4",
     "gridsome": "^0.7.19",
     "vue-i18n": "^8.21.0"
