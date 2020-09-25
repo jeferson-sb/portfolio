@@ -17,8 +17,8 @@
               'menu-link',
               {
                 isActive:
-                  $route.hash === '#Home' || $route.fullPath === '/#Sobre'
-              }
+                  $route.hash === '#Home' || $route.fullPath === '/#Sobre',
+              },
             ]"
             href="#Sobre"
             >{{ $t('navbar.about') }}</a
@@ -31,8 +31,8 @@
               {
                 isActive:
                   $route.hash === '#Projetos' ||
-                  $route.fullPath === '/#Projetos'
-              }
+                  $route.fullPath === '/#Projetos',
+              },
             ]"
             href="#Projetos"
             >{{ $t('navbar.projects') }}</a
@@ -44,8 +44,8 @@
               'menu-link',
               {
                 isActive:
-                  $route.hash === '#Contato' || $route.fullPath === '/#Contato'
-              }
+                  $route.hash === '#Contato' || $route.fullPath === '/#Contato',
+              },
             ]"
             href="#Contato"
             >{{ $t('navbar.contact') }}</a
@@ -60,7 +60,7 @@
 export default {
   data() {
     return {
-      showWhiteHeader: false
+      showWhiteHeader: false,
     };
   },
   mounted() {
@@ -77,14 +77,12 @@ export default {
         return;
       }
       this.showWhiteHeader = currentScrollPosition > 500;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
-
 .header {
   position: fixed;
   background: transparent;
@@ -114,7 +112,7 @@ export default {
     }
   }
   #menu li .menu-link {
-    color: #fff;
+    color: var(--color-default-white);
     cursor: pointer;
     padding: 0 1rem;
     font-size: 1.1em;
@@ -125,17 +123,17 @@ export default {
 
 .menu-link.isActive {
   font-weight: 600;
-  color: $primary-color !important;
+  color: var(--color-primary) !important;
 }
 
 .header--bg-white {
   @extend .header;
-  background: #fff;
+  background: var(--color-default-white);
   height: 65px;
   box-shadow: 0 4.1px 26.5px rgba(0, 0, 0, 0.04),
     0 33px 212px rgba(0, 0, 0, 0.08);
   #menu li .menu-link {
-    color: #303030;
+    color: var(--color-default-black);
   }
 }
 
@@ -146,7 +144,7 @@ export default {
   }
   .navbar {
     padding: 0;
-    font-size: 16px;
+    font-size: var(--text-base);
   }
 }
 </style>

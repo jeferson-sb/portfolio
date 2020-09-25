@@ -23,8 +23,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
-
 .container {
   width: 40%;
   display: flex;
@@ -38,7 +36,7 @@
   max-width: 500px;
   padding: 1rem 1rem;
   background-color: #2ecc71;
-  color: $white;
+  color: var(--color-default-white);
   font-size: 1rem;
   border-radius: 40px;
   opacity: 0;

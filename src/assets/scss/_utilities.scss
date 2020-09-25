@@ -1,33 +1,33 @@
 .hasHeadline {
   position: relative;
   &:after {
-    content: "";
+    content: '';
     left: 0;
     top: 70px;
     width: 30%;
     height: 4px;
-    background-color: lighten($primary-color, 25%);
+    background-color: lighten(hsl(204, 85%, 60%), 25%);
     display: inline-block;
     position: absolute;
   }
 }
 
 .isDark {
-  color: $black !important;
+  color: var(--color-default-black) !important;
 }
 
 @mixin text-color($background-text) {
   @if (lightness($background-text) >= 50%) {
-    color: black;
+    color: var(--color-default-black);
   } @else if (lightness($background-text) < 50%) {
-    color: #fff;
+    color: var(--color-default-white);
   }
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
   .hasHeadline {
     &:after {
-      content: "";
+      content: '';
       top: 50px;
       width: 30%;
     }

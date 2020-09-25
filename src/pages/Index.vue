@@ -49,8 +49,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
-
 .container {
   display: flex;
   place-items: center;
@@ -79,20 +77,6 @@ export default {
     }
   }
   &:nth-of-type(2) {
-    /* // Safari fallback
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.8)
-      ),
-      url('../assets/img/bg-img-03.jpg');
-
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.8)
-      ),
-      url('../assets/img/bg-img-03.webp'); */
     height: 100%;
     background-size: cover;
     background-position: center;

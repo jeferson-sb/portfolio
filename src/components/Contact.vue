@@ -66,7 +66,7 @@ export default {
     encode(data) {
       return Object.keys(data)
         .map(
-          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
         )
         .join('&');
     },
@@ -80,21 +80,20 @@ export default {
         }),
       })
         .then(() => this.$router.push('/success'))
-        .catch((error) => alert(error));
+        .catch(error => alert(error));
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
 .container {
   position: relative;
 }
 .container h2 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: $primary-color;
+  color: var(--color-primary);
   margin-top: 20px;
 }
 
@@ -132,8 +131,8 @@ export default {
       border-radius: 2px;
       width: 100%;
       padding: 8px 20px;
-      background-color: $primary-color;
-      color: $white;
+      background-color: var(--color-primary);
+      color: var(--color-default-white);
       transition: background 0.3s ease-in-out;
       svg {
         transition: all 0.5s ease-in-out;
@@ -143,7 +142,7 @@ export default {
       }
 
       &:hover {
-        background: darken($primary-color, 10%);
+        background: darken(hsl(204, 85%, 60%), 10%);
       }
       &:hover svg {
         opacity: 1;
@@ -154,7 +153,7 @@ export default {
     textarea,
     button {
       &:focus {
-        border-color: $primary-color;
+        border-color: var(--color-primary);
         outline: 0;
         box-shadow: 0 0 0 0.19rem rgba(65, 170, 240, 0.466);
       }

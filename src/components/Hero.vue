@@ -66,28 +66,26 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
-
 .hero-heading {
   font-size: 4rem;
-  color: $white;
+  color: var(--color-default-white);
   strong {
-    color: $primary-color;
+    color: var(--color-primary);
   }
 }
 .hero-subheading {
-  color: $white;
+  color: var(--color-default-white);
   font-weight: 500;
 }
 
 .hero-icons {
   .hero-icons-link {
-    color: $gray;
+    color: var(--color-default-gray);
     padding: 0.4rem;
     font-size: 2em;
     transition: color 0.5s ease;
     &:hover {
-      color: $primary-color;
+      color: var(--color-primary);
     }
   }
 }
@@ -104,9 +102,8 @@
     width: 5px;
     height: 5px;
     transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-right: 2px solid var(--color-default-white);
+    border-bottom: 2px solid var(--color-default-white);
     margin: 0 0 3px 5px;
   }
   .mouse {
@@ -114,7 +111,7 @@
     width: 20px;
     border-radius: 10px;
     transform: none;
-    border: 2px solid #ffffff;
+    border: 2px solid var(--color-default-white);
     top: 170px;
   }
 }
@@ -125,7 +122,7 @@
   border-radius: 5rem;
   display: block;
   margin: 5px auto;
-  background: #ffffff;
+  background: var(--color-default-white);
   position: relative;
   animation: mouse-animated 2s ease-in-out 0.4s infinite;
 }

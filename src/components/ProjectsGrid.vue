@@ -49,17 +49,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
 .container {
   height: 100% !important;
 }
 .container h2 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: $white;
+  color: var(--color-default-white);
   margin-top: 3rem;
   &::after {
-    background-color: $white;
+    background-color: var(--color-default-white);
   }
 }
 
@@ -81,7 +80,7 @@ export default {
       font-weight: bold;
     }
     &-header p {
-      color: $white;
+      color: var(--color-default-white);
     }
 
     img {
@@ -89,7 +88,7 @@ export default {
       border: 2px solid transparent;
       &:hover {
         transition: all 0.4s ease-in-out;
-        border-color: $primary-color;
+        border-color: var(--color-primary);
         cursor: zoom-in;
       }
     }
@@ -122,12 +121,12 @@ export default {
 
 .btn {
   &.isDarken {
-    background-color: #303030;
-    color: #fff;
+    background-color: var(--color-default-black);
+    color: var(--color-default-white);
   }
   &:hover {
     transition: all 0.4s ease-in-out;
-    background-color: $primary-color;
+    background-color: var(--color-primary);
   }
 }
 

@@ -451,13 +451,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/_vars.scss';
-
 .about {
   margin-top: 90px;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(2, 1fr);
+
   .about-aside img.about-aside__author {
     margin-left: 80px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
@@ -470,19 +469,19 @@ export default {
   }
   .about-aside h3 {
     padding: 1em;
-    color: #a3a3a3;
+    color: var(--color-default-gray);
     font-weight: 400;
     text-align: center;
   }
   .about-content h2 {
     font-size: 3rem;
     margin-bottom: 30px;
-    color: $primary-color;
+    color: var(--color-primary);
   }
   .about-content p {
     font-size: 1.1rem;
     line-height: 1.5;
-    color: $black;
+    color: var(--color-default-black);
     margin-top: 10px;
   }
 }
@@ -490,7 +489,7 @@ export default {
 h2 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: $primary-color;
+  color: var(--color-primary);
   margin-top: 20px;
 }
 
@@ -531,7 +530,7 @@ h2 {
       box-shadow: 0 0px 10px rgba(0, 0, 0, 0.015),
         0 0px 80px rgba(0, 0, 0, 0.03);
 
-      color: $black;
+      color: var(--color-default-black);
       margin-right: 10px;
       font-weight: bold;
     }
@@ -540,7 +539,7 @@ h2 {
       height: 48px;
       border-radius: 100%;
       margin: 0 auto;
-      background-color: lighten($primary-color, 10%);
+      background-color: lighten(hsl(204, 85%, 60%), 10%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -600,6 +599,7 @@ h2 {
 @media screen and (max-width: $mobile-breakpoint) {
   .about {
     grid-template-columns: 1fr;
+
     .about-aside img.about-aside__author {
       width: 40%;
       border-radius: 50%;
@@ -623,6 +623,11 @@ h2 {
     display: grid;
     justify-items: start;
     grid-template-columns: 1fr;
+
+    > div {
+      width: 100%;
+    }
+
     ul {
       grid-template-columns: 1fr;
       flex-flow: column wrap;
@@ -635,9 +640,11 @@ h2 {
       padding: 2rem;
     }
   }
+
   .hasWatermark::before {
     font-size: 10rem;
   }
+
   .hard-skills {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 100px);

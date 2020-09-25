@@ -1,0 +1,19 @@
+:root {
+  --color-primary: hsl(204, 85%, 60%);
+  --color-secondary: hsl(32, 100%, 50%);
+  --color-default-black: hsl(0, 0%, 19%);
+  --color-default-white: hsl(0, 0%, 96%);
+  --color-default-gray: hsl(0, 0%, 65%);
+
+  --title-font: 'Raleway', Arial, sans-serif;
+  --body-font: 'Source Sans Pro', Arial, sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+}
+
+$mobile-breakpoint: 425px;
+$laptop-breakpoint: 1024px;
+$tablet-breakpoint: 768px;
