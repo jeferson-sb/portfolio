@@ -16,7 +16,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.3",
     "aos": "^2.3.4",
-    "gridsome": "^0.7.21",
+    "gridsome": "^0.7.22",
     "vue-i18n": "^8.22.1"
   },
   "devDependencies": {
