@@ -17,7 +17,7 @@
     "@gridsome/transformer-remark": "^0.6.3",
     "aos": "^2.3.4",
     "gridsome": "^0.7.21",
-    "vue-i18n": "^8.22.1"
+    "vue-i18n": "^8.22.2"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",
