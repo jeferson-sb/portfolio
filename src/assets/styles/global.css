@@ -1,0 +1,36 @@
+:root {
+  --color-primary: hsl(187, 78%, 46%);
+  --color-default-black: hsl(216, 9%, 11%);
+  --color-default-white: hsl(0, 0%, 97%);
+  --color-silver: hsl(225, 15%, 50%);
+  --color-black-800: hsl(214, 9%, 15%);
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: 3.75rem;
+
+  --font-sans: 'Source Sans Pro', sans-serif;
+  --font-title: 'Raleway', sans-serif;
+  --font-serif: 'PT Serif', serif;
+  --font-mono: 'Source Code Pro', monospace;
+
+  --radius-default: 4px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1110px;
+  display: flex;
+}
+
+@media screen and (min-width: 426px) {
+  .is-mobile-only {
+    display: none;
+  }
+}

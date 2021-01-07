@@ -21,7 +21,8 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane';
 
 import i18n from './i18n';
 
-import '~/assets/scss/main.scss';
+import '~/assets/styles/reset.css';
+import '~/assets/styles/global.css';
 
 export default function(Vue, { appOptions, head }) {
   library.add(
