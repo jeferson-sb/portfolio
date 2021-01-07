@@ -1,115 +1,15 @@
 <template>
   <Layout>
-    <section class="section" id="Home">
-      <Hero />
-    </section>
-    <section class="section" id="Sobre">
-      <AboutMe />
-    </section>
-    <section class="section" id="Projetos">
-      <ProjectsGrid :projects="$page.projects.edges" />
-    </section>
-    <section class="section" id="Contato">
-      <Contact />
-    </section>
+    <HeroSection />
   </Layout>
 </template>
 
-<page-query>
-query Projects{
-	projects: allProjectPost(sortBy: "order", order: ASC, filter: { pinned: { eq: true }}) {
-    edges {
-      node {
-        id
-        title
-        type
-        thumbnail (quality: 90, width: 300, height: 140)
-        demo
-        github
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
-import Hero from '@/components/Hero.vue';
-import AboutMe from '@/components/AboutMe.vue';
-import ProjectsGrid from '@/components/ProjectsGrid.vue';
-import Contact from '@/components/Contact.vue';
+import HeroSection from '@/components/hero/HeroSection.vue'
 
 export default {
   components: {
-    Hero,
-    AboutMe,
-    ProjectsGrid,
-    Contact,
+    HeroSection,
   },
-};
+}
 </script>
-
-<style lang="scss" scoped>
-.container {
-  display: flex;
-  place-items: center;
-  align-items: center;
-  justify-content: center;
-  height: 80%;
-  flex-direction: column;
-  padding: 2rem;
-}
-
-.section {
-  height: 100vh;
-
-  &:nth-of-type(1) {
-    // Safari fallback
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../assets/img/bg-img-02.jpg');
-
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../assets/img/bg-img-02.webp');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    .section-link {
-      color: rgba(255, 255, 255, 0.651);
-    }
-  }
-  &:nth-of-type(2) {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  &:nth-of-type(3) {
-    height: 100%;
-    background-color: #36393f;
-  }
-  &:nth-of-type(4) {
-    height: 100%;
-    padding: 30px 0;
-    background-color: #f8f8f8;
-  }
-}
-
-@media screen and (max-width: $laptop-breakpoint) {
-  .section {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: $mobile-breakpoint) {
-  .container {
-    align-items: initial;
-    height: 100%;
-  }
-  .section:nth-of-type(1) {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../assets/img/bg-img-01.jpg');
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../assets/img/bg-img-01.webp');
-    background-size: cover;
-    background-position: 40%;
-  }
-}
-</style>
