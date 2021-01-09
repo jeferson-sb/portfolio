@@ -4,19 +4,17 @@
   --color-default-white: hsl(0, 0%, 97%);
   --color-silver: hsl(225, 15%, 50%);
   --color-black-800: hsl(214, 9%, 15%);
-
+  --color-black-700: hsl(210, 5%, 24%);
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 2.5rem;
   --text-3xl: 3.75rem;
-
   --font-sans: 'Source Sans Pro', sans-serif;
   --font-title: 'Raleway', sans-serif;
   --font-serif: 'PT Serif', serif;
   --font-mono: 'Source Code Pro', monospace;
-
   --radius-default: 4px;
 }
 
@@ -33,4 +31,25 @@
   .is-mobile-only {
     display: none;
   }
+}
+
+.button {
+  --button-bg-color: var(--color-silver);
+
+  display: inline-block;
+  text-align: center;
+  padding: 8px 16px;
+  color: inherit;
+  background-color: var(--button-bg-color);
+  transition: filter 0.3s ease-in-out;
+}
+
+.button:hover {
+  filter: brightness(70%);
+}
+
+.button:focus {
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: 0 0 0 0.19rem hsla(187, 78%, 46%, 0.366);
 }
