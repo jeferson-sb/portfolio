@@ -6,9 +6,7 @@
     <div class="project-card__content">
       <div class="project-card__header">
         <h4>Project 0101</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="['frontend', 'ai', 'react']" />
@@ -25,13 +23,12 @@ import TagGroup from '@/components/ui/TagGroup.vue'
 
 export default {
   components: {
-    TagGroup
-  }
+    TagGroup,
+  },
 }
 </script>
 
 <style scoped>
-
 .project-card {
   display: flex;
 }
@@ -48,9 +45,10 @@ export default {
 }
 
 .project-card .project-card__content {
-  background-color: var(--color-black-800);
+  background-color: var(--bg-color-lighter, var(--color-black-800));
   padding: 18px;
   border-radius: 0 var(--radius-default) var(--radius-default) 0;
+  border: 1px solid transparent;
 }
 
 .project-card__header {
@@ -76,6 +74,10 @@ export default {
   color: var(--color-default-black);
 }
 
+body[data-theme='light'] .project-card__content {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (max-width: 425px) {
   .project-card {
     flex-direction: column;
@@ -85,5 +87,4 @@ export default {
     max-height: 180px;
   }
 }
-
 </style>

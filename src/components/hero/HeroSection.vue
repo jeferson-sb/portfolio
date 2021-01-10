@@ -53,7 +53,6 @@ export default {
 .hero__subheadline {
   font-size: var(--text-2xl);
   font-size: clamp(var(--text-lg), 1vw + var(--text-xl), var(--text-2xl));
-  color: var(--color-default-white);
   opacity: 0.35;
   letter-spacing: 1.2px;
   margin-bottom: 20px;
@@ -70,13 +69,17 @@ aside .hero-avatar {
   align-items: center;
   width: 323px;
   height: 275px;
-  background-color: var(--color-black-800);
+  background-color: var(--bg-color-primary-lighter, var(--color-black-800));
   border-radius: var(--radius-default);
   box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.14);
 }
 
 aside .hero-avatar .hero-avatar__image {
   clip-path: circle(70px at center);
+}
+
+body[data-theme='light'] .hero-avatar {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
 }
 
 @media screen and (max-width: 425px) {

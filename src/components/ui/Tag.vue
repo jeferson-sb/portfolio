@@ -7,10 +7,9 @@ export default {
   props: {
     tagName: {
       type: String,
-    }
+    },
   },
 }
-
 </script>
 
 <style scoped>
@@ -20,5 +19,9 @@ export default {
   font-size: 12px;
   opacity: 0.6;
   padding: 2px 10px;
+}
+
+body[data-theme='light'] .tag {
+  background-color: hsla(225, 15%, 50%, 0.1);
 }
 </style>

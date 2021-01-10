@@ -56,14 +56,11 @@
 <style scoped>
 .social-media-icons a {
   --shadow-opacity: 0;
+
   border-radius: var(--radius-default);
   background-color: var(--color-black-800);
   padding: 12px;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, var(--shadow-opacity));
-}
-
-.social-media-icons a + a {
-  margin-left: 20px;
 }
 
 .social-media-icons a,
@@ -72,12 +69,29 @@
   transition: all 0.3s ease-out;
 }
 
+.social-media-icons a + a {
+  margin-left: 20px;
+}
+
 .social-media-icons a:hover {
   --shadow-opacity: 0.25;
 }
 
 .social-media-icons a:hover svg,
 .social-media-icons a:hover svg path {
-  fill: var(--color-primary);
+  fill: var(--color-primary) !important;
+}
+
+body[data-theme='light'] .social-media-icons a {
+  background-color: #e7f7f9;
+}
+
+body[data-theme='light'] .social-media-icons a:hover {
+  --shadow-opacity: 0.05;
+}
+
+body[data-theme='light'] .social-media-icons a svg,
+body[data-theme='light'] .social-media-icons a svg path {
+  fill: #beebf1;
 }
 </style>

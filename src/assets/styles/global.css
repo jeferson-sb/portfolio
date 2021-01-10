@@ -5,6 +5,7 @@
   --color-silver: hsl(225, 15%, 50%);
   --color-black-800: hsl(214, 9%, 15%);
   --color-black-700: hsl(210, 5%, 24%);
+  --text-color-default: var(--color-default-white);
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
