@@ -147,11 +147,14 @@
 .footer__copyright em {
   text-emphasis: unset;
   font-style: normal;
+  font-weight: 700;
 }
 
 .footer__copyright span {
   margin-left: 8px;
   opacity: 0.4;
+  font-weight: 700;
+  color: var(--color-silver);
 }
 
 .footer .built-tech {
