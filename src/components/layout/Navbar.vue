@@ -6,24 +6,33 @@
       </g-link>
       <nav class="navbar">
         <ul class="navbar-menu">
+          <li class="no-effect">
+            <ThemeSwitcher variant="transform" />
+          </li>
           <li>
-            <a class="navbar-menu__link">
-              Posts
-            </a>
+            <a class="navbar-menu__link"> Posts </a>
           </li>
           <li>
             <a class="navbar-menu__link">About</a>
           </li>
           <li>
-            <a class="navbar-menu__link">
-              Projects
-            </a>
+            <a class="navbar-menu__link"> Projects </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
+
+<script>
+import ThemeSwitcher from '@/components/ui/ThemeSwitcher.vue'
+
+export default {
+  components: {
+    ThemeSwitcher,
+  },
+}
+</script>
 
 <style scoped>
 .header {
@@ -44,7 +53,7 @@
 
 .header a {
   text-decoration: none;
-  color: var(--color-default-white);
+  color: var(--text-color-default);
   transition-property: font-weight;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
@@ -95,13 +104,13 @@
   cursor: pointer;
 }
 
-.navbar .navbar-menu li:hover::before {
+.navbar .navbar-menu li:not(.no-effect):hover::before {
   transform: scaleX(1);
   transform-origin: center left;
 }
 
-.navbar .navbar-menu li:active,
-.navbar .navbar-menu li:focus {
+.navbar .navbar-menu li:active:not(.no-effect),
+.navbar .navbar-menu li:focus:not(.no-effect) {
   outline: 3px dashed var(--color-primary);
 }
 
@@ -110,6 +119,10 @@
   transition-duration: 50ms;
   transform: scaleX(0);
   transform-origin: center right;
+}
+
+body[data-theme='light'] .header {
+  background-color: transparent;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -124,6 +137,7 @@
   .container {
     padding: 18px;
   }
+
   .header {
     font-size: var(--text-base);
   }
