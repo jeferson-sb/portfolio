@@ -1,5 +1,5 @@
 <template>
-  <div class="social-media-icons">
+  <div :class="classObject">
     <g-link
       to="https://github.com/jeferson-sb"
       aria-label="My Github"
@@ -53,6 +53,25 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    boxed: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    classObject() {
+      return {
+        'social-media-icons': true,
+        'social-media-icons--boxed': this.boxed,
+      }
+    },
+  },
+}
+</script>
+
 <style scoped>
 .social-media-icons a {
   --shadow-opacity: 0;
@@ -80,6 +99,11 @@
 .social-media-icons a:hover svg,
 .social-media-icons a:hover svg path {
   fill: var(--color-primary) !important;
+}
+
+.social-media-icons--boxed a {
+  display: inline-block;
+  padding: 3px 8px;
 }
 
 body[data-theme='light'] .social-media-icons a {
