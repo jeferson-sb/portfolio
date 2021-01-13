@@ -7,7 +7,7 @@
     </div>
     <aside>
       <ScrollIndicator class="is-mobile-only" />
-      <div class="hero-avatar">
+      <HeroAvatar>
         <g-image
           src="@/assets/img/me.jpg"
           alt="me"
@@ -15,7 +15,7 @@
           quality="100"
           width="140"
         />
-      </div>
+      </HeroAvatar>
     </aside>
   </section>
 </template>
@@ -23,11 +23,13 @@
 <script>
 import ScrollIndicator from '@/components/ui/ScrollIndicator.vue'
 import SocialMediaIcons from '@/components/social-media/SocialMediaIcons.vue'
+import HeroAvatar from '@/components/hero/HeroAvatar.vue'
 
 export default {
   components: {
     ScrollIndicator,
     SocialMediaIcons,
+    HeroAvatar,
   },
 }
 </script>
@@ -61,25 +63,6 @@ export default {
 aside {
   justify-self: end;
   padding: 0 17px;
-}
-
-aside .hero-avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 323px;
-  height: 275px;
-  background-color: var(--bg-color-primary-lighter, var(--color-black-800));
-  border-radius: var(--radius-default);
-  box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.14);
-}
-
-aside .hero-avatar .hero-avatar__image {
-  clip-path: circle(70px at center);
-}
-
-body[data-theme='light'] .hero-avatar {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
 }
 
 @media screen and (max-width: 425px) {
