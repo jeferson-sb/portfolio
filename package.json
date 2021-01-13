@@ -18,6 +18,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "gridsome": "^0.7.23",
     "gridsome-plugin-i18n": "^1.6.0",
     "gridsome-plugin-svg": "^0.0.14"
