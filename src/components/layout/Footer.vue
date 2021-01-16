@@ -3,7 +3,7 @@
     <div class="container">
       <p class="footer__copyright">
         <em>Made with ♥ by Jeferson</em>
-        <span>@2020 - Present. All rights reserved.</span>
+        <span>@2021 - Present. All rights reserved.</span>
       </p>
       <div class="built-tech">
         <a
