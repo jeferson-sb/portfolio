@@ -55,3 +55,17 @@
   outline: 0;
   box-shadow: 0 0 0 0.19rem hsla(187, 78%, 46%, 0.366);
 }
+
+::selection {
+  background: var(--color-default-black);
+  color: var(--color-default-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}

@@ -47,7 +47,6 @@ query Projects {
 
 .projects-grid h3 {
   grid-column: 1 / 3;
-  font-family: var(--font-title);
   text-transform: uppercase;
   margin: 33px 0 0;
 }

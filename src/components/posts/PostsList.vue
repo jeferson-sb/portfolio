@@ -45,7 +45,6 @@ query {
 
 .posts-list h3 {
   width: 100%;
-  font-family: var(--font-title);
   text-transform: uppercase;
   margin-bottom: 33px;
 }

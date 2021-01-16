@@ -42,10 +42,6 @@ export default {
   padding: 3rem 0;
 }
 
-.hero-content {
-  font-family: var(--font-title);
-}
-
 .hero__headline {
   font-size: var(--text-3xl);
   font-size: clamp(var(--text-xl), 1vw + var(--text-2xl), var(--text-3xl));
