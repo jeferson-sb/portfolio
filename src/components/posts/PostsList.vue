@@ -2,10 +2,12 @@
   <div class="posts-list container">
     <h3>Latest Posts</h3>
     <PostPreview
-      v-for="{ title, created_at } in dummyPosts"
-      :key="title"
-      :title="title"
-      :date="created_at"
+      v-for="edge in $static.posts.edges"
+      :key="edge.node.id"
+      :title="edge.node.title"
+      :date="new Date(edge.node.published_at)"
+      :href="`/articles/${edge.node.slug}`"
+      :articleId="`article-${edge.node.id}`"
     />
   </div>
 </template>
@@ -17,23 +19,23 @@ export default {
   components: {
     PostPreview,
   },
-  data() {
-    return {
-      dummyPosts: [
-        { title: 'What is CSS Houdini?', created_at: new Date() },
-        {
-          title: 'Awesome DevTools features',
-          created_at: new Date(2020, 12, 22),
-        },
-        {
-          title: 'Vue 3.0 is finally released!',
-          created_at: new Date(2020, 10, 25),
-        },
-      ],
-    }
-  },
 }
 </script>
+
+<static-query>
+query {
+  posts: allArticles(sortBy: "published_at") {
+     edges {
+      node {
+        id,
+        title,
+        published_at,
+        slug
+			}
+    }
+  }
+}
+</static-query>
 
 <style scoped>
 .posts-list {

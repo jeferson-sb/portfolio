@@ -1,10 +1,12 @@
 <template>
-  <article class="post-preview">
-    <time class="post-preview__date" :datetime="date.toISOString()">
-      {{ formattedDate }}
-    </time>
-    <h4 class="post-preview__title">{{ title }}</h4>
-  </article>
+  <g-link :to="href" :aria-labelledby="articleId">
+    <article class="post-preview">
+      <time class="post-preview__date" :datetime="date">
+        {{ formattedDate }}
+      </time>
+      <h4 class="post-preview__title" :id="articleId">{{ title }}</h4>
+    </article>
+  </g-link>
 </template>
 
 <script>
@@ -14,6 +16,12 @@ export default {
       type: Date,
     },
     title: {
+      type: String,
+    },
+    href: {
+      type: String,
+    },
+    articleId: {
       type: String,
     },
   },
@@ -29,6 +37,12 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
 .post-preview {
   background-color: var(--bg-color-lighter, var(--color-black-800));
   border-radius: var(--radius-default);
