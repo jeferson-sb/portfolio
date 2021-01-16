@@ -5,28 +5,28 @@
 </template>
 
 <script>
-import Tag from './Tag';
+import Tag from './Tag'
 
 export default {
   components: {
-    Tag
+    Tag,
   },
   props: {
     tags: {
       type: Array,
-    }
+    },
   },
 }
-
 </script>
 
 <style scoped>
 .tags {
   display: flex;
-  margin: 10px 0;
+  flex-flow: row wrap;
+  margin: 6px 0;
 }
 
-.tag + .tag {
-  margin-left: 9px;
+.tags .tag:not(:last-child) {
+  margin-right: 9px;
 }
 </style>
