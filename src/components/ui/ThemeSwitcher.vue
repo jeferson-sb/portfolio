@@ -1,5 +1,9 @@
 <template>
-  <button class="theme-switcher" @click="toggleTheme">
+  <button
+    class="theme-switcher"
+    @click="toggleTheme"
+    aria-label="Switch theme between light and dark"
+  >
     <template v-if="variant === 'fade'">
       <transition name="fade">
         <LampOnSVG v-if="current === 'light'" />
@@ -34,7 +38,9 @@ export default {
     }
   },
   mounted() {
-    this.current = document.body.getAttribute('data-theme')
+    this.current =
+      document.body.getAttribute('data-theme') ||
+      localStorage.getItem('selected-theme')
   },
   computed: {
     svgClass() {

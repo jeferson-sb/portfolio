@@ -15,7 +15,7 @@ export default {
     Navbar,
     Footer,
   },
-  created() {
+  mounted() {
     const storedTheme = localStorage.getItem('selected-theme')
     const setAttrValue = (el, attr, value) => el.setAttribute(attr, value)
 
@@ -50,6 +50,7 @@ body[data-theme='light'] {
   --secondary-text-color: var(--color-silver);
   --bg-color-primary-lighter: rgba(26, 187, 209, 0.3);
   --bg-color-lighter: #f8f8f8;
+  --accent-color-lighter: hsl(225, 31%, 95%);
 
   background-color: var(--color-light);
   color: var(--color-default-black);
