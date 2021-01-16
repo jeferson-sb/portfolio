@@ -162,5 +162,13 @@ body[data-theme='light'] .header {
   .navbar .navbar-menu li:focus {
     outline-width: 2px;
   }
+
+  .navbar .navbar-menu li.no-effect {
+    padding-right: 0;
+  }
+
+  svg.animated {
+    left: 12px;
+  }
 }
 </style>
