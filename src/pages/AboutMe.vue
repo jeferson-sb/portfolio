@@ -41,13 +41,13 @@
 <script>
 import HeroAvatar from '@/components/hero/HeroAvatar.vue'
 import SocialMediaIcons from '@/components/social-media/SocialMediaIcons.vue'
-import BinaryTextSVG from '@/assets/svg/binary-text.svg';
+import BinaryTextSVG from '@/assets/svg/binary-text.svg'
 
 export default {
   components: {
     HeroAvatar,
     SocialMediaIcons,
-    BinaryTextSVG
+    BinaryTextSVG,
   },
 }
 </script>
@@ -88,13 +88,15 @@ main {
   }
 }
 
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  aside {
+    margin-left: 40px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .container {
     height: 100%;
-  }
-
-  aside {
-    margin-left: 40px;
   }
 
   .binary-text-svg {
@@ -103,5 +105,4 @@ main {
     bottom: -90px;
   }
 }
-
 </style>
