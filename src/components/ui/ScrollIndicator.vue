@@ -19,7 +19,7 @@
   height: 56px;
   width: 23px;
   border-radius: 10px;
-  border: 2px solid var(--color-default-white);
+  border: 2px solid var(--text-color-default, --color-default-white);
 }
 
 .mouse-scroll .mouse .mouse-in {
@@ -28,7 +28,7 @@
   border-radius: 5rem;
   display: block;
   margin: 5px auto;
-  background: var(--color-default-white);
+  background: var(--text-color-default, --color-default-white);
   animation: mouse-animated 2s ease-in-out 0.4s infinite;
 }
 
@@ -37,6 +37,7 @@
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateY(20px);
