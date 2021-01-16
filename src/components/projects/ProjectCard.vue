@@ -1,18 +1,16 @@
 <template>
   <div class="project-card">
     <figure class="project-thumbnail">
-      <g-image src="https://picsum.photos/1280/720" alt="project 0101" />
+      <g-image :src="project.thumbnail" alt="project screenshot" />
     </figure>
     <div class="project-card__content">
       <div class="project-card__header">
-        <h4>Project 0101</h4>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <h4>{{ project.title }}</h4>
+        <p>{{ project.description }}</p>
       </div>
       <div class="project-card__footer">
-        <TagGroup :tags="['frontend', 'ai', 'react']" />
-        <g-link to="https://github.com/jeferson-sb" class="button">
-          Github
-        </g-link>
+        <TagGroup :tags="project.tags.split(',')" />
+        <g-link :to="project.github" class="button"> Github </g-link>
       </div>
     </div>
   </div>
@@ -25,6 +23,11 @@ export default {
   components: {
     TagGroup,
   },
+  props: {
+    project: {
+      type: Object,
+    },
+  },
 }
 </script>
 
@@ -34,7 +37,7 @@ export default {
 }
 
 .project-thumbnail {
-  flex-basis: 60%;
+  max-width: 274px;
   border-radius: var(--radius-default) 0 0 var(--radius-default);
 }
 
@@ -45,10 +48,14 @@ export default {
 }
 
 .project-card .project-card__content {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   background-color: var(--bg-color-lighter, var(--color-black-800));
   padding: 18px;
   border-radius: 0 var(--radius-default) var(--radius-default) 0;
   border: 1px solid transparent;
+  max-width: 265px;
 }
 
 .project-card__header {
@@ -78,13 +85,18 @@ body[data-theme='light'] .project-card__content {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .project-card {
     flex-direction: column;
   }
 
   .project-thumbnail {
-    max-height: 180px;
+    height: 180px;
+  }
+
+  .project-thumbnail,
+  .project-card .project-card__content {
+    max-width: 100%;
   }
 }
 </style>

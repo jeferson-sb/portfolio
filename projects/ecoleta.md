@@ -1,11 +1,10 @@
 ---
-order: 3
 thumbnail: '/uploads/ecoleta.png'
 title: Ecoleta
-type: Fullstack
+tags: React, React Native, Node.js, TypeScript
 demo: https://ecoleta-nlw.netlify.app/
 github: https://github.com/jeferson-sb/ecoleta
-pinned: true
+description: Marketplace de coleta de resíduos
 ---
 
 ![](/uploads/bethehero.png)

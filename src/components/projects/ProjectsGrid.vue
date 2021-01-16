@@ -1,10 +1,11 @@
 <template>
-  <section class="projects-grid container">
+  <section class="projects-grid container" id="projects">
     <h3>Projects</h3>
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
+    <ProjectCard
+      v-for="edge in $static.projects.edges"
+      :key="edge.node.id"
+      :project="edge.node"
+    />
   </section>
 </template>
 
@@ -17,6 +18,24 @@ export default {
   },
 }
 </script>
+
+<static-query>
+query Projects {
+	projects: allProjects(sortBy: "order", order: ASC, filter: { pinned: { eq: true }}) {
+    edges {
+      node {
+        id
+        title
+        tags
+        thumbnail (quality: 90)
+        demo
+        github
+        description
+      }
+    }
+  }
+}
+</static-query>
 
 <style scoped>
 .projects-grid {
@@ -48,5 +67,4 @@ export default {
     grid-column: 1;
   }
 }
-
 </style>
