@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
+  "license": "Apache License 2.0",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
@@ -18,7 +19,6 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "aos": "^2.3.4",
     "axios": "^0.21.1",
     "gridsome": "^0.7.23",
     "gridsome-plugin-i18n": "^1.6.0",
