@@ -71,7 +71,7 @@ query Article ($path: String) {
 
 <style>
 .article-heading {
-  background-color: var(--color-light, var(--color-black-800));
+  background-color: var(--accent-color-lighter, var(--color-black-800));
   padding: calc(2vw + 85px) calc(1vw + 385px);
   max-height: 340px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -83,7 +83,6 @@ body[data-theme='light'] .article-heading {
 }
 
 .article-heading h1 {
-  font-family: var(--font-title);
   font-size: clamp(var(--text-lg), 1vw + var(--text-xl), var(--text-2xl));
 }
 
@@ -111,7 +110,6 @@ body[data-theme='light'] .article-heading {
 
 .article-body h2,
 .article-body h3 {
-  font-family: var(--font-title);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -129,7 +127,6 @@ body[data-theme='light'] .article-heading {
 }
 
 .article-body code:not([class*='language-']) {
-  /* load font source sans pro */
   font-family: var(--font-mono);
   padding: 2px 6px;
   background-color: var(--accent-color-lighter, var(--color-black-700));
@@ -163,6 +160,9 @@ body[data-theme='light'] .article-heading {
 }
 
 .article-body hr {
+  margin: 2rem 0;
+  opacity: 0.5;
+  border-color: var(--color-silver);
 }
 
 .article-body a {
@@ -231,9 +231,5 @@ body[data-theme='light'] .article-heading {
     hyphens: none;
     -moz-hyphens: none;
   }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-}
-@media screen and (min-width: 426px) and (max-width: 768px) {
 }
 </style>
