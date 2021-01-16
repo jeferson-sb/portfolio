@@ -8,19 +8,28 @@
 
 ## Development
 
+### Clone repository
+
 ```bash
-# install Gridsome globally
-yarn global add @gridsome/cli
+$ git clone https://github.com/jeferson-sb/portfolio.git
+```
 
-# clone repository
-git clone https://github.com/jeferson-sb/portfolio.git
+### Install dependencies
 
-# cd into the project directory
-cd portfolio
+```sh
+$ cd portfolio
+$ yarn
+```
 
-# install dependencies
-yarn
+### Start local dev server
 
-# Start local dev server
-gridsome develop
+```
+$ gridsome develop
+```
+
+### Linting and Formatting
+
+```
+$ yarn lint
+$ yarn prettier
 ```

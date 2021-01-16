@@ -1,7 +1,7 @@
 ---
-thumbnail: "/uploads/api.png"
+thumbnail: '/uploads/api.png'
 title: Task Manager Api
-type: Backend
+tags: Backend
 github: https://github.com/jeferson-sb/task-manager-api
 ---
 

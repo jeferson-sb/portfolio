@@ -2,12 +2,16 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
+  "license": "Apache License 2.0",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint ./src --ext .js && stylelint 'src/**/*.css'",
+    "prettier": "prettier 'src/**/*.js' -w"
   },
   "dependencies": {
+    "@chiubaca/gridsome-source-devto": "^0.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -15,13 +19,20 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "gridsome": "^0.7.23",
-    "vue-i18n": "^8.22.2"
+    "gridsome-plugin-i18n": "^1.6.0",
+    "gridsome-plugin-svg": "^0.0.14"
   },
   "devDependencies": {
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0",
-    "style-resources-loader": "^1.4.1"
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-vue": "^7.4.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
