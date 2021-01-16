@@ -2,7 +2,7 @@
   <div :class="classObject">
     <g-link
       to="https://github.com/jeferson-sb"
-      aria-label="My Github"
+      aria-label="Go to my Github"
       title="My Github"
     >
       <svg
@@ -18,7 +18,11 @@
         />
       </svg>
     </g-link>
-    <g-link to="https://dev.to/jeferson_sb" aria-label="My Dev" title="My Dev">
+    <g-link
+      to="https://dev.to/jeferson_sb"
+      aria-label="Go to my Dev"
+      title="My Dev"
+    >
       <svg
         width="41"
         height="41"
@@ -34,7 +38,7 @@
     </g-link>
     <g-link
       to="https://www.linkedin.com/in/jeferson-sb/"
-      aria-label="My LinkedIn"
+      aria-label="Go to my LinkedIn account"
       title="My LinkedIn"
     >
       <svg

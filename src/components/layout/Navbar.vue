@@ -10,13 +10,13 @@
             <ThemeSwitcher variant="transform" />
           </li>
           <li>
-            <a class="navbar-menu__link"> Posts </a>
+            <g-link class="navbar-menu__link" to="/"> Posts </g-link>
           </li>
           <li>
-            <a class="navbar-menu__link">About</a>
+            <g-link class="navbar-menu__link" to="/about-me">About</g-link>
           </li>
           <li>
-            <a class="navbar-menu__link"> Projects </a>
+            <a class="navbar-menu__link" href="/#projects"> Projects </a>
           </li>
         </ul>
       </nav>
