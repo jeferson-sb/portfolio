@@ -13,7 +13,7 @@
   "dependencies": {
     "@chiubaca/gridsome-source-devto": "^0.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "@gridsome/remark-prismjs": "^0.5.0",
