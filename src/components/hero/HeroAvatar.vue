@@ -27,7 +27,7 @@ export default {
   height: 275px;
   background-color: var(--bg-color-primary-lighter, var(--color-black-800));
   border-radius: var(--radius-default);
-  box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.14);
+  box-shadow: var(--elevation-2);
 }
 
 .hero-avatar .hero-avatar__image {
@@ -35,6 +35,6 @@ export default {
 }
 
 body[data-theme='light'] .hero-avatar {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--elevation-3);
 }
 </style>

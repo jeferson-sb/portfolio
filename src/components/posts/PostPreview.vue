@@ -48,7 +48,7 @@ a {
   border-radius: var(--radius-default);
   width: 100%;
   padding: 18px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--elevation-2);
   margin-bottom: 28px;
   display: flex;
 }
@@ -64,7 +64,7 @@ a {
 }
 
 body[data-theme='light'] .post-preview {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--elevation-3);
 }
 
 body[data-theme='light'] .post-preview:hover {

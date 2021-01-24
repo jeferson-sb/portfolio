@@ -75,7 +75,7 @@ main {
 
 .binary-text-svg {
   font-family: monospace;
-  font-size: 20px;
+  font-size: var(--text-xl);
   position: absolute;
   left: 310px;
   top: 280px;

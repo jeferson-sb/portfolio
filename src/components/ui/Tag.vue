@@ -16,7 +16,7 @@ export default {
 .tag {
   border-radius: 14px;
   background-color: var(--color-black-700);
-  font-size: 12px;
+  font-size: var(--text-xsm);
   opacity: 0.6;
   padding: 2px 10px;
 }

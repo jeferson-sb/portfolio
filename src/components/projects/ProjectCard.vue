@@ -63,7 +63,7 @@ export default {
 }
 
 .project-card .project-card__header h4 {
-  font-size: 18px;
+  font-size: var(--text-lg);
   margin-bottom: 10px;
 }
 
