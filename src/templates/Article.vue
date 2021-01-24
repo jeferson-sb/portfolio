@@ -13,6 +13,7 @@
         </div>
         <section class="container">
           <div
+            ref="articleBody"
             class="article-body"
             v-html="$page.article.parsed_markdown"
           ></div>
@@ -39,8 +40,44 @@ export default {
           href:
             'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap',
         },
+        {
+          rel: 'canonical',
+          href: this.$page.article.canonical_url,
+        },
+      ],
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$page.article.title,
+        },
+        {
+          property: 'og:description',
+          content: this.$page.article.description,
+        },
+        {
+          property: 'og:url',
+          content: `https://jefersonsilva.me/articles/${this.$page.article.slug}`,
+        },
+        {
+          name: 'twitter:title',
+          content: this.$page.article.title,
+        },
+        {
+          name: 'twitter:description',
+          content: this.$page.article.description,
+        },
+        {
+          name: 'description',
+          content: this.$page.article.description,
+        },
       ],
     }
+  },
+  mounted() {
+    const headings = Array.from(
+      this.$refs.articleBody.querySelectorAll('a span.icon')
+    )
+    this.addLinkToHeading(headings)
   },
   computed: {
     formattedDate() {
@@ -52,6 +89,20 @@ export default {
           year: 'numeric',
         }
       )
+    },
+    linkSVG() {
+      return `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      `
+    },
+  },
+  methods: {
+    addLinkToHeading(array) {
+      array.forEach((heading, index) => {
+        heading.insertAdjacentHTML('afterBegin', this.linkSVG)
+      })
     },
   },
 }
@@ -65,6 +116,8 @@ query Article ($path: String) {
     tag_list
     parsed_markdown
     slug
+    description
+    canonical_url
   }
 }
 </page-query>
@@ -74,12 +127,12 @@ query Article ($path: String) {
   background-color: var(--accent-color-lighter, var(--color-black-800));
   padding: calc(2vw + 85px) calc(1vw + 385px);
   max-height: 340px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--elevation-2);
   text-align: center;
 }
 
 body[data-theme='light'] .article-heading {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--elevation-3);
 }
 
 .article-heading h1 {
@@ -119,11 +172,52 @@ body[data-theme='light'] .article-heading {
 }
 
 .article-body h3 {
-  font-size: calc(var(--text-lg) + 0.5vw);
+  font-size: calc(var(--text-lg) + 0.3vw);
+}
+
+.article-body h4 {
+  font-size: calc(var(--text-base) + 0.2vw);
+}
+
+.article-body h5 {
+  font-size: calc(var(--text-sm) + 0.1vw);
 }
 
 .article-body p {
   margin-bottom: 16px;
+}
+
+.article-body a[aria-hidden] {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 2px;
+  left: -40px;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.article-body a[aria-hidden]::after {
+  all: unset;
+}
+
+.article-body a[aria-hidden] span svg {
+  width: 100%;
+}
+
+.article-body h2[id],
+.article-body h3[id],
+.article-body h4[id],
+.article-body h5[id] {
+  position: relative;
+}
+
+.article-body h2[id]:hover a,
+.article-body h3[id]:hover a,
+.article-body h4[id]:hover a,
+.article-body h5[id]:hover a {
+  opacity: 1;
 }
 
 .article-body code:not([class*='language-']) {
