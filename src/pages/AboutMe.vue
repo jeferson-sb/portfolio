@@ -82,6 +82,49 @@ main {
   opacity: 0.3;
 }
 
+.binary-text-svg tspan {
+  opacity: 0;
+  animation-name: pulse-spread;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.binary-text-svg tspan:nth-child(1) {
+  animation-delay: 500ms;
+}
+
+.binary-text-svg tspan:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.binary-text-svg tspan:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.binary-text-svg tspan:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.binary-text-svg tspan:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.binary-text-svg tspan:nth-child(6) {
+  animation-delay: 3s;
+}
+
+@keyframes pulse-spread {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
 @media screen and (max-width: 765px) {
   aside {
     padding: 0 2.4rem;
