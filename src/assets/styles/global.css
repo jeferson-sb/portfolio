@@ -3,9 +3,14 @@
   --color-default-black: hsl(216, 9%, 11%);
   --color-default-white: hsl(0, 0%, 97%);
   --color-silver: hsl(225, 15%, 50%);
-  --color-black-800: hsl(214, 9%, 15%);
-  --color-black-700: hsl(210, 5%, 24%);
-  --color-black-600: hsl(214, 9%, 35%);
+  --color-gray-800: hsl(214, 9%, 15%);
+  --color-gray-700: hsl(210, 5%, 24%);
+  --color-gray-600: hsl(214, 9%, 35%);
+  --color-gray-500: hsl(214, 9%, 45%);
+  --color-gray-400: hsl(214, 9%, 55%);
+  --color-gray-300: hsl(214, 9%, 65%);
+  --color-gray-200: hsl(214, 9%, 75%);
+  --color-gray-100: hsl(214, 9%, 85%);
   --text-color-default: var(--color-default-white);
   --text-xsm: 0.75rem;
   --text-sm: 0.875rem;
@@ -14,16 +19,21 @@
   --text-xl: 1.25rem;
   --text-2xl: 2.5rem;
   --text-3xl: 3.75rem;
-  --font-sans: 'Source Sans Pro', sans-serif;
+  --font-sans: 'Source Sans Pro', -apple-system, 'Segoe UI',
+    Helvetica sans-serif;
   --font-title: 'Raleway', sans-serif;
-  --font-serif: 'Roboto Slab', serif;
-  --font-mono: 'Source Code Pro', monospace;
+  --font-serif: 'Roboto Slab', Palatino, Georgia, serif;
+  --font-mono: 'Source Code Pro', 'SF Mono', Consolas, Menlo, monospace;
   --radius-default: 4px;
   --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.2);
   --elevation-2: 0 4px 4px rgba(0, 0, 0, 0.23);
   --elevation-3: 0 4px 10px rgba(0, 0, 0, 0.07);
   --elevation-4: 0 10px 19px rgba(0, 0, 0, 0.27);
   --elevation-5: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border: var(--border-width) var(--border-style) var(--border-color);
 }
 
 body {
@@ -69,8 +79,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-default-black);
-  color: var(--color-default-white);
+  background: var(--color-primary);
+  color: var(--text-color-default);
 }
 
 h1,
@@ -80,4 +90,28 @@ h4,
 h5,
 h6 {
   font-family: var(--font-title);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active,
+a:focus {
+  outline: 2px dashed var(--color-primary);
+}
+
+a:not([href]) {
+  color: var(--text-color-default);
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+button[disabled] {
+  cursor: not-allowed;
 }

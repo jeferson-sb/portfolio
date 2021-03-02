@@ -81,3 +81,11 @@ button {
     scroll-behavior: auto !important;
   }
 }
+
+/* Reduce transparency to all applicable elements */
+@media screen and (prefers-reduced-transparency: reduce) {
+  * {
+    -webkit-backdrop-filter: unset;
+    backdrop-filter: unset;
+  }
+}
