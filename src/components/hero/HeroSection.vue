@@ -1,11 +1,11 @@
 <template>
-  <section class="hero container">
+  <section class="hero container has-ellipse-curve">
     <div class="hero-content">
       <h1 class="hero__headline">I'm Jeferson Brito</h1>
       <h2 class="hero__subheadline">Web Developer & UI Designer</h2>
       <SocialMediaIcons />
     </div>
-    <aside>
+    <div class="hero-aside">
       <ScrollIndicator class="is-mobile-only" />
       <HeroAvatar>
         <g-image
@@ -16,7 +16,7 @@
           width="140"
         />
       </HeroAvatar>
-    </aside>
+    </div>
   </section>
 </template>
 
@@ -51,14 +51,38 @@ export default {
 .hero__subheadline {
   font-size: var(--text-2xl);
   font-size: clamp(var(--text-lg), 1vw + var(--text-xl), var(--text-2xl));
-  opacity: 0.35;
+  opacity: 0.7;
   letter-spacing: 1.2px;
   margin-bottom: 20px;
+  color: var(--color-silver);
 }
 
-aside {
+.hero-aside {
   justify-self: end;
   padding: 0 17px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero::after {
+    content: '';
+    background-color: var(--color-gray-600);
+    opacity: 0.1;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+
+  .hero.has-ellipse-curve::after {
+    clip-path: ellipse(100% 55% at 48% 44%);
+    height: calc(500px + 2vw);
+  }
+
+  .hero.has-triangle-down::after {
+    clip-path: polygon(50% 63%, 100% 38%, 100% 2%, 0% 1%, 0% 38%);
+    height: calc(500px + 3vw);
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -67,7 +91,7 @@ aside {
     grid-template-columns: 1fr;
   }
 
-  aside .hero-avatar {
+  .hero-aside .hero-avatar {
     display: none;
   }
 
