@@ -15,9 +15,9 @@ export default {
 <style scoped>
 .tag {
   border-radius: 14px;
-  background-color: var(--color-black-700);
+  background-color: var(--color-gray-700);
   font-size: var(--text-xsm);
-  opacity: 0.6;
+  opacity: 1;
   padding: 2px 10px;
 }
 

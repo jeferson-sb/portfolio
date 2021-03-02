@@ -2,7 +2,7 @@
   <div :class="classObject">
     <g-link
       to="https://github.com/jeferson-sb"
-      aria-label="Go to my Github"
+      aria-label="My Github"
       title="My Github"
     >
       <svg
@@ -19,9 +19,9 @@
       </svg>
     </g-link>
     <g-link
-      to="https://dev.to/jeferson_sb"
-      aria-label="Go to my Dev"
-      title="My Dev"
+      to="https://www.linkedin.com/in/jeferson-sb/"
+      aria-label="My LinkedIn Account"
+      title="My LinkedIn"
     >
       <svg
         width="41"
@@ -37,9 +37,9 @@
       </svg>
     </g-link>
     <g-link
-      to="https://www.linkedin.com/in/jeferson-sb/"
-      aria-label="Go to my LinkedIn account"
-      title="My LinkedIn"
+      to="https://dev.to/jeferson_sb"
+      aria-label="My Dev.to profile"
+      title="My Dev.to"
     >
       <svg
         width="41"
@@ -79,11 +79,21 @@ export default {
 <style scoped>
 .social-media-icons a {
   --shadow-opacity: 0;
+  --shadow-h: 0;
+  --shadow-s: 0%;
+  --shadow-l: 0%;
 
   border-radius: var(--radius-default);
-  background-color: var(--color-black-800);
+  background-color: var(--color-gray-800);
   padding: 12px;
-  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, var(--shadow-opacity));
+  box-shadow: 1px 4px 8px 1px
+    hsla(
+      var(--shadow-h),
+      var(--shadow-s),
+      var(--shadow-l),
+      var(--shadow-opacity)
+    );
+  outline: 0;
 }
 
 .social-media-icons a,
@@ -98,6 +108,13 @@ export default {
 
 .social-media-icons a:hover {
   --shadow-opacity: 0.25;
+}
+
+.social-media-icons a:focus {
+  --shadow-h: 187;
+  --shadow-s: 78%;
+  --shadow-l: 46%;
+  --shadow-opacity: 0.5;
 }
 
 .social-media-icons a:hover svg,

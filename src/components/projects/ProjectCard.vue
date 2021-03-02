@@ -5,12 +5,19 @@
     </figure>
     <div class="project-card__content">
       <div class="project-card__header">
-        <h4>{{ project.title }}</h4>
+        <h4 :id="titleId">{{ project.title }}</h4>
         <p>{{ project.description }}</p>
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="project.tags.split(',')" />
-        <g-link :to="project.github" class="button"> Github </g-link>
+        <g-link
+          :to="project.github"
+          class="button"
+          :id="buttonId"
+          :aria-labelledby="`${titleId} ${buttonId}`"
+        >
+          Github
+        </g-link>
       </div>
     </div>
   </div>
@@ -26,6 +33,14 @@ export default {
   props: {
     project: {
       type: Object,
+    },
+  },
+  computed: {
+    titleId() {
+      return `title-${this.project.id}`
+    },
+    buttonId() {
+      return `button-${this.project.id}`
     },
   },
 }
@@ -51,7 +66,7 @@ export default {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  background-color: var(--bg-color-lighter, var(--color-black-800));
+  background-color: var(--bg-color-lighter, var(--color-gray-800));
   padding: 18px;
   border-radius: 0 var(--radius-default) var(--radius-default) 0;
   border: 1px solid transparent;
@@ -82,7 +97,7 @@ export default {
 }
 
 body[data-theme='light'] .project-card__content {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: var(--border);
 }
 
 @media screen and (max-width: 768px) {

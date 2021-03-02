@@ -38,13 +38,21 @@ export default {
 
 <style scoped>
 a {
-  text-decoration: none;
   color: inherit;
   width: 100%;
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus .post-preview {
+  box-shadow: 0 4px 10px hsla(187, 78%, 46%, 0.5);
 }
 
 .post-preview {
-  background-color: var(--bg-color-lighter, var(--color-black-800));
+  background-color: var(--bg-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
   width: 100%;
   padding: 18px;
@@ -63,11 +71,17 @@ a {
   margin: 0;
 }
 
+a:hover .post-preview__title {
+  color: var(--color-primary);
+  transition: color 0.3s ease-in-out;
+}
+
 body[data-theme='light'] .post-preview {
   box-shadow: var(--elevation-3);
 }
 
-body[data-theme='light'] .post-preview:hover {
-  box-shadow: 0 4px 10px rgba(26, 187, 209, 0.15);
+body[data-theme='light'] a:hover .post-preview,
+body[data-theme='light'] a:focus .post-preview {
+  box-shadow: 0 4px 10px hsla(187, 78%, 46%, 0.2);
 }
 </style>
