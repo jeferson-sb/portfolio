@@ -1,9 +1,11 @@
 <template>
   <Layout>
-    <HeroSection />
-    <PostsList />
-    <ProjectsGrid />
-    <GithubProjects />
+    <main>
+      <HeroSection />
+      <PostsList />
+      <ProjectsGrid />
+      <GithubProjects />
+    </main>
   </Layout>
 </template>
 

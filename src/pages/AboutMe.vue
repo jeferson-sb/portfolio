@@ -15,7 +15,7 @@
       </aside>
       <main>
         <article class="about-content">
-          <h2 class="about-content__headline">About me</h2>
+          <h1 class="about-content__headline">About me</h1>
           <p>
             I'm software developer consultant focused in Front-end Web
             Developement.
@@ -48,6 +48,11 @@ export default {
     HeroAvatar,
     SocialMediaIcons,
     BinaryTextSVG,
+  },
+  metaInfo() {
+    return {
+      title: 'About me',
+    }
   },
 }
 </script>
