@@ -25,7 +25,7 @@ export default {
   align-items: center;
   width: 323px;
   height: 275px;
-  background-color: var(--bg-color-primary-lighter, var(--color-black-800));
+  background-color: var(--bg-color-primary-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
   box-shadow: var(--elevation-2);
 }

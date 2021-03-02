@@ -42,7 +42,7 @@ export default {
   width: 100%;
   height: 60px;
   font-family: var(--font-title);
-  border-bottom: 1px solid var(--color-black-800);
+  border-bottom: 1px solid var(--color-gray-800);
   z-index: 1;
 }
 
@@ -52,7 +52,6 @@ export default {
 }
 
 .header a {
-  text-decoration: none;
   color: var(--text-color-default);
   transition-property: font-weight;
   transition-duration: 200ms;
@@ -99,9 +98,14 @@ export default {
   transition: transform 0.2s ease-out;
 }
 
+.navbar .navbar-menu li a {
+  outline: 0;
+}
+
 .navbar .navbar-menu li:hover a {
   font-weight: 500;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar .navbar-menu li:not(.no-effect):hover::before {

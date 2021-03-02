@@ -124,7 +124,7 @@ query Article ($path: String) {
 
 <style>
 .article-heading {
-  background-color: var(--accent-color-lighter, var(--color-black-800));
+  background-color: var(--accent-color-lighter, var(--color-gray-800));
   padding: calc(2vw + 85px) calc(1vw + 385px);
   max-height: 340px;
   box-shadow: var(--elevation-2);
@@ -223,7 +223,7 @@ body[data-theme='light'] .article-heading {
 .article-body code:not([class*='language-']) {
   font-family: var(--font-mono);
   padding: 2px 6px;
-  background-color: var(--accent-color-lighter, var(--color-black-700));
+  background-color: var(--accent-color-lighter, var(--color-gray-700));
   border-radius: var(--radius-default);
   letter-spacing: -0.5px;
 }
@@ -234,7 +234,7 @@ body[data-theme='light'] .article-heading {
 
 .article-body blockquote {
   border-left: 2px solid var(--color-primary);
-  background-color: var(--accent-color-lighter, var(--color-black-800));
+  background-color: var(--accent-color-lighter, var(--color-gray-800));
   padding: 1.2rem 2rem;
   border-radius: var(--radius-default);
 }
@@ -260,14 +260,8 @@ body[data-theme='light'] .article-heading {
 }
 
 .article-body a {
-  color: var(--color-primary);
-  text-decoration: none;
   position: relative;
-}
-
-.article-body a:active,
-.article-body a:focus {
-  outline: 2px dashed var(--color-primary);
+  text-decoration: none;
 }
 
 .article-body a::after {

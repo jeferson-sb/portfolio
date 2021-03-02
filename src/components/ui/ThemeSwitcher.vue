@@ -123,7 +123,7 @@ export default {
 }
 
 .off .lamp-on-holder {
-  fill: var(--color-black-800);
+  fill: var(--color-gray-800);
 }
 
 .off .lamp-on-shadow,

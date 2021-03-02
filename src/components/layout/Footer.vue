@@ -53,7 +53,7 @@ export default {
 .footer {
   width: 100%;
   height: 60px;
-  border-top: 1px solid var(--color-black-800);
+  border-top: 1px solid var(--color-gray-800);
   margin-top: 40px;
 }
 
@@ -70,8 +70,8 @@ export default {
 
 .footer__copyright span {
   margin-left: 8px;
-  opacity: 0.35;
   font-weight: 700;
+  opacity: 0.6;
   color: var(--text-color-default);
 }
 

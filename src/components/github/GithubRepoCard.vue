@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .github-repo-card {
   padding: 18px 28px;
-  background-color: var(--bg-color-lighter, var(--color-black-800));
+  background-color: var(--bg-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
   color: var(--text-color-default);
   flex: 1 1 220px;
@@ -56,20 +56,6 @@ export default {
 .github-repo-card__title {
   font-family: var(--font-sans);
   font-size: var(--text-lg);
-}
-
-.github-repo-card__title a {
-  text-decoration: none;
-  color: var(--color-primary);
-}
-
-.github-repo-card__title a:hover {
-  text-decoration: underline;
-}
-
-.github-repo-card__title a:active,
-.github-repo-card__title a:focus {
-  outline: 2px dashed var(--color-primary);
 }
 
 .github-repo-card__description {
@@ -101,7 +87,7 @@ export default {
 }
 
 body[data-theme='light'] .github-repo-card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: var(--border);
 }
 
 body[data-theme='light'] .github-repo-card__description {
