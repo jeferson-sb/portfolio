@@ -11,7 +11,6 @@
     "prettier": "prettier 'src/**/*.js' -w"
   },
   "dependencies": {
-    "@chiubaca/gridsome-source-devto": "^0.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -23,7 +22,9 @@
     "axios": "^0.21.1",
     "gridsome": "^0.7.23",
     "gridsome-plugin-i18n": "^1.6.0",
-    "gridsome-plugin-svg": "^0.0.14"
+    "gridsome-plugin-remark-prismjs-all": "^0.3.5",
+    "gridsome-plugin-svg": "^0.0.14",
+    "remark-attr": "^0.11.1"
   },
   "devDependencies": {
     "eslint": "^7.16.0",
