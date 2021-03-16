@@ -12,6 +12,8 @@
   --color-gray-200: hsl(214, 9%, 75%);
   --color-gray-100: hsl(214, 9%, 85%);
   --text-color-default: var(--color-default-white);
+  --code-bg-color: hsl(220, 13%, 18%);
+  --code-highlight-color: hsla(187, 78%, 46%, 0.05);
   --text-xsm: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;

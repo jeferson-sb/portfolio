@@ -2,6 +2,8 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import '~/assets/styles/reset.css'
 import '~/assets/styles/global.css'
+import '~/assets/styles/prism-onedark.css'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 export default (Vue, { appOptions, head }) => {
   Vue.component('Layout', DefaultLayout)
@@ -15,10 +17,10 @@ export default (Vue, { appOptions, head }) => {
       'data-cache': true,
       'data-website-id': process.env.ANALYTICS_WEBSITE_ID,
     })
-  }
 
-  head.meta.push({
-    name: 'google-site-verification',
-    content: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN,
-  })
+    head.meta.push({
+      name: 'google-site-verification',
+      content: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN,
+    })
+  }
 }

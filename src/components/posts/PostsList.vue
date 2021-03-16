@@ -2,12 +2,12 @@
   <div class="posts-list container">
     <h3>Latest Posts</h3>
     <PostPreview
-      v-for="edge in $static.posts.edges"
-      :key="edge.node.id"
-      :title="edge.node.title"
-      :date="new Date(edge.node.published_at)"
-      :href="`/articles/${edge.node.slug}`"
-      :articleId="`article-${edge.node.id}`"
+      v-for="post in allPosts"
+      :key="post.node.id"
+      :title="post.node.title"
+      :date="new Date(post.node.published_at)"
+      :href="`/articles/${post.node.slug}`"
+      :articleId="`article-${post.node.id}`"
     />
   </div>
 </template>
@@ -19,19 +19,24 @@ export default {
   components: {
     PostPreview,
   },
+  computed: {
+    allPosts() {
+      return [...this.$static.posts.edges]
+    },
+  },
 }
 </script>
 
 <static-query>
 query {
-  posts: allArticles(sortBy: "published_at") {
-     edges {
+	posts: allArticles(sortBy: "published_at", limit: 3) {
+    edges {
       node {
-        id,
-        title,
-        published_at,
+        id
+        title
+        published_at
         slug
-			}
+      }
     }
   }
 }
