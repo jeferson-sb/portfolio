@@ -3,28 +3,25 @@
     <main>
       <article class="article">
         <div class="article-heading">
-          <h1>{{ $page.article.title }}</h1>
+          <h1>{{ article.title }}</h1>
           <p class="article-info">
-            <time :datetime="$page.article.published_at">
+            <time :datetime="article.published_at">
               {{ formattedDate }}
             </time>
             <span
               class="article-source"
-              v-if="
-                $page.article.crosspostedOn[0] &&
-                $page.article.crosspostedOn[0].link
-              "
+              v-if="article.crosspostedOn && article.crosspostLink"
             >
               Originally posted on
               <a
-                :href="$page.article.crosspostedOn[0].link"
+                :href="article.crosspostLink"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {{ $page.article.crosspostedOn[0].name }}
+                {{ article.crosspostedOn }}
               </a>
             </span>
-            <TagGroup :tags="$page.article.tags.split(',')" />
+            <TagGroup :tags="tags" />
           </p>
         </div>
         <section class="container">
@@ -46,7 +43,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.article.title,
+      title: this.article.title,
       link: [
         {
           rel: 'stylesheet',
@@ -61,11 +58,11 @@ export default {
       meta: [
         {
           property: 'og:title',
-          content: this.$page.article.title,
+          content: this.article.title,
         },
         {
           property: 'og:description',
-          content: this.$page.article.excerpt,
+          content: this.article.excerpt,
         },
         {
           property: 'og:url',
@@ -73,32 +70,39 @@ export default {
         },
         {
           name: 'twitter:title',
-          content: this.$page.article.title,
+          content: this.article.title,
         },
         {
           name: 'twitter:description',
-          content: this.$page.article.excerpt,
+          content: this.article.excerpt,
         },
         {
           name: 'description',
-          content: this.$page.article.excerpt,
+          content: this.article.excerpt,
         },
       ],
     }
   },
   computed: {
+    article() {
+      return {
+        ...this.$page.article,
+      }
+    },
     formattedDate() {
-      return new Date(this.$page.article.published_at).toLocaleString(
-        ['en-US'],
-        {
-          day: '2-digit',
-          month: 'short',
-          year: 'numeric',
-        }
-      )
+      return new Date(this.article.published_at).toLocaleString(['en-US'], {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+      })
     },
     canonicalUrl() {
-      return `${this.$page.site.siteUrl}${this.$page.article.path}`
+      return this.article.canonicalUrl
+        ? this.article.canonicalUrl
+        : `${this.$page.site.siteUrl}${this.article.path}`
+    },
+    tags() {
+      return this.article.tags.split(',')
     },
   },
 }
@@ -112,10 +116,9 @@ query Article ($path: String) {
     published_at
     tags
     excerpt
-    crosspostedOn {
-      name
-      link
-    }
+    crosspostedOn
+    crosspostLink
+    canonicalUrl
   }
   site: metadata {
     siteUrl

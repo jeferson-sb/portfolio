@@ -30,6 +30,7 @@ export default {
       return this.date.toLocaleString(['en-US'], {
         day: '2-digit',
         month: 'short',
+        year: '2-digit',
       })
     },
   },
@@ -62,7 +63,7 @@ a:focus .post-preview {
 }
 
 .post-preview__date {
-  flex-basis: 60px;
+  flex-basis: 80px;
   opacity: 0.7;
   color: var(--secondary-text-color, var(--color-default-white));
 }
