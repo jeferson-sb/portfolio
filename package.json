@@ -27,7 +27,7 @@
     "remark-attr": "^0.11.1"
   },
   "devDependencies": {
-    "eslint": "^7.16.0",
+    "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "^2.22.1",
