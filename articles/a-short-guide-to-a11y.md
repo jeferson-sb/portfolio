@@ -70,7 +70,7 @@ Adopting keyboard-navigation techniques brings a lot of benefits for users with 
 
 You probably might know this already, but we can provide an **alternative text** so users and search engines can understand the image. It also used to display the text whenever the image is not available.
 
-![The Colosseum in Rome](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fca115af-cc00-418d-a5c7-5628f01fb2a6/clay-banks-hi_52O-h5G8-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210315%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210315T001934Z&X-Amz-Expires=86400&X-Amz-Signature=363b05db9dcb94e9b00135f1c2c44a1d56c4bf6fee7c2aa7729e66c83ac57dbc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22clay-banks-hi_52O-h5G8-unsplash.jpg%22)
+<g-image src="../uploads/colosseum.jpg" alt="The Colosseum in Rome" />
 
 ```html
 <img alt="The Colosseum in Rome" ... />

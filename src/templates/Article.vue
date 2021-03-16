@@ -322,6 +322,7 @@ body[data-theme='light'] .article-heading {
   background-color: var(--accent-color-lighter, var(--color-gray-800));
   padding: 1.2rem 2rem;
   border-radius: var(--radius-default);
+  margin-bottom: 1rem;
 }
 
 .article-body-content blockquote p {
