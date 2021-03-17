@@ -15,15 +15,14 @@
       <p class="post-preview__description">
         {{ excerpt }}
       </p>
-      <g-link :to="href" class="button" :aria-describedby="articleId"
-        >Read more</g-link
-      >
+      <Button :to="href" :aria-describedby="articleId"> Read more </Button>
     </template>
   </article>
 </template>
 
 <script>
 import TagGroup from '@/components/ui/TagGroup'
+import Button from '@/components/ui/Button.vue'
 
 export default {
   props: {
@@ -53,6 +52,7 @@ export default {
   },
   components: {
     TagGroup,
+    Button,
   },
   computed: {
     styles() {
@@ -107,11 +107,6 @@ export default {
 
 .post-preview--long .post-preview__title {
   font-size: var(--text-xl);
-}
-
-.post-preview--long .button {
-  max-width: fit-content;
-  border-radius: var(--radius-default);
 }
 
 .post-preview--long .post-preview__date {

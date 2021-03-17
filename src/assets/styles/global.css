@@ -59,27 +59,6 @@ body {
   }
 }
 
-.button {
-  --button-bg-color: var(--color-gray-600);
-
-  display: inline-block;
-  text-align: center;
-  padding: 8px 16px;
-  color: inherit;
-  background-color: var(--button-bg-color);
-  transition: filter 0.3s ease-in-out;
-}
-
-.button:hover {
-  filter: brightness(70%);
-}
-
-.button:focus {
-  border-color: var(--color-primary);
-  outline: 0;
-  box-shadow: 0 0 0 0.19rem hsla(187, 78%, 46%, 0.366);
-}
-
 ::selection {
   background: var(--color-primary);
   color: var(--text-color-default);
@@ -111,9 +90,5 @@ a:focus {
 a:not([href]) {
   color: var(--text-color-default);
   opacity: 0.8;
-  cursor: not-allowed;
-}
-
-button[disabled] {
   cursor: not-allowed;
 }

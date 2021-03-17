@@ -4,7 +4,7 @@
       <aside>
         <HeroAvatar>
           <g-image
-            src="@/assets/img/me.jpg"
+            src="@/assets/img/profile.jpg"
             alt="me"
             class="hero-avatar__image"
             quality="100"

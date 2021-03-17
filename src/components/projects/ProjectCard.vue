@@ -10,14 +10,15 @@
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="project.tags.split(',')" />
-        <g-link
+        <Button
+          variant="primary"
+          full
           :to="project.github"
-          class="button"
           :id="buttonId"
           :aria-labelledby="`${titleId} ${buttonId}`"
         >
           Github
-        </g-link>
+        </Button>
       </div>
     </div>
   </div>
@@ -25,10 +26,12 @@
 
 <script>
 import TagGroup from '@/components/ui/TagGroup.vue'
+import Button from '@/components/ui/Button.vue'
 
 export default {
   components: {
     TagGroup,
+    Button,
   },
   props: {
     project: {
@@ -84,16 +87,6 @@ export default {
 
 .project-card .project-card__header p {
   opacity: 0.7;
-}
-
-.project-card .project-card__footer .button {
-  --button-bg-color: var(--color-primary);
-
-  border-radius: var(--radius-default);
-  width: 100%;
-  text-decoration: none;
-  font-weight: 700;
-  color: var(--color-default-black);
 }
 
 body[data-theme='light'] .project-card__content {

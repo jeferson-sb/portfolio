@@ -9,16 +9,18 @@
       :href="`/articles/${post.node.slug}`"
       :articleId="`article-${post.node.id}`"
     />
-    <g-link to="/articles" class="button">View all</g-link>
+    <Button variant="outline" to="/articles">View all</Button>
   </div>
 </template>
 
 <script>
+import Button from '@/components/ui/Button.vue'
 import PostPreview from './PostPreview.vue'
 
 export default {
   components: {
     PostPreview,
+    Button,
   },
   computed: {
     allPosts() {
@@ -53,16 +55,6 @@ query {
   width: 100%;
   text-transform: uppercase;
   margin-bottom: 33px;
-}
-
-/* TODO: create dedicated component */
-.posts-list .button {
-  border-radius: var(--radius-default);
-  background: transparent;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-  text-decoration: none;
-  font-weight: 700;
 }
 
 @media screen and (max-width: 1024px) {
