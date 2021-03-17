@@ -34,6 +34,7 @@ export default {
 <style scoped>
 .button-group {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .button-group .button {

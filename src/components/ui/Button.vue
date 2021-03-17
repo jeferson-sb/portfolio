@@ -69,9 +69,11 @@ export default {
   background-color: var(--button-bg-color);
   font-weight: var(--fw);
   transition: filter 0.3s ease-in-out;
+  border-radius: var(--radius-default);
 }
 
 .button:hover {
+  text-decoration: none;
   filter: brightness(70%);
 }
 
@@ -79,6 +81,10 @@ export default {
   outline: 0;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 0.19rem var(--shadow-color);
+}
+
+.button::after {
+  all: unset;
 }
 
 .button--primary {
@@ -99,6 +105,7 @@ export default {
 .button--link {
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
+  color: var(--text-color-default);
 }
 
 .button--link:hover {
@@ -121,6 +128,7 @@ export default {
 
 .button--full {
   width: 100%;
+  max-width: 100%;
 }
 
 .button[disabled] {
