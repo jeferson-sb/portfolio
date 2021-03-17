@@ -4,7 +4,7 @@ title: Create a simple Note-taking app with Deno
 slug: create-a-simple-note-taking-app-with-deno-3k7g
 published_at: 2020-05-20T21:33:59.131Z
 tags: deno,javascript,typescript,tutorial
-excerpt: Write your first cli application with Deno
+excerpt: Since Deno 1.0 version was released last week it started to really caught the attetion of all us from the JavaScript Community, especially on the server-side of the JavaScript ecosystem. Deno isn't just a new Technology...
 crosspostedOn: Dev.to
 crosspostLink: https://dev.to/jeferson_sb/create-a-simple-note-taking-app-with-deno-3k7g
 url: https://dev.to/jeferson_sb/create-a-simple-note-taking-app-with-deno-3k7g
