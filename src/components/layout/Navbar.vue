@@ -10,7 +10,7 @@
             <ThemeSwitcher variant="transform" />
           </li>
           <li>
-            <g-link class="navbar-menu__link" to="/"> Posts </g-link>
+            <g-link class="navbar-menu__link" to="/articles"> Articles </g-link>
           </li>
           <li>
             <g-link class="navbar-menu__link" to="/about-me">About</g-link>

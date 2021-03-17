@@ -21,7 +21,7 @@
             Developement.
           </p>
           <p>
-            I’m Developer that aim promoting and delivering the best quality
+            I’m a Developer that aim promoting and delivering the best quality
             products. Someone who believes that perseverance, effort and
             determination leads to the best results.
           </p>
