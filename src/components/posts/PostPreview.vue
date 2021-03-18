@@ -158,4 +158,10 @@ body[data-theme='light'] a:hover .post-preview,
 body[data-theme='light'] a:focus .post-preview {
   box-shadow: 0 4px 10px hsla(187, 78%, 46%, 0.2);
 }
+
+@media screen and (max-width: 425px) {
+  .post-preview-metadata {
+    margin-right: 7px;
+  }
+}
 </style>

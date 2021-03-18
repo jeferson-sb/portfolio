@@ -214,6 +214,7 @@ body[data-theme='light'] .article-heading {
 
 .article-body-content p {
   margin-bottom: 16px;
+  word-break: break-word;
 }
 
 .article-body-content a[aria-hidden] {
@@ -405,9 +406,18 @@ body[data-theme='light'] .article-heading {
     margin-bottom: 7px;
   }
 
+  .article-body {
+    max-width: 100%;
+  }
+
   .article-body-content {
     padding-left: 18px;
     padding-right: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  .article-body-content > * {
+    grid-column: 1;
   }
 
   .article-body-content p {
