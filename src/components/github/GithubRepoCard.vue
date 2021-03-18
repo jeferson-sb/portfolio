@@ -1,21 +1,23 @@
 <template>
   <div class="github-repo-card">
     <h4 class="github-repo-card__title">
-      <a href="https://github.com">{{ repository.name }}</a>
+      <g-link :to="pullRequest.repository.url">
+        {{ pullRequest.repository.nameWithOwner }}
+      </g-link>
     </h4>
-    <p class="github-repo-card__description">{{ repository.description }}</p>
+    <p class="github-repo-card__description">
+      {{ pullRequest.repository.description }}
+    </p>
     <p class="github-repo-details">
       <span class="github-repo-language">
         <CircleFillSVG />
-        <span>{{ repository.language }}</span>
+        <span>{{ pullRequest.repository.primaryLanguage.name }}</span>
       </span>
-      <span class="github-repo-stars">
-        <StarFilledSVG />
-        <span>{{ repository.stars }}</span>
-      </span>
-      <span class="github-repo-prs">
-        <PullRequestSVG />
-        <span>{{ repository.prs }}</span>
+      <span class="github-repo-pullrequest">
+        <g-link :to="pullRequest.url">
+          <PullRequestSVG />
+          <span>Last PR #{{ pullRequest.number }}</span>
+        </g-link>
       </span>
     </p>
   </div>
@@ -23,18 +25,16 @@
 
 <script>
 import PullRequestSVG from '@/assets/svg/git-pull-request.svg'
-import StarFilledSVG from '@/assets/svg/star-fill.svg'
 import CircleFillSVG from '@/assets/svg/circle-fill.svg'
 
 export default {
   props: {
-    repository: {
+    pullRequest: {
       type: Object,
     },
   },
   components: {
     PullRequestSVG,
-    StarFilledSVG,
     CircleFillSVG,
   },
 }
@@ -46,11 +46,6 @@ export default {
   background-color: var(--bg-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
   color: var(--text-color-default);
-  flex: 1 1 220px;
-}
-
-.github-repo-card + .github-repo-card {
-  margin-left: 10px;
 }
 
 .github-repo-card__title {
@@ -63,6 +58,7 @@ export default {
 }
 
 .github-repo-details {
+  display: flex;
   margin-top: 18px;
   color: var(--text-color-default);
 }
@@ -73,7 +69,13 @@ export default {
 }
 
 .github-repo-details span + span {
-  margin-left: 32px;
+  margin-left: 12px;
+}
+
+.github-repo-language,
+.github-repo-pullrequest a {
+  display: flex;
+  align-items: center;
 }
 
 .github-repo-language svg {
@@ -92,12 +94,5 @@ body[data-theme='light'] .github-repo-card {
 
 body[data-theme='light'] .github-repo-card__description {
   color: var(--color-gray-500);
-}
-
-@media screen and (max-width: 425px) {
-  .github-repo-card + .github-repo-card {
-    margin-left: 0;
-    margin-top: 32px;
-  }
 }
 </style>
