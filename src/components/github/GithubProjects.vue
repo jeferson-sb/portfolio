@@ -4,9 +4,9 @@
     <h4>Latest contributions</h4>
     <div class="github-repositories">
       <GithubRepoCard
-        v-for="repo in repositories"
-        :key="repo.id"
-        :repository="repo"
+        v-for="pr in pullRequests"
+        :key="pr.node.id"
+        :pullRequest="pr.node"
       />
     </div>
   </section>
@@ -19,32 +19,58 @@ export default {
   components: {
     GithubRepoCard,
   },
-  data() {
-    return {
-      repositories: [
-        {
-          id: 1,
-          name: 'Grommet',
-          description:
-            'a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package',
-          language: 'JavaScript',
-          stars: 7000,
-          prs: 245,
-        },
-        {
-          id: 2,
-          name: 'Grommet',
-          description:
-            'a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package',
-          language: 'JavaScript',
-          stars: 7000,
-          prs: 245,
-        },
-      ],
-    }
+  computed: {
+    pullRequests() {
+      return this.$static.userInfo.user.pullRequests.edges.filter(
+        (pr, i, arr) => {
+          const isFork = pr.node.isCrossRepository
+          const isRecent = new Date(pr.node.createdAt) >= this.lastThreeMonths
+          const nonDuplicate =
+            arr.findIndex(
+              (x) => x.node.repository.id === pr.node.repository.id
+            ) === i
+          return isFork && isRecent && nonDuplicate
+        }
+      )
+    },
+    lastThreeMonths() {
+      const d = new Date()
+      d.setMonth(d.getMonth() - 3)
+      return d
+    },
   },
 }
 </script>
+
+<static-query>
+query {
+  userInfo {
+    user(login: "jeferson-sb") {
+      pullRequests(last: 50, orderBy: { field: CREATED_AT, direction: DESC }) {
+        edges {
+          node {
+            id
+            number
+            url
+            createdAt
+            isCrossRepository
+            repository {
+              id
+              isPrivate
+              nameWithOwner
+              url
+              description
+              primaryLanguage {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</static-query>
 
 <style scoped>
 .github-projects,
@@ -54,11 +80,8 @@ export default {
 
 .github-projects h3,
 .github-projects h4 {
-  text-transform: uppercase;
-}
-
-.github-projects h3 {
   flex-basis: 100%;
+  text-transform: uppercase;
 }
 
 .github-projects h4 {
@@ -68,8 +91,10 @@ export default {
 }
 
 .github-repositories {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
