@@ -32,6 +32,17 @@ module.exports = {
       },
     },
     {
+      use: '@gridsome/source-graphql',
+      options: {
+        url: 'https://api.github.com/graphql',
+        fieldName: 'userInfo',
+        typeName: 'User',
+        headers: {
+          Authorization: `token ${process.env.GITHUB_TOKEN}`,
+        },
+      },
+    },
+    {
       use: 'gridsome-plugin-svg',
     },
   ],
