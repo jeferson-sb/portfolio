@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!isAnchor" :class="styles" v-bind="$attrs">
+  <button v-if="!isAnchor" :class="styles" v-bind="$attrs" v-on="$listeners">
     <slot name="icon"></slot>
     <slot />
   </button>
@@ -49,7 +49,7 @@ export default {
       }
     },
     isAnchor() {
-      return this.variant === 'link' || this.to !== ''
+      return this.variant === 'link' || Boolean(this.to)
     },
   },
 }

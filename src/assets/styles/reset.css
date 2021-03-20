@@ -9,6 +9,7 @@
 ul[class],
 ol[class] {
   padding: 0;
+  list-style: none;
 }
 
 /* Remove default margin */
@@ -35,12 +36,6 @@ body {
   text-rendering: optimizeLegibility;
   line-height: 1.5;
   scroll-behavior: smooth;
-}
-
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */

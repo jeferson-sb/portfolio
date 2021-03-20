@@ -1,7 +1,9 @@
 <template>
   <div>
     <Navbar />
-    <slot />
+    <transition name="fade" appear>
+      <slot />
+    </transition>
     <Footer />
   </div>
 </template>
@@ -66,5 +68,13 @@ body[data-theme='light'] header {
 
 body[data-theme='dark'] img {
   filter: brightness(0.8);
+}
+
+.fade-enter-active {
+  transition: opacity 600ms;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 </style>

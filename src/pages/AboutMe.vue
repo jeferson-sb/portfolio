@@ -17,8 +17,8 @@
         <article class="about-content">
           <h1 class="about-content__headline">About me</h1>
           <p>
-            I'm software developer consultant focused in Front-end Web
-            Developement.
+            I'm <strong>software developer consultant</strong> focused in
+            <em>Front-end Web Developement</em>.
           </p>
           <p>
             I’m a Developer that aim promoting and delivering the best quality
@@ -26,10 +26,11 @@
             determination leads to the best results.
           </p>
           <p>
-            I am always focused on proving the best practices, fundamentals and
-            consistency through out the code, passionated about the entire
-            JavaScript ecosystem and that loves a good experience and delightful
-            user interfaces.
+            I am always focused on proving the
+            <strong>
+              best practices, fundamentals and consistency through out the code </strong
+            >, passionated about the entire JavaScript ecosystem and that loves
+            a good experience and delightful user interfaces.
           </p>
           <SocialMediaIcons boxed />
         </article>
