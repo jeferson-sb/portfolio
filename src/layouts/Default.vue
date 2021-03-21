@@ -2,7 +2,9 @@
   <div>
     <Navbar />
     <transition name="fade" appear>
-      <slot />
+      <template>
+        <slot />
+      </template>
     </transition>
     <Footer />
   </div>
