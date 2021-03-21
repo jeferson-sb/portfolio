@@ -59,6 +59,10 @@ body {
   }
 }
 
+.overflow--hidden {
+  overflow: hidden;
+}
+
 ::selection {
   background: var(--color-primary);
   color: var(--text-color-default);

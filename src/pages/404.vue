@@ -57,18 +57,22 @@ export default {
     }
   },
   mounted() {
+    document.querySelector('body').classList.add('overflow--hidden')
+
     this.gen = this.typeCommands()
     this.gen.next()
-    // create timeline
-    setTimeout(() => {
+
+    const t = this.timeline({ start: this.errorDelay })
+    t.set('message1', () => {
       this.nextLine += 1
-    }, this.errorDelay)
-    setTimeout(() => {
+    })
+    t.set('message2', () => {
       this.nextLine += 1
-    }, this.errorDelay + 1500)
-    setTimeout(() => {
+    })
+    t.set('die', () => {
       this.isComputerDead = true
-    }, this.errorDelay + 2500)
+    })
+    t.play()
   },
   computed: {
     consoleStyles() {
@@ -79,7 +83,7 @@ export default {
     },
   },
   methods: {
-    async typing(command) {
+    typing(command) {
       let i = 0
       const timer = setInterval(() => {
         if (i < command.length) {
@@ -101,15 +105,29 @@ export default {
       yield this.typing(this.commands[1])
       yield this.typing(this.commands[2])
     },
+    timeline({ start }) {
+      let timeQueue = start
+      const scenes = []
+
+      const play = () => {
+        scenes.forEach((scene) => {
+          setTimeout(scene.cb, scene.timeStart)
+        })
+      }
+
+      const set = (name, cb) => {
+        timeQueue += 1500
+        scenes.push({ name, cb, timeStart: timeQueue })
+      }
+
+      return {
+        play,
+        set,
+      }
+    },
   },
 }
 </script>
-
-<style>
-body {
-  overflow: hidden;
-}
-</style>
 
 <style scoped>
 main {
