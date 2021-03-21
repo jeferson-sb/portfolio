@@ -71,9 +71,7 @@ export default {
       isCrashing: false,
     }
   },
-  created() {
-    document.querySelector('body').classList.add('overflow--hidden')
-
+  mounted() {
     this.gen = this.typeCommands()
     this.gen.next()
 
@@ -89,6 +87,8 @@ export default {
       this.isComputerDead = true
     })
     t.play()
+
+    document.querySelector('body').classList.add('overflow--hidden')
   },
   computed: {
     consoleStyles() {
