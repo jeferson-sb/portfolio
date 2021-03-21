@@ -6,7 +6,7 @@
       :key="post.node.id"
       :title="post.node.title"
       :date="new Date(post.node.published_at)"
-      :href="`/articles/${post.node.slug}`"
+      :href="`/articles/${post.node.slug}/`"
       :articleId="`article-${post.node.id}`"
     />
     <Button variant="outline" to="/articles">View all</Button>

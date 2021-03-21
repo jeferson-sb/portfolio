@@ -1,7 +1,6 @@
 const path = require('path')
 const axios = require('axios')
 
-const hello = require('./src/api/hello')
 const DevToArticleAdapter = require('./lib/adapters/DevToArticleAdapter')
 const { writeFileOn, transformMarkdown } = require('./lib/md')
 
@@ -23,9 +22,5 @@ module.exports = function serverSetup(api) {
         writeFileOn(filePath, data)
       )
     })
-  })
-
-  api.configureServer((app) => {
-    app.get('/api/hello', hello)
   })
 }

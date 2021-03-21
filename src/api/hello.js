@@ -1,15 +1,17 @@
 const axios = require('axios')
 
-async function handler(request, response) {
+exports.handler = async (event, context) => {
   try {
     const { data } = await axios.get('https://v2.jokeapi.dev/joke/programming')
 
-    return response.status(200).json({
-      joke: data.joke || data.delivery,
-    })
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ joke: data.joke || data.delivery }),
+    }
   } catch (error) {
-    return response.status(400).json({ error: 'Oof.. Something went bad' })
+    return {
+      statusCode: 500,
+      body: { error: 'Oof.. Something went bad' },
+    }
   }
 }
-
-module.exports = handler
