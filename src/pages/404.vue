@@ -71,7 +71,7 @@ export default {
       isCrashing: false,
     }
   },
-  mounted() {
+  created() {
     document.querySelector('body').classList.add('overflow--hidden')
 
     this.gen = this.typeCommands()

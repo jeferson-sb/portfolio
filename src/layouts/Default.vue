@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <Navbar />
-    <transition name="fade" appear>
-      <template>
-        <slot />
-      </template>
-    </transition>
-    <Footer />
-  </div>
+  <transition name="fade" appear>
+    <div>
+      <Navbar />
+      <slot />
+      <Footer />
+    </div>
+  </transition>
 </template>
 
 <script>
