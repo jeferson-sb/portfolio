@@ -1,43 +1,57 @@
 <template>
   <main>
-    <div v-if="!isComputerDead" class="content">
-      <g-image
-        src="@/assets/img/meme.png"
-        alt="Doge"
-        class="doge"
-        width="200"
-      />
+    <transition name="swirl">
+      <div v-if="!isComputerDead" class="content">
+        <g-image
+          src="@/assets/img/meme.png"
+          alt="Doge"
+          class="doge"
+          width="200"
+        />
+        <g-image
+          src="@/assets/img/water_drop.png"
+          alt="water drop"
+          class="sweat"
+          width="30"
+          v-if="isCrashing"
+        />
 
-      <div :class="consoleStyles">
-        <pre>me@cia ~ $ {{ commandHistory[0] || prompt }} <span class="cursor" v-show="nextLine === 1"></span></pre>
-        <pre
-          v-show="nextLine >= 2"
-        >Enter password: {{ commandHistory[1] || prompt }} <span class="cursor" v-show="nextLine === 2"></span></pre>
-        <pre
-          v-show="nextLine >= 3"
-        >mysql> {{ commandHistory[2] || prompt }}<span class="cursor" v-show="nextLine === 3"></span></pre>
-        <pre class="breakline" v-show="nextLine >= 4">uh-oh....</pre>
-        <pre class="breakline" v-show="nextLine >= 5">
+        <div :class="consoleStyles">
+          <pre>me@cia ~ $ {{ commandHistory[0] || prompt }} <span class="cursor" v-show="nextLine === 1"></span></pre>
+          <pre
+            v-show="nextLine >= 2"
+          >Enter password: {{ commandHistory[1] || prompt }} <span class="cursor" v-show="nextLine === 2"></span></pre>
+          <pre
+            v-show="nextLine >= 3"
+          >mysql> {{ commandHistory[2] || prompt }}<span class="cursor" v-show="nextLine === 3"></span></pre>
+          <pre class="breakline" v-show="nextLine >= 4">uh-oh....</pre>
+          <pre class="breakline" v-show="nextLine >= 5">
 [ERROR] ... beep boop ...</pre
-        >
-      </div>
+          >
+        </div>
 
-      <p class="credits">
-        (Credits for the console illustration to
-        <g-link to="https://codepen.io/joseluisq">Jose Quintana</g-link>)
-      </p>
-    </div>
-    <h1 v-else class="error">Not found</h1>
+        <p class="credits">
+          (Credits for the console illustration to
+          <g-link to="https://codepen.io/joseluisq">Jose Quintana</g-link>)
+        </p>
+      </div>
+      <h1 v-else class="error">
+        Not found
+        <Button to="/" variant="outline">Go back home</Button>
+      </h1>
+    </transition>
     <SpotLightSVG class="spotlight" />
   </main>
 </template>
 
 <script>
 import SpotLightSVG from '@/assets/svg/spotlight.svg'
+import Button from '@/components/ui/Button.vue'
 
 export default {
   components: {
     SpotLightSVG,
+    Button,
   },
   metaInfo() {
     return {
@@ -47,13 +61,14 @@ export default {
   data() {
     return {
       speed: 100,
-      errorDelay: 9000,
+      errorDelay: 6000,
       prompt: '',
       commandHistory: [],
       commands: ['mysql -u root -p', '*******', 'DELETE FROM secret_stuff'],
       nextLine: 1,
       gen: null,
       isComputerDead: false,
+      isCrashing: false,
     }
   },
   mounted() {
@@ -68,6 +83,7 @@ export default {
     })
     t.set('message2', () => {
       this.nextLine += 1
+      this.isCrashing = true
     })
     t.set('die', () => {
       this.isComputerDead = true
@@ -78,7 +94,7 @@ export default {
     consoleStyles() {
       return {
         console: true,
-        'console--burning': false,
+        'console--burning': this.isCrashing,
       }
     },
   },
@@ -143,6 +159,10 @@ main {
   font-size: var(--text-3xl);
   text-transform: uppercase;
   letter-spacing: 10px;
+}
+
+.error .button {
+  font-size: var(--text-xl);
 }
 
 .content {
@@ -225,11 +245,20 @@ main {
   z-index: 1;
 }
 
+.sweat {
+  position: absolute;
+  left: -90px;
+  top: 213px;
+  z-index: 1;
+}
+
 .credits {
   opacity: 0.5;
   margin-top: 10px;
   margin-left: 50px;
-  font-size: var(--text-xl);
+  font-size: var(--text-sm);
+  text-align: right;
+  font-weight: 700;
 }
 
 .cursor {
@@ -249,6 +278,38 @@ main {
   z-index: -1;
   opacity: 0.2;
   animation: spotlight 5s infinite alternate ease-in-out;
+}
+
+.swirl-enter-active {
+  animation: swirl-in 3s 1s ease-out both;
+}
+
+@keyframes swirl-in {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.swirl-leave-active {
+  animation: swirl-out 0.4s ease-in forwards;
+}
+
+@keyframes swirl-out {
+  0% {
+    transform: rotate(0) scale(1);
+    display: block;
+  }
+
+  100% {
+    transform: rotate(-540deg) scale(0);
+    display: none;
+  }
 }
 
 @keyframes spotlight {
@@ -281,6 +342,21 @@ main {
 
   50% {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+
+  .doge {
+    left: -67px;
+    bottom: 9px;
+  }
+
+  .spotlight {
+    display: none;
   }
 }
 </style>
