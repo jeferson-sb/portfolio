@@ -10,3 +10,4 @@ dist
 .netlify
 articles/draft/
 articles/draft/*
+*:Zone.Identifier
