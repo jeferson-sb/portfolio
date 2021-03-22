@@ -88,7 +88,10 @@ export default {
     })
     t.play()
 
-    document.querySelector('body').classList.add('overflow--hidden')
+    document.body.classList.add('overflow--hidden')
+  },
+  destroyed() {
+    document.body.classList.remove('overflow--hidden')
   },
   computed: {
     consoleStyles() {
