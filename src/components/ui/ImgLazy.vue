@@ -48,4 +48,10 @@ export default {
 .lozad {
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  .lozad {
+    height: auto;
+  }
+}
 </style>
