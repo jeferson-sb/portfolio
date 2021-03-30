@@ -17,6 +17,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/vue-remark": "^0.2.6",
     "axios": "^0.21.1",
+    "firebase": "^8.3.1",
     "gridsome": "^0.7.23",
     "gridsome-plugin-i18n": "^1.6.0",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
