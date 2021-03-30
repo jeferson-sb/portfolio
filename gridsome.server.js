@@ -17,7 +17,7 @@ module.exports = function serverSetup(api) {
 
     articles.forEach(async (article) => {
       const fileName = `${article.slug}.md`
-      const filePath = path.resolve(__dirname, 'articles', fileName)
+      const filePath = path.resolve(__dirname, 'content', 'articles', fileName)
       transformMarkdown(article, DevToArticleAdapter).then((data) =>
         writeFileOn(filePath, data)
       )

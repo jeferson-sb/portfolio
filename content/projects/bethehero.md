@@ -1,6 +1,6 @@
 ---
 order: 4
-thumbnail: '/uploads/bethehero.png'
+thumbnail: './media/bethehero.png'
 title: Be the Hero
 tags: Node.js, React, React Native
 demo: https://be-thehero.netlify.com/
@@ -9,4 +9,4 @@ pinned: true
 description: Donate System for NGOs campaigns
 ---
 
-![](/uploads/bethehero.png)
+![](./media/bethehero.png)

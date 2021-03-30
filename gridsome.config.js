@@ -8,7 +8,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'projects/**/*.md',
+        path: 'content/projects/**/*.md',
         typeName: 'Projects',
         resolveAbsolutePaths: true,
       },
@@ -17,9 +17,10 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         typeName: 'Articles',
-        baseDir: './articles',
+        baseDir: './content/articles',
         template: './src/templates/Article.vue',
         route: '/articles/:slug',
+        ignore: ['draft/**/*'],
         plugins: [
           'remark-attr',
           [

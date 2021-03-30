@@ -8,6 +8,6 @@ dist
 .vscode
 # Local Netlify folder
 .netlify
-articles/draft/
-articles/draft/*
+draft/
+draft/*
 *:Zone.Identifier

@@ -1,6 +1,6 @@
 ---
 order: 1
-thumbnail: '/uploads/dogAI.jpg'
+thumbnail: './media/dogAI.jpg'
 title: Dog AI
 tags: Front-end, React, Tensorflow
 demo: https://dogai.netlify.com/
@@ -9,4 +9,4 @@ pinned: true
 description: Dog breed image recognition with Teachable Machine & Tensorflow.js
 ---
 
-![](/uploads/dogAI.jpg)
+![](./media/dogAI.jpg)
