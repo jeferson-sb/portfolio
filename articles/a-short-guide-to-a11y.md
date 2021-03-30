@@ -9,13 +9,13 @@ crosspostedOn: ''
 crosspostLink: ''
 ---
 
-In Web Development, we often think about design, performance, tools, and libraries when building our applications, but when it comes to usability and user experience making these applications more accessible is also an important task that is not always common to see on our daily basis.
+In Web Development, we often think about design, performance, tools, and libraries when building our applications, but when it comes to usability and user experience making these applications more accessible is also an important task that is not always common to see on a daily basis.
 
 Essentially, web accessibility is about creating and managing content on the web that can be not only functional but available, understandable, and operable by anyone.
 
 ## A11y and Standards
 
-"A11y" is a numeronym of the word “accessibility”. Numeronyms are abbreviations that use numbers to abbreviate by taking the first and last letters ("a" and "y" in this case). It's a common term to refer to Web Accessibility.
+"A11y" is a numeronym of the word “accessibility”. Numeronyms are abbreviations that use numbers to abbreviate by taking the first and last letters ("a" and "y" in this case). It is a common term to refer to Web Accessibility.
 
 ### Web Content Accessibility Guidelines
 
@@ -28,7 +28,9 @@ These guidelines are group in four principles:
 - Understandable: Users must be able to understand the information as well as the operation of the interface.
 - Robust: Users must be able to consume the same web content by different browsers and assistive technologies.
 
-**WebAIM** is a sort of short version or summary of the WCAG guidelines in a form of a [checklist](https://webaim.org/standards/wcag/checklist) to help identity what you need to implement.
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-banner.png?alt=media&token=283cad1b-a4d7-43ce-b4d3-c60d062ec636" alt="Human sense banner" className="full-bleed" height="560" />
+
+**WebAIM** is a sort of short version or summary of the WCAG guidelines as a [checklist](https://webaim.org/standards/wcag/checklist) to help identify what you need to implement.
 
 The best way to follow these guidelines and accomplish these criterias is to take a look at the [WAI-ARIA Best Practices document](https://www.w3.org/TR/wai-aria-practices-1.1/) to know which attributes do you have to set on your custom element and what type of keyboard support it needs to provide.
 
@@ -40,7 +42,7 @@ In short, when we say focus, we refer to the control of the interactive elements
 
 ### Handling Focus
 
-The order in which elements receive the next or previous focus is called the **tab order**. The tab order is based on the DOM structure of your page.
+The order in which elements receive the next or previous focus is called the <em>tab order</em>. The tab order is based on the DOM structure of your page.
 
 Native controls such as inputs, buttons, and selects are implicitly focusable which means they're automatically inserted in the tab order.
 
@@ -60,17 +62,17 @@ Usually, only interactive elements can be focusable, so there's no need to put t
 <nav class="offscreen sidenav" tabindex="-1"></nav>
 ```
 
-`tabindex="1"` or (anything greater than zero) means that the element will jump on the tab order, but this often leads to confusion and it's also considered an **anti-pattern**.
+`tabindex="1"` or (anything greater than zero) means that the element will **jump** on the tab order, but this often leads to confusion and it's also considered an **anti-pattern**.
 
 Ideally, if you want to move something on the tab order, you should move it on the DOM whenever is possible.
 
 Adopting keyboard-navigation techniques brings a lot of benefits for users with motor impairment and also for typical users that are keyboard-focused, as they would be more productive.
 
-### Accessible Images
+## Accessible Images
 
-You probably might know this already, but we can provide an **alternative text** so users and search engines can understand the image. It also used to display the text whenever the image is not available.
+You probably might know this already, but we can provide an **alternative text** so users and search engines can understand what the image is about. It also used to display the text whenever the image is not available.
 
-<g-image src="../uploads/colosseum.jpg" alt="The Colosseum in Rome" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/colosseum.jpg?alt=media&token=0e08f7ec-e76e-4574-9559-83be3ec9c77f" alt="The Colosseum in Rome" height="700" width="100%" />
 
 ```html
 <img alt="The Colosseum in Rome" ... />
@@ -82,15 +84,23 @@ It can be a simple or a more elaborate description:
 <img alt="The Colosseum building under gray sky during daytime" ... />
 ```
 
-Choosing the appropriate alternative text can be tricky though, it's all about context. Some images may be decorative and others are more functional, to get a deeper understanding [check out this amazing article by WebAIM](https://webaim.org/techniques/alttext/).
+Choosing the appropriate alternative text can be tricky though, it's all about context. Some images may be decorative and others more functional, to get a deeper understanding I highly recommend [checking out this amazing article by WebAIM](https://webaim.org/techniques/alttext/)
 
 ## Semantics
 
-A screen reader is one of the most popular assistive technology that can help users with visual disabilities to operate a computer by reading content aloud in a generated voice. Many operating systems today have their own Screen Reader solution, for instance, macOS has **VoiceOver** and Windows has the **Narrator** app.
+A <em>screen reader</em> is one of the most popular assistive technology that can help users with visual disabilities to operate a computer by reading content out loud with a generated voice. Many operating systems today have their own Screen Reader solution, for instance, macOS has **VoiceOver** and Windows has the **Narrator** app.
 
-But before the web content can be turned into audio, the assistive technology uses the **Accessibility Tree** representation to retrieve enough information about its content.
+But before the web content can be turned into audio, the assistive technology uses the <em>Accessibility Tree</em> representation to retrieve enough information about its content.
 
-Broadly speaking, the Accessibility Tree is a non-visual DOM tree representation modified by the browser to use all of the semantic information available on the page in a way that can be useful to assistive technologies. Therefore, writing good and semantic HTML elements have a huge impact on how this content will be presented to our end users.
+Broadly speaking, the **Accessibility Tree** is a non-visual DOM tree representation modified by the browser to use all of the semantic information available on the page in a way that can be useful to assistive technologies.
+For example:
+
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-tree.jpg?alt=media&token=d06a85d3-4615-4866-a874-09a345b268a2" alt="accessibility tree" width="100%" height="500" />
+
+Browsers, such as chrome, can display the acessibility tree like this:
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chrome-a11y-tree.png?alt=media&token=ef132039-c57d-4c02-b6fc-b7b340f879e7" alt="chrome accessibility tab open" />
+
+Therefore, writing good and semantic HTML elements has a huge impact on how this content will be presented to our end users.
 
 In fact, native elements have implicit semantics that can be recognized by the browser.
 
@@ -146,12 +156,12 @@ We can take advantage of certain aria attributes to make our elements more disco
   aria-labelledby="download-btn download-details"
 >
   Download
-  <!-- this will read as "Download JPG, 450 kb button" -->
+  <!-- this will announced as "Download JPG, 450 kb button" -->
 </button>
 <p id="download-details">JPG, 450 KB</p>
 ```
 
-`aria-describedby` similar to `aria-labelledby`, it can reference elements, which might no be visible every time, to provide an additional description the user may need in order to complete its action.
+`aria-describedby` similar to `aria-labelledby`. It can reference elements, which might no be visible every time, to provide an additional description the user may need in order to complete its action.
 
 ```html
 <input
@@ -163,15 +173,15 @@ We can take advantage of certain aria attributes to make our elements more disco
 <small id="password-help">Password must be at least 8 characters</small>
 ```
 
-But be careful when using any of these attributes, since assistive technologies use the Accessibility tree, ARIA can override those built-in semantics and lead your application to incomprehensible results.
+But be careful when using any of these attributes! Since assistive technologies use the Accessibility tree, ARIA can override those built-in semantics and lead your application to incomprehensible results.
 
 ### Roles and Controls
 
-ARIA can also express semantic relationships or cont between elements, even when you do not have a direct parent-child relation or vice versa.
+ARIA can also express semantic relationships between elements, even when you do not have a direct parent-child relation or vice versa.
 
 For instance, you might have a button that **controls** whether or not a menu is visible:
 
-```html
+```html{3, 9}
 <!-- aria-controls identifies the element (or elements) content are controlled by the current element-->
 
 <button class="button" aria-controls="menu-items" aria-haspopup="true" id="menu-button">
@@ -194,7 +204,7 @@ For instance, you might have a button that **controls** whether or not a menu is
 </div>
 ```
 
-You might notice the dropdown has a role, you can think of a `role` as a type of component you're building. Each role can support states and properties, such as checked, pressed, hidden, and so on.
+You might notice the dropdown has a role. You can think of a `role` as a type of component you're building. Each role can support states and properties, such as checked, pressed, hidden, and so on.
 
 And you can also declare a relationship between siblings elements using `aria-owns`, but in this case, we're indicating that an element (child) **depends on** another element (parent) regardless of how the DOM hierarchy is set.
 
@@ -225,16 +235,17 @@ Usually, if we need to hide some content on a page we add `visibility:hidden` or
 
 ARIA also provides us a way to define real-time content. `aria-live` is used to indicate a region of your page that is constantly changing due or not to user interaction, such as a popup message, status, or live chat.
 
-It can accept two values: assertive or polite which define the priority of how these live updates would be announced.
+It can accept two values: _assertive_ or _polite_ which define the priority of how these live updates would be announced.
 
 ```html
 <!-- assertive means it will be announced immediately -->
 <div role="alert" class="alert danger" aria-live="assertive">Urgent!</div>
+
 <!-- polite means it will announce only if the user is idle -->
 <div class="status" aria-live="polite">Your configuration is not complete</div>
 ```
 
-And there are several of these attributes, you can check the full list [here](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties).
+There are several of these attributes, you can check the full list [here](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties).
 
 ## Color Contrast
 
@@ -248,6 +259,14 @@ In order to make your content more perceivable and with the correct contrast rat
 - Level AAA (Enhanced) — Large text or images of large text must have a contrast ratio of at least **4.5:1**, and body text a contrast ratio of at least **7:1**
 
 Although it is not explicitly mentioned in the [specification](https://www.w3.org/TR/WCAG21/#contrast-minimum), if your text can change color on different states, like on hover, on focus or when pressed you might as well assume it would have to meet the same requirements as well.
+
+If you are on Chrome (or any chromium based browser) you can inspect a text element on the page and you will see a popup showing the current contrast value and what criterias it is matching or not.
+
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-inspect.png?alt=media&token=7e1eee3a-efa7-49f1-b72f-ba678ce8aeae" alt="chrome contrast picker with value 3.02" />
+
+In addition, if you open the styles tab on the dev tools, select the text element and click on the color property, you will see a visual picker popping up with the contrast ratio information, and you can also change the color by picking in any area between these two slightly curved lines.
+
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-styles.png?alt=media&token=8a94c2aa-4bd9-4add-a3a2-abd1ede8afc1" alt="devtools contrast color picker" />
 
 ## How to measure web accessibility
 
@@ -270,6 +289,7 @@ It is important to note that none of these automated tools can fully guarantee o
 
 ## Useful Resources
 
+- [BrownBag CM42: Introduction to Web Accessibility](https://www.youtube.com/watch?v=8pz9r7Z74N4)
 - [WCAG 2](https://www.w3.org/TR/WCAG21/)
 - [WebAIM](https://webaim.org/intro/)
 - [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/)
