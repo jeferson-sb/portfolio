@@ -1,8 +1,9 @@
 :root {
   --color-primary: hsl(187, 78%, 46%);
+  --color-accent: hsl(26, 79%, 56%);
+  --color-silver: hsl(225, 15%, 50%);
   --color-default-black: hsl(216, 9%, 11%);
   --color-default-white: hsl(0, 0%, 97%);
-  --color-silver: hsl(225, 15%, 50%);
   --color-gray-800: hsl(214, 9%, 15%);
   --color-gray-700: hsl(210, 5%, 24%);
   --color-gray-600: hsl(214, 9%, 35%);
