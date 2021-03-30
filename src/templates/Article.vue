@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import lozad from 'lozad'
 import TagGroup from '@/components/ui/TagGroup'
 
 export default {
@@ -104,6 +105,10 @@ export default {
     tags() {
       return this.article.tags.split(',')
     },
+  },
+  updated() {
+    const observer = lozad()
+    observer.observe()
   },
 }
 </script>
@@ -275,8 +280,8 @@ body[data-theme='light'] .article-heading {
 
 .gridsome-highlight-code-line {
   display: block;
-  margin-right: -1em;
-  margin-left: -1em;
+  margin-left: -0.5rem;
+  margin-right: 0;
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.25em solid var(--color-primary);
@@ -331,13 +336,22 @@ body[data-theme='light'] .article-heading {
   opacity: 0.8;
 }
 
+.article-body-content blockquote p em {
+  color: var(--text-color-default);
+}
+
 .article-body-content img {
   border-radius: var(--radius-default);
   margin: 10px 0 2rem;
 }
 
 .article-body-content ul {
+  margin-block-start: 0;
   padding-inline-start: 20px;
+}
+
+.article-body-content ul li::marker {
+  color: var(--color-silver);
 }
 
 .article-body-content li + li {
@@ -371,6 +385,10 @@ body[data-theme='light'] .article-heading {
 .article-body-content a:hover::after {
   opacity: 1;
   transform: translateY(0);
+}
+
+.article-body-content em {
+  color: var(--color-accent);
 }
 
 @media screen and (min-width: 1440px) {
