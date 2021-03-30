@@ -1,5 +1,3 @@
-import firebase from './firebase'
-
 import DefaultLayout from '~/layouts/Default.vue'
 import ImgLazy from '~/components/ui/ImgLazy.vue'
 
@@ -14,8 +12,6 @@ export default (Vue, { appOptions, head }) => {
 
   // Production-only
   if (process.env.NODE_ENV === 'production') {
-    firebase.analytics()
-
     head.meta.push({
       name: 'google-site-verification',
       content: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN,
