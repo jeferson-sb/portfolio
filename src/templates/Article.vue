@@ -391,6 +391,17 @@ body[data-theme='light'] .article-heading {
   color: var(--color-accent);
 }
 
+.article-body-content kbd {
+  padding: 3px 5px;
+  vertical-align: middle;
+  background-color: var(--color-default-white);
+  color: var(--color-default-black);
+  box-shadow: inset 0 -2px 0 var(--color-gray-400);
+  border-radius: var(--radius-default);
+  border-bottom: var(--color-gray-400);
+  font-size: var(--text-sm);
+}
+
 @media screen and (min-width: 1440px) {
   .article-body-content {
     display: grid;
