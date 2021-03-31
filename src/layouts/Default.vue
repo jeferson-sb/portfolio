@@ -70,6 +70,21 @@ body[data-theme='dark'] img {
   filter: brightness(0.8);
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-gray-800);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--color-silver);
+  border: 3px solid var(--color-gray-800);
+}
+
 .fade-enter-active {
   transition: opacity 600ms;
 }
