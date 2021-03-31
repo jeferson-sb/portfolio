@@ -4,6 +4,7 @@ module.exports = {
   titleTemplate: '%s • Jeferson S. Brito',
   siteDescription:
     "I'm a Software Developer Consultant focused in Front-end Web Development",
+  icon: './static/favicon.png',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
