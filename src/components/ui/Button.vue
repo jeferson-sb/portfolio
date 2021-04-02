@@ -58,6 +58,7 @@ export default {
 <style scoped>
 .button {
   --button-bg-color: var(--color-gray-600);
+  --button-text-color: var(--color-default-white);
   --shadow-color: hsla(187, 78%, 46%, 0.366);
   --fw: 600;
 
@@ -65,7 +66,7 @@ export default {
   text-align: center;
   padding: 8px 16px;
   max-width: fit-content;
-  color: var(--color-default-white);
+  color: var(--button-text-color);
   background-color: var(--button-bg-color);
   font-weight: var(--fw);
   transition: filter 0.3s ease-in-out;
@@ -89,27 +90,28 @@ export default {
 
 .button--primary {
   --button-bg-color: var(--color-primary);
+  --button-text-color: var(--color-default-black);
   --fw: 700;
-
-  color: var(--color-default-black);
 }
 
 .button--outline {
+  --button-text-color: var(--color-primary);
+  --button-bg-color: transparent;
   --fw: 700;
 
-  background: transparent;
-  color: var(--color-primary);
   border: 1px solid var(--color-primary);
 }
 
 .button--link {
-  background-color: transparent;
+  --button-bg-color: transparent;
+  --button-text-color: var(--text-color-default);
+
   transition: background-color 0.3s ease-in-out;
-  color: var(--text-color-default);
 }
 
 .button--link:hover {
-  background-color: var(--color-gray-600);
+  --button-bg-color: var(--color-gray-600);
+
   filter: unset;
 }
 
@@ -132,8 +134,9 @@ export default {
 }
 
 .button[disabled] {
-  color: var(--color-gray-400);
-  background-color: var(--color-gray-800);
+  --button-text-color: var(--color-gray-400);
+  --button-bg-color: var(--color-gray-800);
+
   cursor: not-allowed;
 }
 </style>

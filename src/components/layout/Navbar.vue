@@ -114,7 +114,8 @@ export default {
 }
 
 .navbar .navbar-menu li:active:not(.no-effect),
-.navbar .navbar-menu li:focus:not(.no-effect) {
+.navbar .navbar-menu li:focus:not(.no-effect),
+.navbar .navbar-menu li:focus-within:not(.no-effect) {
   outline: 3px dashed var(--color-primary);
 }
 

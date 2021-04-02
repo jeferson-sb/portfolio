@@ -75,6 +75,10 @@ export default {
   top: -24px;
 }
 
+.theme-switcher:focus-visible svg {
+  outline: 2px dashed var(--color-primary);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -89,21 +93,28 @@ export default {
   transition: all 300ms ease-in-out;
 }
 
+.lamp-on-line {
+  --start: 300ms;
+  --delay-1: var(--start);
+  --delay-2: calc(var(--delay-1) / 2);
+  --delay-3: calc(var(--delay-2) / 2);
+}
+
 .on .lamp-on-line {
   opacity: 0;
   animation: turn-on-lines 300ms ease-in-out forwards;
 }
 
 .on .lamp-on-line-1 {
-  animation-delay: 150ms;
+  animation-delay: var(--delay-2);
 }
 
 .on .lamp-on-line-2 {
-  animation-delay: 50ms;
+  animation-delay: var(--delay-3);
 }
 
 .on .lamp-on-line-3 {
-  animation-delay: 300ms;
+  animation-delay: var(--delay-1);
 }
 
 .off .lamp-on-line {
@@ -111,15 +122,15 @@ export default {
 }
 
 .off .lamp-on-line-1 {
-  animation-delay: 150ms;
+  animation-delay: var(--delay-2);
 }
 
 .off .lamp-on-line-2 {
-  animation-delay: 300ms;
+  animation-delay: var(--delay-1);
 }
 
 .off .lamp-on-line-3 {
-  animation-delay: 50ms;
+  animation-delay: var(--delay-3);
 }
 
 .off .lamp-on-holder {
