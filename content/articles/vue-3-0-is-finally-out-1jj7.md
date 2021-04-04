@@ -4,7 +4,7 @@ title: Vue 3.0 is finally out!
 slug: vue-3-0-is-finally-out-1jj7
 published_at: 2020-09-20T20:36:15.500Z
 tags: vue,javascript,webdev,tutorial
-excerpt: Vue 3.0 has landed, we'll go through some of the exciting new features he brings us and learn how to get started
+excerpt: Vue 3.0 has landed, in this post we'll go through some of the exciting new features he brings us and learn how to get started with Vue 3.
 crosspostedOn: Dev.to
 crosspostLink: https://dev.to/jeferson_sb/vue-3-0-is-finally-out-1jj7
 url: https://dev.to/jeferson_sb/vue-3-0-is-finally-out-1jj7
@@ -15,7 +15,7 @@ cover_image: https://res.cloudinary.com/practicaldev/image/fetch/s--rPczvTck--/c
 
 The new major version of Vue is here! after 2 years of development one of the most popular JavaScript frameworks is full of new capabilities and much more approachable for large applications.
 
-We will go through some of the exciting new features and see how the new release will affect the way you write Vue Apps
+We will go through some of the exciting new features and see how the new release will affect the way you write Vue Apps.
 
 ## Table of contents
 
@@ -34,16 +34,16 @@ We will go through some of the exciting new features and see how the new release
 
 ## Breaking changes
 
-- Vue 3 has a new Global API, now we use `createApp` instead of `new Vue({})`
-- No more support for **Filters**, you should use **computed proprieties** or methods instead.
-- $on, $off, and $once methods are removed, you probably have used them before with an `eventBus`
-- `data` option should always be declared as a function
-- `defineAsyncComponent` is the new method used to import and deal with async components
-- Vue's Reactivity system is now based in ES2015 Proxies
+- Vue 3 has a new Global API, now we use `createApp` instead of `new Vue({})`;
+- No more support for **Filters**, you should use **computed proprieties** or methods instead;
+- $on, $off, and $once methods are removed, you might have used them in the past alongside an `eventBus`;
+- `data` option should always be declared as a function;
+- `defineAsyncComponent` is the new method used to import and deal with async components;
+- Vue's Reactivity system is now based on ES2015 Proxies;
 
 ## How to Create a new Vue 3 App
 
-The most simple way is to just plug in a cdn script tag
+The most simple way is to just plug in a cdn script tag:
 
 ```html
 <html>
@@ -66,11 +66,11 @@ The most simple way is to just plug in a cdn script tag
 </html>
 ```
 
-You can start creating a fresh new Vue 3 App today quickly with the @vue/cli@4.5.0 to take advantage of a toon of integrations that Vue CLI provides out-of-the-box
+You can start creating a fresh new Vue 3 App today quickly with the @vue/cli@4.5.0 to take advantage of a toon of integrations that Vue CLI provides out-of-the-box.
 
 ![vue-cli](https://dev-to-uploads.s3.amazonaws.com/i/1eu1kszx8zfii1kf3lee.gif)
 
-Alternatively, you can also use **Vite**, a blazing fast build tool for modern JavaScript Projects, it uses Browser native ES Modules during development combined with Hot Module Replacement, with this approach you only need to bundle the files you actually need and your dev server start fast and cold.
+Alternatively, you can also use **Vite**, a blazing fast build tool for modern JavaScript Projects, it uses Browser Native ES Modules during development combined with Hot Module Replacement, with this approach your development server does not need to bundle all the files at once, but instead, it bundles only files you actually use at the time, which makes it also starts really fast and cold.
 
 ```sh
 $ npm init @vitejs/app hello-vue3 --template vue
@@ -78,14 +78,14 @@ $ cd hello-vue3
 $ npm i && npm run dev
 ```
 
-You can learn more about Vite [here](https://github.com/vitejs/vite).
+You can learn more about Vite [here](https://vitejs.dev/).
 
 ## New Global API
 
 Previously in Vue 2.x apps, you would use `new Vue()` to create a root instance and pass a series of options.
 Now with Vue 3.x, we have a new Global API for creating an app instance.
 
-The idea is to everything that mutates Vue's behavior should be placed at the level of the app instance.
+The idea is to place everything that mutates Vue's behavior at the level of the app instance.
 
 ```js{codeTitle: src/main.js}
 
@@ -102,7 +102,7 @@ app.directive(/* some custom directive... */)
 app.mount('#app')
 ```
 
-As you can see every configuration is scoped to a certain Vue application defined with `createApp`
+As you can see every configuration is scoped to a certain Vue application defined with `createApp`.
 
 ## New Features
 
@@ -112,7 +112,9 @@ This is definitely one of the game-changing ones, In fact, Composition API itsel
 
 You may be used to define a new component as an object with a set of options like data, methods, computed, and so on which is perfectly fine for small components, however as your app grows you end up creating complex and large components. Typically in these situations, we create Mixins to extract the common logic to be able to share with other components, which works in some cases but is not very flexible.
 
-Composition API allows us to **reuse logic between components creating composition functions**, so instead of having your logic split up in multiple component options, you can take advantage of composition functions to have your all your logic code in one place.
+### How composition works
+
+Composition API allows us to **reuse logic between components creating** <em> composable functions</em>, so instead of having your logic split up in multiple component options, you can take advantage of composition functions to have your all your logic code in one place.
 
 In short, with this approach, our components are less complex and much more maintainable.
 
@@ -145,6 +147,7 @@ export default {
   components: {
     GameCard,
   },
+  // Pretty much everything lives inside this setup function
   setup() {
     const searchInput = ref('');
     const { results, hasErrors, loading, execute } = useFetch();
@@ -175,9 +178,9 @@ export default {
 
 First off, we're importing our components, methods and declaring our setup function.
 
-As you can see we're not using the `data()` option, in this case we use a ref. A ref is a reactive reference that allows us to track changes in the template.
+As you can see we're not using the `data()` option, in this case, we use a ref. A `ref` is a reactive reference that allows us to track changes in the template.
 
-We're using a composable function called useFetch to handle requests, and last but not least, we returning our state.
+We're using a composable function called `useFetch` to handle requests, and last but not least, we return our state.
 
 Our composable function:
 
@@ -210,7 +213,7 @@ export default function useFetch {
 
 You can view this complete example in [this repo](https://github.com/jeferson-sb/demo-vue3).
 
-Another good example of Composition API is to create a `IntersectionObserver` composition function to lazy load our images like so:
+Another good example of Composition API implementation is to create an `IntersectionObserver` composition function to lazy load images or components, for instance:
 
 ```js{codeTitle: src/composables/useIntersection.js}
 
@@ -218,39 +221,44 @@ import { ref } from 'vue'
 
 export default function useIntersectionObserver() {
   const isSupported = 'IntersectionObserver' in window
-  if (isSupported) {
-    const isIntersecting = ref(false)
+  const isIntersecting = ref(false)
+  const isShown = ref(false)
 
-    const observer = new IntersectionObserver((entries) => {
-      const component = entries[0]
-
-      if (component.isIntersecting) {
-        isIntersecting.value = true
-      } else {
-        isIntersecting.value = false
-      }
-    })
-
-    const observe = (element) => {
-      observer.observe(element)
-    }
-
-    const unobserve = (element) => {
-      observer.unobserve(element)
-    }
-
-    return { observe, unobserve, isIntersecting }
-  } else {
-    console.log('Your browser does not support this feature')
+  if (!isSupported) {
+    console.log('Your browser does not support this feature yet.')
   }
+
+  const observer = new IntersectionObserver((entries) => {
+    const component = entries[0]
+
+    if (component.isIntersecting && !isShown.value) {
+      isIntersecting.value = true
+      isShown.value = true
+    } else {
+      isIntersecting.value = false
+    }
+  })
+
+  const observe = (element) => {
+    observer.observe(element)
+  }
+
+  const unobserve = (element) => {
+    observer.unobserve(element)
+  }
+
+  return { observe, unobserve, isIntersecting, isShown }
 }
 ```
+
+Now in our component, we import it like a regular function and use the methods to dynamically render the image.
+(Pretty similar to creating a custom hook in the React world).
 
 ```html{codeTitle: src/components/GameCard.vue}
 <template>
   ...
   <div ref="el">
-    <img :src="isIntersecting ? game.background_image : null" />
+    <img :src="isShown ? game.background_image : null" />
   </div>
   ...
 </template>
@@ -264,7 +272,6 @@ export default function useIntersectionObserver() {
       game: Object,
     },
     setup(props, context) {
-      const { game } = props
       const el = ref(null)
       const { observe, unobserve, isIntersecting } = useIntersectionObserver()
 
@@ -276,7 +283,7 @@ export default function useIntersectionObserver() {
         unobserve(el.value)
       })
 
-      return { game, el, isIntersecting }
+      return { el, isIntersecting }
     },
   }
 </script>
@@ -284,23 +291,23 @@ export default function useIntersectionObserver() {
 
 ### Benefits:
 
-- Code can now be organized by logical concerns (or features)
+- Code can now be organized by <em>logical concerns</em> (or features)
 - Keeps your components more readable
 - Extremely flexible
 
-Good news: You can use Composition API with Vue 2 through [@vue/composition api module](https://github.com/vuejs/composition-api)
+Good news: You can also use Composition API with <em>Vue 2</em> through [@vue/composition api module](https://github.com/vuejs/composition-api)!
 
-It's good to say this syntax is optional, therefore you don't need to use composition for every single component you build, the standard object syntax is still completely valid.
+It's good to say this syntax (setup) is optional, therefore you don't need to use composition for every single component you build, the standard object syntax is still completely valid.d.
 
 ### Better TypeScript support
 
-Vue 3 is completely written in TypeScript, which is good for everyone, now you can get better type definitions, develop more maintainable apps and, of course, you get the _Intellisense_ and _Autocompletetion_ of your favorite code editor
+Vue 3 is completely written in TypeScript, which is good for everyone, now you can get better type definitions, develop more maintainable apps with typescript code, and, you can also get the _Intellisense_ and _Autocompletetion_ of your favorite code editor.
 
 ### Suspense
 
 Suspense is a native Vue component to deal with async dependencies. It is a good option to control what should render until a condition is met and our async component is ready.
 
-In addition, it is a better way to handle multiple API calls from different components than relying on a v-if loading condition.
+In addition, it is a better way to handle multiple API calls from different components than relying on a `v-if` loading condition.
 
 > Note: Suspense is pretty experimental at this stage and its API might change in the future.
 
@@ -318,11 +325,11 @@ In addition, it is a better way to handle multiple API calls from different comp
 
 ### Teleport
 
-We can use Teleport to write components that can be moved/teleported into different parts of your application, by selecting where (DOM element) to place even if this place is not where your app is mounted.
+We can use Teleport to write components that can have to move/teleport into different parts of your application, by selecting where (DOM element) to place even if this place is not where your app is mounted.
 
 ![alt Goku teleport](https://media1.tenor.com/images/e81ce2586db0f6ab36c25f9f533ed8ac/tenor.gif?itemid=5155252)
 
-Teleport re-uses the DOM elements, so the state is preserved.
+> Teleport re-uses the DOM elements, so the state is preserved.
 
 ```html
 <div id="app"></div>
@@ -347,7 +354,7 @@ Simple, but very powerful!
 
 If you used React before you might know this one, in Vue 2.x we could not create a template with 2 elements at the same root and the reason for that is Vue instance that represents any Vue component needs to be bound into a single DOM element.
 
-Now with Vue 3 you don't have to worry about that
+Now with Vue 3 you don't have to worry about that:
 
 ```html
 <!-- Before -->
@@ -373,16 +380,16 @@ I'm very glad you reach until here and I hope you enjoyed reading 😊.
 
 Here are some useful links to explore and learn more about Vue 3 🖖
 
-Example shown in this post → [https://github.com/jeferson-sb/demo-vue3](https://github.com/jeferson-sb/demo-vue3)
+- Example shown in this post → [https://github.com/jeferson-sb/demo-vue3](https://github.com/jeferson-sb/demo-vue3)
 
-Vue 3.0 current status → [https://github.com/vuejs/vue-next](https://github.com/vuejs/vue-next)
+- Vue 3.0 current status → [https://github.com/vuejs/vue-next](https://github.com/vuejs/vue-next)
 
-Migration Guide → [https://v3.vuejs.org/guide/migration/introduction.html#overview](https://v3.vuejs.org/guide/migration/introduction.html#overview)
+- Migration Guide → [https://v3.vuejs.org/guide/migration/introduction.html#overview](https://v3.vuejs.org/guide/migration/introduction.html#overview)
 
-Great collection of composable functions → [https://github.com/pikax/vue-composable](https://github.com/pikax/vue-composable)
+- Great collection of composable functions → [https://github.com/pikax/vue-composable](https://github.com/pikax/vue-composable)
 
-[https://vuedose.tips/go-async-in-vue-3-with-suspense/](https://vuedose.tips/go-async-in-vue-3-with-suspense/)
+- [Go async in Vue 3 with Suspense](https://vuedose.tips/go-async-in-vue-3-with-suspense/)
 
-[https://vuedose.tips/easily-switch-to-composition-api-in-vuejs-3/](https://vuedose.tips/easily-switch-to-composition-api-in-vuejs-3/)
+- [Easily switch to composition api in Vue 3](https://vuedose.tips/easily-switch-to-composition-api-in-vuejs-3/)
 
-[https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/](https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/)
+- [Exciting new features in Vue 3](https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/)
