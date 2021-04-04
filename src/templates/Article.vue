@@ -179,6 +179,8 @@ body[data-theme='light'] .article-heading {
   font-family: var(--font-serif);
 }
 
+/* Markdown content */
+
 .article-body-content {
   display: grid;
   grid-template-columns: 1fr min(85ch, 100%) 1fr;
@@ -197,7 +199,7 @@ body[data-theme='light'] .article-heading {
 
 .article-body-content h2,
 .article-body-content h3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -233,6 +235,10 @@ body[data-theme='light'] .article-heading {
   transition: opacity 500ms ease-out;
 }
 
+.article-body-content a[aria-hidden]:focus-visible {
+  opacity: 1;
+}
+
 .article-body-content a[aria-hidden]::after {
   all: unset;
 }
@@ -256,71 +262,6 @@ body[data-theme='light'] .article-heading {
 .article-body-content h4[id]:hover a,
 .article-body-content h5[id]:hover a {
   opacity: 1;
-}
-
-.article-body-content code[class*='language-text'] {
-  font-family: var(--font-mono);
-  padding: 2px 6px;
-  background-color: var(--accent-color-lighter, var(--color-gray-700));
-  border-radius: var(--radius-default);
-  letter-spacing: -0.5px;
-  color: var(--text-color-default);
-}
-
-.article-body-content pre {
-  border-radius: var(--radius-default);
-}
-
-.gridsome-highlight {
-  border-radius: var(--radius-default);
-  margin-bottom: 0.5em;
-  overflow: auto;
-  background: var(--code-bg-color);
-}
-
-.gridsome-highlight-code-line {
-  display: block;
-  margin-left: -0.5rem;
-  margin-right: 0;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid var(--color-primary);
-  background-color: var(--code-highlight-color);
-}
-
-.gridsome-highlight pre[class*='language-'] {
-  padding: 0;
-  overflow: initial;
-  min-width: 100%;
-}
-
-.gridsome-highlight pre[class*='language-'].line-numbers {
-  padding-left: 2.8em;
-}
-
-.gridsome-highlight pre[class*='language-'].line-numbers .line-numbers-rows {
-  padding-left: 10px;
-  border-right: 1px solid var(--color-gray-700);
-}
-
-.gridsome-code-title {
-  background-color: var(--code-bg-color);
-  border-bottom: 1px solid var(--color-gray-700);
-  text-align: center;
-  padding: 0.4rem 0;
-}
-
-.gridsome-code-title span {
-  color: var(--color-gray-300);
-}
-
-.gridsome-code-title + .gridsome-highlight {
-  border-radius: 0 0 var(--radius-default);
-}
-
-.gridsome-highlight ::selection {
-  color: unset !important;
-  background: rgba(0, 0, 0, 0.3) !important;
 }
 
 .article-body-content blockquote {
@@ -400,6 +341,73 @@ body[data-theme='light'] .article-heading {
   border-radius: var(--radius-default);
   border-bottom: var(--color-gray-400);
   font-size: var(--text-sm);
+}
+
+/* Code syntax highlight */
+
+.article-body-content code[class*='language-text'] {
+  font-family: var(--font-mono);
+  padding: 2px 6px;
+  background-color: var(--accent-color-lighter, var(--color-gray-700));
+  border-radius: var(--radius-default);
+  letter-spacing: -0.5px;
+  color: var(--text-color-default);
+}
+
+.article-body-content pre {
+  border-radius: var(--radius-default);
+}
+
+.gridsome-highlight {
+  border-radius: var(--radius-default);
+  margin-bottom: 0.5em;
+  overflow: auto;
+  background: var(--code-bg-color);
+}
+
+.gridsome-highlight-code-line {
+  display: block;
+  margin-left: -0.5rem;
+  margin-right: 0;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid var(--color-primary);
+  background-color: var(--code-highlight-color);
+}
+
+.gridsome-highlight pre[class*='language-'] {
+  padding: 0;
+  overflow: initial;
+  min-width: 100%;
+}
+
+.gridsome-highlight pre[class*='language-'].line-numbers {
+  padding-left: 2.8em;
+}
+
+.gridsome-highlight pre[class*='language-'].line-numbers .line-numbers-rows {
+  padding-left: 10px;
+  border-right: 1px solid var(--color-gray-700);
+}
+
+.gridsome-code-title {
+  background-color: var(--code-bg-color);
+  border-bottom: 1px solid var(--color-gray-700);
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.gridsome-code-title span {
+  color: var(--color-gray-300);
+}
+
+.gridsome-code-title + .gridsome-highlight {
+  border-radius: 0 0 var(--radius-default);
+}
+
+.gridsome-highlight ::selection {
+  color: unset !important;
+  background: rgba(0, 0, 0, 0.3) !important;
 }
 
 @media screen and (min-width: 1440px) {
