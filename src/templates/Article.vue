@@ -183,7 +183,7 @@ body[data-theme='light'] .article-heading {
 
 .article-body-content {
   display: grid;
-  grid-template-columns: 1fr min(85ch, 100%) 1fr;
+  grid-template-columns: 1fr min(75ch, 100%) 1fr;
 }
 
 .article-body-content > * {
@@ -221,7 +221,6 @@ body[data-theme='light'] .article-heading {
 
 .article-body-content p {
   margin-bottom: 16px;
-  word-break: break-word;
 }
 
 .article-body-content a[aria-hidden] {
@@ -286,12 +285,14 @@ body[data-theme='light'] .article-heading {
   margin: 10px 0 2rem;
 }
 
-.article-body-content ul {
+.article-body-content ul,
+.article-body-content ol {
   margin-block-start: 0;
   padding-inline-start: 20px;
 }
 
-.article-body-content ul li::marker {
+.article-body-content ul li::marker,
+.article-body-content ol li::marker {
   color: var(--color-silver);
 }
 
@@ -365,6 +366,22 @@ body[data-theme='light'] .article-heading {
   background: var(--code-bg-color);
 }
 
+.gridsome-highlight::-webkit-scrollbar {
+  width: 1em;
+}
+
+.gridsome-highlight::-webkit-scrollbar-track {
+  background-color: var(--color-gray-800);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+}
+
+.gridsome-highlight::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--color-silver);
+  border: 5px solid var(--color-gray-800);
+}
+
 .gridsome-highlight-code-line {
   display: block;
   margin-left: -0.5rem;
@@ -413,7 +430,7 @@ body[data-theme='light'] .article-heading {
 @media screen and (min-width: 1440px) {
   .article-body-content {
     display: grid;
-    grid-template-columns: 1fr min(100ch, 100%) 1fr;
+    grid-template-columns: 1fr min(85ch, 100%) 1fr;
   }
 }
 
