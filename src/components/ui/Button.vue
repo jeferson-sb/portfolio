@@ -59,8 +59,8 @@ export default {
 .button {
   --button-bg-color: var(--color-gray-600);
   --button-text-color: var(--color-default-white);
-  --shadow-color: hsla(187, 78%, 46%, 0.366);
-  --fw: 600;
+  --button-shadow-color: hsla(187, 78%, 46%, 0.366);
+  --button-fw: 400;
 
   display: inline-block;
   text-align: center;
@@ -68,7 +68,8 @@ export default {
   max-width: fit-content;
   color: var(--button-text-color);
   background-color: var(--button-bg-color);
-  font-weight: var(--fw);
+  font-weight: var(--button-fw);
+  font-size: var(--button-font-size, inherit);
   transition: filter 0.3s ease-in-out;
   border-radius: var(--radius-default);
 }
@@ -81,7 +82,7 @@ export default {
 .button:focus {
   outline: 0;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.19rem var(--shadow-color);
+  box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
 }
 
 .button::after {
@@ -91,13 +92,13 @@ export default {
 .button--primary {
   --button-bg-color: var(--color-primary);
   --button-text-color: var(--color-default-black);
-  --fw: 700;
+  --button-fw: 700;
 }
 
 .button--outline {
   --button-text-color: var(--color-primary);
   --button-bg-color: transparent;
-  --fw: 700;
+  --button-fw: 700;
 
   border: 1px solid var(--color-primary);
 }
