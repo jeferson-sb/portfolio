@@ -261,7 +261,6 @@ main {
   margin-left: 50px;
   font-size: var(--text-sm);
   text-align: right;
-  font-weight: 700;
 }
 
 .cursor {
@@ -281,10 +280,13 @@ main {
   z-index: -1;
   opacity: 0.2;
   animation: spotlight 5s infinite alternate ease-in-out;
+  filter: blur(3px);
+  will-change: filter;
 }
 
 .swirl-enter-active {
   animation: swirl-in 3s 1s ease-out both;
+  will-change: transform;
 }
 
 @keyframes swirl-in {
@@ -301,6 +303,7 @@ main {
 
 .swirl-leave-active {
   animation: swirl-out 0.4s ease-in forwards;
+  will-change: transform;
 }
 
 @keyframes swirl-out {
