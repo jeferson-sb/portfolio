@@ -1,0 +1,57 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: eslint-plugin-vue
+    versions:
+    - 7.5.0
+    - 7.6.0
+    - 7.7.0
+    - 7.8.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.2.0
+    - 8.0.0
+    - 8.1.0
+  - dependency-name: stylelint-config-standard
+    versions:
+    - 21.0.0
+  - dependency-name: stylelint
+    versions:
+    - 13.10.0
+    - 13.11.0
+    - 13.12.0
+  - dependency-name: elliptic
+    versions:
+    - 6.5.4
+  - dependency-name: eslint-plugin-prettier
+    versions:
+    - 3.3.1
+  - dependency-name: "@fortawesome/free-brands-svg-icons"
+    versions:
+    - 5.15.2
+  - dependency-name: "@fortawesome/free-solid-svg-icons"
+    versions:
+    - 5.15.2
+  - dependency-name: "@fortawesome/fontawesome-svg-core"
+    versions:
+    - 1.2.34
+  - dependency-name: "@fortawesome/vue-fontawesome"
+    versions:
+    - 2.0.2
+  - dependency-name: vue-i18n
+    versions:
+    - 8.22.3
