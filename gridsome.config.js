@@ -55,6 +55,22 @@ module.exports = {
     {
       use: 'gridsome-plugin-svg',
     },
+    {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        disableServiceWorker: false,
+        serviceWorkerPath: 'service-worker.js',
+        cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+        manifestPath: 'manifest.json',
+        title: 'Front-end Developer & UI Designer',
+        startUrl: '/',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        themeColor: '#1abbd1',
+        backgroundColor: '#1A1C1F',
+        icon: 'static/favicon.png',
+      },
+    },
   ],
   transformers: {
     remark: {
