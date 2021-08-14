@@ -1,6 +1,7 @@
 <template>
   <transition name="fade" appear>
     <div>
+      <SkipLink />
       <Navbar />
       <slot />
       <Footer />
@@ -11,11 +12,13 @@
 <script>
 import Navbar from '@/components/layout/Navbar.vue'
 import Footer from '@/components/layout/Footer.vue'
+import SkipLink from '@/components/ui/SkipLink.vue'
 
 export default {
   components: {
     Navbar,
     Footer,
+    SkipLink,
   },
   mounted() {
     const storedTheme = localStorage.getItem('selected-theme')

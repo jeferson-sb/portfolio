@@ -12,7 +12,7 @@
           </p>
         </div>
       </div>
-      <section class="container">
+      <section class="container" id="main-content">
         <PostPreview
           v-for="post in allPosts"
           :key="post.node.id"

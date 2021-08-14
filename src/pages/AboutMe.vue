@@ -13,7 +13,7 @@
         </HeroAvatar>
         <BinaryTextSVG />
       </aside>
-      <main>
+      <main id="main-content">
         <article class="about-content">
           <h1 class="about-content__headline">About me</h1>
           <p>

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main>
+    <main id="main-content">
       <HeroSection />
       <PostsList />
       <ProjectsGrid />
