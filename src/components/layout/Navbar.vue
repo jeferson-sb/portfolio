@@ -6,16 +6,16 @@
       </g-link>
       <nav class="navbar">
         <ul class="navbar-menu">
-          <li class="no-effect">
+          <li class="navbar-menu__item no-effect">
             <ThemeSwitcher variant="transform" />
           </li>
-          <li>
+          <li class="navbar-menu__item">
             <g-link class="navbar-menu__link" to="/articles"> Articles </g-link>
           </li>
-          <li>
+          <li class="navbar-menu__item">
             <g-link class="navbar-menu__link" to="/about-me">About</g-link>
           </li>
-          <li>
+          <li class="navbar-menu__item">
             <a class="navbar-menu__link" href="/#projects"> Projects </a>
           </li>
         </ul>
@@ -74,56 +74,53 @@ export default {
   text-transform: uppercase;
 }
 
-.navbar .navbar-menu li {
+.navbar .navbar-menu .navbar-menu__item {
   position: relative;
   z-index: 1;
   padding: 2px 10px;
 }
 
-.navbar .navbar-menu li + li {
+.navbar .navbar-menu .navbar-menu__item + .navbar-menu__item {
   margin-left: 30px;
 }
 
-.navbar .navbar-menu li::before {
+.navbar .navbar-menu .navbar-menu__item:not(.no-effect)::before {
   content: '';
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: 15px;
   bottom: 0;
-  left: -0.25em;
-  right: -0.25em;
-  background-color: var(--color-primary);
-  transform-origin: center right;
-  transform: scaleX(0);
+  left: 0;
+  background: radial-gradient(
+    circle at bottom,
+    rgba(26, 188, 209, 0.603) 5%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  width: 100%;
+  height: 100%;
   transition: transform 0.2s ease-out;
+  transform: scale(0);
+  transform-origin: bottom;
 }
 
-.navbar .navbar-menu li a {
+.navbar .navbar-menu .navbar-menu__item:not(.no-effect):hover::before {
+  transform: scale(100%);
+}
+
+.navbar .navbar-menu .navbar-menu__item .navbar-menu__link {
   outline: 0;
 }
 
-.navbar .navbar-menu li:hover a {
+.navbar .navbar-menu .navbar-menu__item:hover .navbar-menu__link {
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
 }
 
-.navbar .navbar-menu li:not(.no-effect):hover::before {
-  transform: scaleX(1);
-  transform-origin: center left;
-}
-
-.navbar .navbar-menu li:active:not(.no-effect),
-.navbar .navbar-menu li:focus:not(.no-effect),
-.navbar .navbar-menu li:focus-within:not(.no-effect) {
+.navbar .navbar-menu .navbar-menu__item:active:not(.no-effect),
+.navbar .navbar-menu .navbar-menu__item:focus:not(.no-effect),
+.navbar .navbar-menu .navbar-menu__item:focus-within:not(.no-effect) {
   outline: 3px dashed var(--color-primary);
-}
-
-.navbar .navbar-menu li:focus:hover::before,
-.navbar .navbar-menu li:active:hover::before {
-  transition-duration: 50ms;
-  transform: scaleX(0);
-  transform-origin: center right;
 }
 
 body[data-theme='light'] .header {
