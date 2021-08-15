@@ -348,7 +348,7 @@ body[data-theme='light'] .article-heading {
 .article-body-content code[class*='language-text'] {
   font-family: var(--font-mono);
   padding: 2px 6px;
-  background-color: var(--accent-color-lighter, var(--color-gray-700));
+  background-color: var(--accent-color-lighter, var(--code-bg-color));
   border-radius: var(--radius-default);
   letter-spacing: -0.5px;
   color: var(--text-color-default);
