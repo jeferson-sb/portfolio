@@ -128,7 +128,7 @@ export default {
 }
 
 body[data-theme='light'] .social-media-icons a {
-  background-color: #e7f7f9;
+  background-color: var(--bg-color-lighter);
 }
 
 body[data-theme='light'] .social-media-icons a:hover {
@@ -137,6 +137,6 @@ body[data-theme='light'] .social-media-icons a:hover {
 
 body[data-theme='light'] .social-media-icons a svg,
 body[data-theme='light'] .social-media-icons a svg path {
-  fill: #beebf1;
+  fill: var(--color-default-black);
 }
 </style>

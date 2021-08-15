@@ -74,6 +74,10 @@ export default {
     top: 0;
   }
 
+  body[data-theme='light'] .hero::after {
+    background-color: var(--color-gray-300);
+  }
+
   .hero.has-ellipse-curve::after {
     clip-path: ellipse(100% 55% at 48% 44%);
     height: calc(500px + 2vw);

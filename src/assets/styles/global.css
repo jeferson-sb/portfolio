@@ -37,6 +37,9 @@
   --border-style: solid;
   --border-color: rgba(0, 0, 0, 0.1);
   --border: var(--border-width) var(--border-style) var(--border-color);
+  --scrollbar-bg: hsl(214, 9%, 15%);
+  --scrollbar-thumb-color: hsl(225, 15%, 50%);
+  --scrollbar-border: var(--color-gray-800);
 }
 
 body {

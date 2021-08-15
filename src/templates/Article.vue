@@ -48,8 +48,7 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap',
         },
         {
           rel: 'canonical',
@@ -363,7 +362,7 @@ body[data-theme='light'] .article-heading {
   border-radius: var(--radius-default);
   margin-bottom: 0.5em;
   overflow: auto;
-  background: var(--code-bg-color);
+  background: var(--accent-color-lighter, var(--code-bg-color));
 }
 
 .gridsome-highlight::-webkit-scrollbar {
@@ -371,15 +370,15 @@ body[data-theme='light'] .article-heading {
 }
 
 .gridsome-highlight::-webkit-scrollbar-track {
-  background-color: var(--color-gray-800);
+  background-color: var(--scrollbar-bg);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   border-radius: 0;
 }
 
 .gridsome-highlight::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--color-silver);
-  border: 5px solid var(--color-gray-800);
+  background-color: var(--scrollbar-thumb-color);
+  border: 5px solid var(--scrollbar-border);
 }
 
 .gridsome-highlight-code-line {
@@ -396,6 +395,7 @@ body[data-theme='light'] .article-heading {
   padding: 0;
   overflow: initial;
   min-width: 100%;
+  margin-top: 0;
 }
 
 .gridsome-highlight pre[class*='language-'].line-numbers {
@@ -408,8 +408,8 @@ body[data-theme='light'] .article-heading {
 }
 
 .gridsome-code-title {
-  background-color: var(--code-bg-color);
-  border-bottom: 1px solid var(--color-gray-700);
+  background-color: var(--accent-color-lighter, var(--code-bg-color));
+  border-bottom: 3px solid var(--color-gray-700);
   text-align: center;
   padding: 0.4rem 0;
 }
@@ -425,6 +425,33 @@ body[data-theme='light'] .article-heading {
 .gridsome-highlight ::selection {
   color: unset !important;
   background: rgba(0, 0, 0, 0.3) !important;
+}
+
+body[data-theme='dark'] .token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #657b83;
+}
+
+body[data-theme='dark'] code[class*='language-'],
+pre[class*='language-'] {
+  color: #93a1a1;
+}
+
+body[data-theme='light'] .gridsome-highlight ::selection {
+  background: rgba(223, 223, 223, 0.3) !important;
+}
+
+body[data-theme='light']
+  .gridsome-highlight
+  pre[class*='language-'].line-numbers
+  .line-numbers-rows {
+  border-right-color: var(--border-color);
+}
+
+body[data-theme='light'] .gridsome-code-title {
+  border-bottom-color: var(--color-gray-100);
 }
 
 @media screen and (min-width: 1440px) {

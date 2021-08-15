@@ -50,12 +50,15 @@ body {
 }
 
 body[data-theme='light'] {
-  --color-light: #f5f6fa;
+  --color-light: hsl(228, 33%, 97%);
   --text-color-default: var(--color-default-black);
   --secondary-text-color: var(--color-silver);
   --bg-color-primary-lighter: rgba(26, 187, 209, 0.3);
-  --bg-color-lighter: #f8f8f8;
+  --bg-color-lighter: hsl(0, 0%, 97%);
   --accent-color-lighter: hsl(225, 31%, 95%);
+  --scrollbar-bg: var(--accent-color-lighter);
+  --scrollbar-thumb-color: var(--color-gray-300);
+  --scrollbar-border: var(--color-gray-300);
 
   background-color: var(--color-light);
   color: var(--color-default-black);
@@ -78,14 +81,14 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: var(--color-gray-800);
+  background-color: var(--scrollbar-bg);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--color-silver);
-  border: 3px solid var(--color-gray-800);
+  background-color: var(--scrollbar-thumb-color);
+  border: 3px solid var(--scrollbar-border);
 }
 
 .fade-enter-active {
