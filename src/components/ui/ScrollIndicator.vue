@@ -11,7 +11,7 @@
   position: absolute;
   margin: auto;
   left: 50%;
-  top: 55%;
+  top: 65%;
   transform: translateX(-50%);
 }
 

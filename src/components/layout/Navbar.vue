@@ -151,7 +151,7 @@ body[data-theme='light'] .header {
     line-height: 1.25rem;
   }
 
-  .navbar .navbar-menu li + li {
+  .navbar .navbar-menu .navbar-menu__item + .navbar-menu__item {
     margin-left: 0;
   }
 
