@@ -30,12 +30,16 @@ dd {
   margin: 0;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
+  color-rendering: optimizespeed;
   line-height: 1.5;
-  scroll-behavior: smooth;
 }
 
 /* A elements that don't have a class get default styles */

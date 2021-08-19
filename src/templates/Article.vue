@@ -362,7 +362,7 @@ body[data-theme='light'] .article-heading {
   border-radius: var(--radius-default);
   margin-bottom: 0.5em;
   overflow: auto;
-  background: var(--accent-color-lighter, var(--code-bg-color));
+  background: var(--code-bg-color);
 }
 
 .gridsome-highlight::-webkit-scrollbar {
@@ -410,6 +410,7 @@ body[data-theme='light'] .article-heading {
 .gridsome-code-title {
   background-color: var(--accent-color-lighter, var(--code-bg-color));
   border-bottom: 3px solid var(--color-gray-700);
+  border-radius: 4px 4px 0 0;
   text-align: center;
   padding: 0.4rem 0;
 }
@@ -425,22 +426,6 @@ body[data-theme='light'] .article-heading {
 .gridsome-highlight ::selection {
   color: unset !important;
   background: rgba(0, 0, 0, 0.3) !important;
-}
-
-body[data-theme='dark'] .token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #657b83;
-}
-
-body[data-theme='dark'] code[class*='language-'],
-pre[class*='language-'] {
-  color: #93a1a1;
-}
-
-body[data-theme='light'] .gridsome-highlight ::selection {
-  background: rgba(223, 223, 223, 0.3) !important;
 }
 
 body[data-theme='light']
