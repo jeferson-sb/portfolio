@@ -137,27 +137,26 @@ main {
   }
 }
 
-@media screen and (max-width: 765px) {
-  aside {
-    padding: 0 2.4rem;
-  }
-}
-
 @media screen and (min-width: 426px) and (max-width: 768px) {
   aside {
     margin-left: 40px;
+    padding: 0 2.4rem 0 0;
   }
 }
 
 @media screen and (max-width: 425px) {
+  aside {
+    padding: 0 1rem;
+  }
+
   .container {
     height: 100%;
   }
 
   .binary-text-svg {
-    top: auto;
-    left: 210px;
-    bottom: -90px;
+    top: 50%;
+    left: 0;
+    bottom: 0;
   }
 }
 </style>
