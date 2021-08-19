@@ -1,13 +1,15 @@
 <template>
   <div class="github-repo-card">
-    <h4 class="github-repo-card__title">
-      <g-link :to="pullRequest.repository.url">
-        {{ pullRequest.repository.nameWithOwner }}
-      </g-link>
-    </h4>
-    <p class="github-repo-card__description">
-      {{ pullRequest.repository.description }}
-    </p>
+    <div class="github-repo-card__heading">
+      <h4 class="github-repo-card__title">
+        <g-link :to="pullRequest.repository.url">
+          {{ pullRequest.repository.nameWithOwner }}
+        </g-link>
+      </h4>
+      <p class="github-repo-card__description">
+        {{ pullRequest.repository.description }}
+      </p>
+    </div>
     <p class="github-repo-details">
       <span class="github-repo-language">
         <CircleFillSVG />
@@ -42,6 +44,9 @@ export default {
 
 <style scoped>
 .github-repo-card {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
   padding: 18px 28px;
   background-color: var(--bg-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
