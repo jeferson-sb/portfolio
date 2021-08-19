@@ -59,10 +59,16 @@ export default {
 </script>
 
 <style scoped>
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .container {
   flex-flow: row wrap;
   padding: 3rem 0;
-  height: calc(100vh - 168px);
 }
 
 main {
