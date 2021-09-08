@@ -395,7 +395,6 @@ body[data-theme='light'] .article-heading {
   padding: 0;
   overflow: initial;
   min-width: 100%;
-  margin-top: 0;
 }
 
 .gridsome-highlight pre[class*='language-'].line-numbers {

@@ -40,7 +40,7 @@ export default {
   mounted() {
     this.current =
       document.body.getAttribute('data-theme') ||
-      localStorage.getItem('selected-theme')
+      localStorage.getItem('@jb/selected-theme')
   },
   computed: {
     svgClass() {
@@ -53,7 +53,7 @@ export default {
       const currentIndex = this.themes.indexOf(this.current) + 1
       const nextIndex = currentIndex % this.themes.length
       this.current = this.themes[nextIndex]
-      localStorage.setItem('selected-theme', this.current)
+      localStorage.setItem('@jb/selected-theme', this.current)
       document.body.setAttribute('data-theme', this.current)
     },
   },
@@ -115,6 +115,10 @@ export default {
 
 .on .lamp-on-line-3 {
   animation-delay: var(--delay-1);
+}
+
+.on .lamp-on-bulb {
+  filter: drop-shadow(0 2px 5px #fec165);
 }
 
 .off .lamp-on-line {

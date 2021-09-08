@@ -62,7 +62,10 @@ module.exports = {
         serviceWorkerPath: 'service-worker.js',
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
         manifestPath: 'manifest.json',
-        title: 'Front-end Developer & UI Designer',
+        title: 'Jeferson S. Brito',
+        short_name: 'JB',
+        description:
+          "I'm a Software Developer Consultant focused in Front-end Web Development",
         startUrl: '/',
         display: 'standalone',
         statusBarStyle: 'default',

@@ -21,7 +21,7 @@ export default {
     SkipLink,
   },
   mounted() {
-    const storedTheme = localStorage.getItem('selected-theme')
+    const storedTheme = localStorage.getItem('@jb/selected-theme')
     const setAttrValue = (el, attr, value) => el.setAttribute(attr, value)
 
     if (!storedTheme) {
