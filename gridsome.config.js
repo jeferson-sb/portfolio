@@ -61,6 +61,7 @@ module.exports = {
         disableServiceWorker: false,
         serviceWorkerPath: 'service-worker.js',
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+        disableTemplatedUrls: false,
         manifestPath: 'manifest.json',
         title: 'Jeferson S. Brito',
         short_name: 'JB',
