@@ -173,8 +173,8 @@ body[data-theme='light'] .article-heading {
 }
 
 .article-body {
-  font-size: clamp(var(--text-base), 0.9697rem + 0.1294vw, var(--text-lg));
   margin: 0 auto;
+  font-size: clamp(var(--text-base), 0.9697rem + 0.1294vw, var(--text-lg));
   font-family: var(--font-serif);
 }
 
@@ -345,7 +345,8 @@ body[data-theme='light'] .article-heading {
 
 /* Code syntax highlight */
 
-.article-body-content code[class*='language-text'] {
+.article-body-content code[class*='language-text'],
+.article-body-content code[class*='language-inline-text'] {
   font-family: var(--font-mono);
   padding: 2px 6px;
   background-color: var(--accent-color-lighter, var(--code-bg-color));
