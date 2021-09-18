@@ -100,6 +100,10 @@ export default {
   --delay-3: calc(var(--delay-2) / 2);
 }
 
+.on {
+  filter: drop-shadow(0 20px 10px rgb(254 193 101 / 30%));
+}
+
 .on .lamp-on-line {
   opacity: 0;
   animation: turn-on-lines 300ms ease-in-out forwards;
@@ -115,10 +119,6 @@ export default {
 
 .on .lamp-on-line-3 {
   animation-delay: var(--delay-1);
-}
-
-.on .lamp-on-bulb {
-  filter: drop-shadow(0 2px 5px #fec165);
 }
 
 .off .lamp-on-line {
