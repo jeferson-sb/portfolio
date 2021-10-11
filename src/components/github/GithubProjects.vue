@@ -46,7 +46,7 @@ export default {
 query {
   userInfo {
     user(login: "jeferson-sb") {
-      pullRequests(last: 50, orderBy: { field: CREATED_AT, direction: DESC }) {
+      pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }) {
         edges {
           node {
             id
