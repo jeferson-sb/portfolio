@@ -16,7 +16,7 @@
     "@gridsome/source-graphql": "^0.1.0",
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/vue-remark": "^0.2.6",
-    "axios": "^0.22.0",
+    "axios": "^0.24.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-gtag": "^0.1.10",
     "gridsome-plugin-i18n": "^1.6.0",
