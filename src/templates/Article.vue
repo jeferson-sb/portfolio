@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main>
+    <main id="main-content">
       <article class="article">
         <div class="article-heading">
           <h1>{{ article.title }}</h1>
