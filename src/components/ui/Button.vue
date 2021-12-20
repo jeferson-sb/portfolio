@@ -1,12 +1,14 @@
 <template>
-  <button v-if="!isAnchor" :class="styles" v-bind="$attrs" v-on="$listeners">
+  <component
+    :class="styles"
+    v-bind="$attrs"
+    :is="isAnchor ? 'g-link' : 'button'"
+    :to="isAnchor ? to : null"
+    v-on="$listeners"
+  >
     <slot name="icon"></slot>
     <slot />
-  </button>
-  <g-link v-else-if="isAnchor" :to="to" :class="styles" v-bind="$attrs">
-    <slot name="icon"></slot>
-    <slot />
-  </g-link>
+  </component>
 </template>
 
 <script>
