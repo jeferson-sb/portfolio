@@ -43,11 +43,19 @@ export default {
       meta: [
         {
           name: 'description',
-          content: `
-          Here you can find all of my published articles, tutorials and
-          guides, going from little css tips to software architecture, open
-          source, user experience and all sort of things
-          `,
+          content: this.SEO.description,
+        },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: this.SEO.title },
+        { property: 'og:description', content: this.SEO.description },
+        { property: 'og:url', content: this.url },
+        {
+          property: 'twitter:title',
+          content: this.SEO.title,
+        },
+        {
+          property: 'twitter:description',
+          content: this.SEO.description,
         },
       ],
     }
@@ -56,11 +64,19 @@ export default {
   data() {
     return {
       scrolling: false,
+      SEO: {
+        title: 'Articles • Jeferson S. Brito',
+        description:
+          'Here you can find all of my articles, tutorials and guides, going from little css tips to software architecture, open source, user experience and so on',
+      },
     }
   },
   computed: {
     allPosts() {
       return this.$page.articles.edges
+    },
+    url() {
+      return `${this.$page.metadata.siteUrl}${this.$route.path}`
     },
   },
   methods: {
@@ -90,6 +106,9 @@ query {
         tags
       }
     }
+  }
+  metadata {
+    siteUrl
   }
 }
 </page-query>

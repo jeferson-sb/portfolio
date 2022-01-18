@@ -69,11 +69,23 @@ export default {
           content: this.canonicalUrl,
         },
         {
-          name: 'twitter:title',
+          property: 'og:type',
+          content: 'article',
+        },
+        {
+          property: 'og:image',
+          content: this.article.coverImage,
+        },
+        {
+          property: 'twitter:title',
           content: this.article.title,
         },
         {
-          name: 'twitter:description',
+          property: 'twitter:image',
+          content: this.article.coverImage,
+        },
+        {
+          property: 'twitter:description',
           content: this.article.excerpt,
         },
         {
@@ -123,6 +135,7 @@ query Article ($path: String) {
     crosspostedOn
     crosspostLink
     canonicalUrl
+    coverImage
   }
   site: metadata {
     siteUrl

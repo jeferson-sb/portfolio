@@ -50,13 +50,51 @@ export default {
     SocialMediaIcons,
     BinaryTextSVG,
   },
+  data: () => ({
+    SEO: {
+      title: 'About me • Jeferson S. Brito',
+      description:
+        'I am focused on proving the best practices, fundamentals and consistency through out the code and passionate about designing delightful user interfaces',
+    },
+  }),
   metaInfo() {
     return {
       title: 'About me',
+      meta: [
+        {
+          name: 'description',
+          content: this.SEO.description,
+        },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: this.SEO.title },
+        { property: 'og:description', content: this.SEO.description },
+        { property: 'og:url', content: this.url },
+        {
+          property: 'twitter:title',
+          content: this.SEO.title,
+        },
+        {
+          property: 'twitter:description',
+          content: this.SEO.description,
+        },
+      ],
     }
+  },
+  computed: {
+    url() {
+      return `${this.$page.metadata.siteUrl}${this.$route.path}`
+    },
   },
 }
 </script>
+
+<page-query>
+query {
+  metadata {
+    siteUrl
+  }
+}
+</page-query>
 
 <style scoped>
 #app {

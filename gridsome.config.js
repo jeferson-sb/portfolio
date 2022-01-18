@@ -1,9 +1,7 @@
 module.exports = {
-  siteName: 'Front-end Developer & UI Designer',
+  siteName: 'Software Engineer',
   siteUrl: `https://jefersonsilva.me`,
   titleTemplate: '%s • Jeferson S. Brito',
-  siteDescription:
-    "I'm a Software Developer Consultant focused in Front-end Web Development",
   icon: './static/favicon.png',
   plugins: [
     {
@@ -63,16 +61,19 @@ module.exports = {
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
         disableTemplatedUrls: false,
         manifestPath: 'manifest.json',
-        title: 'Jeferson S. Brito',
-        short_name: 'JB',
-        description:
-          "I'm a Software Developer Consultant focused in Front-end Web Development",
+        title: "Jeferson's Portfolio",
         startUrl: '/',
-        display: 'standalone',
-        statusBarStyle: 'default',
-        themeColor: '#1abbd1',
-        backgroundColor: '#1A1C1F',
         icon: 'static/favicon.png',
+        display: 'standalone',
+        orientation: 'landscape',
+        statusBarStyle: 'default',
+        themeColor: '#1A1C1F',
+        backgroundColor: '#1ABBD1',
+        shortName: 'JB',
+        description:
+          "I'm Jeferson a Software Engineer that crafts things for the Web, heavy focused on front-end development with a boiling taste of UI design",
+        msTileColor: '#1A1C1F',
+        appleMaskIconColor: '#1A1C1F',
       },
     },
   ],

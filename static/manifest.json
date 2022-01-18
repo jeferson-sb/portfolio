@@ -1,7 +1,8 @@
 {
   "name": "Jeferson S. Brito",
   "short_name": "JB",
-  "start_url": ".",
+  "start_url": "/",
+  "display": "standalone",
   "description": "I'm a Software Developer Consultant focused in Front-end Web Development",
   "icons": [
     {
@@ -17,6 +18,5 @@
   ],
   "orientation": "landscape",
   "theme_color": "#1A1C1F",
-  "background_color": "#1ABBD1",
-  "display": "standalone"
+  "background_color": "#1ABBD1"
 }

@@ -56,6 +56,24 @@ export default {
   metaInfo() {
     return {
       title: '404 Not Found',
+      meta: [
+        {
+          name: 'description',
+          content: 'This page could not be found',
+        },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: '404 Not Found • Jeferson S. Brito' },
+        { property: 'og:description', content: 'This page could not be found' },
+        { property: 'og:url', content: '/404' },
+        {
+          property: 'twitter:title',
+          content: '404 Not Found • Jeferson S. Brito',
+        },
+        {
+          property: 'twitter:description',
+          content: 'This page could not be found',
+        },
+      ],
     }
   },
   data() {

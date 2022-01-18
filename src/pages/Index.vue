@@ -22,5 +22,43 @@ export default {
     ProjectsGrid,
     GithubProjects,
   },
+  data: () => ({
+    SEO: {
+      description:
+        "I'm Jeferson a Software Engineer that crafts things for the Web, heavy focused on front-end development with a boiling taste of UI design",
+    },
+  }),
+  metaInfo() {
+    return {
+      title: this.$page.metadata.siteName,
+      meta: [
+        {
+          name: 'description',
+          content: this.SEO.description,
+        },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: this.$page.metadata.siteName },
+        { property: 'og:description', content: this.SEO.description },
+        { property: 'og:url', content: this.$page.metadata.siteUrl },
+        {
+          property: 'twitter:title',
+          content: this.$page.metadata.siteName,
+        },
+        {
+          property: 'twitter:description',
+          content: this.SEO.description,
+        },
+      ],
+    }
+  },
 }
 </script>
+
+<page-query>
+query {
+  metadata {
+    siteName
+    siteUrl
+  }
+}
+</page-query>
