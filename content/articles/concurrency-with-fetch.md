@@ -7,6 +7,7 @@ excerpt: Fetch API is a web api for making network requests and fetching resourc
 slug: how-to-make-concurrent-requests-with-fetch-api
 crosspostedOn: ''
 crosspostLink: ''
+coverImage: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/concurrent_fetch_example.png?alt=media&token=be235c2c-93e7-46ae-9b80-390feacb15fc
 ---
 
 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) is a web api for making network requests and fetching resources with JavaScript. Calling fetch returns a promise response that can be managed in various ways.
@@ -89,9 +90,9 @@ One way to pull that information is to make sequential requests to the API:
 
 ```js
 /* Let's imagine we need a structure like this:
-{ 
-	...todo data, 
-	user: ...Todo author user data 
+{
+	...todo data,
+	user: ...Todo author user data
 }
 */
 

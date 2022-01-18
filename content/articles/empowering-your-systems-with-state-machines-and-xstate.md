@@ -7,6 +7,7 @@ excerpt: We know software can get complex over time, specially when it comes to 
 slug: empowering-your-systems-with-state-machines-and-xstate
 crosspostedOn: 'Codeminer42 Blog'
 crosspostLink: 'https://blog.codeminer42.com/empowering-your-systems-with-state-machines-and-xstate/'
+coverImage: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/fsm-banner.jpg?alt=media&token=63356086-b759-40a7-ab22-5fec2d4991fd
 ---
 
 We know software can get complex over time, specially when it comes to state management. More often than not, we find ourselves with tricky user interface logic where things on the screen may not represent the actual system's state, which ends up being either too vague and leading to a difficult diagnosis of what is the current state, what the next will be and so on...

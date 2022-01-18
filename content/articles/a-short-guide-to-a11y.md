@@ -7,6 +7,7 @@ excerpt: In Web Development, we often think about design, performance, tools, an
 slug: a-short-guide-to-a11y
 crosspostedOn: ''
 crosspostLink: ''
+coverImage: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-banner.png?alt=media&token=283cad1b-a4d7-43ce-b4d3-c60d062ec636
 ---
 
 In Web Development, we often think about design, performance, tools, and libraries when building our applications, but when it comes to usability and user experience making these applications more accessible is also an important task that is not always common to see on a daily basis.
