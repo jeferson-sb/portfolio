@@ -1,5 +1,6 @@
 <template functional>
   <img
+    loading="lazy"
     :data-src="props.src"
     :data-srcset="props.srcset"
     :alt="props.alt"

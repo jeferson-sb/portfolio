@@ -49,7 +49,11 @@
     <code> --gallery-columns: {{ columns }} </code>
     <div class="gallery" ref="gallery">
       <figure class="image" v-for="i in 6" :key="i">
-        <img :src="`https://picsum.photos/id/${i * 100}/400/200`" alt="" />
+        <img
+          :src="`https://picsum.photos/id/${i * 100}/400/200`"
+          loading="lazy"
+          alt=""
+        />
       </figure>
     </div>
   </div>
