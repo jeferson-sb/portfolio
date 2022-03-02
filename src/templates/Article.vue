@@ -2,28 +2,15 @@
   <Layout>
     <main id="main-content">
       <article class="article">
-        <div class="article-heading">
-          <h1>{{ article.title }}</h1>
-          <p class="article-info">
-            <time :datetime="article.published_at">
-              {{ formattedDate }}
-            </time>
-            <span
-              class="article-source"
-              v-if="article.crosspostedOn && article.crosspostLink"
-            >
-              Originally posted on
-              <a
-                :href="article.crosspostLink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ article.crosspostedOn }}
-              </a>
-            </span>
-            <TagGroup :tags="tags" />
-          </p>
-        </div>
+        <ArticleHeading
+          :title="article.title"
+          :tags="tags"
+          :crosspostedOn="article.crosspostedOn"
+          :crosspostLink="article.crosspostLink"
+          :datetime="article.published_at"
+          :displayDate="formattedDate"
+        />
+        <ArticleControls :articleUrl="canonicalUrl" />
         <section class="container">
           <div ref="articleBody" class="article-body">
             <VueRemarkContent class="article-body-content" />
@@ -36,11 +23,13 @@
 
 <script>
 import lozad from 'lozad'
-import TagGroup from '@/components/ui/TagGroup'
+import ArticleControls from '../components/article/ArticleControls.vue'
+import ArticleHeading from '../components/article/ArticleHeading.vue'
 
 export default {
   components: {
-    TagGroup,
+    ArticleControls,
+    ArticleHeading,
   },
   metaInfo() {
     return {
@@ -144,43 +133,6 @@ query Article ($path: String) {
 </page-query>
 
 <style>
-.article-heading {
-  background-color: var(--accent-color-lighter, var(--color-gray-800));
-  padding: calc(2vw + 85px) calc(1vw + 200px);
-  max-height: 340px;
-  box-shadow: var(--elevation-2);
-  text-align: center;
-}
-
-body[data-theme='light'] .article-heading {
-  box-shadow: var(--elevation-3);
-}
-
-.article-heading h1 {
-  font-size: clamp(var(--text-lg), 1vw + var(--text-xl), var(--text-2xl));
-}
-
-.article-info {
-  display: flex;
-  flex-flow: row wrap;
-  opacity: 0.7;
-  justify-content: center;
-}
-
-.article-info .tags {
-  margin: 0;
-}
-
-.article-info time {
-  margin-right: 9px;
-}
-
-.article-info .article-source {
-  margin-right: 9px;
-  padding-left: 9px;
-  border-left: 1px solid var(--text-color-default);
-}
-
 .article .container {
   max-width: 100%;
 }
@@ -467,24 +419,6 @@ body[data-theme='light'] .gridsome-code-title {
 }
 
 @media screen and (max-width: 425px) {
-  .article-heading {
-    padding: 20px;
-    text-align: left;
-  }
-
-  .article-heading h1 {
-    margin-bottom: 2vw;
-  }
-
-  .article-info {
-    justify-content: unset;
-  }
-
-  .article-info time {
-    flex-basis: 100%;
-    margin-bottom: 7px;
-  }
-
   .article-body {
     max-width: 100%;
   }
