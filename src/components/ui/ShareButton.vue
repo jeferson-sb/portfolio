@@ -37,14 +37,13 @@ export default {
     },
     title: {
       type: String,
-      default: document.title,
     },
   },
   components: { Button },
   methods: {
     async share() {
       await window.navigator.share({
-        title: this.title,
+        title: this.title ?? document.title,
         text: this.text,
         url: this.link,
       })

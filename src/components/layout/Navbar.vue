@@ -9,6 +9,9 @@
           <li class="navbar-menu__item no-effect">
             <ThemeSwitcher variant="transform" />
           </li>
+          <li class="navbar-menu__item no-effect is-mobile-only">
+            <HamburgerMenu aria-controls="mobile-menu" @click="showMenu" />
+          </li>
           <li class="navbar-menu__item">
             <g-link class="navbar-menu__link" to="/articles"> Articles </g-link>
           </li>
@@ -21,26 +24,54 @@
         </ul>
       </nav>
     </div>
+    <MobileNavbar>
+      <li class="navbar-menu__item">
+        <g-link class="navbar-menu__link" to="/articles"> Articles </g-link>
+      </li>
+      <li class="navbar-menu__item">
+        <g-link class="navbar-menu__link" to="/about-me">About</g-link>
+      </li>
+      <li class="navbar-menu__item">
+        <a class="navbar-menu__link" href="/#projects"> Projects </a>
+      </li>
+    </MobileNavbar>
   </header>
 </template>
 
 <script>
 import ThemeSwitcher from '@/components/ui/ThemeSwitcher.vue'
+import HamburgerMenu from '../ui/HamburgerMenu.vue'
+import MobileNavbar from './MobileNavbar.vue'
 
 export default {
   components: {
     ThemeSwitcher,
+    HamburgerMenu,
+    MobileNavbar,
+  },
+  methods: {
+    showMenu() {
+      const button = document.querySelector('.hamburger-menu')
+      const menu = document.querySelector('.mobile-navbar')
+
+      button.classList.toggle('hamburger-menu--active')
+      menu.classList.toggle('mobile-navbar--opened')
+
+      const isActive = button.classList.contains('hamburger-menu--active')
+      button.setAttribute('aria-expanded', isActive)
+    },
   },
 }
 </script>
 
 <style scoped>
 .header {
+  display: flex;
+  align-items: center;
   position: sticky;
   top: 0;
-  display: flex;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   font-family: var(--font-title);
   border-bottom: 1px solid var(--color-gray-800);
   z-index: 1;
@@ -53,9 +84,11 @@ export default {
 
 .header a {
   color: var(--text-color-default);
-  transition-property: font-weight;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
+  transition: font-weight 200ms ease-out;
+}
+
+.header ul {
+  list-style-type: none;
 }
 
 .navbar {
@@ -63,7 +96,6 @@ export default {
 }
 
 .navbar .navbar-menu {
-  list-style-type: none;
   display: flex;
   align-items: center;
 }
@@ -152,25 +184,11 @@ body[data-theme='light'] .header {
   }
 
   .navbar .navbar-menu .navbar-menu__item + .navbar-menu__item {
-    margin-left: 0;
+    margin-left: 20px;
   }
 
-  .navbar .navbar-menu .navbar-menu__link {
-    letter-spacing: 1px;
-    text-transform: initial;
-  }
-
-  .navbar .navbar-menu li:active,
-  .navbar .navbar-menu li:focus {
-    outline-width: 2px;
-  }
-
-  .navbar .navbar-menu li.no-effect {
-    padding-right: 0;
-  }
-
-  svg.animated {
-    left: 12px;
+  .navbar-menu .navbar-menu__item:nth-child(n + 3) {
+    display: none;
   }
 }
 </style>
