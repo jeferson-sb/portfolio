@@ -1,7 +1,7 @@
 <template>
   <section class="github-projects container">
     <h3>Open Source</h3>
-    <h4>Latest contributions</h4>
+    <h4>Latest contributions <small>(monthly updated)</small></h4>
     <div class="github-repositories">
       <GithubRepoCard
         v-for="pr in pullRequests"

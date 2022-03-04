@@ -25,7 +25,7 @@ export default {
   data: () => ({
     SEO: {
       description:
-        "I'm Jeferson a Software Engineer that crafts things for the Web, heavy focused on front-end development with a boiling taste of UI design",
+        "I'm a Software Engineer that crafts things for the Web, heavy focused on front-end development enthusiastic and fascinated on UI design",
     },
   }),
   metaInfo() {

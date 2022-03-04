@@ -2,11 +2,15 @@
   <section class="hero container has-ellipse-curve">
     <div class="hero-content">
       <h1 class="hero__headline">I'm Jeferson Brito</h1>
-      <h2 class="hero__subheadline">Web Developer & UI Designer</h2>
+      <p class="hero__description">
+        Software Engineer that crafts things for the Web, heavy focused on
+        front-end development enthusiastic and fascinated on UI design ✨
+      </p>
       <SocialMediaIcons />
     </div>
     <div class="hero-aside">
       <ScrollIndicator class="is-mobile-only" />
+      <h2 class="hero__subheadline">web developer</h2>
       <HeroAvatar>
         <g-image
           src="@/assets/img/profile.jpg"
@@ -49,15 +53,37 @@ export default {
 }
 
 .hero__subheadline {
-  font-size: var(--text-2xl);
-  font-size: clamp(var(--text-lg), 1vw + var(--text-xl), var(--text-2xl));
-  opacity: 0.7;
-  letter-spacing: 1.2px;
-  margin-bottom: 20px;
-  color: var(--color-silver);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1em;
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--color-gray-400);
+  margin: 0 1rem;
+}
+
+.hero__subheadline::before,
+.hero__subheadline::after {
+  content: '';
+  border-bottom: 1px solid var(--color-gray-400);
+  align-self: center;
+  justify-self: center;
+  min-width: 24px;
+  transform: rotate(90deg);
+}
+
+.hero__description {
+  font-size: clamp(var(--text-base), 1vw + var(--text-lg), var(--text-xl));
+  margin-bottom: 1.5rem;
+  color: var(--color-silver-600);
 }
 
 .hero-aside {
+  display: flex;
   justify-self: end;
   padding: 0 17px;
 }
@@ -106,12 +132,6 @@ export default {
   .hero__headline {
     font-size: calc(var(--text-xl) + 0.75rem);
     letter-spacing: 1.2px;
-  }
-
-  .hero__subheadline {
-    font-weight: 500;
-    letter-spacing: initial;
-    font-size: var(--text-base);
   }
 
   .social-media-icons a {

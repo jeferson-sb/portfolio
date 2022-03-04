@@ -71,7 +71,7 @@ module.exports = {
         backgroundColor: '#1ABBD1',
         shortName: 'JB',
         description:
-          "I'm Jeferson a Software Engineer that crafts things for the Web, heavy focused on front-end development with a boiling taste of UI design",
+          'I am Software Engineer that crafts things for the Web, heavy focused on front-end development enthusiastic and fascinated on UI design',
         msTileColor: '#1A1C1F',
         appleMaskIconColor: '#1A1C1F',
       },

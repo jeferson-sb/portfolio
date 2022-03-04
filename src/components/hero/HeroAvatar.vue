@@ -1,6 +1,8 @@
 <template>
   <div class="hero-avatar">
-    <slot />
+    <picture>
+      <slot />
+    </picture>
   </div>
 </template>
 
@@ -34,7 +36,42 @@ export default {
   clip-path: circle(70px at center);
 }
 
-body[data-theme='light'] .hero-avatar {
+.hero-avatar picture {
+  position: relative;
+}
+
+.hero-avatar picture::before {
+  --avatar-outline-color: var(--color-silver);
+
+  content: '';
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  outline: 8px inset var(--avatar-outline-color);
+  border-radius: 9999px;
+  animation: rotateOutline 20s linear infinite normal both;
+  will-change: transform;
+}
+
+@keyframes rotateOutline {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+[data-theme='light'] .hero-avatar {
   box-shadow: var(--elevation-3);
+}
+
+[data-theme='light'] .hero-avatar picture::before {
+  --avatar-outline-color: var(--color-primary);
 }
 </style>

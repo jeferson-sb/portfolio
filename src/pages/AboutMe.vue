@@ -16,22 +16,25 @@
       <main id="main-content">
         <article class="about-content">
           <h1 class="about-content__headline">About me</h1>
+          <p>👋 Hey! How are you?</p>
           <p>
-            I'm <strong>software developer consultant</strong> focused in
-            <em>Front-end Web Developement</em>.
+            I'm Jeferson. I'm a
+            <strong>software engineer</strong> dedicated to
+            <em> crafting </em> things for the web through coding.
           </p>
           <p>
-            I’m a Developer that aim promoting and delivering the best quality
-            products. Someone who believes that perseverance, effort and
-            determination leads to the best results.
+            I wrote my first lines of code back in 2014 of HTML4, CSS and ES5
+            using just a notepad in a very low machine 😅. Like many people I
+            graduated a few years later and since then I've been on this
+            adventure into the world of programming.
           </p>
           <p>
-            I am always focused on proving the
-            <strong>
-              best practices, fundamentals and consistency through out the code </strong
-            >, passionated about the entire JavaScript ecosystem and that loves
-            a good experience and delightful user interfaces.
+            I don't have "favorites", but I like to code on JavaScript,
+            Typescript, Python, and Elixir at the moment. I also like to think
+            outside coding, prioritizing tasks/features, and proving the best
+            practices, fundamentals, and consistency throughout the code.
           </p>
+          <p>I'm into computers, ui design, games and anime (of course) :P</p>
           <SocialMediaIcons boxed />
         </article>
       </main>
@@ -54,7 +57,7 @@ export default {
     SEO: {
       title: 'About me • Jeferson S. Brito',
       description:
-        'I am focused on proving the best practices, fundamentals and consistency through out the code and passionate about designing delightful user interfaces',
+        'I am Software Engineer that crafts things for the Web, heavy focused on front-end development enthusiastic and fascinated on UI design',
     },
   }),
   metaInfo() {
@@ -124,45 +127,43 @@ main {
 }
 
 .binary-text-svg {
-  font-family: monospace;
+  font-family: var(--font-mono);
   font-size: var(--text-xl);
   position: absolute;
-  left: 310px;
-  top: 280px;
+  left: 282px;
+  top: 387px;
   opacity: 0.3;
 }
 
 .binary-text-svg tspan {
+  --text-delay: 500ms;
+
   opacity: 0;
-  animation-name: pulse-spread;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: pulse-spread 3s var(--text-delay) ease-out infinite alternate;
 }
 
 .binary-text-svg tspan:nth-child(1) {
-  animation-delay: 500ms;
+  --text-delay: 500ms;
 }
 
 .binary-text-svg tspan:nth-child(2) {
-  animation-delay: 1s;
+  --text-delay: 1s;
 }
 
 .binary-text-svg tspan:nth-child(3) {
-  animation-delay: 1.5s;
+  --text-delay: 1.5s;
 }
 
 .binary-text-svg tspan:nth-child(4) {
-  animation-delay: 2s;
+  --text-delay: 2s;
 }
 
 .binary-text-svg tspan:nth-child(5) {
-  animation-delay: 2.5s;
+  --text-delay: 2.5s;
 }
 
 .binary-text-svg tspan:nth-child(6) {
-  animation-delay: 3s;
+  --text-delay: 3s;
 }
 
 @keyframes pulse-spread {
