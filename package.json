@@ -20,7 +20,7 @@
     "gridsome": "^0.7.23",
     "gridsome-plugin-gtag": "^0.1.10",
     "gridsome-plugin-i18n": "^1.6.0",
-    "gridsome-plugin-pwa": "^0.0.18",
+    "gridsome-plugin-pwa": "^0.0.22",
     "gridsome-plugin-remark-prismjs-all": "^0.4.8",
     "gridsome-plugin-svg": "^0.0.14",
     "lozad": "^1.16.0",
