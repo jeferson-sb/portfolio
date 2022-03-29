@@ -1,6 +1,6 @@
 ---
 id: 1618319933899yu2ik783m
-title: Better Layout Composition with Custom Properties
+title: Better Layout Composition with CSS Custom Properties
 published_at: 2021-04-13T13:19:05.252Z
 tags: css, front-end
 excerpt: CSS is one of the three Pilars of Modern Web Development, it has evolved a lot in the past years both in terms of features and technologies going from preprocessors to CSS-in-JS, CSS modules and PostCSS...
