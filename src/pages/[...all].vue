@@ -1,170 +1,183 @@
 <template>
   <main>
     <transition name="swirl">
-      <div v-if="!isComputerDead" class="content">
-        <g-image
+      <div v-if="!state.isComputerDead" class="content">
+        <img
           src="@/assets/img/meme.png"
           alt="Doge"
+          loading="lazy"
           class="doge"
           width="200"
         />
-        <g-image
+        <img
           src="@/assets/img/water_drop.png"
           alt="water drop"
+          loading="lazy"
           class="sweat"
           width="30"
-          v-if="isCrashing"
+          v-if="state.isCrashing"
         />
 
         <div :class="consoleStyles">
-          <pre>me@cia ~ $ {{ commandHistory[0] || prompt }} <span class="cursor" v-show="nextLine === 1"></span></pre>
+          <pre>me@cia ~ $ {{ state.commandHistory[0] || state.prompt }} <span class="cursor" v-show="state.nextLine === 1"></span></pre>
           <pre
-            v-show="nextLine >= 2"
-          >Enter password: {{ commandHistory[1] || prompt }} <span class="cursor" v-show="nextLine === 2"></span></pre>
+            v-show="state.nextLine >= 2"
+          >Enter password: {{ state.commandHistory[1] || state.prompt }} <span class="cursor" v-show="state.nextLine === 2"></span></pre>
           <pre
-            v-show="nextLine >= 3"
-          >mysql> {{ commandHistory[2] || prompt }}<span class="cursor" v-show="nextLine === 3"></span></pre>
-          <pre class="breakline" v-show="nextLine >= 4">uh-oh....</pre>
-          <pre class="breakline" v-show="nextLine >= 5">
+            v-show="state.nextLine >= 3"
+          >mysql> {{ state.commandHistory[2] || state.prompt }}<span class="cursor" v-show="state.nextLine === 3"></span></pre>
+          <pre class="breakline" v-show="state.nextLine >= 4">uh-oh....</pre>
+          <pre class="breakline" v-show="state.nextLine >= 5">
 [ERROR] ... beep boop ...</pre
           >
         </div>
 
-        <p class="credits">
+        <blockquote class="credits">
           (Credits for the console illustration to
-          <g-link to="https://codepen.io/joseluisq">Jose Quintana</g-link>)
-        </p>
+          <a href="https://codepen.io/joseluisq" target="_blank"
+            >Jose Quintana</a
+          >)
+        </blockquote>
       </div>
       <h1 v-else class="error">
         Not found
-        <Button to="/" variant="outline">Go back home</Button>
+        <Button href="/" variant="outline">Go back home</Button>
       </h1>
     </transition>
     <SpotLightSVG class="spotlight" />
   </main>
 </template>
 
-<script>
-import SpotLightSVG from '@/assets/svg/spotlight.svg'
-import Button from '@/components/ui/Button.vue'
+<script setup>
+import { ref, computed, reactive, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 
-export default {
-  components: {
-    SpotLightSVG,
-    Button,
-  },
-  metaInfo() {
-    return {
-      title: '404 Not Found',
-      meta: [
-        {
-          name: 'description',
-          content: 'This page could not be found',
-        },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: '404 Not Found • Jeferson S. Brito' },
-        { property: 'og:description', content: 'This page could not be found' },
-        { property: 'og:url', content: '/404' },
-        {
-          property: 'twitter:title',
-          content: '404 Not Found • Jeferson S. Brito',
-        },
-        {
-          property: 'twitter:description',
-          content: 'This page could not be found',
-        },
-      ],
+import config from '../config/siteconfig.json'
+
+const route = useRoute()
+const title = 'Page Not Found'
+const description = 'This page could not be found'
+
+useHead({
+  title,
+  meta: [
+    {
+      name: 'description',
+      content: description,
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:url', content: `${config.siteUrl}${route.path}` },
+    {
+      property: 'twitter:title',
+      content: title,
+    },
+    {
+      property: 'twitter:description',
+      content: description,
+    },
+  ],
+})
+
+const state = reactive({
+  speed: 100,
+  errorDelay: 6000,
+  prompt: '',
+  commandHistory: [],
+  commands: ['mysql -u root -p', '*******', 'DELETE FROM secret_stuff'],
+  nextLine: 1,
+  isComputerDead: false,
+  isCrashing: false,
+})
+
+const gen = ref(null)
+
+const consoleStyles = computed(() => ({
+  console: true,
+  'console--burning': state.isCrashing,
+}))
+
+const typing = (command) => {
+  let i = 0
+  const timer = setInterval(() => {
+    if (i < command.length) {
+      state.prompt += command.charAt(i)
+      i += 1
+    } else {
+      clearInterval(timer)
+      state.commandHistory.push(state.prompt)
+      state.prompt = ''
+
+      if (state.commandHistory.length < state.commands.length) {
+        state.nextLine += 1
+        gen.value.next()
+      }
     }
-  },
-  data() {
-    return {
-      speed: 100,
-      errorDelay: 6000,
-      prompt: '',
-      commandHistory: [],
-      commands: ['mysql -u root -p', '*******', 'DELETE FROM secret_stuff'],
-      nextLine: 1,
-      gen: null,
-      isComputerDead: false,
-      isCrashing: false,
-    }
-  },
-  mounted() {
-    this.gen = this.typeCommands()
-    this.gen.next()
-
-    const t = this.timeline({ start: this.errorDelay })
-    t.set('message1', () => {
-      this.nextLine += 1
-    })
-    t.set('message2', () => {
-      this.nextLine += 1
-      this.isCrashing = true
-    })
-    t.set('die', () => {
-      this.isComputerDead = true
-    })
-    t.play()
-
-    document.body.classList.add('overflow--hidden')
-  },
-  destroyed() {
-    document.body.classList.remove('overflow--hidden')
-  },
-  computed: {
-    consoleStyles() {
-      return {
-        console: true,
-        'console--burning': this.isCrashing,
-      }
-    },
-  },
-  methods: {
-    typing(command) {
-      let i = 0
-      const timer = setInterval(() => {
-        if (i < command.length) {
-          this.prompt += command.charAt(i)
-          i += 1
-        } else {
-          clearInterval(timer)
-          this.commandHistory.push(this.prompt)
-          this.prompt = ''
-          if (this.commandHistory.length < this.commands.length) {
-            this.nextLine += 1
-            this.gen.next()
-          }
-        }
-      }, this.speed)
-    },
-    *typeCommands() {
-      yield this.typing(this.commands[0])
-      yield this.typing(this.commands[1])
-      yield this.typing(this.commands[2])
-    },
-    timeline({ start }) {
-      let timeQueue = start
-      const scenes = []
-
-      const play = () => {
-        scenes.forEach((scene) => {
-          setTimeout(scene.cb, scene.timeStart)
-        })
-      }
-
-      const set = (name, cb) => {
-        timeQueue += 1500
-        scenes.push({ name, cb, timeStart: timeQueue })
-      }
-
-      return {
-        play,
-        set,
-      }
-    },
-  },
+  }, state.speed)
 }
+
+function* typeCommands() {
+  const [first, second, third] = state.commands
+
+  yield typing(first)
+  yield typing(second)
+  yield typing(third)
+}
+
+const timeline = ({ start }) => {
+  let timeQueue = start
+  const scenes = []
+
+  const play = () => {
+    scenes.forEach((scene) => {
+      setTimeout(scene.cb, scene.timeStart)
+    })
+  }
+
+  const set = (name, cb) => {
+    timeQueue += 1500
+    scenes.push({ name, cb, timeStart: timeQueue })
+  }
+
+  return {
+    play,
+    set,
+  }
+}
+
+onMounted(() => {
+  gen.value = typeCommands()
+  gen.value.next()
+
+  const t = timeline({ start: state.errorDelay })
+  t.set('message1', () => {
+    state.nextLine += 1
+  })
+
+  t.set('message2', () => {
+    state.nextLine += 1
+    state.isCrashing = true
+  })
+
+  t.set('die', () => {
+    state.isComputerDead = true
+  })
+
+  t.play()
+
+  document.body.classList.add('overflow--hidden')
+})
+
+onUnmounted(() => {
+  document.body.classList.remove('overflow--hidden')
+})
 </script>
+
+<route lang="yaml">
+meta:
+  layout: simple
+</route>
 
 <style scoped>
 main {
@@ -264,6 +277,7 @@ main {
   left: -140px;
   bottom: -20px;
   z-index: 1;
+  clip-path: circle(80px at center 84px);
 }
 
 .sweat {
