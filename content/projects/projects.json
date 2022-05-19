@@ -1,0 +1,72 @@
+{
+  "aircnc": {
+    "order": 1,
+    "thumbnail": "content/projects/media/aircnc.png",
+    "title": "Aircnc",
+    "tags": "Fullstack",
+    "demo": "https://aircnc-web.herokuapp.com/",
+    "github": "https://github.com/jeferson-sb/aircnc"
+  },
+  "chatme": {
+    "order": 2,
+    "thumbnail": "content/projects/media/chatme.png",
+    "title": "ChatMe",
+    "tags": "Node.js, Vue.js, Socket.io",
+    "demo": "https://whispering-reaches-62773.herokuapp.com/",
+    "github": "https://github.com/jeferson-sb/node-chat-app",
+    "pinned": true,
+    "description": "Lightweight chat app built with Vue 2, Express and Socket.io"
+  },
+  "gobarber": {
+    "order": 3,
+    "thumbnail": "content/projects/media/gobarber.jpg",
+    "title": "GoBarber",
+    "tags": "Node.js, React, TypeScript",
+    "github": "https://github.com/jeferson-sb/gobarber-web",
+    "pinned": true,
+    "description": "React app to manage haircuts appointments"
+  },
+  "devradar": {
+    "order": 4,
+    "thumbnail": "content/projects/media/devradar.jpg",
+    "title": "DevRadar",
+    "tags": "Full Stack",
+    "demo": "https://devradar-api.appspot.com/",
+    "github": "https://github.com/jeferson-sb/devradar"
+  },
+  "dogAI": {
+    "order": 1,
+    "thumbnail": "content/projects/media/dogAI.jpg",
+    "title": "Dog AI",
+    "tags": "Front-end, React, Tensorflow",
+    "demo": "https://dogai.netlify.com/",
+    "github": "https://github.com/jeferson-sb/dogAI",
+    "pinned": true,
+    "description": "Dog breed image recognition with Teachable Machine & Tensorflow.js"
+  },
+  "ecoleta": {
+    "thumbnail": "content/projects/media/ecoleta.png",
+    "title": "Ecoleta",
+    "tags": "React, React Native, Node.js, TypeScript",
+    "demo": "https://ecoleta-nlw.netlify.app/",
+    "github": "https://github.com/jeferson-sb/ecoleta",
+    "description": "Marketplace de coleta de resíduos"
+  },
+  "tindev": {
+    "thumbnail": "content/projects/media/tindev.png",
+    "title": "Tindev",
+    "tags": "React, React Native, Node.js, TypeScript",
+    "demo": "https://tindev-app.herokuapp.com",
+    "github": "https://github.com/jeferson-sb/tindev"
+  },
+  "bethehero": {
+    "order": 4,
+    "thumbnail": "content/projects/media/bethehero.png",
+    "title": "Be the Hero",
+    "tags": "Node.js, React, React Native",
+    "demo": "https://be-thehero.netlify.com/",
+    "github": "https://github.com/jeferson-sb/be-the-hero",
+    "pinned": true,
+    "description": "Donate System for NGOs campaigns"
+  }
+}
