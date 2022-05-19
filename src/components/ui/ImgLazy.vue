@@ -1,13 +1,13 @@
-<template functional>
+<template>
   <img
     loading="lazy"
-    :data-src="props.src"
-    :data-srcset="props.srcset"
-    :alt="props.alt"
-    :class="{ lozad: true, [props.className]: true }"
-    :width="props.width"
-    :height="props.height"
-    :style="`background-color: ${props.bgColor};`"
+    :data-src="src"
+    :data-srcset="srcset"
+    :alt="alt"
+    :class="styles"
+    :width="width"
+    :height="height"
+    :style="`background-color: ${bgColor};`"
   />
 </template>
 
@@ -27,9 +27,9 @@ export default {
       type: String,
       default: '',
     },
-    className: {
-      type: String,
-      default: '',
+    fullBleed: {
+      type: Boolean,
+      default: false,
     },
     width: {
       type: String,
@@ -41,13 +41,34 @@ export default {
       type: String,
       default: 'hsl(214, 9%, 55%)',
     },
+    fit: {
+      type: String,
+      default: 'cover',
+    },
+  },
+  computed: {
+    styles() {
+      return {
+        lozad: true,
+        'full-bleed': this.fullBleed,
+        contain: this.fit === 'contain',
+        cover: this.fit === 'cover',
+      }
+    },
   },
 }
 </script>
 
 <style scoped>
-.lozad {
+.cover {
   object-fit: cover;
+}
+
+.contain {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 768px) {

@@ -35,20 +35,6 @@
   </footer>
 </template>
 
-<script>
-import NetlifyLogoSVG from '@/assets/svg/netlify-logo.svg'
-import OctocatSVG from '@/assets/svg/octocat.svg'
-import GridsomeSVG from '@/assets/svg/gridsome-logo.svg'
-
-export default {
-  components: {
-    NetlifyLogoSVG,
-    OctocatSVG,
-    GridsomeSVG,
-  },
-}
-</script>
-
 <style scoped>
 .footer {
   width: 100%;
@@ -86,10 +72,6 @@ export default {
 
 .footer .built-tech a + a {
   margin-left: 30px;
-}
-
-.netlify-logo-svg path {
-  fill: #36b2bb;
 }
 
 @media screen and (max-width: 1024px) {

@@ -7,70 +7,61 @@
       <TagGroup v-if="size === 'long'" :tags="tags.split(',')" />
     </div>
 
-    <g-link :to="href">
+    <a :href="href">
       <h4 class="post-preview__title" :id="articleId">{{ title }}</h4>
-    </g-link>
+    </a>
 
     <template v-if="size === 'long'">
       <p class="post-preview__description">
         {{ excerpt }}
       </p>
-      <Button :to="href" :aria-describedby="articleId"> Read more </Button>
+      <Button :href="href" :aria-describedby="articleId"> Read more </Button>
     </template>
   </article>
 </template>
 
-<script>
-import TagGroup from '@/components/ui/TagGroup'
-import Button from '@/components/ui/Button.vue'
+<script setup>
+import { defineProps, computed } from 'vue'
 
-export default {
-  props: {
-    date: {
-      type: Date,
-    },
-    title: {
-      type: String,
-    },
-    href: {
-      type: String,
-    },
-    articleId: {
-      type: String,
-    },
-    excerpt: {
-      type: String,
-      default: '',
-    },
-    tags: {
-      type: String,
-    },
-    size: {
-      type: String,
-      default: 'short',
-    },
+const props = defineProps({
+  date: {
+    type: Date,
   },
-  components: {
-    TagGroup,
-    Button,
+  title: {
+    type: String,
   },
-  computed: {
-    styles() {
-      return {
-        'post-preview': true,
-        'post-preview--long': this.size === 'long',
-        'post-preview--short': this.size === 'short',
-      }
-    },
-    formattedDate() {
-      return this.date.toLocaleString(['en-US'], {
-        day: '2-digit',
-        month: 'short',
-        year: '2-digit',
-      })
-    },
+  href: {
+    type: String,
   },
-}
+  articleId: {
+    type: String,
+  },
+  excerpt: {
+    type: String,
+    default: '',
+  },
+  tags: {
+    type: String,
+  },
+  size: {
+    type: String,
+    default: 'short',
+  },
+})
+
+const styles = computed(() => ({
+  'post-preview': true,
+  'post-preview--long': props.size === 'long',
+  'post-preview--short': props.size === 'short',
+}))
+
+const formattedDate = computed(() =>
+  props.date.toLocaleString(['en-US'], {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  })
+)
 </script>
 
 <style scoped>
@@ -85,8 +76,8 @@ export default {
   position: relative;
 }
 
-.post-preview-metadata {
-  flex-basis: 86px;
+.post-preview-metadata:not(.post-preview--long) {
+  flex-basis: 100px;
   display: flex;
   align-items: center;
 }

@@ -2,44 +2,37 @@
   <div class="github-repo-card">
     <div class="github-repo-card__heading">
       <h4 class="github-repo-card__title">
-        <g-link :to="pullRequest.repository.url">
-          {{ pullRequest.repository.nameWithOwner }}
-        </g-link>
+        <a :href="repository.url">
+          {{ repository.nameWithOwner }}
+        </a>
       </h4>
       <p class="github-repo-card__description">
-        {{ pullRequest.repository.description }}
+        {{ repository.description }}
       </p>
     </div>
     <p class="github-repo-details">
       <span class="github-repo-language">
         <CircleFillSVG />
-        <span>{{ pullRequest.repository.primaryLanguage.name }}</span>
+        <span>{{ repository.primaryLanguage.name }}</span>
       </span>
       <span class="github-repo-pullrequest">
-        <g-link :to="pullRequest.url">
+        <a :href="url">
           <PullRequestSVG />
-          <span>Last PR #{{ pullRequest.number }}</span>
-        </g-link>
+          <span>Last PR #{{ number }}</span>
+        </a>
       </span>
     </p>
   </div>
 </template>
 
-<script>
-import PullRequestSVG from '@/assets/svg/git-pull-request.svg'
-import CircleFillSVG from '@/assets/svg/circle-fill.svg'
+<script setup>
+import { defineProps } from 'vue'
 
-export default {
-  props: {
-    pullRequest: {
-      type: Object,
-    },
-  },
-  components: {
-    PullRequestSVG,
-    CircleFillSVG,
-  },
-}
+defineProps({
+  repository: Object,
+  url: String,
+  number: Number,
+})
 </script>
 
 <style scoped>

@@ -1,10 +1,5 @@
 <template>
-  <button
-    aria-label="menu"
-    class="hamburger-menu"
-    v-bind="$attrs"
-    v-on="$listeners"
-  >
+  <button aria-label="menu" class="hamburger-menu" v-bind="$attrs">
     <span class="bar top"></span>
     <span class="bar middle"></span>
     <span class="bar bottom"></span>

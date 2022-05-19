@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import TagGroup from '@/components/ui/TagGroup'
-
 export default {
   props: {
     title: {
@@ -39,9 +37,6 @@ export default {
     tags: {
       type: Array,
     },
-  },
-  components: {
-    TagGroup,
   },
 }
 </script>

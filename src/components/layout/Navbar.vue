@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <div class="container">
-      <g-link to="/">
+      <router-link to="/">
         <h3>Jeferson Brito</h3>
-      </g-link>
+      </router-link>
       <nav class="navbar">
         <ul class="navbar-menu">
           <li class="navbar-menu__item no-effect">
@@ -13,42 +13,45 @@
             <HamburgerMenu aria-controls="mobile-menu" @click="showMenu" />
           </li>
           <li class="navbar-menu__item">
-            <g-link class="navbar-menu__link" to="/articles"> Articles </g-link>
+            <router-link class="navbar-menu__link" to="/articles">
+              Articles
+            </router-link>
           </li>
           <li class="navbar-menu__item">
-            <g-link class="navbar-menu__link" to="/about-me">About</g-link>
+            <router-link class="navbar-menu__link" to="/about-me"
+              >About</router-link
+            >
           </li>
           <li class="navbar-menu__item">
-            <a class="navbar-menu__link" href="/#projects"> Projects </a>
+            <router-link class="navbar-menu__link" to="/#projects">
+              Projects
+            </router-link>
           </li>
         </ul>
       </nav>
     </div>
     <MobileNavbar>
       <li class="navbar-menu__item">
-        <g-link class="navbar-menu__link" to="/articles"> Articles </g-link>
+        <router-link class="navbar-menu__link" to="/articles">
+          Articles
+        </router-link>
       </li>
       <li class="navbar-menu__item">
-        <g-link class="navbar-menu__link" to="/about-me">About</g-link>
+        <router-link class="navbar-menu__link" to="/about-me"
+          >About</router-link
+        >
       </li>
       <li class="navbar-menu__item">
-        <a class="navbar-menu__link" href="/#projects"> Projects </a>
+        <router-link class="navbar-menu__link" to="/#projects">
+          Projects
+        </router-link>
       </li>
     </MobileNavbar>
   </header>
 </template>
 
 <script>
-import ThemeSwitcher from '@/components/ui/ThemeSwitcher.vue'
-import HamburgerMenu from '../ui/HamburgerMenu.vue'
-import MobileNavbar from './MobileNavbar.vue'
-
 export default {
-  components: {
-    ThemeSwitcher,
-    HamburgerMenu,
-    MobileNavbar,
-  },
   methods: {
     showMenu() {
       const button = document.querySelector('.hamburger-menu')

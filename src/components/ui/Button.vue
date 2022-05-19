@@ -2,9 +2,8 @@
   <component
     :class="styles"
     v-bind="$attrs"
-    :is="isAnchor ? 'g-link' : 'button'"
-    :to="isAnchor ? to : null"
-    v-on="$listeners"
+    :is="isAnchor ? 'router-link' : 'button'"
+    :to="isAnchor ? href : null"
   >
     <slot name="icon"></slot>
     <slot />
@@ -26,7 +25,7 @@ export default {
       type: String,
       default: 'normal',
     },
-    to: {
+    href: {
       type: String,
     },
     squared: {
@@ -55,7 +54,7 @@ export default {
       }
     },
     isAnchor() {
-      return this.variant === 'link' || Boolean(this.to)
+      return this.variant === 'link' || Boolean(this.href)
     },
   },
 }

@@ -1,18 +1,13 @@
 <template>
   <div class="article-controls">
-    <g-link to="/articles">View other articles</g-link>
+    <a href="/articles">View other articles</a>
     <ShareButton :link="articleUrl" text="Take a look at this article" />
   </div>
 </template>
 
 <script>
-import ShareButton from '@/components/ui/ShareButton.vue'
-
 export default {
   props: ['articleUrl'],
-  components: {
-    ShareButton,
-  },
 }
 </script>
 

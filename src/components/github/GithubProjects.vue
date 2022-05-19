@@ -2,67 +2,65 @@
   <section class="github-projects container">
     <h3>Open Source</h3>
     <h4>Latest contributions <small>(monthly updated)</small></h4>
-    <div class="github-repositories">
+    <div class="github-repositories" v-show="pullRequests">
       <GithubRepoCard
         v-for="pr in pullRequests"
         :key="pr.node.id"
-        :pullRequest="pr.node"
+        :repository="pr.node.repository"
+        :url="pr.node.url"
+        :number="pr.node.number"
       />
     </div>
   </section>
 </template>
 
-<script>
-import GithubRepoCard from './GithubRepoCard.vue'
+<script setup>
+import { computed, defineAsyncComponent } from 'vue'
+import { useQuery } from 'vql'
 
-export default {
-  components: {
-    GithubRepoCard,
-  },
-  computed: {
-    pullRequests() {
-      return this.$static.userInfo.user.pullRequests.edges.filter(
-        (pr, i, arr) => {
-          const isFork = pr.node.isCrossRepository
-          const isRecent = new Date(pr.node.createdAt) >= this.lastThreeMonths
-          const nonDuplicate =
-            arr.findIndex(
-              (x) => x.node.repository.id === pr.node.repository.id
-            ) === i
-          return isFork && isRecent && nonDuplicate
-        }
-      )
-    },
-    lastThreeMonths() {
-      const d = new Date()
-      d.setMonth(d.getMonth() - 3)
-      return d
-    },
-  },
+const GithubRepoCard = defineAsyncComponent({
+  loader: () => import('@/components/github/GithubRepoCard.vue'),
+  loadingComponent: '<p>Loading...</p>',
+})
+const { data } = useQuery()
+
+const lastThreeMonths = () => {
+  const today = new Date()
+  today.setMonth(today.getMonth() - 3)
+  return today
 }
+
+const pullRequests = computed(() =>
+  data.value?.user?.pullRequests?.edges?.filter((pr, index, arr) => {
+    const isFork = pr.node.isCrossRepository
+    const isRecent = new Date(pr.node.createdAt) >= lastThreeMonths()
+    const nonDuplicate =
+      arr.findIndex((x) => x.node.repository.id === pr.node.repository.id) ===
+      index
+    return isFork && isRecent && nonDuplicate
+  })
+)
 </script>
 
-<static-query>
+<gql>
 query {
-  userInfo {
-    user(login: "jeferson-sb") {
-      pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }) {
-        edges {
-          node {
+  user(login: "jeferson-sb") {
+    pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }) {
+      edges {
+        node {
+          id
+          number
+          url
+          createdAt
+          isCrossRepository
+          repository {
             id
-            number
+            isPrivate
+            nameWithOwner
             url
-            createdAt
-            isCrossRepository
-            repository {
-              id
-              isPrivate
-              nameWithOwner
-              url
-              description
-              primaryLanguage {
-                name
-              }
+            description
+            primaryLanguage {
+              name
             }
           }
         }
@@ -70,7 +68,7 @@ query {
     }
   }
 }
-</static-query>
+</gql>
 
 <style scoped>
 .github-projects,

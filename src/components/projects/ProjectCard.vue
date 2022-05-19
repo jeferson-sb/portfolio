@@ -1,19 +1,19 @@
 <template>
   <div class="project-card">
     <figure class="project-thumbnail">
-      <g-image :src="project.thumbnail" alt="project screenshot" />
+      <img :src="thumbnail" alt="project screenshot" />
     </figure>
     <div class="project-card__content">
       <div class="project-card__header">
-        <h4 :id="titleId">{{ project.title }}</h4>
-        <p>{{ project.description }}</p>
+        <h4 :id="titleId">{{ title }}</h4>
+        <p>{{ description }}</p>
       </div>
       <div class="project-card__footer">
-        <TagGroup :tags="project.tags.split(',')" />
+        <TagGroup :tags="tags.split(',')" />
         <Button
           variant="primary"
           full
-          :to="project.github"
+          :href="github"
           :id="buttonId"
           :aria-labelledby="`${titleId} ${buttonId}`"
         >
@@ -24,29 +24,21 @@
   </div>
 </template>
 
-<script>
-import TagGroup from '@/components/ui/TagGroup.vue'
-import Button from '@/components/ui/Button.vue'
+<script setup>
+import { computed, defineProps } from 'vue'
 
-export default {
-  components: {
-    TagGroup,
-    Button,
-  },
-  props: {
-    project: {
-      type: Object,
-    },
-  },
-  computed: {
-    titleId() {
-      return `title-${this.project.id}`
-    },
-    buttonId() {
-      return `button-${this.project.id}`
-    },
-  },
-}
+const props = defineProps({
+  thumbnail: String,
+  title: String,
+  description: String,
+  tags: String,
+  github: String,
+})
+
+const titleSlug = props.title.toLowerCase().replaceAll(' ', '')
+
+const titleId = computed(() => `title-${titleSlug}`)
+const buttonId = computed(() => `button-${titleSlug}`)
 </script>
 
 <style scoped>

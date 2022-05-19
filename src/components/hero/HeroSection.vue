@@ -12,31 +12,16 @@
       <ScrollIndicator class="is-mobile-only" />
       <h2 class="hero__subheadline">web developer</h2>
       <HeroAvatar>
-        <g-image
+        <img
           src="@/assets/img/profile.jpg"
           alt="me"
           class="hero-avatar__image"
-          quality="100"
           width="140"
         />
       </HeroAvatar>
     </div>
   </section>
 </template>
-
-<script>
-import ScrollIndicator from '@/components/ui/ScrollIndicator.vue'
-import SocialMediaIcons from '@/components/social-media/SocialMediaIcons.vue'
-import HeroAvatar from '@/components/hero/HeroAvatar.vue'
-
-export default {
-  components: {
-    ScrollIndicator,
-    SocialMediaIcons,
-    HeroAvatar,
-  },
-}
-</script>
 
 <style scoped>
 .hero {

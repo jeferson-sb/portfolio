@@ -1,6 +1,6 @@
 <template>
   <div class="hero-avatar">
-    <picture>
+    <picture class="hero-avatar__image">
       <slot />
     </picture>
   </div>
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .hero-avatar {
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ export default {
   box-shadow: var(--elevation-2);
 }
 
-.hero-avatar .hero-avatar__image {
+.hero-avatar .hero-avatar__image img {
   clip-path: circle(70px at center);
 }
 

@@ -1,7 +1,7 @@
 <template>
-  <div :class="classObject">
-    <g-link
-      to="https://github.com/jeferson-sb"
+  <div :class="classes">
+    <a
+      href="https://github.com/jeferson-sb"
       aria-label="My Github"
       title="My Github"
     >
@@ -17,9 +17,9 @@
           fill="#F4F4F4"
         />
       </svg>
-    </g-link>
-    <g-link
-      to="https://www.linkedin.com/in/jeferson-sb/"
+    </a>
+    <a
+      href="https://www.linkedin.com/in/jeferson-sb/"
       aria-label="My LinkedIn Account"
       title="My LinkedIn"
     >
@@ -35,9 +35,9 @@
           fill="#F4F4F4"
         />
       </svg>
-    </g-link>
-    <g-link
-      to="https://dev.to/jeferson_sb"
+    </a>
+    <a
+      href="https://dev.to/jeferson_sb"
       aria-label="My Dev.to profile"
       title="My Dev.to"
     >
@@ -53,27 +53,24 @@
           fill="#F4F4F4"
         />
       </svg>
-    </g-link>
+    </a>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    boxed: {
-      type: Boolean,
-      default: false,
-    },
+<script setup>
+import { computed, defineProps } from 'vue'
+
+const props = defineProps({
+  boxed: {
+    type: Boolean,
+    default: false,
   },
-  computed: {
-    classObject() {
-      return {
-        'social-media-icons': true,
-        'social-media-icons--boxed': this.boxed,
-      }
-    },
-  },
-}
+})
+
+const classes = computed(() => ({
+  'social-media-icons': true,
+  'social-media-icons--boxed': props.boxed,
+}))
 </script>
 
 <style scoped>

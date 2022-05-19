@@ -5,12 +5,7 @@
 </template>
 
 <script>
-import Tag from './Tag'
-
 export default {
-  components: {
-    Tag,
-  },
   props: {
     tags: {
       type: Array,

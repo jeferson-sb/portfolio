@@ -7,56 +7,45 @@
     <template v-if="variant === 'fade'">
       <transition name="fade">
         <LampOnSVG v-if="current === 'light'" />
-      </transition>
-      <transition name="fade">
-        <LampOffSVG v-if="current === 'dark'" />
+        <LampOffSVG v-else-if="current === 'dark'" />
       </transition>
     </template>
     <LampOnSVG v-if="variant === 'transform'" :class="svgClass" />
   </button>
 </template>
 
-<script>
-import LampOnSVG from '@/assets/svg/lamp-on.svg'
-import LampOffSVG from '@/assets/svg/lamp-off.svg'
+<script setup>
+import { ref, onMounted, computed, defineProps } from 'vue'
 
-export default {
-  components: {
-    LampOnSVG,
-    LampOffSVG,
+defineProps({
+  variant: {
+    type: String,
+    default: 'fade',
   },
-  props: {
-    variant: {
-      type: String,
-      default: 'fade',
-    },
-  },
-  data() {
-    return {
-      themes: ['light', 'dark'],
-      current: 'dark',
-    }
-  },
-  mounted() {
-    this.current =
-      document.body.getAttribute('data-theme') ||
-      localStorage.getItem('@jb/selected-theme')
-  },
-  computed: {
-    svgClass() {
-      const theme = this.current === 'light' ? 'on' : 'off'
-      return `animated ${theme}`
-    },
-  },
-  methods: {
-    toggleTheme() {
-      const currentIndex = this.themes.indexOf(this.current) + 1
-      const nextIndex = currentIndex % this.themes.length
-      this.current = this.themes[nextIndex]
-      localStorage.setItem('@jb/selected-theme', this.current)
-      document.body.setAttribute('data-theme', this.current)
-    },
-  },
+})
+
+const themes = ['light', 'dark']
+const current = ref('dark')
+
+onMounted(() => {
+  current.value =
+    document.body.getAttribute('data-theme') ??
+    localStorage.getItem('@jb/selected-theme')
+})
+
+const svgClass = computed(() => {
+  const theme = current.value === 'light' ? 'on' : 'off'
+  return `animated ${theme}`
+})
+
+const toggleTheme = () => {
+  const currentIndex = themes.indexOf(current.value) + 1
+  const nextIndex = currentIndex % themes.length
+  current.value = themes[nextIndex]
+
+  localStorage.setItem('@jb/selected-theme', current.value)
+
+  document.body.setAttribute('data-theme', current.value)
 }
 </script>
 
@@ -87,105 +76,5 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-}
-
-.animated path {
-  transition: all 300ms ease-in-out;
-}
-
-.lamp-on-line {
-  --start: 300ms;
-  --delay-1: var(--start);
-  --delay-2: calc(var(--delay-1) / 2);
-  --delay-3: calc(var(--delay-2) / 2);
-}
-
-.on {
-  filter: drop-shadow(0 20px 10px rgb(254 193 101 / 30%));
-}
-
-.on .lamp-on-line {
-  opacity: 0;
-  animation: turn-on-lines 300ms ease-in-out forwards;
-}
-
-.on .lamp-on-line-1 {
-  animation-delay: var(--delay-2);
-}
-
-.on .lamp-on-line-2 {
-  animation-delay: var(--delay-3);
-}
-
-.on .lamp-on-line-3 {
-  animation-delay: var(--delay-1);
-}
-
-.off .lamp-on-line {
-  animation: turn-off-lines 300ms ease-in-out forwards;
-}
-
-.off .lamp-on-line-1 {
-  animation-delay: var(--delay-2);
-}
-
-.off .lamp-on-line-2 {
-  animation-delay: var(--delay-1);
-}
-
-.off .lamp-on-line-3 {
-  animation-delay: var(--delay-3);
-}
-
-.off .lamp-on-holder {
-  fill: var(--color-gray-800);
-}
-
-.off .lamp-on-shadow,
-.off .lamp-on-cable,
-.off .lamp-on-base {
-  fill: var(--color-default-black);
-}
-
-.off .lamp-on-bulb {
-  animation: turn-off-bulb 800ms ease-in-out forwards;
-}
-
-@keyframes turn-off-lines {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes turn-on-lines {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes turn-off-bulb {
-  from {
-    fill: #fec165;
-  }
-
-  to {
-    fill: #e0e0e0;
-  }
 }
 </style>

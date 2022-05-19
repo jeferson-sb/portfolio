@@ -2,40 +2,24 @@
   <section class="projects-grid container" id="projects">
     <h3>Projects</h3>
     <ProjectCard
-      v-for="edge in $static.projects.edges"
-      :key="edge.node.id"
-      :project="edge.node"
+      v-for="project in highlightedProjects"
+      :key="project.title"
+      :thumbnail="project.thumbnail"
+      :title="project.title"
+      :description="project?.description"
+      :tags="project.tags"
+      :github="project.github"
     />
   </section>
 </template>
 
-<script>
-import ProjectCard from './ProjectCard'
+<script setup>
+import projects from '@content/projects/projects.json'
 
-export default {
-  components: {
-    ProjectCard,
-  },
-}
+const highlightedProjects = Object.values(projects).filter(
+  (project) => project.pinned
+)
 </script>
-
-<static-query>
-query Projects {
-	projects: allProjects(sortBy: "order", order: ASC, filter: { pinned: { eq: true }}) {
-    edges {
-      node {
-        id
-        title
-        tags
-        thumbnail (quality: 90)
-        demo
-        github
-        description
-      }
-    }
-  }
-}
-</static-query>
 
 <style scoped>
 .projects-grid {

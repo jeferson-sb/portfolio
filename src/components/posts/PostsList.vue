@@ -1,49 +1,48 @@
 <template>
   <div class="posts-list container">
-    <h3>Latest Posts</h3>
+    <h3 id="posts-heading">Latest Posts</h3>
     <PostPreview
-      v-for="post in allPosts"
-      :key="post.node.id"
-      :title="post.node.title"
-      :date="new Date(post.node.published_at)"
-      :href="`/articles/${post.node.slug}/`"
-      :articleId="`article-${post.node.id}`"
+      v-for="article in topRecentArticles"
+      :key="article.id"
+      :title="article.title"
+      :date="new Date(article.date)"
+      :href="article.path"
+      :articleId="article.articleId"
     />
-    <Button variant="outline" to="/articles">View all</Button>
+    <Button
+      variant="outline"
+      href="/articles"
+      id="view-all-posts"
+      aria-labelledby="view-all-posts posts-heading"
+      >View all</Button
+    >
   </div>
 </template>
 
-<script>
-import Button from '@/components/ui/Button.vue'
-import PostPreview from './PostPreview.vue'
+<script setup>
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 
-export default {
-  components: {
-    PostPreview,
-    Button,
-  },
-  computed: {
-    allPosts() {
-      return [...this.$static.posts.edges]
-    },
-  },
-}
+const { getRoutes } = useRouter()
+const limit = 3
+const topRecentArticles = computed(() =>
+  getRoutes()
+    .filter((route) => route.path.startsWith('/articles/') && route.name)
+    .sort((a, b) =>
+      a.meta.frontmatter.published_at < b.meta.frontmatter.published_at ? 1 : -1
+    )
+    .slice(0, limit)
+    .map((article) => ({
+      id: article.meta?.frontmatter?.id,
+      articleId: article.name,
+      title: article.meta?.frontmatter?.title,
+      date: article.meta?.frontmatter?.published_at,
+      path: article.path,
+      excerpt: article.meta?.frontmatter?.excerpt,
+      tags: article.meta?.frontmatter?.tags,
+    }))
+)
 </script>
-
-<static-query>
-query {
-	posts: allArticles(sortBy: "published_at", limit: 3) {
-    edges {
-      node {
-        id
-        title
-        published_at
-        slug
-      }
-    }
-  }
-}
-</static-query>
 
 <style scoped>
 .posts-list {
