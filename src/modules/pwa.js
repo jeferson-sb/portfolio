@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const install = ({ isClient, router }) => {
   if (!isClient) return
 
