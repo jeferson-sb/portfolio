@@ -9,5 +9,7 @@
     "sourceType": "module"
   },
   "plugins": ["vue", "prettier"],
-  "rules": {}
+  "rules": {
+    "import/prefer-default-export": "off"
+  }
 }

@@ -1,8 +1,7 @@
-const axios = require('axios')
-
 exports.handler = async (event, context) => {
   try {
-    const { data } = await axios.get('https://v2.jokeapi.dev/joke/programming')
+    const response = await fetch('https://v2.jokeapi.dev/joke/programming')
+    const data = await response.json()
 
     return {
       statusCode: 200,
