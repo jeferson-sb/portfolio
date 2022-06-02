@@ -7,9 +7,9 @@
       <TagGroup v-if="size === 'long'" :tags="tags.split(',')" />
     </div>
 
-    <a :href="href">
+    <AppLink :to="href">
       <h4 class="post-preview__title" :id="articleId">{{ title }}</h4>
-    </a>
+    </AppLink>
 
     <template v-if="size === 'long'">
       <p class="post-preview__description">
@@ -129,7 +129,6 @@ const formattedDate = computed(() =>
 a {
   color: inherit;
   width: 100%;
-  outline: 0;
 }
 
 a:hover {
@@ -139,6 +138,10 @@ a:hover {
 a:hover .post-preview__title {
   color: var(--color-primary);
   transition: color 0.3s ease-in-out;
+}
+
+a:focus {
+  outline-color: transparent;
 }
 
 body[data-theme='light'] .post-preview {
