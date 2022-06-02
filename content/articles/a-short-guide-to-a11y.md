@@ -29,7 +29,7 @@ These guidelines are group in four principles:
 - Understandable: Users must be able to understand the information as well as the operation of the interface.
 - Robust: Users must be able to consume the same web content by different browsers and assistive technologies.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-banner.png?alt=media&token=283cad1b-a4d7-43ce-b4d3-c60d062ec636" alt="Human sense banner" className="full-bleed" height="560" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-banner.png?alt=media&token=283cad1b-a4d7-43ce-b4d3-c60d062ec636" alt="Human sense banner" width="100%" height="560" fullBleed />
 
 **WebAIM** is a sort of short version or summary of the WCAG guidelines as a [checklist](https://webaim.org/standards/wcag/checklist) to help identify what you need to implement.
 
@@ -99,7 +99,7 @@ For example:
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-tree.jpg?alt=media&token=d06a85d3-4615-4866-a874-09a345b268a2" alt="accessibility tree" width="100%" height="500" />
 
 Browsers, such as chrome, can display the acessibility tree like this:
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chrome-a11y-tree.png?alt=media&token=ef132039-c57d-4c02-b6fc-b7b340f879e7" alt="chrome accessibility tab open" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chrome-a11y-tree.png?alt=media&token=ef132039-c57d-4c02-b6fc-b7b340f879e7" alt="chrome accessibility tab open" width="100%" fit="contain" />
 
 Therefore, writing good and semantic HTML elements has a huge impact on how this content will be presented to our end users.
 
@@ -182,7 +182,7 @@ ARIA can also express semantic relationships between elements, even when you do 
 
 For instance, you might have a button that **controls** whether or not a menu is visible:
 
-```html{3, 9}
+```html
 <!-- aria-controls identifies the element (or elements) content are controlled by the current element-->
 
 <button class="button" aria-controls="menu-items" aria-haspopup="true" id="menu-button">
@@ -263,11 +263,11 @@ Although it is not explicitly mentioned in the [specification](https://www.w3.or
 
 If you are on Chrome (or any chromium based browser) you can inspect a text element on the page and you will see a popup showing the current contrast value and what criterias it is matching or not.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-inspect.png?alt=media&token=7e1eee3a-efa7-49f1-b72f-ba678ce8aeae" alt="chrome contrast picker with value 3.02" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-inspect.png?alt=media&token=7e1eee3a-efa7-49f1-b72f-ba678ce8aeae" alt="chrome contrast picker with value 3.02" height="400" />
 
 In addition, if you open the styles tab on the dev tools, select the text element and click on the color property, you will see a visual picker popping up with the contrast ratio information, and you can also change the color by picking in any area between these two slightly curved lines.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-styles.png?alt=media&token=8a94c2aa-4bd9-4add-a3a2-abd1ede8afc1" alt="devtools contrast color picker" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-styles.png?alt=media&token=8a94c2aa-4bd9-4add-a3a2-abd1ede8afc1" alt="devtools contrast color picker" height="600" fit="contain" />
 
 ## How to measure web accessibility
 

@@ -31,23 +31,23 @@ By default this tab is hidden, however, you can enable it by pressing <kbd>Cmd/C
 
 **`Paint Flashing`** option gives you the ability to visualize when something is repainted on the screen.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/z8ioi6m1d9ekpy2r34aw.gif" alt="paint" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/z8ioi6m1d9ekpy2r34aw.gif" alt="paint" height="420" width="100%" />
 
 **`Layout shift`** shows you which areas of your page (highlighted blue) are being shifted at any point in time. A layout shift occurs when a visible element on your page changes position or size, affecting the position of content around it.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/0c38f52mkh3dx8i152nk.gif" alt="layout shift" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/0c38f52mkh3dx8i152nk.gif" alt="layout shift" height="420" width="100%" />
 
 **`Frame rendering stats`** display frames per second and GPU usage in realtime on your current page.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/1flyxbxgo2zkt1ydy6po.gif" alt="fps" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/1flyxbxgo2zkt1ydy6po.gif" alt="fps" height="400" width="auto" fit="contain" bgColor="none" />
 
 **`Scrolling performance issues`** option highlights elements that can slow down your page scrolling.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/tdtthnmfwsqhofv8fje3.png" alt="scroll" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/tdtthnmfwsqhofv8fje3.png" alt="scroll" width="100%" height="500" />
 
 **`Highlight ad frames`** option shows all ad frames present on your website
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/9rlxzrii6e0jfcyt7701.png" alt="ad" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/9rlxzrii6e0jfcyt7701.png" alt="ad" width="100%" height="480" />
 
 ### CSS Media Features
 

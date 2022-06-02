@@ -72,7 +72,7 @@ You can start creating a fresh new Vue 3 App today quickly with the @vue/cli@4.5
 
 Alternatively, you can also use **Vite**, a blazing fast build tool for modern JavaScript Projects, it uses Browser Native ES Modules during development combined with Hot Module Replacement, with this approach your development server does not need to bundle all the files at once, but instead, it bundles only files you actually use at the time, which makes it also starts really fast and cold.
 
-```sh
+```bash
 $ npm init @vitejs/app hello-vue3 --template vue
 $ cd hello-vue3
 $ npm i && npm run dev
@@ -87,8 +87,7 @@ Now with Vue 3.x, we have a new Global API for creating an app instance.
 
 The idea is to place everything that mutates Vue's behavior at the level of the app instance.
 
-```js{codeTitle: src/main.js}
-
+```js
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -118,7 +117,7 @@ Composition API allows us to **reuse logic between components creating** <em> co
 
 In short, with this approach, our components are less complex and much more maintainable.
 
-```javascript{codeTitle: src/components/GameList.vue}
+```javascript
 <template>
   ...
   <input
@@ -184,7 +183,7 @@ We're using a composable function called `useFetch` to handle requests, and last
 
 Our composable function:
 
-```js{codeTitle: src/composables/useFetch.js}
+```js
 import { ref } from 'vue';
 
 export default function useFetch {
@@ -215,8 +214,7 @@ You can view this complete example in [this repo](https://github.com/jeferson-sb
 
 Another good example of Composition API implementation is to create an `IntersectionObserver` composition function to lazy load images or components, for instance:
 
-```js{codeTitle: src/composables/useIntersection.js}
-
+```js
 import { ref } from 'vue'
 
 export default function useIntersectionObserver() {
@@ -254,7 +252,7 @@ export default function useIntersectionObserver() {
 Now in our component, we import it like a regular function and use the methods to dynamically render the image.
 (Pretty similar to creating a custom hook in the React world).
 
-```html{codeTitle: src/components/GameCard.vue}
+```html
 <template>
   ...
   <div ref="el">

@@ -9,11 +9,6 @@ crosspostedOn: ''
 crosspostLink: ''
 ---
 
-import CustomThemes from '@/components/demos/CustomThemes.vue'
-import GeneratePallete from '@/components/demos/GeneratePallete.vue'
-import SmartGrid from '@/components/demos/SmartGrid.vue'
-import InteractiveWrapper from '@/components/ui/InteractiveWrapper.vue'
-
 CSS is one of the three Pillars of Modern Web Development, it has evolved a lot in the past years both in terms of features and technologies going from preprocessors to CSS-in-JS, CSS modules, and PostCSS. Write good and maintainable CSS code requires study and practice.
 
 In this article, we'll deep dive into custom properties and possibilities for creating and composing layouts with ease.

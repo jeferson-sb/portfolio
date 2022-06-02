@@ -14,7 +14,15 @@
       <ArticleControls :articleUrl="canonicalUrl" />
       <section class="container">
         <div ref="articleBody" class="article-body">
-          <router-view class="article-body-content"></router-view>
+          <router-view v-slot="{ Component, route }">
+            <transition name="fade" mode="out-in">
+              <component
+                :is="Component"
+                :key="route.path"
+                class="article-body-content"
+              />
+            </transition>
+          </router-view>
         </div>
       </section>
     </article>
@@ -111,36 +119,34 @@ onMounted(() => {
   margin-bottom: 16px;
 }
 
-.article-body-content a[aria-hidden] {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+.article-body-content .header-anchor {
+  opacity: 0;
   position: absolute;
   top: 2px;
   left: -40px;
-  opacity: 0;
   transition: opacity 500ms ease-out;
+  min-width: 30px;
+  min-height: 30px;
 }
 
-.article-body-content a[aria-hidden]:focus-visible {
-  opacity: 1;
+.article-body-content .header-anchor svg {
+  max-width: 30px;
+  max-height: 30px;
 }
 
-.article-body-content a[aria-hidden]::after {
+.article-body-content .header-anchor::after {
   all: unset;
 }
 
-.article-body-content a[aria-hidden] span {
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlPSIjMWFiYmQxIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTEzLjgyOCAxMC4xNzJhNCA0IDAgMDAtNS42NTYgMGwtNCA0YTQgNCAwIDEwNS42NTYgNS42NTZsMS4xMDItMS4xMDFtLS43NTgtNC44OTlhNCA0IDAgMDA1LjY1NiAwbDQtNGE0IDQgMCAwMC01LjY1Ni01LjY1NmwtMS4xIDEuMSIgLz4KPC9zdmc+Cg==');
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+.article-body-content .header-anchor:focus-visible {
+  opacity: 1;
 }
 
 .article-body-content h2[id],
 .article-body-content h3[id],
 .article-body-content h4[id],
 .article-body-content h5[id] {
+  scroll-margin-top: 6ex;
   position: relative;
 }
 
@@ -232,33 +238,13 @@ onMounted(() => {
   font-size: var(--text-sm);
 }
 
-/* Prism */
-code:not([class*='language-']) {
+p code {
   font-family: var(--font-mono);
   padding: 2px 6px;
   background-color: var(--accent-color-lighter, var(--code-bg-color));
   border-radius: var(--radius-default);
   letter-spacing: -0.5px;
   color: var(--text-color-default);
-}
-
-div[class*='language-']::-webkit-scrollbar,
-pre[class*='language-']::-webkit-scrollbar {
-  width: 1em;
-}
-
-div[class*='language-']::-webkit-scrollbar-track,
-pre[class*='language-']::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-bg);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-}
-
-div[class*='language-']::-webkit-scrollbar-thumb,
-pre[class*='language-']::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--scrollbar-thumb-color);
-  border: 5px solid var(--scrollbar-border);
 }
 
 @media screen and (min-width: 1440px) {
@@ -292,5 +278,15 @@ pre[class*='language-']::-webkit-scrollbar-thumb {
   .article-body-content p {
     line-height: 1.7;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
