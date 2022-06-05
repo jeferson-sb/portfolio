@@ -8,6 +8,8 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import lozad from 'lozad'
 import { useRoute } from 'vue-router'
 import config from '@/config/siteconfig.json'
 
@@ -36,5 +38,10 @@ useHead({
       content: description,
     },
   ],
+})
+
+onMounted(() => {
+  const observer = lozad()
+  observer.observe()
 })
 </script>

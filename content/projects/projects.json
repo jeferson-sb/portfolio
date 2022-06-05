@@ -1,7 +1,7 @@
 {
   "aircnc": {
     "order": 1,
-    "thumbnail": "content/projects/media/aircnc.png",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Faircnc.png?alt=media&token=0e827724-c281-4196-b801-48c0194cdbf0",
     "title": "Aircnc",
     "tags": "Fullstack",
     "demo": "https://aircnc-web.herokuapp.com/",
@@ -9,7 +9,7 @@
   },
   "chatme": {
     "order": 2,
-    "thumbnail": "content/projects/media/chatme.png",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fchatme.png?alt=media&token=f1a2d950-6c59-4fe6-a9ea-e9d11b8ee255",
     "title": "ChatMe",
     "tags": "Node.js, Vue.js, Socket.io",
     "demo": "https://whispering-reaches-62773.herokuapp.com/",
@@ -19,7 +19,7 @@
   },
   "gobarber": {
     "order": 3,
-    "thumbnail": "content/projects/media/gobarber.jpg",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fgobarber.jpg?alt=media&token=9a733a14-f498-465a-96dd-e034f773513a",
     "title": "GoBarber",
     "tags": "Node.js, React, TypeScript",
     "github": "https://github.com/jeferson-sb/gobarber-web",
@@ -28,7 +28,7 @@
   },
   "devradar": {
     "order": 4,
-    "thumbnail": "content/projects/media/devradar.jpg",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fdevradar.jpg?alt=media&token=1f23fb7e-23e2-4270-a057-d724b3b880eb",
     "title": "DevRadar",
     "tags": "Full Stack",
     "demo": "https://devradar-api.appspot.com/",
@@ -36,7 +36,7 @@
   },
   "dogAI": {
     "order": 1,
-    "thumbnail": "content/projects/media/dogAI.jpg",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2FdogAI.jpg?alt=media&token=8a340fd4-749b-41c8-8200-f51db8df27cf",
     "title": "Dog AI",
     "tags": "Front-end, React, Tensorflow",
     "demo": "https://dogai.netlify.com/",
@@ -45,7 +45,7 @@
     "description": "Dog breed image recognition with Teachable Machine & Tensorflow.js"
   },
   "ecoleta": {
-    "thumbnail": "content/projects/media/ecoleta.png",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fecoleta.png?alt=media&token=43931213-70df-4a66-9cf4-d6bb6fe50889",
     "title": "Ecoleta",
     "tags": "React, React Native, Node.js, TypeScript",
     "demo": "https://ecoleta-nlw.netlify.app/",
@@ -53,7 +53,7 @@
     "description": "Marketplace de coleta de resíduos"
   },
   "tindev": {
-    "thumbnail": "content/projects/media/tindev.png",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Ftindev.png?alt=media&token=f59beae0-3f38-45dc-90ef-8d1ec87b0f43",
     "title": "Tindev",
     "tags": "React, React Native, Node.js, TypeScript",
     "demo": "https://tindev-app.herokuapp.com",
@@ -61,7 +61,7 @@
   },
   "bethehero": {
     "order": 4,
-    "thumbnail": "content/projects/media/bethehero.png",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fbethehero.png?alt=media&token=5af9bc3e-0e5f-4758-bc24-8775d4fdd10a",
     "title": "Be the Hero",
     "tags": "Node.js, React, React Native",
     "demo": "https://be-thehero.netlify.com/",

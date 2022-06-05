@@ -1,7 +1,13 @@
 <template>
   <div class="project-card">
     <figure class="project-thumbnail">
-      <img :src="thumbnail" alt="project screenshot" />
+      <img-lazy
+        :src="thumbnail"
+        :alt="`${title} project screenshot`"
+        class="project-card__image"
+        width="600"
+        height="220"
+      />
     </figure>
     <div class="project-card__content">
       <div class="project-card__header">
@@ -83,6 +89,16 @@ const buttonId = computed(() => `button-${titleSlug}`)
 
 body[data-theme='light'] .project-card__content {
   border: var(--border);
+}
+
+.project-card__image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+  will-change: filter;
+}
+
+.project-card__image.lozad {
+  filter: blur(0);
 }
 
 @media screen and (max-width: 768px) {
