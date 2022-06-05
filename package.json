@@ -19,7 +19,7 @@
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.25",
     "vue-gtag": "^2.0.1",
-    "vue-router": "^4.0.13",
+    "vue-router": "^4.0.15",
     "vite-ssg": "^0.17.11"
   },
   "devDependencies": {
