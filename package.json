@@ -23,7 +23,6 @@
     "vue-router": "^4.0.13"
   },
   "devDependencies": {
-    "@netlify/plugin-sitemap": "^0.8.1",
     "@vitejs/plugin-vue": "^2.2.0",
     "critters": "^0.0.16",
     "eslint": "^7.31.0",
@@ -36,7 +35,6 @@
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
     "markdown-it-shiki": "^0.5.1",
-    "netlify-plugin-lighthouse": "^0.1.2",
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.4.2",
     "prettier": "^2.3.2",
