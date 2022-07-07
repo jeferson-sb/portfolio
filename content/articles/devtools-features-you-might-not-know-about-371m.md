@@ -27,15 +27,15 @@ You can open up your browser DevTools by pressing <kbd>Ctrl + Shift + I</kbd> (W
 
 By default this tab is hidden, however, you can enable it by pressing <kbd>Cmd/Ctrl + Shift + P</kbd> and type "Show Rendering". This feature provides you a series of options to visualize your page's rendering performance.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/35ugmr413qbrtwoil6ev.png" alt="show" height="660" width="100%" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/35ugmr413qbrtwoil6ev.png" alt="show" height="660" width="870" />
 
 **`Paint Flashing`** option gives you the ability to visualize when something is repainted on the screen.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/z8ioi6m1d9ekpy2r34aw.gif" alt="paint" height="420" width="100%" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/z8ioi6m1d9ekpy2r34aw.gif" alt="paint" height="420" width="870" />
 
 **`Layout shift`** shows you which areas of your page (highlighted blue) are being shifted at any point in time. A layout shift occurs when a visible element on your page changes position or size, affecting the position of content around it.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/0c38f52mkh3dx8i152nk.gif" alt="layout shift" height="420" width="100%" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/0c38f52mkh3dx8i152nk.gif" alt="layout shift" height="420" width="870" />
 
 **`Frame rendering stats`** display frames per second and GPU usage in realtime on your current page.
 
@@ -43,11 +43,11 @@ By default this tab is hidden, however, you can enable it by pressing <kbd>Cmd/C
 
 **`Scrolling performance issues`** option highlights elements that can slow down your page scrolling.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/tdtthnmfwsqhofv8fje3.png" alt="scroll" width="100%" height="500" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/tdtthnmfwsqhofv8fje3.png" alt="scroll" width="870" height="500" />
 
 **`Highlight ad frames`** option shows all ad frames present on your website
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/9rlxzrii6e0jfcyt7701.png" alt="ad" width="100%" height="480" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/9rlxzrii6e0jfcyt7701.png" alt="ad" width="870" height="480" />
 
 ### CSS Media Features
 

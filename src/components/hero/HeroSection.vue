@@ -12,11 +12,12 @@
       <ScrollIndicator class="is-mobile-only" />
       <h2 class="hero__subheadline">web developer</h2>
       <HeroAvatar>
-        <img
-          src="@/assets/img/profile.jpg"
+        <img-lazy
+          src="src/assets/img/profile.jpg"
           alt="me"
           class="hero-avatar__image"
           width="140"
+          height="140"
         />
       </HeroAvatar>
     </div>

@@ -121,7 +121,7 @@ For simple requests that work, but as your project gets larger and you start to 
 
 Let's imagine we have the following situation:
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/concurrent_fetch_example.png?alt=media&token=be235c2c-93e7-46ae-9b80-390feacb15fc" height="545" width="100%" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/concurrent_fetch_example.png?alt=media&token=be235c2c-93e7-46ae-9b80-390feacb15fc" height="545" width="870" />
 
 Where we need to get the first 10 posts, once we get then we fetch all of comments and users author of each post concurrently.
 
@@ -241,6 +241,6 @@ async function main() {
 
 If you look at the network tab, under the waterfall column, you'll notice all of the comments and users are been queued and fetched nearly at the same time.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/waterfall.png?alt=media&token=9ec0a7e2-984a-4c81-b9be-1ff40a75a833" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/waterfall.png?alt=media&token=9ec0a7e2-984a-4c81-b9be-1ff40a75a833" width="870" height="580" />
 
 Performing multiple queries/requests is a common daily task and you can use this solution not only with Fetch but with any other HTTP Client promise-based library of your choice.

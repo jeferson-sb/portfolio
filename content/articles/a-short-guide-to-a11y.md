@@ -73,7 +73,7 @@ Adopting keyboard-navigation techniques brings a lot of benefits for users with 
 
 You probably might know this already, but we can provide an **alternative text** so users and search engines can understand what the image is about. It also used to display the text whenever the image is not available.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/colosseum.jpg?alt=media&token=0e08f7ec-e76e-4574-9559-83be3ec9c77f" alt="The Colosseum in Rome" height="700" width="100%" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/colosseum.jpg?alt=media&token=0e08f7ec-e76e-4574-9559-83be3ec9c77f" alt="The Colosseum in Rome" height="700" width="870" />
 
 ```html
 <img alt="The Colosseum in Rome" ... />
@@ -96,10 +96,10 @@ But before the web content can be turned into audio, the assistive technology us
 Broadly speaking, the **Accessibility Tree** is a non-visual DOM tree representation modified by the browser to use all of the semantic information available on the page in a way that can be useful to assistive technologies.
 For example:
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-tree.jpg?alt=media&token=d06a85d3-4615-4866-a874-09a345b268a2" alt="accessibility tree" width="100%" height="500" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-tree.jpg?alt=media&token=d06a85d3-4615-4866-a874-09a345b268a2" alt="accessibility tree" width="870" height="400" fit="contain" />
 
 Browsers, such as chrome, can display the acessibility tree like this:
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chrome-a11y-tree.png?alt=media&token=ef132039-c57d-4c02-b6fc-b7b340f879e7" alt="chrome accessibility tab open" width="100%" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chrome-a11y-tree.png?alt=media&token=ef132039-c57d-4c02-b6fc-b7b340f879e7" alt="chrome accessibility tab open" width="334" height="770" fit="contain" />
 
 Therefore, writing good and semantic HTML elements has a huge impact on how this content will be presented to our end users.
 
@@ -263,11 +263,11 @@ Although it is not explicitly mentioned in the [specification](https://www.w3.or
 
 If you are on Chrome (or any chromium based browser) you can inspect a text element on the page and you will see a popup showing the current contrast value and what criterias it is matching or not.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-inspect.png?alt=media&token=7e1eee3a-efa7-49f1-b72f-ba678ce8aeae" alt="chrome contrast picker with value 3.02" height="400" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-inspect.png?alt=media&token=7e1eee3a-efa7-49f1-b72f-ba678ce8aeae" alt="chrome contrast picker with value 3.02" height="400" width="870" />
 
 In addition, if you open the styles tab on the dev tools, select the text element and click on the color property, you will see a visual picker popping up with the contrast ratio information, and you can also change the color by picking in any area between these two slightly curved lines.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-styles.png?alt=media&token=8a94c2aa-4bd9-4add-a3a2-abd1ede8afc1" alt="devtools contrast color picker" height="600" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/contrast-chrome-styles.png?alt=media&token=8a94c2aa-4bd9-4add-a3a2-abd1ede8afc1" alt="devtools contrast color picker" height="600" width="430" fit="contain" />
 
 ## How to measure web accessibility
 
