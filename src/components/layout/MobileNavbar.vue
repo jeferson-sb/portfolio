@@ -6,7 +6,7 @@
   </nav>
 </template>
 
-<style scoped>
+<style>
 .mobile-navbar {
   background-color: hsl(220deg 13% 12% / 92%);
   height: 100vh;
@@ -15,6 +15,7 @@
   width: 100%;
   padding-top: 80px;
   visibility: hidden;
+  overflow-y: auto;
 }
 
 .mobile-navbar::before {
@@ -44,7 +45,7 @@
   --scale3d: 13, 13, 13;
 }
 
-.mobile-navbar-menu {
+.mobile-navbar .mobile-navbar-menu {
   padding: 0 2rem;
 }
 
