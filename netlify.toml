@@ -12,3 +12,10 @@
   from = '/api/*'
   to = '/.netlify/functions/:splat'
   status = 200
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+package = "netlify-plugin-lighthouse"
+
+  [plugins.inputs]
+  output_path = "reports/lighthouse.html"
