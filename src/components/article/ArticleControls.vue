@@ -1,7 +1,7 @@
 <template>
   <div class="article-controls">
-    <a href="/articles">View other articles</a>
-    <ShareButton :link="articleUrl" text="Take a look at this article" />
+    <AppLink to="/articles">View other articles</AppLink>
+    <ShareButton :link="articleUrl" />
   </div>
 </template>
 
