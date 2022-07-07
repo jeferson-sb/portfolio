@@ -1,5 +1,5 @@
 <template>
-  <Button variant="outline" @click="share" circle>
+  <Button type="button" variant="outline" @click="share" circle>
     <template v-slot:icon>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,31 +23,23 @@
   </Button>
 </template>
 
-<script>
-import Button from '@/components/ui/Button.vue'
+<script setup>
+import { defineProps } from 'vue'
 
-export default {
-  props: {
-    link: {
-      type: String,
-      required: true,
-    },
-    text: {
-      type: String,
-    },
-    title: {
-      type: String,
-    },
+const props = defineProps({
+  link: {
+    type: String,
+    required: true,
   },
-  components: { Button },
-  methods: {
-    async share() {
-      await window.navigator.share({
-        title: this.title ?? document.title,
-        text: this.text,
-        url: this.link,
-      })
-    },
+  title: {
+    type: String,
   },
+})
+
+const share = async () => {
+  await window.navigator.share({
+    title: props.title ?? document.title,
+    url: props.link,
+  })
 }
 </script>

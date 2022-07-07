@@ -12,7 +12,6 @@
 
 <script>
 export default {
-  inheritAttrs: false,
   props: {
     variant: {
       type: String,
@@ -38,7 +37,6 @@ export default {
       type: Boolean,
     },
   },
-  emits: ['click'],
   computed: {
     type() {
       return `button--${this.variant}`
