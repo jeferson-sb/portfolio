@@ -1,7 +1,8 @@
 <template>
   <div :class="classes">
-    <a
-      href="https://github.com/jeferson-sb"
+    <AppLink
+      isExternal
+      to="https://github.com/jeferson-sb"
       aria-label="My Github"
       title="My Github"
     >
@@ -17,9 +18,10 @@
           fill="#F4F4F4"
         />
       </svg>
-    </a>
-    <a
-      href="https://www.linkedin.com/in/jeferson-sb/"
+    </AppLink>
+    <AppLink
+      isExternal
+      to="https://www.linkedin.com/in/jeferson-sb/"
       aria-label="My LinkedIn Account"
       title="My LinkedIn"
     >
@@ -35,9 +37,10 @@
           fill="#F4F4F4"
         />
       </svg>
-    </a>
-    <a
-      href="https://dev.to/jeferson_sb"
+    </AppLink>
+    <AppLink
+      isExternal
+      to="https://dev.to/jeferson_sb"
       aria-label="My Dev.to profile"
       title="My Dev.to"
     >
@@ -53,7 +56,7 @@
           fill="#F4F4F4"
         />
       </svg>
-    </a>
+    </AppLink>
   </div>
 </template>
 

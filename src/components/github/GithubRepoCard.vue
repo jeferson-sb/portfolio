@@ -2,9 +2,9 @@
   <div class="github-repo-card">
     <div class="github-repo-card__heading">
       <h4 class="github-repo-card__title">
-        <a :href="repository.url">
+        <AppLink isExternal :to="repository.url">
           {{ repository.nameWithOwner }}
-        </a>
+        </AppLink>
       </h4>
       <p class="github-repo-card__description">
         {{ repository.description }}
@@ -16,10 +16,10 @@
         <span>{{ repository.primaryLanguage.name }}</span>
       </span>
       <span class="github-repo-pullrequest">
-        <a :href="url">
+        <AppLink isExternal :to="url">
           <PullRequestSVG />
           <span>Last PR #{{ number }}</span>
-        </a>
+        </AppLink>
       </span>
     </p>
   </div>
