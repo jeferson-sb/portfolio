@@ -16,15 +16,16 @@
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="tags.split(',')" />
-        <Button
-          variant="primary"
+        <AppLink
+          variant="button"
           full
-          :href="github"
+          isExternal
+          :to="github"
           :id="buttonId"
           :aria-labelledby="`${titleId} ${buttonId}`"
         >
           Github
-        </Button>
+        </AppLink>
       </div>
     </div>
   </div>
