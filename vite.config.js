@@ -83,27 +83,8 @@ export default defineConfig({
 
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'robots.txt', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: "Jeferson's Portfolio",
-        short_name: 'JB',
-        theme_color: '#1A1C1F',
-        background_color: '#1ABBD1',
-        lang: 'en-us',
-        description:
-          "I'm a Software Engineer that crafts things for the Web, heavy focused on front-end development enthusiastic and fascinated on UI design",
-        icons: [
-          {
-            src: '/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+      workbox: {
+        globPatterns: ['**/*{js,css,html,txt,ico,png,svg}'],
       },
     }),
   ],
