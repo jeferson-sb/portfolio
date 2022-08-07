@@ -6,30 +6,28 @@
         <span>@2021 - Present. All rights reserved.</span>
       </p>
       <div class="built-tech">
-        <a
-          href="https://www.netlify.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <AppLink
+          to="https://www.netlify.com/"
           aria-label="Hosted on Netlify"
+          isExternal
         >
           <NetlifyLogoSVG />
-        </a>
-        <a
-          href="https://gridsome.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Built with Gridsome"
+        </AppLink>
+        <AppLink
+          to="https://vuejs.org/"
+          aria-label="Built with Vue"
+          title="Built with Vue.js"
+          isExternal
         >
-          <GridsomeSVG />
-        </a>
-        <a
-          href="https://www.github.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+          <VueSVG />
+        </AppLink>
+        <AppLink
+          to="https://www.github.com/"
           aria-label="Source Code on Github"
+          isExternal
         >
           <OctocatSVG />
-        </a>
+        </AppLink>
       </div>
     </div>
   </footer>
