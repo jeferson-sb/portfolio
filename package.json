@@ -12,7 +12,7 @@
     "prettier": "prettier 'src/**/*.js' -w"
   },
   "dependencies": {
-    "@urql/vue": "^0.6.1",
+    "@urql/vue": "^1.0.2",
     "@vueuse/head": "^0.7.5",
     "graphql": "^15.8.0",
     "lozad": "^1.16.0",
