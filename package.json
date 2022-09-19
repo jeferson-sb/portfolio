@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.14.0",
+    "eslint-plugin-vue": "^9.5.1",
     "gray-matter": "^4.0.3",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
