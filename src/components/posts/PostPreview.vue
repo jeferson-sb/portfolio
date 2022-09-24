@@ -11,6 +11,11 @@
       <h4 class="post-preview__title" :id="articleId">{{ title }}</h4>
     </AppLink>
 
+    <Tag
+      tagName="NEW"
+      variant="accent"
+      v-show="size === 'short' && isRecentPost"
+    />
     <template v-if="size === 'long'">
       <p class="post-preview__description">
         {{ excerpt }}
@@ -54,6 +59,16 @@ const styles = computed(() => ({
   'post-preview--long': props.size === 'long',
   'post-preview--short': props.size === 'short',
 }))
+
+const diffInDays = (a, b) => {
+  const DAY_IN_MS = 1000 * 3600 * 24
+  const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())
+  const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate())
+
+  return Math.floor((utc2 - utc1) / DAY_IN_MS)
+}
+
+const isRecentPost = diffInDays(props.date, new Date()) <= 7
 
 const formattedDate = computed(() =>
   props.date.toLocaleString(['en-US'], {
@@ -107,6 +122,10 @@ const formattedDate = computed(() =>
 .post-preview--long .post-preview-metadata {
   justify-content: space-between;
   flex-basis: unset;
+}
+
+.post-preview--short {
+  align-items: center;
 }
 
 .post-preview--short a {
