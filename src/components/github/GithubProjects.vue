@@ -16,13 +16,39 @@
 
 <script setup>
 import { computed, defineAsyncComponent } from 'vue'
-import { useQuery } from 'vql'
+import { useQuery } from '@urql/vue'
 
 const GithubRepoCard = defineAsyncComponent({
   loader: () => import('@/components/github/GithubRepoCard.vue'),
   loadingComponent: '<p>Loading...</p>',
 })
-const { data } = useQuery()
+const { data } = useQuery({ query: `
+  query {
+    user(login: "jeferson-sb") {
+      pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
+        edges {
+          node {
+            id
+            number
+            url
+            createdAt
+            isCrossRepository
+            repository {
+              id
+              isPrivate
+              nameWithOwner
+              url
+              description
+              primaryLanguage {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+` })
 
 const lastThreeMonths = () => {
   const today = new Date()
@@ -41,34 +67,6 @@ const pullRequests = computed(() =>
   })
 )
 </script>
-
-<gql>
-query {
-  user(login: "jeferson-sb") {
-    pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
-      edges {
-        node {
-          id
-          number
-          url
-          createdAt
-          isCrossRepository
-          repository {
-            id
-            isPrivate
-            nameWithOwner
-            url
-            description
-            primaryLanguage {
-              name
-            }
-          }
-        }
-      }
-    }
-  }
-}
-</gql>
 
 <style scoped>
 .github-projects,
