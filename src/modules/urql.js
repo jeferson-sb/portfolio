@@ -1,7 +1,7 @@
 import urql from '@urql/vue'
 
 export const install = ({ isClient, app }) => {
-  if (!isClient) return
+  // if (!isClient) return
 
   app.use(urql, {
     url: 'https://api.github.com/graphql',

@@ -50,13 +50,16 @@ export default defineConfig({
     }),
 
     Layouts(),
+
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/head'],
     }),
+
     Components({
       extensions: ['vue', 'md'],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
+
     Markdown({
       wrapperClasses: 'prose',
       headEnabled: true,

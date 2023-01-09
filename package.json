@@ -3,6 +3,7 @@
   "version": "2.1.0",
   "private": true,
   "license": "Apache License 2.0",
+  "type": "module",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite",
@@ -43,9 +44,9 @@
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.4",
-    "vite-plugin-vue-markdown": "^0.22.1",
     "vite-plugin-pages": "^0.28.0",
     "vite-plugin-pwa": "^0.14.1",
-    "vite-plugin-vue-layouts": "^0.7.0"
+    "vite-plugin-vue-layouts": "^0.7.0",
+    "vite-plugin-vue-markdown": "^0.22.1"
   }
 }
