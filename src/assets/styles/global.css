@@ -41,6 +41,7 @@
   --scrollbar-bg: hsl(214, 9%, 15%);
   --scrollbar-thumb-color: hsl(225, 15%, 50%);
   --scrollbar-border: var(--color-gray-800);
+  --selection: hsla(26, 94%, 54%, 0.5);
 }
 
 body {
@@ -79,7 +80,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-primary);
+  background: var(--selection);
   color: var(--text-color-default);
 }
 
