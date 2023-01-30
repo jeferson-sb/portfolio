@@ -15,7 +15,7 @@
   "dependencies": {
     "@urql/vue": "^1.0.4",
     "@vueuse/head": "^1.0.22",
-    "graphql": "^15.8.0",
+    "graphql": "^16.6.0",
     "lozad": "^1.16.0",
     "prism-theme-vars": "^0.2.4",
     "vite-ssg": "^0.22.1",
