@@ -2,7 +2,7 @@
   <section class="github-projects container">
     <h3>Open Source</h3>
     <h4>Latest contributions <small>(monthly updated)</small></h4>
-    <div class="github-repositories" v-show="pullRequests">
+    <div class="github-repositories" v-if="pullRequests?.length">
       <GithubRepoCard
         v-for="pr in pullRequests"
         :key="pr.node.id"
@@ -11,6 +11,7 @@
         :number="pr.node.number"
       />
     </div>
+    <GithubCardEmpty v-else />
   </section>
 </template>
 
@@ -22,7 +23,8 @@ const GithubRepoCard = defineAsyncComponent({
   loader: () => import('@/components/github/GithubRepoCard.vue'),
   loadingComponent: '<p>Loading...</p>',
 })
-const { data } = useQuery({ query: `
+const { data } = useQuery({
+  query: `
   query {
     user(login: "jeferson-sb") {
       pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
@@ -48,7 +50,8 @@ const { data } = useQuery({ query: `
       }
     }
   }
-` })
+`,
+})
 
 const lastThreeMonths = () => {
   const today = new Date()
