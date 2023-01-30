@@ -22,6 +22,8 @@
 }
 
 .shiki code .line::before {
+  display: inline-block;
+  width: 10px;
   content: counter(step);
   counter-increment: step;
   color: hsl(0, 0%, 60%);
