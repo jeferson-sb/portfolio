@@ -41,7 +41,7 @@
     "prettier": "^2.8.1",
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
-    "unplugin-auto-import": "^0.12.1",
+    "unplugin-auto-import": "^0.14.3",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.4",
     "vite-plugin-pages": "^0.28.0",
