@@ -35,7 +35,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-attrs": "^4.1.6",
-    "markdown-it-shiki": "^0.7.2",
+    "markdown-it-shiki": "^0.8.0",
     "postcss-nested": "^6.0.0",
     "postcss-preset-env": "^7.8.3",
     "prettier": "^2.8.1",
