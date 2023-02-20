@@ -46,7 +46,7 @@
     "vite": "^4.0.4",
     "vite-plugin-pages": "^0.28.0",
     "vite-plugin-pwa": "^0.14.1",
-    "vite-plugin-vue-layouts": "^0.7.0",
+    "vite-plugin-vue-layouts": "^0.8.0",
     "vite-plugin-vue-markdown": "^0.22.1"
   }
 }
