@@ -7,8 +7,8 @@
       title="My Github"
     >
       <svg
-        width="44"
-        height="44"
+        width="41"
+        height="41"
         viewBox="0 0 44 44"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,10 @@ const classes = computed(() => ({
 .social-media-icons a,
 .social-media-icons svg,
 .social-media-icons svg path {
-  transition: all 0.3s ease-out;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-property: transform, fill, box-shadow;
+  will-change: transform;
 }
 
 .social-media-icons a + a {
@@ -108,6 +111,7 @@ const classes = computed(() => ({
 
 .social-media-icons a:hover {
   --shadow-opacity: 0.25;
+  transform: translateY(-8px);
 }
 
 .social-media-icons a:focus {
@@ -119,11 +123,10 @@ const classes = computed(() => ({
 
 .social-media-icons a:hover svg,
 .social-media-icons a:hover svg path {
-  fill: var(--color-primary) !important;
+  fill: var(--color-primary);
 }
 
 .social-media-icons--boxed a {
-  display: inline-block;
   padding: 3px 8px;
 }
 
@@ -133,6 +136,7 @@ body[data-theme='light'] .social-media-icons a {
 
 body[data-theme='light'] .social-media-icons a:hover {
   --shadow-opacity: 0.05;
+  transform: translateY(-8px);
 }
 
 body[data-theme='light'] .social-media-icons a svg,
