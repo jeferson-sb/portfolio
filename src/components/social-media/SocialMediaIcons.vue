@@ -127,6 +127,7 @@ const classes = computed(() => ({
 }
 
 .social-media-icons--boxed a {
+  display: inline-block;
   padding: 3px 8px;
 }
 
