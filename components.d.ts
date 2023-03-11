@@ -29,7 +29,6 @@ declare module '@vue/runtime-core' {
     InteractiveWrapper: typeof import('./src/components/ui/InteractiveWrapper.vue')['default']
     LampOffSVG: typeof import('./src/components/svg/LampOffSVG.vue')['default']
     LampOnSVG: typeof import('./src/components/svg/LampOnSVG.vue')['default']
-    LastCommits: typeof import('./src/components/demos/LastCommits.vue')['default']
     MobileNavbar: typeof import('./src/components/layout/MobileNavbar.vue')['default']
     Navbar: typeof import('./src/components/layout/Navbar.vue')['default']
     NetlifyLogoSVG: typeof import('./src/components/svg/NetlifyLogoSVG.vue')['default']
