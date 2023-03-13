@@ -27,7 +27,7 @@ const { data } = useQuery({
   query: `
   query {
     user(login: "jeferson-sb") {
-      pullRequests(last: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
+      pullRequests(first: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
         edges {
           node {
             id
