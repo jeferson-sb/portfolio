@@ -15,7 +15,7 @@ meta:
 
 # What I'm doing now
 
-I'm currently reading two technical books: <em>Pragmatic Programmer</em> and <em>Programming Lua</em>.
+I'm currently reading two technical books: <em>Refactoring: Improving the Design of Existing Code</em> and <em>Programming Lua</em>.
 
 I'm developing a toy project for listing upcoming tech conferences with Next.js, tRPC, and Prisma.
 
@@ -25,7 +25,7 @@ Tinkering a bit with [LunarVIM](https://www.lunarvim.org/), which caught my inte
 
 There are so many good shows happening now! 📺 I'm watching Bluelock, Trigun Stampede, NieR: Automata, and My Hero Academia (I guess...)
 
-As for games, I currently playing <em>The Witcher 3</em> and <em>Persona 3 Portable</em> 🎮
+As for games, I currently playing <em>The Witcher 3 (Remastered)</em> and <em>Persona 3 Portable</em> 🎮
 
 <img src="https://media.giphy.com/media/4ilFRqgbzbx4c/giphy.gif" alt="gif of the day" />
 
