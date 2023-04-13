@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">Mar 2023</time>
+<time class="time">Apr 2023</time>
 
 # What I'm doing now
 
@@ -23,11 +23,12 @@ I've been writing a few posts as well, one of them I released a couple of days a
 
 Tinkering a bit with [LunarVIM](https://www.lunarvim.org/), which caught my interest as I began learning Lua in the last couple of months, and I'm planning to build a little theme with it.
 
-There are so many good shows happening now! 📺 I'm watching Bluelock, Trigun Stampede, NieR: Automata, and My Hero Academia (I guess...)
+Excited to the new season of Spring Anime! 📺 
 
-As for games, I currently playing <em>The Witcher 3 (Remastered)</em> and <em>Persona 3 Portable</em> 🎮
+As for games, I currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
 
-<img src="https://media.giphy.com/media/4ilFRqgbzbx4c/giphy.gif" alt="gif of the day" />
+<img src="https://media.giphy.com/media/yALcFbrKshfoY/giphy.gif" alt="gif of the day" />
+  
 
 </article>
 
