@@ -61,6 +61,7 @@ const buttonId = computed(() => `button-${titleSlug}`)
 .project-thumbnail img {
   border-radius: inherit;
   object-fit: cover;
+  object-position: top center;
   min-height: 100%;
 }
 
@@ -109,6 +110,10 @@ body[data-theme='light'] .project-card__content {
 
   .project-thumbnail {
     height: 180px;
+  }
+
+  .project-thumbnail img {
+    height: 100%;
   }
 
   .project-thumbnail,
