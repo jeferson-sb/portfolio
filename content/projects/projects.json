@@ -17,6 +17,25 @@
     "pinned": true,
     "description": "Lightweight chat app built with Vue 2, Express and Socket.io"
   },
+  "whatconf": {
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fwhatconf.png?alt=media&token=a34f3155-b326-4944-a767-82fcc108092e",
+    "title": "WhatConf",
+    "tags": "Next.js, tRPC, Prisma",
+    "demo": "https://whatconf.vercel.app/",
+    "github": "https://github.com/jeferson-sb/whatconf",
+    "pinned": true,
+    "description": "Tech conferences feed that users can check its date and details and subscribe to receive web notifications!"
+  },
+  "dogAI": {
+    "order": 1,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2FdogAI.jpg?alt=media&token=8a340fd4-749b-41c8-8200-f51db8df27cf",
+    "title": "Dog AI",
+    "tags": "Front-end, React, Tensorflow",
+    "demo": "https://dogai.netlify.com/",
+    "github": "https://github.com/jeferson-sb/dogAI",
+    "pinned": true,
+    "description": "Dog breed image recognition with Teachable Machine & Tensorflow.js"
+  },
   "gobarber": {
     "order": 3,
     "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fgobarber.jpg?alt=media&token=9a733a14-f498-465a-96dd-e034f773513a",
@@ -33,16 +52,6 @@
     "tags": "Full Stack",
     "demo": "https://devradar-api.appspot.com/",
     "github": "https://github.com/jeferson-sb/devradar"
-  },
-  "dogAI": {
-    "order": 1,
-    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2FdogAI.jpg?alt=media&token=8a340fd4-749b-41c8-8200-f51db8df27cf",
-    "title": "Dog AI",
-    "tags": "Front-end, React, Tensorflow",
-    "demo": "https://dogai.netlify.com/",
-    "github": "https://github.com/jeferson-sb/dogAI",
-    "pinned": true,
-    "description": "Dog breed image recognition with Teachable Machine & Tensorflow.js"
   },
   "ecoleta": {
     "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fecoleta.png?alt=media&token=43931213-70df-4a66-9cf4-d6bb6fe50889",
@@ -66,7 +75,7 @@
     "tags": "Node.js, React, React Native",
     "demo": "https://be-thehero.netlify.com/",
     "github": "https://github.com/jeferson-sb/be-the-hero",
-    "pinned": true,
+    "pinned": false,
     "description": "Donate System for NGOs campaigns"
   }
 }
