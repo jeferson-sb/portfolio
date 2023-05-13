@@ -10,7 +10,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-vue-markdown'
 import { VitePWA } from 'vite-plugin-pwa'
 import Shiki from 'markdown-it-shiki'
-import MarkdownItAttrs from 'markdown-it-attrs'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import matter from 'gray-matter'
 
@@ -65,9 +64,9 @@ export default defineConfig({
       headEnabled: true,
       markdownItSetup(md) {
         md.use(Shiki, {
-          theme: 'one-dark-pro',
+          theme: 'css-variables',
+          highlightLines: true,
         })
-        md.use(MarkdownItAttrs)
         md.use(MarkdownItAnchor, {
           permalink: MarkdownItAnchor.permalink.linkInsideHeader({
             symbol: `

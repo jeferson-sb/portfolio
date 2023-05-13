@@ -1,3 +1,18 @@
+:root {
+  --shiki-color-text: hsl(0, 0%, 83%);
+  --shiki-color-background: hsl(235, 19%, 13%);
+  --shiki-token-constant: hsl(24, 75%, 50%);
+  --shiki-token-string: hsl(40, 67%, 51%);
+  --shiki-token-comment: hsl(229, 23%, 44%);
+  --shiki-token-keyword: hsl(259, 59%, 59%);
+  --shiki-token-parameter: hsl(0, 100%, 33%);
+  --shiki-token-function: hsl(266, 59%, 70%);
+  --shiki-token-string-expression: hsl(190, 91%, 48%);
+  --shiki-token-punctuation: hsl(0, 0%, 83%);
+  --shiki-token-link: hsl(0, 100%, 47%);
+  --shiki-highlited-line: hsla(258, 50%, 52%, 0.4);
+}
+
 .shiki *::selection {
   background: hsla(0, 0%, 0%, 0.3);
 }
@@ -19,6 +34,13 @@
 
 .shiki .line:empty {
   display: none;
+}
+
+.shiki .line.highlighted {
+  display: inline-block;
+  background: var(--shiki-highlited-line);
+  width: 100%;
+  border-radius: var(--radius-default);
 }
 
 .shiki code .line::before {
