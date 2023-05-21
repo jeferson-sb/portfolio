@@ -266,7 +266,7 @@ function Content(props) {
 }
 ```
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/cdd-compound-component.png?alt=media&token=9fe6e886-5b7c-4616-9df6-9f1caac46c35" fit="contain" bgColor="transparent" height="450" alt="File " />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/cdd-compound-component.png?alt=media&token=9fe6e886-5b7c-4616-9df6-9f1caac46c35" fit="contain" bgColor="transparent" height="450" alt="File dropdown diagram" />
 
 Compound components are a good solution to handle **multiple components** that depend on the same state
 and behaviors to allow them to work as a **single unit**, in other words, components that are meant to work together.
