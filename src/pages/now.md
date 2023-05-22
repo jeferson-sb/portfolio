@@ -11,25 +11,19 @@ meta:
 
 <article class="article">
 
-<time class="time">Apr 2023</time>
+<time class="time">May 2023</time>
 
 # What I'm doing now
 
-I'm currently reading two technical books: <em>Refactoring: Improving the Design of Existing Code</em> and <em>Programming Lua</em>.
+I'm currently reading: <em>A Mind for Numbers</em>.
 
-Exploring a bit with Ruby on Rails!
+I've recently published the second post of Component Drive UI Patterns, make sure to check it out! [Component Drive UI Patterns II](/articles/component-driven-design-part-2)
 
-I've been writing a few posts as well, one of them I released a couple of days ago: [Component Driven UI Patterns](/articles/component-driven-design), which is the first of a series I'm elaborating about components and how to understand their patterns.
+Watching Dr. Stone season 3 📺
 
-Tinkering a bit with [LunarVIM](https://www.lunarvim.org/), which caught my interest as I began learning Lua in the last couple of months, and I'm planning to build a little theme with it.
+Currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
 
-Excited to the new season of Spring Anime! 📺
-
-As for games, I currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
-
-<img src="https://media.giphy.com/media/yALcFbrKshfoY/giphy.gif" alt="gif of the day" />
-
-
+<img src="https://media.giphy.com/media/9GIyktt76WotG/giphy.gif" alt="gif of the day" />
 </article>
 
 <style scoped>
