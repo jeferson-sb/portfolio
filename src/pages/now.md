@@ -11,19 +11,22 @@ meta:
 
 <article class="article">
 
-<time class="time">May 2023</time>
+<time class="time">Jun 2023 (already?)</time>
 
 # What I'm doing now
 
-I'm currently reading: <em>A Mind for Numbers</em>.
+I'm currently reading: <em>Refactoring: Improving the Design of Existing Code</em> from Kent Back. It has been pretty useful to the client I'm working right now, can't wait to share 
+more thoughts about it.
 
 I've recently published the second post of Component Drive UI Patterns, make sure to check it out! [Component Drive UI Patterns II](/articles/component-driven-design-part-2)
 
-Watching Dr. Stone season 3 📺
+  Also I'm quite enjoying studying a Ruby on Rails with a new toy project I'm building.
+  
+Watching Dr. Stone season 3 and the new Arc of Kimetsu no Yaiba (or Demon slayer) 📺
 
 Currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
 
-<img src="https://media.giphy.com/media/9GIyktt76WotG/giphy.gif" alt="gif of the day" />
+<img src="https://media.giphy.com/media/xUPGcF0ytDobP8mkz6/giphy.gif" alt="gif of the day" />
 </article>
 
 <style scoped>
