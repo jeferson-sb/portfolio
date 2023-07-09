@@ -11,23 +11,25 @@ meta:
 
 <article class="article">
 
-<time class="time">Jun 2023 (already?)</time>
+<time class="time">Jul 2023</time>
 
 # What I'm doing now
 
-I'm currently reading: <em>Refactoring: Improving the Design of Existing Code</em> from Kent Back. It has been pretty useful to the client I'm working right now, can't wait to share 
-more thoughts about it.
+📖 Currently reading: <em>Programming TypeScript</em> from Boris Cherny.
 
-I've recently published the second post of Component Drive UI Patterns, make sure to check it out! [Component Drive UI Patterns II](/articles/component-driven-design-part-2)
+✏️ Learning: Ruby on Rails
 
-  Also I'm quite enjoying studying a Ruby on Rails with a new toy project I'm building.
-  
-Watching Dr. Stone season 3 and the new Arc of Kimetsu no Yaiba (or Demon slayer) 📺
+📺 Watching: Jujutsu Kaisen Season 2
 
-Currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
+🎮 Currently playing: <em>Ni no Kuni II: Revenant Kingdom</em>
 
-<img src="https://media.giphy.com/media/xUPGcF0ytDobP8mkz6/giphy.gif" alt="gif of the day" />
+Bonus: If you use neovim/lunarvim make sure to checkout my new colorscheme: [amethyst](https://github.com/jeferson-sb/amethyst)
+
 </article>
+<figure>
+  <img src="https://media.giphy.com/media/RMwgs5kZqkRyhF24KK/giphy.gif" alt="gif of the day" />
+  <figcaption>(gif from Seeking Blue)</figcaption>
+</figure>
 
 <style scoped>
 :global(#app) {
@@ -37,10 +39,19 @@ Currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
   justify-content: space-between;
 }
 
-.article {
-  width: min(100ch, 100% - 2rem);
+.prose {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(100% - 2rem);
   margin-left: auto;
   margin-right: auto;
+}
+
+.article {
   padding: 2rem 0;
 }
 
@@ -65,5 +76,14 @@ Currently playing <em>Ni no Kuni Wrath of the White Witch</em>🎮
 img {
   object-fit: contain;
   width: min(400px, 100%);
+}
+
+figure {
+  padding-top: calc(2rem + 1em)
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--color-silver);
 }
 </style>

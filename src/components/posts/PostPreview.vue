@@ -145,6 +145,11 @@ const formattedDate = computed(() =>
   box-shadow: 0 4px 10px hsla(187, 78%, 46%, 0.5);
 }
 
+.post-preview .button:active {
+  transform: translateY(10px);
+  transition: transform 200ms ease-out;
+}
+
 a {
   color: inherit;
   width: 100%;
