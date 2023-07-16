@@ -1,4 +1,5 @@
-import urql from '@urql/vue'
+import * as urql from '@urql/vue'
+import { cacheExchange, fetchExchange } from '@urql/core'
 
 export const install = ({ isClient, app }) => {
   // if (!isClient) return
@@ -11,5 +12,6 @@ export const install = ({ isClient, app }) => {
         headers: { authorization: token ? `Bearer ${token}` : '' },
       }
     },
+    exchanges: [cacheExchange, fetchExchange],
   })
 }
