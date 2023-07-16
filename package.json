@@ -18,7 +18,7 @@
     "graphql": "^15.8.0",
     "lozad": "^1.16.0",
     "prism-theme-vars": "^0.2.4",
-    "vite-ssg": "^0.22.1",
+    "vite-ssg": "^0.23.0",
     "vue": "^3.3.4",
     "vue-gtag": "^2.0.1",
     "vue-router": "^4.2.4"
