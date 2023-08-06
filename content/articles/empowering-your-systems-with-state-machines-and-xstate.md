@@ -327,7 +327,8 @@ Finally, we've arrived at the framework land. XState provides a handful of hooks
 
 Since this is a fairly small example we're going to keep it implemented in a custom hook:
 
-```jsx{codeTitle: src/components/Airplane/useAirplane.js}
+```jsx
+// useAirplane.js
 import { useState } from 'react';
 import { useMachine } from '@xstate/react';
 
@@ -371,7 +372,7 @@ As we've seen in previous examples, in order to see if the machine is in a speci
 
 In the following lines we're going to consume the states and events provided by this custom hook on our main component:
 
-```jsx{codeTitle: src/App.js}
+```jsx
 import { AirplaneForm } from './components/AirplaneForm';
 import { useAirplane } from './components/Airplane/useAirplane';
 
@@ -435,13 +436,7 @@ Essentially, what we're doing now is adding a few buttons to trigger the transit
 
 To see this all in action take a look at the demo below in which you can play around with:
 
-<iframe src="https://codesandbox.io/embed/demo-cm42-xstate-vgf6x?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fstate%2FairplaneMachine.js&theme=dark&view=preview"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="demo-cm42-xstate-codesandbox"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-     loading="lazy"
-   ></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius:2px;" width="800" height="450" src="https://codesandbox.io/p/sandbox/demo-xstate-6wc8rq?embed=1" allowfullscreen></iframe>
 
 ## Wrapping up
 
