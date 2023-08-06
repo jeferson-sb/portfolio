@@ -546,7 +546,7 @@ so we can start using utility classes while keeping our default theme from [Tail
 
 #### Live demo
 
-<iframe src="https://stackblitz.com/edit/vitejs-vite-x2y4qu?embed=1&file=src%2Fstyles%2Fglobal.css&hideExplorer=1&theme=dark&view=preview" width="870" height="600" />
+<iframe src="https://stackblitz.com/edit/vitejs-vite-x2y4qu?ctl=1&embed=1&file=src%2Fstyles%2Fglobal.css&hideExplorer=1&hideNavigation=1&theme=dark&view=preview" width="870" height="600" />
 
 ---
 
