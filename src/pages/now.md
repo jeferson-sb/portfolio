@@ -15,7 +15,7 @@ meta:
 
 # What I'm doing now
 
-📖 Currently reading: <em>Programming TypeScript</em> from Boris Cherny.
+📖 Currently reading: <em>The Mythical Man-Month</em> from Frederick P. Brooks.
 
 ✏️ Learning: Ruby on Rails
 
