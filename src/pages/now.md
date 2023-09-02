@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">AGO 2023</time>
+<time class="time">SEP 2023</time>
 
 # What I'm doing now
 
@@ -19,18 +19,16 @@ meta:
 
 ✏️ Learning: Ruby on Rails
 
-📺 Watching: Jujutsu Kaisen Season 2
+📺 Watching: Jujutsu Kaisen Season 2 and Rurouni Kenshin
 
 🎮 Currently playing: <em>Ni no Kuni II: Revenant Kingdom</em>
 
 New post! [Learn to organise your CSS with Cascade Layers](/articles/organise-your-css-with-cascade-layers)
 
-Bonus: If you use neovim/lunarvim make sure to checkout my new colorscheme: [amethyst](https://github.com/jeferson-sb/amethyst)
-
 </article>
 <figure>
-  <img src="https://media.giphy.com/media/U8wCBLhkjNknS/giphy.gif" alt="gif of the day" />
-  <figcaption>(gif from r0llcake)</figcaption>
+  <img src="https://media.giphy.com/media/C3gZCY92Cwyxq/giphy.gif" alt="gif of the day" />
+  <figcaption>(gif from @maudit)</figcaption>
 </figure>
 
 <style scoped>
