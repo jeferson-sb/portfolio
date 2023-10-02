@@ -50,6 +50,7 @@ body {
 
   font-size: var(--base-font-size);
   accent-color: var(--color-silver);
+  scrollbar-gutter: stable;
 }
 
 .container {

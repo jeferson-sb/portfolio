@@ -80,12 +80,12 @@ useHead({
 const handleScrollChange = () => {
   let timeout
 
-  main.value.style.setProperty('--state', 'running')
+  main?.value?.style?.setProperty('--state', 'running')
 
   window.clearTimeout(timeout)
 
   timeout = setTimeout(() => {
-    main.value.style.setProperty('--state', 'paused')
+    main?.value?.style?.setProperty('--state', 'paused')
   }, 2000)
 }
 
