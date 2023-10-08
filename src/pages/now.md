@@ -11,24 +11,24 @@ meta:
 
 <article class="article">
 
-<time class="time">SEP 2023</time>
+<time class="time">OCT 2023</time>
 
 # What I'm doing now
 
-📖 Currently reading: <em>The Mythical Man-Month</em> from Frederick P. Brooks.
+📖 Currently reading: <em>The Rust Programming Language</em> by Steve Klabnik and Carol Nichols.
 
-✏️ Learning: Ruby on Rails
+✏️ Learning: Ruby on Rails and Rust.
 
-📺 Watching: Jujutsu Kaisen Season 2 and Rurouni Kenshin
+📺 Watching: Jujutsu Kaisen Season 2, Rurouni Kenshin and Spy Family.
 
-🎮 Currently playing: <em>Ni no Kuni II: Revenant Kingdom</em>
+🎮 Currently playing: <em>Forza Motorsport</em> and <em>Starfield</em>.
 
-New post! [Learn to organise your CSS with Cascade Layers](/articles/organise-your-css-with-cascade-layers)
+New post! [Mixing colors in CSS](/articles/css-color-mix)
 
 </article>
 <figure>
-  <img src="https://media.giphy.com/media/C3gZCY92Cwyxq/giphy.gif" alt="gif of the day" />
-  <figcaption>(gif from @maudit)</figcaption>
+  <img src="https://media.giphy.com/media/hq7O4BvUNmjLicWaST/giphy.gif" alt="gif of the day" />
+  <figcaption>(gif from @theline)</figcaption>
 </figure>
 
 <style scoped>

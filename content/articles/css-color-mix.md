@@ -1,7 +1,7 @@
 ---
 id: 4gg5ha081e
 title: Mixing colors in CSS
-published_at: 2023-09-24T23:21:24.304Z
+published_at: 2023-10-08T23:31:01.858Z
 tags: CSS
 excerpt: Color plays a vital role on today's web and also our daily life. And as technology progresses, new colors...
 slug: css-color-mix
