@@ -1,16 +1,20 @@
 <template>
-  <div class="box"></div>
+  <div :class="{ box: true, unsupported: !supported }">
+    <span v-if="!supported">Unsupported by your browser</span>
+  </div>
   <span>{{ color }}</span>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   color: String,
   size: {
     type: Number,
     default: 100,
   },
 })
+
+const supported = window.CSS.supports('background', props.color)
 </script>
 
 <style scoped>
@@ -23,6 +27,11 @@ defineProps({
   border-radius: var(--radius-default);
   width: calc(var(--size) * 1px);
   height: calc(var(--size) * 1px);
+}
+
+.box.unsupported {
+  padding: 1rem;
+  background: hsl(0, 0%, 26%);
 }
 
 span {
