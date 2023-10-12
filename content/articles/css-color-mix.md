@@ -27,7 +27,7 @@ Having more or less colors comes down to human color perception and is subjectiv
 
 Color spaces arrange colors of a gamut in certain shapes, being some in 3D shapes like cubes (rgb) and others as cylinders (hsl).
 
-We often apply colors in CSS in the so called **sRGB**, used for the legacy `rgb`, `hex`, `hsl` and `hwb` color functions. But there are way more possible colors that are capable to human eye to see visible outside of these spectrum.
+We often apply colors in CSS in the so-called **sRGB**, used for the legacy `rgb`, `hex`, `hsl`, and `hwb` color functions. But there are way more possible colors that are capable of human eye seeing visible outside of these spectrums.
 
 `lch` - Device-independent representation that stands for _CIE Lightness_, _Chroma_ and _Hue_. It allows for more precise control over the appearance of colors, especially when it comes to adjusting the lightness and saturation. More precise as per human perception.
 <ColorBox color="lch(50% 100 27)" />
