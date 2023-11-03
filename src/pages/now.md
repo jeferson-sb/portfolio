@@ -11,24 +11,22 @@ meta:
 
 <article class="article">
 
-<time class="time">OCT 2023</time>
+<time class="time">NOV 2023</time>
 
 # What I'm doing now
 
-📖 Currently reading: <em>The Rust Programming Language</em> by Steve Klabnik and Carol Nichols.
+📖 Currently reading: <em>The Rust Programming Language</em> by Steve Klabnik and Carol Nichols. 🦀
 
 ✏️ Learning: Ruby on Rails and Rust.
 
 📺 Watching: Jujutsu Kaisen Season 2, Rurouni Kenshin and Spy Family.
 
-🎮 Currently playing: <em>Forza Motorsport</em> and <em>Starfield</em>.
-
-New post! [Mixing colors in CSS](/articles/css-color-mix)
+🎮 Currently playing: <em>Forza Motorsport</em> and <em>Persona 5 Tactica</em>.
 
 </article>
 <figure>
-  <img src="https://media.giphy.com/media/hq7O4BvUNmjLicWaST/giphy.gif" alt="gif of the day" />
-  <figcaption>(gif from @theline)</figcaption>
+  <img src="https://media.giphy.com/media/g0OT8JBFRc8SY/giphy.gif" alt="gif of the day" />
+  <!-- <figcaption>(gif from @)</figcaption> -->
 </figure>
 
 <style scoped>
