@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     AppLink: typeof import('./src/components/base/AppLink.vue')['default']
     ArticleControls: typeof import('./src/components/article/ArticleControls.vue')['default']
     ArticleHeading: typeof import('./src/components/article/ArticleHeading.vue')['default']
+    ArticlesHero: typeof import('./src/components/article/ArticlesHero.vue')['default']
     BaseInput: typeof import('./src/components/forms/BaseInput.vue')['default']
     BaseRange: typeof import('./src/components/forms/BaseRange.vue')['default']
     BaseSelect: typeof import('./src/components/forms/BaseSelect.vue')['default']

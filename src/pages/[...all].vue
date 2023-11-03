@@ -197,6 +197,7 @@ main {
 
 .error .button {
   font-size: var(--text-xl);
+  vertical-align: middle;
 }
 
 .content {

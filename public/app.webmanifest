@@ -22,7 +22,7 @@
   "background_color": "#1ABBD1",
   "shortcuts": [
     {
-      "name": "Read latest article",
+      "name": "Read articles",
       "url": "/articles",
       "icons": [
         {

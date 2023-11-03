@@ -1,16 +1,6 @@
 <template>
   <main class="main" ref="main">
-    <div class="hero">
-      <div class="container">
-        <h1 class="hero__headline">Articles</h1>
-        <p class="hero__description">
-          Here you can find all of my published articles, tutorials and guides,
-          going from little css tips to software architecture, open source, user
-          experience and all sort of things. I hope you enjoy you're reading
-          📖👋
-        </p>
-      </div>
-    </div>
+    <ArticlesHero />
     <section class="container" id="main-content">
       <PostPreview
         v-for="article in allArticles"
@@ -103,27 +93,8 @@ onUnmounted(() => {
   padding: 1.2rem 0;
 }
 
-.hero {
-  background-color: var(--accent-color-lighter, var(--color-gray-800));
-  box-shadow: var(--elevation-2);
-}
-
-.hero .container,
 .hero + .container {
   flex-flow: column wrap;
-}
-
-.hero .container {
-  padding: calc(2rem + 1vw) 0;
-}
-
-.hero__headline {
-  font-size: var(--text-2xl);
-}
-
-.hero__description {
-  font-size: var(--text-lg);
-  max-width: 800px;
 }
 
 .main {
@@ -135,10 +106,6 @@ onUnmounted(() => {
   animation: shuffle 15s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-play-state: var(--state);
   will-change: background-position;
-}
-
-body[data-theme='light'] .hero {
-  box-shadow: var(--elevation-3);
 }
 
 body[data-theme='light'] .main {
@@ -172,8 +139,7 @@ body[data-theme='light'] .main {
 }
 
 @media screen and (max-width: 768px) {
-  .container,
-  .hero .container {
+  .container {
     padding: 1rem 2.4rem;
   }
 }

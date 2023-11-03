@@ -163,7 +163,7 @@ export default {
 .navbar .navbar-menu .navbar-menu__item:active:not(.no-effect),
 .navbar .navbar-menu .navbar-menu__item:focus:not(.no-effect),
 .navbar .navbar-menu .navbar-menu__item:focus-within:not(.no-effect) {
-  outline: 3px dashed var(--color-primary);
+  outline: 2px dashed var(--color-primary);
 }
 
 body[data-theme='light'] .header {
