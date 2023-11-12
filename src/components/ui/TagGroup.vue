@@ -18,10 +18,6 @@ export default {
 .tags {
   display: flex;
   flex-flow: row wrap;
-  margin: 6px 0;
-}
-
-.tags .tag:not(:last-child) {
-  margin-right: 9px;
+  gap: 0.25rem;
 }
 </style>

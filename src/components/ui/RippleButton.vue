@@ -1,26 +1,21 @@
 <template>
-  <Button @click="ripple" class="button--ripple" v-bind="$attrs">
+  <Button ref="ripple" @click="onClick" class="button--ripple" v-bind="$attrs">
     <slot />
   </Button>
 </template>
 
-<script>
-import Button from '@/components/ui/Button'
+<script setup>
+import { ref } from 'vue';
 
-export default {
-  components: {
-    Button,
-  },
-  methods: {
-    ripple(e) {
-      const rect = e.target.getBoundingClientRect()
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
+const ripple = ref(null)
 
-      this.$el.style.setProperty('--x', x)
-      this.$el.style.setProperty('--y', y)
-    },
-  },
+const onClick = (e) => {
+  const rect = e.target.getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+
+  ripple?.value?.style?.setProperty('--x', x)
+  ripple?.value?.style?.setProperty('--y', y)
 }
 </script>
 
@@ -38,25 +33,25 @@ export default {
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-}
 
-.button--ripple:focus {
-  box-shadow: 0 3px 6px 0 rgba(var(--shadow-color), 0.15),
+  &:focus {
+    box-shadow: 0 3px 6px 0 rgba(var(--shadow-color), 0.15),
     0 3px 6px 0 rgba(var(--shadow-color), 0.23);
-}
+  }
 
-.button--ripple::before {
-  content: '';
-  position: absolute;
-  background: rgba(var(--shadow-color), 0.25);
-  border-radius: 50%;
-  transform: scale(0);
-  transform-origin: 50% 50%;
-  top: calc(var(--y) * 1px);
-  left: calc(var(--x) * 1px);
-  width: 5px;
-  height: 5px;
-  opacity: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    background: rgba(var(--shadow-color), 0.25);
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    top: calc(var(--y) * 1px);
+    left: calc(var(--x) * 1px);
+    width: 5px;
+    height: 5px;
+    opacity: 0;
+  }
 }
 
 .button--ripple:focus:not(:active)::before {

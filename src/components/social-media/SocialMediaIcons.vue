@@ -108,71 +108,82 @@ const classes = computed(() => ({
 </script>
 
 <style scoped>
-.social-media-icons a {
-  --shadow-opacity: 0;
-  --shadow-h: 0;
-  --shadow-s: 0%;
-  --shadow-l: 0%;
+.social-media-icons {
+  display: flex;
+  align-items: center;
 
-  border-radius: var(--radius-default);
-  background-color: var(--color-gray-800);
-  padding: 12px;
-  box-shadow: 1px 4px 8px 1px
-    hsla(
-      var(--shadow-h),
-      var(--shadow-s),
-      var(--shadow-l),
-      var(--shadow-opacity)
-    );
-  outline: 0;
+  & a {
+    --shadow-opacity: 0;
+    --shadow-h: 0;
+    --shadow-s: 0%;
+    --shadow-l: 0%;
+
+    border-radius: var(--radius-default);
+    background-color: var(--color-gray-800);
+    padding: 0.25rem  0.5rem;
+    box-shadow: 1px 4px 8px 1px
+      hsla(
+        var(--shadow-h),
+        var(--shadow-s),
+        var(--shadow-l),
+        var(--shadow-opacity)
+      );
+    outline: 0;
+
+    &:hover {
+      --shadow-opacity: 0.25;
+      transform: translateY(-8px);
+    }
+
+    &:hover svg,
+    &:hover svg path {
+      fill: var(--color-primary);
+    }
+
+    &:focus {
+      --shadow-h: 187;
+      --shadow-s: 78%;
+      --shadow-l: 46%;
+      --shadow-opacity: 0.5;
+    }
+  }
+
+  & a + a {
+    margin-inline-start: 20px;
+  }
+
+  & :is(a, svg, path) {
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-property: transform, fill, box-shadow;
+    will-change: transform;
+  }
 }
 
-.social-media-icons a,
-.social-media-icons svg,
-.social-media-icons svg path {
-  transition-duration: 400ms;
-  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition-property: transform, fill, box-shadow;
-  will-change: transform;
+.social-media-icons--boxed {
+  a {
+    display: inline-block;
+  }
 }
 
-.social-media-icons a + a {
-  margin-left: 20px;
+@media (--vw-sm) {
+  .social-media-icons {
+    justify-content: center;
+  }
 }
 
-.social-media-icons a:hover {
-  --shadow-opacity: 0.25;
-  transform: translateY(-8px);
-}
+body[data-theme='light'] {
+  .social-media-icons a {
+    background-color: var(--bg-color-lighter);
 
-.social-media-icons a:focus {
-  --shadow-h: 187;
-  --shadow-s: 78%;
-  --shadow-l: 46%;
-  --shadow-opacity: 0.5;
-}
+    &:hover {
+      --shadow-opacity: 0.05;
+      transform: translateY(-8px);
+    }
 
-.social-media-icons a:hover svg,
-.social-media-icons a:hover svg path {
-  fill: var(--color-primary);
-}
-
-.social-media-icons--boxed a {
-  display: inline-block;
-  padding: 3px 8px;
-}
-
-body[data-theme='light'] .social-media-icons a {
-  background-color: var(--bg-color-lighter);
-}
-
-body[data-theme='light'] .social-media-icons a:hover {
-  --shadow-opacity: 0.05;
-  transform: translateY(-8px);
-}
-
-body[data-theme='light'] .social-media-icons a svg,
-body[data-theme='light'] .social-media-icons a svg path {
-  fill: var(--color-default-black);
+    svg, svg path {
+      fill: var(--color-default-black);
+    }
+  }
 }
 </style>

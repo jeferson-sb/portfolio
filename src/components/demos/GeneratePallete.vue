@@ -102,7 +102,7 @@ export default {
 
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-block-start: 20px;
   gap: 10px;
 }
 

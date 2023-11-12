@@ -9,11 +9,11 @@ defineProps(['marker'])
 </template>
 
 <style>
-.custom-list ul li::marker {
-  content: v-bind(marker);
-}
-
 .custom-list ul li {
   padding-inline-start: 0.4em;
+
+  &::marker {
+    content: v-bind(marker);
+  }
 }
 </style>

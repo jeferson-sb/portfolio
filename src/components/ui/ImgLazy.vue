@@ -4,59 +4,55 @@
     :data-src="src"
     :data-srcset="srcset"
     :alt="alt"
-    :class="styles"
+    :class="classes"
     :width="width"
     :height="height"
-    :style="`background-color: ${bgColor};`"
+    :style="`--fallback-bg: ${bgColor};`"
   />
 </template>
 
-<script>
-export default {
-  name: 'ImageLazy',
-  props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    srcset: {
-      type: String,
-      default: null,
-    },
-    alt: {
-      type: String,
-      default: '',
-    },
-    fullBleed: {
-      type: Boolean,
-      default: false,
-    },
-    width: {
-      type: String,
-    },
-    height: {
-      type: String,
-    },
-    bgColor: {
-      type: String,
-      default: 'hsl(214, 9%, 55%)',
-    },
-    fit: {
-      type: String,
-      default: 'cover',
-    },
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  src: {
+    type: String,
+    required: true,
   },
-  computed: {
-    styles() {
-      return {
-        lozad: true,
-        'full-bleed': this.fullBleed,
-        contain: this.fit === 'contain',
-        cover: this.fit === 'cover',
-      }
-    },
+  srcset: {
+    type: String,
+    default: null,
   },
-}
+  alt: {
+    type: String,
+    default: '',
+  },
+  fullBleed: {
+    type: Boolean,
+    default: false,
+  },
+  width: {
+    type: String,
+  },
+  height: {
+    type: String,
+  },
+  bgColor: {
+    type: String,
+    default: 'hsl(214, 9%, 55%)',
+  },
+  fit: {
+    type: String,
+    default: 'contain',
+  },
+})
+
+const classes = computed(() => ({
+  lozad: true,
+  'full-bleed': props.fullBleed,
+  contain: props.fit === 'contain',
+  cover: props.fit === 'cover',
+}))
 </script>
 
 <style scoped>
@@ -66,12 +62,15 @@ export default {
 
 .contain {
   width: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
+img:not([data-loaded="true"]) {
+  background-color: var(--fallback-bg);
+}
+
+@media (--vw-md) {
   .lozad {
     height: auto;
   }

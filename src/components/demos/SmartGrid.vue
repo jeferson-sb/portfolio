@@ -1,7 +1,7 @@
 <template>
   <div>
     <ButtonGroup grouped>
-      <Button @click="columns = 6">
+      <Button @click="columns = 6" type="button">
         <template v-slot:icon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@
         </template>
         Small
       </Button>
-      <Button @click="columns = 3">
+      <Button @click="columns = 3" type="button">
         <template v-slot:icon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
         </template>
         Large
       </Button>
-      <Button @click="columns = 1">
+      <Button @click="columns = 1" type="button">
         <template v-slot:icon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(var(--gallery-columns, 6), 1fr);
   grid-gap: 10px;
-  margin-top: 10px;
+  margin-block-start: 10px;
 }
 
 .image {

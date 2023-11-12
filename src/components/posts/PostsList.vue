@@ -20,45 +20,23 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useArticles } from '@/composables/useArticles';
 
-const { getRoutes } = useRouter()
 const limit = 3
-const topRecentArticles = computed(() =>
-  getRoutes()
-    .filter((route) => route.path.startsWith('/articles/') && route.name)
-    .sort((a, b) =>
-      a.meta.frontmatter.published_at < b.meta.frontmatter.published_at ? 1 : -1
-    )
-    .slice(0, limit)
-    .map((article) => ({
-      id: article.meta?.frontmatter?.id,
-      articleId: article.name,
-      title: article.meta?.frontmatter?.title,
-      date: article.meta?.frontmatter?.published_at,
-      path: article.path,
-      excerpt: article.meta?.frontmatter?.excerpt,
-      tags: article.meta?.frontmatter?.tags,
-    }))
-)
+const articles = useArticles()
+const topRecentArticles = articles.value?.slice(0, limit)
 </script>
 
 <style scoped>
 .posts-list {
   display: flex;
   flex-flow: row wrap;
-}
+  gap: 1rem;
+  width: min(160ch, 100% - 2rem);
 
-.posts-list h3 {
-  width: 100%;
-  text-transform: uppercase;
-  margin-bottom: 33px;
-}
-
-@media screen and (max-width: 1024px) {
-  .posts-list {
-    padding: 18px;
+  & #posts-heading {
+    text-transform: uppercase;
+    flex-basis: 100%;
   }
 }
 </style>

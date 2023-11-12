@@ -126,7 +126,7 @@ export default {
 }
 
 .button--icon svg {
-  margin-right: 4px;
+  margin-inline-end: 4px;
 }
 
 .button--rounded-full {
@@ -153,5 +153,9 @@ export default {
   --button-bg-color: var(--color-gray-800);
 
   cursor: not-allowed;
+}
+
+body[data-theme='light'] .button {
+  color: var(--button-text-color);
 }
 </style>

@@ -5,30 +5,26 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'InteractiveWrapper',
-  props: {
-    title: {
-      type: String,
-      default: 'Interactive Example',
-    },
-    borderless: {
-      type: Boolean,
-    },
-    resizable: {
-      type: Boolean,
-    },
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  title: {
+    type: String,
+    default: 'Interactive Example',
   },
-  computed: {
-    classes() {
-      return {
-        'interactive-wrapper': true,
-        'interactive-wrapper--borderless': this.borderless,
-      }
-    },
+  borderless: {
+    type: Boolean,
   },
-}
+  resizable: {
+    type: Boolean,
+  },
+})
+
+const classes = computed(() => ({
+  'interactive-wrapper': true,
+  'interactive-wrapper--borderless': props.borderless,
+}))
 </script>
 
 <style scoped>
@@ -45,7 +41,7 @@ export default {
   color: var(--color-silver);
   font-size: var(--text-sm);
   font-family: var(--font-mono);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   background: var(--color-light, var(--color-default-black));
   position: absolute;
   top: -10px;

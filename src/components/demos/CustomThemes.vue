@@ -86,7 +86,7 @@ export default {
   background: var(--v-bg-color);
   color: var(--v-text-color);
   border-radius: var(--radius-default);
-  margin-top: 10px;
+  margin-block-start: 10px;
 }
 
 [data-v-theme='dark'] {

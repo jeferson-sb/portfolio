@@ -11,8 +11,8 @@
   background: var(--color-accent);
   color: var(--color-default-black);
   padding: 10px;
-  z-index: 100;
-  font-weight: 700;
+  z-index: var(--z-100);
+  font-weight: var(--fw-bold);
 }
 
 .skip-link:focus {

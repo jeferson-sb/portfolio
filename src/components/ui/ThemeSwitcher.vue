@@ -3,6 +3,7 @@
     class="theme-switcher"
     @click="toggleTheme"
     aria-label="Switch theme between light and dark"
+    type="button"
   >
     <template v-if="variant === 'fade'">
       <transition name="fade">
@@ -53,19 +54,17 @@ const toggleTheme = () => {
 .theme-switcher {
   background: transparent;
   outline: 0;
-}
 
-.theme-switcher svg {
-  margin-top: -5px;
-  transform: scale(0.7);
-  position: absolute;
-  left: -10px;
-  right: 0;
-  top: -24px;
-}
+  & svg {
+        position: absolute;
+    transform: scale(0.9);
+    right: 10px;
+    top: -130%;
+  }
 
-.theme-switcher:focus-visible svg {
-  outline: 2px dashed var(--color-primary);
+  &:focus-visible svg {
+    outline: 2px dashed var(--color-primary);
+  }
 }
 
 .fade-enter-active,

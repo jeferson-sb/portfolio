@@ -9,7 +9,7 @@
   >
     <slot />
   </a>
-  <router-link v-else v-bind="$props">
+  <router-link :to="to" v-else>
     <slot />
   </router-link>
 </template>
@@ -59,17 +59,17 @@ const classes = reactive({
   font-size: var(--button-font-size, inherit);
   transition: filter 0.3s ease-in-out;
   border-radius: var(--button-radius);
-}
 
-.link--button:hover {
-  text-decoration: none;
-  filter: brightness(70%);
-}
+  &:hover {
+    text-decoration: none;
+    filter: brightness(70%);
+  }
 
-.link--button:focus {
-  outline: 0;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
+  &:focus {
+    outline: 0;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
+  }
 }
 
 .link--full {
