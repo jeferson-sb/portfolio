@@ -16,8 +16,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: min(110ch, 100% - 2rem);
+  width: min(96ch, 100% - 2rem);
   margin: 0 auto;
-  margin-top: 1.125rem;
+  margin-block-start: 1.125rem;
 }
 </style>

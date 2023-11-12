@@ -36,7 +36,7 @@ body[data-theme='light'] .hero {
   box-shadow: var(--elevation-3);
 }
 
-@media screen and (max-width: 768px) {
+@media (--vw-md) {
   .hero .container {
     padding: 1rem 2.4rem;
   }
