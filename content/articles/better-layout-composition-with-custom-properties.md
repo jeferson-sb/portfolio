@@ -52,7 +52,7 @@ A custom property can have up to 4 possible values:
 4. If custom properties are not supported (e.g. IE 11), then the property value will be the default value or the previous declared one (1s).
 
 At the time of this writing, CSS Varibles are supported in all major browsers:
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/caniuse-css-vars.png?alt=media&token=13624719-db53-4dab-86fa-cf420d72e23f" alt="94% of browser support" height="277" width="870" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/caniuse-css-vars.png?alt=media&token=13624719-db53-4dab-86fa-cf420d72e23f" alt="94% of browser support" height="240" width="760" />
 
 Once you define a property on a given element, you can view and debug on the browser devtools, for instance on chrome you can check on
 the `computed` tab.

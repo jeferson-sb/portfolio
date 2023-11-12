@@ -15,7 +15,7 @@ This costs time and requires a lot of effort, and research, especially when crea
 
 You probably might be wondering, “why not use a component library?” You can definitely do that, it will work completely fine in most cases. However, those libraries are usually opinionated and come with the cost of having an entire suite of styles you would have to customize according to your design system. They also might lack some important features like keyboard navigation or not cover necessary accessibility attributes.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/component-blueprint.png?alt=media&token=721aaa15-28b0-4a55-b311-ba89a77ae1c0" alt="Component anatomy blueprint illustration" height="752" width="870" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/component-blueprint.png?alt=media&token=721aaa15-28b0-4a55-b311-ba89a77ae1c0" alt="Component anatomy blueprint illustration" height="600" width="870" />
 
 If you need a lightweight, full-featured accessible component with zero styling I think a low-level component might be a good suit for you.
 
@@ -62,7 +62,7 @@ const SystemUpgradeAlert = () => (
 )
 ```
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/alert-demo-radix-tailwindcss.png?alt=media&token=556922c4-7378-4100-97d6-685d566a822b" alt="System upgrade alert demo component" height="636" width="870" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/alert-demo-radix-tailwindcss.png?alt=media&token=556922c4-7378-4100-97d6-685d566a822b" alt="System upgrade alert demo component" height="500" width="870" />
 
 ### Controlled vs Uncontrolled components
 

@@ -20,7 +20,7 @@ You can use [Netlify’s command line](https://www.npmjs.com/package/netlify-cli
 
 For this demonstration I have this little web app I'm going to deploy from the terminal just using the Netlify CLI!
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/demo_app.png?alt=media&token=bd233c50-3a87-4dfc-851c-5be5c965a2e7" alt="fitness demo man doing shoulder stretch" fit="contain" width="870" height="700" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/demo_app.png?alt=media&token=bd233c50-3a87-4dfc-851c-5be5c965a2e7" alt="fitness demo man doing shoulder stretch" height="950" />
 
 First things first, Let's install it as global dependency:
 
@@ -42,7 +42,7 @@ netlify login
 
 This will open a authorization page to you to grant access and obtain an access token that allows CLI to get info and manage your sites through the terminal.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/cli-authorize-ui.png?alt=media&token=d3bc6a32-8f89-4ba4-9214-18f1c7c00961" alt="authorize netlify" height="320" width="870" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/cli-authorize-ui.png?alt=media&token=d3bc6a32-8f89-4ba4-9214-18f1c7c00961" alt="authorize netlify" width="800" height="290" />
 
 If you're already logged in, you can check the current user by running:
 
@@ -100,7 +100,7 @@ Finally we open our new deployed app:
 netlify open:site
 ```
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/fitness-deployed.png?alt=media&token=c905b519-3a28-45da-83dd-19028f3122e2" alt="fitness deployed" height="820" width="870" fit="contain" style="--radius-default: 20px" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/fitness-deployed.png?alt=media&token=c905b519-3a28-45da-83dd-19028f3122e2" alt="fitness deployed" width="800" height="727" style="--radius-default: 20px" />
 
 Wohooo! 🎉🥳 Our app has been successfully deployed into production!
 

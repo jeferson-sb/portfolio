@@ -93,7 +93,7 @@ const Button = ({ leftIcon }) => (
 You can decide to expose data from the parent component itself to the rendered child as well.
 Let's see how can make the icon the same color as the button:
 
-```js{1-2}
+```js {1,3}
 const Button = ({ colorScheme = 'blue', leftIcon }) => (
   <button type="button">
     {leftIcon({ color: colorScheme })}
@@ -118,11 +118,9 @@ Cool! We just made our component more reusable by adding render props.
 But be cautious! You might be tempted to replace components with render props, and one potential problem is that this pattern
 might introduce complex nested render functions:
 
-```jsx
-{
-  /* bad */
-}
-;<Page
+```js
+{ /* bad */ }
+<Page
   renderHeader={({ theme }) => (
     <Header
       height={theme.topbar}

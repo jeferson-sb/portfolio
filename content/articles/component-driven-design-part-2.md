@@ -60,7 +60,7 @@ const Menu = ({ items }) => (
 
 It will recursively render Nodes in our tree until reaches the leaf node, in other words, when there's no items left in the menu. You can use pattern to render nested data like a threads of comments in a more readable way.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/recursive.png?alt=media&token=489e64eb-82c4-4e41-b2ea-1fff52bc8412" height="400" width="870" alt="menu tree" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/recursive.png?alt=media&token=489e64eb-82c4-4e41-b2ea-1fff52bc8412" height="655" width="800" alt="menu tree" />
 
 However, there are a few things to keep in mind:
 
@@ -256,7 +256,7 @@ Avoid passing props through multiple components as much as possible and try to h
 
 Start small. By breaking down components in a modular way, we can effectively decouple their logic and isolate them from the rest of the user interface (UI). Drawing inspiration from Brad Frost's concept of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), we can adopt a systematic approach to creating a robust and scalable system:
 
-<img-lazy src="https://bradfrost.com/wp-content/uploads/2013/06/atomic-design.png" width="870" height="400" alt="atoms, molecules, organisms, templates and pages" />
+<img-lazy src="https://bradfrost.com/wp-content/uploads/2013/06/atomic-design.png" width="800" alt="atoms, molecules, organisms, templates and pages" />
 
 The first layer of our design system comprises atoms, which serve as the fundamental building blocks. Atoms should ideally possess minimal or no logic, ensuring they remain concise and highly reusable. Examples of atoms include buttons, text elements, and input fields. By keeping atoms simple and self-contained, we lay the foundation for creating more complex components.
 

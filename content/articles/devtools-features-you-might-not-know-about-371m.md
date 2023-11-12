@@ -27,7 +27,7 @@ You can open up your browser DevTools by pressing <kbd>Ctrl + Shift + I</kbd> (W
 
 By default this tab is hidden, however, you can enable it by pressing <kbd>Cmd/Ctrl + Shift + P</kbd> and type "Show Rendering". This feature provides you a series of options to visualize your page's rendering performance.
 
-<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/35ugmr413qbrtwoil6ev.png" alt="show" height="660" width="870" />
+<img-lazy src="https://dev-to-uploads.s3.amazonaws.com/i/35ugmr413qbrtwoil6ev.png" alt="show" height="500" width="870" />
 
 **`Paint Flashing`** option gives you the ability to visualize when something is repainted on the screen.
 
@@ -116,8 +116,7 @@ I hope you found these features helpful, if you have some feedback or suggest pl
 
 [What's New in DevTools](https://developers.google.com/web/updates/2020/08/devtools)
 
-[Chrome DevTools Performance Rendering]
-(https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference?hl=en#rendering)
+[Chrome DevTools Performance Rendering](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference?hl=en#rendering)
 
 [Performance Analysis Reference](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference?hl=en)
 

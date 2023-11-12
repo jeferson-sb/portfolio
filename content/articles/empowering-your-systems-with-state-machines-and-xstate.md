@@ -24,7 +24,7 @@ Examples are:
 - Turnstile: Locked → Unlocked
 - Revolving door: Push → Rotate
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/fsm-banner.jpg?alt=media&token=63356086-b759-40a7-ab22-5fec2d4991fd" alt="Traffic lights (green on)" height="580" width="870" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/fsm-banner.jpg?alt=media&token=63356086-b759-40a7-ab22-5fec2d4991fd" alt="Traffic lights (green on)" height="510" width="870" />
 
 State machines are linear which means you can't have a state going directly to another, e.g. "idle" → "submitted".
 
@@ -168,7 +168,7 @@ Here we're initializing our state machine in the "prepared" state and once we in
 
 In order to be better visualize our logic, XState provides an [awesome tool](https://stately.ai/viz/e159da28-bead-47c9-a970-adef54df8986) where we can test finite-state machines manually:
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/airplane_fsm_viz.png?alt=media&token=b5248d9f-dbc6-42ea-8b8f-5aa3e5688df7" alt="airplane state machine diagram" height="276" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/airplane_fsm_viz.png?alt=media&token=b5248d9f-dbc6-42ea-8b8f-5aa3e5688df7" alt="airplane state machine diagram" width="600" height="230" />
 
 ### Handling side-effects and asynchronous data
 
