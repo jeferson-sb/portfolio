@@ -4,7 +4,7 @@
       <time class="post-preview__date" :datetime="date">
         {{ formattedDate }}
       </time>
-      <TagGroup v-if="size === 'long'" :tags="tags.split(',')" />
+      <TagGroup v-if="size === 'long'" :tags="tags.split(',')" linkable />
     </div>
 
     <AppLink :to="href">

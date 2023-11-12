@@ -1,17 +1,18 @@
 <template>
   <div class="tags">
-    <Tag v-for="tag in tags" :key="tag" :tagName="tag" />
+    <Tag v-for="tag in tags" :key="tag" :tagName="tag" :linkable="linkable" />
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    tags: {
-      type: Array,
-    },
+<script setup>
+defineProps({
+  tags: {
+    type: Array,
   },
-}
+  linkable: {
+    type: Boolean
+  }
+})
 </script>
 
 <style scoped>
