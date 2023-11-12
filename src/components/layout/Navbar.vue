@@ -143,11 +143,6 @@ const toggleMenu = () => {
     cursor: pointer;
     text-decoration: none;
   }
-
-  &:focus-visible:not(.no-effect),
-  &:focus-within:not(.no-effect) {
-    outline: 2px dashed var(--color-primary);
-  }
 }
 
 .navbar-menu .navbar-menu__item + .navbar-menu__item {
@@ -156,6 +151,11 @@ const toggleMenu = () => {
 
 .navbar-menu__link {
   outline: 0;
+
+  &:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 10px;
+  }
 }
 
 body[data-theme='light'] {
