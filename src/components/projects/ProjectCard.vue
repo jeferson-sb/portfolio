@@ -5,8 +5,8 @@
         :src="thumbnail"
         :alt="`${title} project screenshot`"
         class="project-card__image"
-        width="600"
-        height="220"
+        width="500"
+        height="200"
       />
     </figure>
     <div class="project-card__content">
@@ -54,71 +54,57 @@ const buttonId = computed(() => `button-${titleSlug}`)
 }
 
 .project-thumbnail {
-  max-width: 274px;
+  flex-basis: 50%;
   border-radius: var(--radius-default) 0 0 var(--radius-default);
 }
 
-.project-thumbnail img {
+.project-card__image {
   border-radius: inherit;
   object-fit: cover;
   object-position: top center;
+  height: 200px;
   min-height: 100%;
+  &.lozad {
+    filter: blur(0);
+  }
 }
 
-.project-card .project-card__content {
+.project-card__content {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  flex-basis: 50%;
   background-color: var(--bg-color-lighter, var(--color-gray-800));
-  padding: 18px;
+  padding: 1.125rem;
   border-radius: 0 var(--radius-default) var(--radius-default) 0;
   border: 1px solid transparent;
-  max-width: 265px;
 }
 
 .project-card__header {
-  margin-bottom: 20px;
+  & h4 {
+    font-size: var(--text-lg);
+  }
+  & p {
+    margin-block-end: 10px;
+    opacity: 0.7;
+  }
 }
 
-.project-card .project-card__header h4 {
-  font-size: var(--text-lg);
-  margin-bottom: 10px;
+.project-card__footer {
+  .tags {
+    margin-block-end: 1rem;
+  }
 }
 
-.project-card .project-card__header p {
-  opacity: 0.7;
+body[data-theme='light'] {
+  .project-card__content {
+    border: var(--border);
+  }
 }
 
-body[data-theme='light'] .project-card__content {
-  border: var(--border);
-}
-
-.project-card__image {
-  filter: blur(10px);
-  transition: filter 0.7s;
-  will-change: filter;
-}
-
-.project-card__image.lozad {
-  filter: blur(0);
-}
-
-@media screen and (max-width: 768px) {
+@media (--vw-sm) {
   .project-card {
     flex-direction: column;
-  }
-
-  .project-thumbnail {
-    height: 180px;
-  }
-
-  .project-thumbnail img {
-    height: 100%;
-  }
-
-  .project-thumbnail,
-  .project-card .project-card__content {
-    max-width: 100%;
   }
 }
 </style>

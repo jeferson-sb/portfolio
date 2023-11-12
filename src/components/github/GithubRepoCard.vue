@@ -40,7 +40,7 @@ defineProps({
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  padding: 18px 28px;
+  padding: 1.125rem 1.75rem;
   background-color: var(--bg-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
   color: var(--text-color-default);
@@ -57,17 +57,22 @@ defineProps({
 
 .github-repo-details {
   display: flex;
-  margin-top: 18px;
+  margin-block-start: 1.125rem;
   color: var(--text-color-default);
-}
 
-.github-repo-details span {
-  font-weight: 700;
-  color: inherit;
-}
+  & span {
+    font-weight: var(--fw-bold);
+    color: inherit;
+  }
 
-.github-repo-details span + span {
-  margin-left: 12px;
+  & span + span {
+    margin-inline-start: 0.75rem;
+  }
+
+  svg {
+    vertical-align: inherit;
+    margin-inline-end: 5px;
+  }
 }
 
 .github-repo-language,
@@ -81,16 +86,13 @@ defineProps({
   width: 12px;
 }
 
-.github-repo-details svg {
-  vertical-align: inherit;
-  margin-right: 5px;
-}
+body[data-theme='light'] {
+  .github-repo-card {
+    border: var(--border);
+  }
 
-body[data-theme='light'] .github-repo-card {
-  border: var(--border);
-}
-
-body[data-theme='light'] .github-repo-card__description {
-  color: var(--color-gray-500);
+  .github-repo-card__description {
+    color: var(--color-gray-500);
+  }
 }
 </style>

@@ -16,89 +16,42 @@
 </template>
 
 <script setup>
-import { computed, defineAsyncComponent } from 'vue'
-import { useQuery } from '@urql/vue'
+import { defineAsyncComponent } from 'vue'
+import { useContributions } from '@/composables/useContributions';
 
 const GithubRepoCard = defineAsyncComponent({
   loader: () => import('@/components/github/GithubRepoCard.vue'),
   loadingComponent: '<p>Loading...</p>',
 })
-const { data } = useQuery({
-  query: `
-  query {
-    user(login: "jeferson-sb") {
-      pullRequests(first: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
-        edges {
-          node {
-            id
-            number
-            url
-            createdAt
-            isCrossRepository
-            repository {
-              id
-              isPrivate
-              nameWithOwner
-              url
-              description
-              primaryLanguage {
-                name
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`,
-})
 
-const lastThreeMonths = () => {
-  const today = new Date()
-  today.setMonth(today.getMonth() - 3)
-  return today
-}
-
-const pullRequests = computed(() =>
-  data.value?.user?.pullRequests?.edges?.filter((pr, index, arr) => {
-    const isFork = pr.node.isCrossRepository
-    const isRecent = new Date(pr.node.createdAt) >= lastThreeMonths()
-    const nonDuplicate =
-      arr.findIndex((x) => x.node.repository.id === pr.node.repository.id) ===
-      index
-    return isFork && isRecent && nonDuplicate
-  })
-)
+const pullRequests = useContributions();
 </script>
 
 <style scoped>
+.github-projects {
+  & > :is(h3, h4) {
+    flex-basis: 100%;
+    text-transform: uppercase;
+  }
+
+  & h4 {
+    color: var(--color-gray-400);
+    font-size: var(--text-sm);
+    margin: 10px 0 15px 0;
+  }
+}
+
 .github-projects,
 .github-repositories {
   flex-wrap: wrap;
 }
 
-.github-projects h3,
-.github-projects h4 {
-  flex-basis: 100%;
-  text-transform: uppercase;
-}
-
-.github-projects h4 {
-  color: var(--color-gray-400);
-  font-size: var(--text-sm);
-  margin: 10px 0 15px 0;
-}
-
 .github-repositories {
+  --github-card-size: 270px;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--github-card-size), 1fr));
   width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
-  .github-projects {
-    padding: 18px;
-  }
-}
 </style>
