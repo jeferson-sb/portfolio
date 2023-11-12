@@ -1,0 +1,31 @@
+@layer utility {
+  .container {
+    --max-w: 1110px;
+
+    margin-inline: auto;
+    width: calc(100% - 2rem);
+    height: 100%;
+    max-width: var(--max-w);
+    display: flex;
+  }
+
+  .overflow--hidden {
+    overflow: hidden;
+  }
+
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  @media screen and (min-width: 26.625em) {
+    .is-mobile-only {
+      display: none;
+    }
+  }
+}
