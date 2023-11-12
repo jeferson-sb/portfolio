@@ -78,6 +78,7 @@ meta:
 <style lang="css" scoped>
 :global(#app) {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,18 +87,15 @@ meta:
 .container {
   flex-flow: row wrap;
   padding: 3rem 0;
-}
-
-main {
-  padding: 1.2rem 2.4rem;
+  gap: 2.4rem;
 }
 
 .about-content {
-  .about-content__headline {
+  & .about-content__headline {
     font-size: var(--text-2xl);
   }
 
-  p {
+  & p {
     font-size: var(--text-lg);
     opacity: 0.8;
     max-width: 71ch;
@@ -170,14 +168,14 @@ main {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 26.625em) and (max-width: 48em) {
   aside {
-    margin-left: 40px;
+    margin-inline-start: 40px;
     padding: 0 2.4rem 0 0;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (--vw-sm) {
   aside {
     padding: 0 1rem;
   }

@@ -33,11 +33,20 @@ onMounted(() => {
 
 <style>
 body {
-  background-color: var(--color-default-black);
-  color: var(--color-default-white);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-bg);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--scrollbar-thumb-color);
+    border: 3px solid var(--scrollbar-border);
+  }
 }
 
 body[data-theme='light'] {
@@ -56,32 +65,19 @@ body[data-theme='light'] {
   transition-property: background-color, color;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
+
+  & :is(footer, header) {
+    border-color: rgba(108, 118, 147, 0.3);
+  }
 }
 
-body[data-theme='light'] footer,
-body[data-theme='light'] header {
-  border-color: rgba(108, 118, 147, 0.3) !important;
+body[data-theme='dark'] {
+  img {
+    filter: brightness(0.8);
+  }
 }
 
-body[data-theme='dark'] img {
-  filter: brightness(0.8);
-}
-
-body::-webkit-scrollbar {
-  width: 1em;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-bg);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--scrollbar-thumb-color);
-  border: 3px solid var(--scrollbar-border);
-}
-
+/* Has some issues */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease-out;

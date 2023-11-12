@@ -45,8 +45,7 @@ meta:
   align-items: center;
 
   width: calc(100% - 2rem);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .article {
@@ -77,7 +76,7 @@ img {
 }
 
 figure {
-  padding-top: calc(2rem + 1em)
+  padding-block-start: calc(2rem + 1em)
 }
 
 figcaption {

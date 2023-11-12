@@ -384,7 +384,7 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (--vw-md) {
   main {
     padding: 2rem;
   }
