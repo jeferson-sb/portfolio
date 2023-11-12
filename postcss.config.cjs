@@ -1,3 +1,6 @@
+const postcssPresetEnv = require('postcss-preset-env');
+const postcssNested = require('postcss-nested')
+
 module.exports = {
-  plugins: [require('postcss-nested'), require('postcss-preset-env')],
+  plugins: [postcssNested(), postcssPresetEnv()],
 }

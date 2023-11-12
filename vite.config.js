@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import path from 'path'
 import fs from 'fs'
 import { defineConfig } from 'vite'
@@ -52,6 +51,7 @@ export default defineConfig({
 
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/head'],
+      dirs: ['./composables']
     }),
 
     Components({
