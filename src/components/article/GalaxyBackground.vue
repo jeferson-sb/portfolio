@@ -40,6 +40,7 @@ onUnmounted(() => {
   animation: shuffle 15s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-play-state: var(--state);
   will-change: background-position;
+  min-height: 100dvh;
 }
 
 body[data-theme='light'] .galaxy-pattern {
