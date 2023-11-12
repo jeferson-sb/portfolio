@@ -9,8 +9,8 @@
           <li class="navbar-menu__item no-effect">
             <ThemeSwitcher variant="transform" />
           </li>
-          <li class="navbar-menu__item no-effect is-mobile-only">
-            <HamburgerMenu aria-controls="mobile-menu" @click="showMenu" />
+          <li class="navbar-menu__item no-effect">
+            <HamburgerMenu aria-controls="mobile-menu" @toggle="toggleMenu" />
           </li>
           <li class="navbar-menu__item">
             <router-link class="navbar-menu__link" to="/articles">
@@ -58,20 +58,16 @@
   </header>
 </template>
 
-<script>
-export default {
-  methods: {
-    showMenu() {
-      const button = document.querySelector('.hamburger-menu')
-      const menu = document.querySelector('.mobile-navbar')
+<script setup>
+const toggleMenu = () => {
+  const button = document.querySelector('.hamburger-menu')
+  const menu = document.querySelector('.mobile-navbar')
 
-      button.classList.toggle('hamburger-menu--active')
-      menu.classList.toggle('mobile-navbar--opened')
+  button.classList.toggle('hamburger-menu--active')
+  menu.classList.toggle('mobile-navbar--opened')
 
-      const isActive = button.classList.contains('hamburger-menu--active')
-      button.setAttribute('aria-expanded', isActive)
-    },
-  },
+  const isActive = button.classList.contains('hamburger-menu--active')
+  button.setAttribute('aria-expanded', isActive)
 }
 </script>
 
@@ -84,90 +80,88 @@ export default {
   width: 100%;
   min-height: 60px;
   font-family: var(--font-title);
-  border-bottom: 1px solid var(--color-gray-800);
-  z-index: 1;
-}
-
-.header .container {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header a {
-  color: var(--text-color-default);
-  transition: font-weight 200ms ease-out;
-}
-
-.header ul {
-  list-style-type: none;
+  border-bottom: 1px solid hsla(214, 9%, 15%, 0.2);
+  z-index: var(--z-base);
+  & .container {
+    align-items: center;
+    justify-content: space-between;
+  }
+  & a {
+    color: var(--text-color-default);
+    transition: font-weight 200ms ease-out;
+  }
+  & ul {
+    list-style-type: none;
+  }
 }
 
 .navbar {
   padding: 0.3rem;
 }
 
-.navbar .navbar-menu {
+.navbar-menu {
   display: flex;
   align-items: center;
 }
 
-.navbar .navbar-menu .navbar-menu__link {
+.navbar-menu__link {
   letter-spacing: 1.2px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
 }
 
-.navbar .navbar-menu .navbar-menu__item {
+.navbar-menu .navbar-menu__item {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-base);
   padding: 2px 10px;
+
+  &:not(.no-effect)::before {
+    content: '';
+    position: absolute;
+    z-index: var(--z-hide);
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(
+      circle at bottom,
+      rgba(26, 188, 209, 0.603) 5%,
+      rgba(0, 0, 0, 0) 60%
+    );
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-out;
+    transform: scale(0);
+    transform-origin: bottom;
+  }
+
+  &:not(.no-effect):hover::before {
+    transform: scale(100%);
+  }
+
+  &:hover .navbar-menu__link {
+    font-weight: var(--fw-normal);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:focus-visible:not(.no-effect),
+  &:focus-within:not(.no-effect) {
+    outline: 2px dashed var(--color-primary);
+  }
 }
 
-.navbar .navbar-menu .navbar-menu__item + .navbar-menu__item {
-  margin-left: 30px;
+.navbar-menu .navbar-menu__item + .navbar-menu__item {
+  margin-inline-start: 30px;
 }
 
-.navbar .navbar-menu .navbar-menu__item:not(.no-effect)::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 15px;
-  bottom: 0;
-  left: 0;
-  background: radial-gradient(
-    circle at bottom,
-    rgba(26, 188, 209, 0.603) 5%,
-    rgba(0, 0, 0, 0) 60%
-  );
-  width: 100%;
-  height: 100%;
-  transition: transform 0.2s ease-out;
-  transform: scale(0);
-  transform-origin: bottom;
-}
-
-.navbar .navbar-menu .navbar-menu__item:not(.no-effect):hover::before {
-  transform: scale(100%);
-}
-
-.navbar .navbar-menu .navbar-menu__item .navbar-menu__link {
+.navbar-menu__link {
   outline: 0;
 }
 
-.navbar .navbar-menu .navbar-menu__item:hover .navbar-menu__link {
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.navbar .navbar-menu .navbar-menu__item:active:not(.no-effect),
-.navbar .navbar-menu .navbar-menu__item:focus:not(.no-effect),
-.navbar .navbar-menu .navbar-menu__item:focus-within:not(.no-effect) {
-  outline: 2px dashed var(--color-primary);
-}
-
-body[data-theme='light'] .header {
-  background-color: transparent;
+body[data-theme='light'] {
+  .header {
+    background-color: transparent;
+  }
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -178,7 +172,13 @@ body[data-theme='light'] .header {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 48em) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media (--vw-md) {
   .container {
     padding: 18px;
   }
@@ -186,20 +186,22 @@ body[data-theme='light'] .header {
   .header {
     font-size: var(--text-base);
   }
+  .navbar-menu { 
+    & .navbar-menu__item:nth-child(n + 3) {
+      display: none;
+    }
+  }
 }
 
-@media screen and (max-width: 425px) {
+@media (--vw-sm) {
   .header {
     font-size: var(--text-sm);
     line-height: 1.25rem;
   }
-
-  .navbar .navbar-menu .navbar-menu__item + .navbar-menu__item {
-    margin-left: 20px;
-  }
-
-  .navbar-menu .navbar-menu__item:nth-child(n + 3) {
-    display: none;
+  .navbar-menu {
+    & .navbar-menu__item + .navbar-menu__item {
+      margin-inline-start: 1.25rem;
+    }
   }
 }
 </style>

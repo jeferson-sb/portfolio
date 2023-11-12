@@ -8,7 +8,7 @@
       </p>
       <SocialMediaIcons />
     </div>
-    <div class="hero-aside">
+    <aside class="hero-aside">
       <ScrollIndicator class="is-mobile-only" />
       <h2 class="hero__subheadline">web developer</h2>
       <HeroAvatar>
@@ -21,7 +21,7 @@
           loading="lazy"
         />
       </HeroAvatar>
-    </div>
+    </aside>
   </section>
 </template>
 
@@ -36,7 +36,7 @@
 .hero__headline {
   font-size: var(--text-3xl);
   font-size: clamp(var(--text-xl), 1vw + var(--text-2xl), var(--text-3xl));
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .hero__subheadline {
@@ -45,27 +45,27 @@
   gap: 1em;
   font-size: var(--text-sm);
   font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: var(--fw-normal);
   writing-mode: vertical-lr;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: var(--color-gray-400);
   margin: 0 1rem;
-}
 
-.hero__subheadline::before,
-.hero__subheadline::after {
-  content: '';
-  border-bottom: 1px solid var(--color-gray-400);
-  align-self: center;
-  justify-self: center;
-  min-width: 24px;
-  transform: rotate(90deg);
+  &::before,
+  &::after {
+    content: '';
+    border-bottom: 1px solid var(--color-gray-400);
+    align-self: center;
+    justify-self: center;
+    min-width: 24px;
+    transform: rotate(90deg);
+  }
 }
 
 .hero__description {
   font-size: clamp(var(--text-base), 1vw + var(--text-lg), var(--text-xl));
-  margin-bottom: 1.5rem;
+  margin-block-end: 1.5rem;
   color: var(--color-silver-600);
 }
 
@@ -75,41 +75,47 @@
   padding: 0 17px;
 }
 
-@media screen and (min-width: 1024px) {
-  .hero::after {
-    content: '';
-    background-color: var(--color-gray-600);
-    opacity: 0.1;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    left: 0;
-    top: 0;
+@media screen and (min-width: 64em) {
+  .hero {
+    &::after {
+      content: '';
+      background-color: var(--color-gray-600);
+      opacity: 0.1;
+      position: absolute;
+      width: 100%;
+      z-index: var(--z-hide);
+      left: 0;
+      top: 0;
+    }
+    &.has-ellipse-curve::after {
+      content: '';
+      clip-path: ellipse(100% 55% at 48% 44%);
+      height: calc(500px + 2vw);
+    }
+
+    &.has-triangle-down::after {
+      clip-path: polygon(50% 63%, 100% 38%, 100% 2%, 0% 1%, 0% 38%);
+      height: calc(500px + 3vw);
+    }
   }
 
   body[data-theme='light'] .hero::after {
+    content: '';
     background-color: var(--color-gray-300);
-  }
-
-  .hero.has-ellipse-curve::after {
-    clip-path: ellipse(100% 55% at 48% 44%);
-    height: calc(500px + 2vw);
-  }
-
-  .hero.has-triangle-down::after {
-    clip-path: polygon(50% 63%, 100% 38%, 100% 2%, 0% 1%, 0% 38%);
-    height: calc(500px + 3vw);
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (--vw-lg) {
+  .hero-avatar {
+    display: none;
+  }
+}
+
+@media (--vw-sm) {
   .hero {
     height: 100vh;
+    height: 100dvh;
     grid-template-columns: 1fr;
-  }
-
-  .hero-aside .hero-avatar {
-    display: none;
   }
 
   .hero-content {
@@ -127,13 +133,6 @@
 
   .social-media-icons a svg {
     max-width: 35px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .hero {
-    padding-right: 18px;
-    padding-left: 18px;
   }
 }
 </style>

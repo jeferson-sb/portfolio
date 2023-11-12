@@ -6,18 +6,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    src: {
-      type: String,
-    },
-    alt: {
-      type: String,
-      default: "user's picture",
-    },
+<script setup>
+defineProps({
+  src: {
+    type: String,
   },
-}
+  alt: {
+    type: String,
+    default: "user's picture",
+  },
+})
 </script>
 
 <style>
@@ -32,30 +30,30 @@ export default {
   box-shadow: var(--elevation-2);
 }
 
-.hero-avatar .hero-avatar__image img {
-  clip-path: circle(70px at center);
-  object-fit: cover;
-}
-
-.hero-avatar picture {
+.hero-avatar__image {
   position: relative;
-}
 
-.hero-avatar picture::before {
-  --avatar-outline-color: var(--color-silver);
+  & img {
+    clip-path: circle(70px at center);
+    object-fit: cover;
+  }
 
-  content: '';
-  position: absolute;
-  display: block;
-  width: 160px;
-  height: 160px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  outline: 8px inset var(--avatar-outline-color);
-  border-radius: 9999px;
-  animation: rotateOutline 20s linear infinite normal both;
-  will-change: transform;
+  &::before {
+    --avatar-outline-color: var(--color-silver);
+
+    content: '';
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    outline: 8px inset var(--avatar-outline-color);
+    border-radius: 9999px;
+    animation: rotateOutline 20s linear infinite normal both;
+    will-change: transform;
+  }
 }
 
 @keyframes rotateOutline {
@@ -68,11 +66,13 @@ export default {
   }
 }
 
-[data-theme='light'] .hero-avatar {
-  box-shadow: var(--elevation-3);
-}
+[data-theme='light'] {
+  .hero-avatar {
+    box-shadow: var(--elevation-3);
 
-[data-theme='light'] .hero-avatar picture::before {
-  --avatar-outline-color: var(--color-primary);
+    & picture::before {
+      --avatar-outline-color: var(--color-primary);
+    }
+  }
 }
 </style>
