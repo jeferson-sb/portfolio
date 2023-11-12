@@ -32,10 +32,15 @@
   }
 
   html,
-  body,
-  #app {
-    height: 100%;
+  body {
     min-height: 100%;
+  }
+
+  #app {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   html:focus-within {

@@ -87,7 +87,6 @@ export default defineConfig({
         globPatterns: ['**/*{js,css,html,txt,ico,png,svg}'],
         cleanupOutdatedCaches: true,
       },
-      disable: true // temporarily 
     }),
   ],
   ssgOptions: {

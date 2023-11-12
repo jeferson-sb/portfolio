@@ -76,14 +76,6 @@ meta:
 </route>
 
 <style lang="css" scoped>
-:global(#app) {
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .container {
   flex-flow: row wrap;
   padding: 3rem 0;

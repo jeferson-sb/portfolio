@@ -30,13 +30,6 @@ meta:
 </figure>
 
 <style scoped>
-:global(#app) {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .prose {
   display: flex;
   flex-flow: row wrap;
