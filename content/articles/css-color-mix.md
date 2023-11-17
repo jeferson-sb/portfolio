@@ -1,6 +1,6 @@
 ---
 id: 4gg5ha081e
-title: Mixing colors in CSS
+title: How to mix colors in CSS
 published_at: 2023-10-08T23:31:01.858Z
 tags: CSS
 excerpt: Color plays a vital role on today's web and also our daily life. And as technology progresses, new colors are born in modern displays, monitors, and we need a way to represent them in web too...
