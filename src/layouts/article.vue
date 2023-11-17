@@ -11,8 +11,8 @@
         :datetime="publishedAt"
         :displayDate="formattedDate"
       />
-      <ArticleControls :articleUrl="canonicalUrl" />
-      <section class="container">
+      <section class="container article-grid">
+        <ArticleControls :articleUrl="canonicalUrl" :articleId="id" />
         <div ref="articleBody" class="article-body">
           <router-view v-slot="{ Component, route }">
             <component
@@ -44,6 +44,7 @@ useHead({
 })
 const route = useRoute()
 
+const id = route.meta.frontmatter?.id
 const title = route.meta.frontmatter?.title
 const tags = route.meta.frontmatter?.tags.split(',')
 const crosspostedOn = route.meta.frontmatter?.crosspostedOn
@@ -65,9 +66,13 @@ onMounted(() => {
 </script>
 
 <style>
-.article .container {
-  max-width: 100%;
-  width: 100%;
+.article-grid {
+  --content-width: 100ch;
+
+  display: grid;
+  grid-template-columns: 1fr min(var(--content-width), 100%) 1fr;
+  justify-items: end;
+  gap: 1rem;
 }
 
 .article-body {
@@ -77,15 +82,13 @@ onMounted(() => {
 }
 
 .article-body-content {
-  display: grid;
-  grid-template-columns: 1fr min(75ch, 100%) 1fr;
+  --article-width: 75ch;
 
-  & .full-bleed {
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr min(var(--article-width), 100%) 1fr;
+
+  & > * {
     grid-column: 1 / -1;
-    max-height: 60vh;
-    object-fit: cover;
-    aspect-ratio: 16 / 9;
   }
 
   & :is(h2, h3) {
@@ -229,19 +232,13 @@ onMounted(() => {
   }
 }
 
-.article-body-content > * {
-  grid-column: 2;
-}
-
-@media (--vw-xl) {
-  .article-body-content {
-    grid-template-columns: 1fr min(85ch, 100%) 1fr;
-  }
-}
-
 @media (--vw-md) {
+  .article-grid {
+    --content-width: 1fr;
+  }
+
   .article-body-content {
-    padding-inline: 1.125rem;
+    --article-width: 1fr;
   }
 }
 
@@ -251,13 +248,6 @@ onMounted(() => {
   }
 
   .article-body-content {
-    padding-inline: 1.125rem;
-    grid-template-columns: 1fr;
-
-    & > * {
-      grid-column: 1;
-    }
-
     & p {
       line-height: 1.7;
     }

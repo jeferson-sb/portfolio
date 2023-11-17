@@ -17,6 +17,7 @@ export default defineConfig({
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
       '@content': `${path.resolve(__dirname, 'content')}/`,
+      '@lib': `${path.resolve(__dirname, 'lib')}`
     },
   },
   plugins: [

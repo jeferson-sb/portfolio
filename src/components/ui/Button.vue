@@ -139,6 +139,10 @@ export default {
   margin: 0;
 }
 
+.button--rounded-full.button--icon {
+  justify-content: center;
+}
+
 .button--squared {
   --button-radius: 0;
 }
