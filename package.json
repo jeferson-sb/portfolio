@@ -13,15 +13,18 @@
     "prettier": "prettier 'src/**/*.js' -w"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^4.2.1",
     "@urql/vue": "^1.1.2",
     "@vueuse/head": "^2.0.0",
+    "firebase": "^10.6.0",
     "graphql": "^16.8.1",
     "lozad": "^1.16.0",
     "prism-theme-vars": "^0.2.4",
     "vite-ssg": "^0.23.4",
     "vue": "^3.3.7",
     "vue-gtag": "^2.0.1",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuefire": "^3.1.18"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
