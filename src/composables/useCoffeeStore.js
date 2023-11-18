@@ -13,7 +13,7 @@ export function useCoffeeStore() {
     try {
       const userDoc = doc(coffeeRef, visitorId);
       const userCups = coffee.value.find(cup => cup.id === visitorId);
-      const articles = userCups.articles || {}
+      const articles = userCups?.articles || {}
 
       await setDoc(userDoc, {
         articles: {
