@@ -20,7 +20,7 @@ import debounce from '@lib/handling/debounce'
 import { isProd } from '@lib/modes'
 import { useCoffeeStore } from '@/composables/useCoffeeStore'
 
-const { articleUrl, articleId } = defineProps(['articleUrl',  'articleId'])
+const { articleUrl, articleId } = defineProps(['articleUrl', 'articleId'])
 
 const { coffee, addCoffeePoints } = useCoffeeStore();
 const formatPoints = (n) => Intl.NumberFormat('en-US', {
@@ -30,12 +30,12 @@ const formatPoints = (n) => Intl.NumberFormat('en-US', {
 
 const points = ref(0);
 const visitor = ref('');
-const allCupsCoffee = computed(() => 
+const allCupsCoffee = computed(() =>
   coffee
     .value
     .reduce((total, coffeeCup) => {
       const articlePoints = coffeeCup.articles[articleId]?.points
-      return articlePoints ? articlePoints + total : 0
+      return articlePoints ? articlePoints + total : total
     }, 0)
 )
 
@@ -50,7 +50,9 @@ onMounted(async () => {
 
     visitor.value = visitorId
     points.value = visitorGivenPoints || 0
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+  }
 })
 
 const onPointsWatch = debounce(async () => {

@@ -9,7 +9,7 @@ export function useCoffeeStore() {
 
   const addCoffeePoints = async ({ articleId, points, visitorId }) => {
     if (!articleId || !visitorId) return;
-    
+
     try {
       const userDoc = doc(coffeeRef, visitorId);
       const userCups = coffee.value.find(cup => cup.id === visitorId);
