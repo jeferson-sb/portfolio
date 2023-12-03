@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">NOV 2023</time>
+<time class="time">DEC 2023</time>
 
 # What I'm doing now
 
@@ -19,15 +19,13 @@ meta:
 
 ✏️ Learning: Ruby on Rails and Rust.
 
-📺 Watching: Jujutsu Kaisen Season 2, Rurouni Kenshin and Spy Family.
+📺 Watching: Jujutsu Kaisen Season 2 and Rurouni Kenshin.
 
 🎮 Currently playing: <em>Forza Motorsport</em> and <em>Persona 5 Tactica</em>.
 
 </article>
-<figure>
-  <img src="https://media.giphy.com/media/g0OT8JBFRc8SY/giphy.gif" alt="gif of the day" />
-  <!-- <figcaption>(gif from @)</figcaption> -->
-</figure>
+
+<video src="@/assets/clip.mp4" height="300" autoplay loop muted />
 
 <style scoped>
 .prose {
