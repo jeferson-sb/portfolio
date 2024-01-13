@@ -11,17 +11,21 @@ meta:
 
 <article class="article">
 
-<time class="time">DEC 2023</time>
+<time class="time">JAN 2024</time>
 
 # What I'm doing now
 
 📖 Currently reading: <em>The Rust Programming Language</em> by Steve Klabnik and Carol Nichols. 🦀
 
-✏️ Learning: Ruby on Rails and Rust.
+✏️ Learning: Rust.
 
-📺 Watching: Jujutsu Kaisen Season 2 and Rurouni Kenshin.
+📺 Watching: Sousou no Frieren.
 
-🎮 Currently playing: <em>Forza Motorsport</em> and <em>Persona 5 Tactica</em>.
+🎮 Currently playing: <em>Persona 3</em>.
+
+Happy new year! 🥳🚀
+
+Excited to bring more content and start new projects this year, stay tuned!
 
 </article>
 
