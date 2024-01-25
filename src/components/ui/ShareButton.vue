@@ -1,17 +1,8 @@
 <template>
   <Button type="button" variant="outline" @click="share" circle>
     <template v-slot:icon>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
         <title>Share</title>
         <circle cx="18" cy="5" r="3" />
         <circle cx="6" cy="12" r="3" />
@@ -37,9 +28,13 @@ const props = defineProps({
 })
 
 const share = async () => {
-  await window.navigator.share({
-    title: props.title ?? document.title,
-    url: props.link,
-  })
+  if ('share' in window.navigator) {
+    return await window.navigator.share({
+      title: props.title ?? document.title,
+      url: props.link,
+    })
+  }
+
+  await window.navigator.clipboard.writeText(props.link);
 }
 </script>
