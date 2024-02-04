@@ -11,21 +11,21 @@ meta:
 
 <article class="article">
 
-<time class="time">JAN 2024</time>
+<time class="time">FEV 2024</time>
 
 # What I'm doing now
 
-📖 Currently reading: <em>The Rust Programming Language</em> by Steve Klabnik and Carol Nichols. 🦀
+📖 Currently reading: <em>Rust in Action</em> by Tim McNamara. 🦀
 
 ✏️ Learning: Rust.
 
 📺 Watching: Sousou no Frieren.
 
-🎮 Currently playing: <em>Persona 3</em>.
+🎮 Currently playing: <em>Persona 3 Reload</em>.
 
 Happy new year! 🥳🚀
 
-Excited to bring more content and start new projects this year, stay tuned!
+Latest article: [/articles/writing-smooth-css-transitions](/articles/writing-smooth-css-transitions)
 
 </article>
 
