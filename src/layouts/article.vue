@@ -3,23 +3,13 @@
   <Navbar />
   <main id="main-content">
     <article class="article">
-      <ArticleHeading
-        :title="title"
-        :tags="tags"
-        :crosspostedOn="crosspostedOn"
-        :crosspostLink="crosspostLink"
-        :datetime="publishedAt"
-        :displayDate="formattedDate"
-      />
+      <ArticleHeading :title="title" :tags="tags" :crosspostedOn="crosspostedOn" :crosspostLink="crosspostLink"
+        :datetime="publishedAt" :displayDate="formattedDate" />
       <section class="container article-grid">
         <ArticleControls :articleUrl="canonicalUrl" :articleId="id" />
         <div ref="articleBody" class="article-body">
           <router-view v-slot="{ Component, route }">
-            <component
-              :is="Component"
-              :key="route.path"
-              class="article-body-content"
-            />
+            <component :is="Component" :key="route.path" class="article-body-content" />
           </router-view>
         </div>
       </section>
@@ -66,7 +56,7 @@ onMounted(() => {
 </script>
 
 <style>
-.article-grid {
+.container.article-grid {
   --content-width: 100ch;
 
   display: grid;
@@ -87,7 +77,7 @@ onMounted(() => {
   display: grid;
   grid-template-columns: 1fr min(var(--article-width), 100%) 1fr;
 
-  & > * {
+  &>* {
     grid-column: 1 / -1;
   }
 
@@ -98,15 +88,19 @@ onMounted(() => {
   & h2 {
     font-size: calc(var(--text-xl) + 0.5vw);
   }
+
   & h3 {
     font-size: calc(var(--text-lg) + 0.3vw);
   }
+
   & h4 {
     font-size: calc(var(--text-base) + 0.2vw);
   }
+
   & h5 {
     font-size: calc(var(--text-sm) + 0.1vw);
   }
+
   & p {
     margin-block-end: 16px;
   }
@@ -151,7 +145,7 @@ onMounted(() => {
     }
   }
 
-  & li + li {
+  & li+li {
     margin-block-start: 7px;
   }
 
@@ -253,5 +247,4 @@ onMounted(() => {
     }
   }
 }
-
 </style>
