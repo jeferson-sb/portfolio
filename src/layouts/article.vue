@@ -5,7 +5,7 @@
     <article class="article">
       <ArticleHeading :title="title" :tags="tags" :crosspostedOn="crosspostedOn" :crosspostLink="crosspostLink"
         :datetime="publishedAt" :displayDate="formattedDate" />
-      <section class="container article-grid">
+      <section class="article-grid">
         <ArticleControls :articleUrl="canonicalUrl" :articleId="id" />
         <div ref="articleBody" class="article-body">
           <router-view v-slot="{ Component, route }">
@@ -56,10 +56,12 @@ onMounted(() => {
 </script>
 
 <style>
-.container.article-grid {
+.article-grid {
   --content-width: 100ch;
 
   display: grid;
+  width: calc(100% - 2rem);
+  margin-inline: auto;
   grid-template-columns: 1fr min(var(--content-width), 100%) 1fr;
   justify-items: end;
   gap: 1rem;
