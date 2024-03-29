@@ -1,6 +1,7 @@
-import { VueFire } from 'vuefire'
+import { VueFire, VueFireAppCheck } from 'vuefire'
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
+import { ReCaptchaV3Provider } from 'firebase/app-check'
 
 // Initialize Firebase
 export const firebaseApp = initializeApp({
@@ -16,5 +17,12 @@ export const db = getFirestore(firebaseApp)
 export const install = ({ isClient, app }) => {
   app.use(VueFire, {
     firebaseApp,
+    modules: [
+      VueFireAppCheck({
+        provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA),
+        debug: process.env.NODE_ENV !== 'production',
+        isTokenAutoRefreshEnabled: true,
+      }),
+    ]
   })
 }
