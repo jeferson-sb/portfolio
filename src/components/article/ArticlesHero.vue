@@ -5,7 +5,7 @@
       <p class="hero__description">
         Here you can find all of my published articles, tutorials and guides,
         going from little css tips to software architecture, open source, user
-        experience and all sort of things. I hope you enjoy you're reading
+        experience and all sort of things. I hope you enjoy the reading
         📖👋
       </p>
     </div>

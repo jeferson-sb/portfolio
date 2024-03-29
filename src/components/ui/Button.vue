@@ -1,10 +1,5 @@
 <template>
-  <component
-    :class="styles"
-    v-bind="$attrs"
-    :is="isAnchor ? 'router-link' : 'button'"
-    :to="isAnchor ? href : null"
-  >
+  <component :class="styles" v-bind="$attrs" :is="isAnchor ? 'router-link' : 'button'" :to="isAnchor ? href : null">
     <slot name="icon"></slot>
     <slot />
   </component>
@@ -15,10 +10,17 @@ export default {
   props: {
     variant: {
       type: String,
-      default: 'default',
+      default: 'solid',
       validator(val) {
-        return ['primary', 'outline', 'default', 'link'].includes(val)
+        return ['solid', 'outline', 'link'].includes(val)
       },
+    },
+    colorScheme: {
+      type: String,
+      default: 'gray',
+      validator(val) {
+        return ['cyan', 'white', 'gray']
+      }
     },
     size: {
       type: String,
@@ -41,10 +43,14 @@ export default {
     type() {
       return `button--${this.variant}`
     },
+    color() {
+      return `button--${this.colorScheme}`
+    },
     styles() {
       return {
         button: true,
         [this.type]: true,
+        [this.color]: true,
         'button--squared': this.squared,
         'button--full': this.full,
         'button--icon': Boolean(this.$slots.icon),
@@ -60,9 +66,7 @@ export default {
 
 <style scoped>
 .button {
-  --button-bg-color: var(--color-gray-600);
-  --button-text-color: var(--color-default-white);
-  --button-shadow-color: hsla(187, 78%, 46%, 0.366);
+  --button-shadow-color: hsla(187, 78%, 46%, 0.842);
   --button-fw: 400;
   --button-radius: var(--radius-default);
 
@@ -74,27 +78,38 @@ export default {
   background-color: var(--button-bg-color);
   font-weight: var(--button-fw);
   font-size: var(--button-font-size, inherit);
-  transition: filter 0.3s ease-in-out;
+  transition: filter 300ms ease-in-out;
   border-radius: var(--button-radius);
+
+  &:hover {
+    text-decoration: none;
+    filter: brightness(80%);
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
+  }
+
+  &::after {
+    all: unset;
+  }
 }
 
-.button:hover {
-  text-decoration: none;
-  filter: brightness(70%);
-}
-
-.button:focus {
-  outline: 0;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
-}
-
-.button::after {
-  all: unset;
-}
-
-.button--primary {
+.button--cyan {
   --button-bg-color: var(--color-primary);
+  --button-text-color: var(--color-default-black);
+  --button-fw: 700;
+}
+
+.button--gray {
+  --button-bg-color: var(--color-gray-600);
+  --button-text-color: var(--color-default-white);
+}
+
+.button--white {
+  --button-bg-color: var(--color-gray-100);
   --button-text-color: var(--color-default-black);
   --button-fw: 700;
 }
@@ -112,35 +127,34 @@ export default {
   --button-text-color: var(--text-color-default);
 
   transition: background-color 0.3s ease-in-out;
-}
 
-.button--link:hover {
-  --button-bg-color: var(--color-gray-600);
-
-  filter: unset;
+  &:hover {
+    --button-bg-color: var(--color-gray-600);
+    filter: unset;
+  }
 }
 
 .button--icon {
+  --offset: 4px;
   display: flex;
   align-items: center;
-}
 
-.button--icon svg {
-  margin-inline-end: 4px;
+  & svg {
+    margin-inline-end: var(--offset);
+  }
 }
 
 .button--rounded-full {
   --button-radius: 9999px;
-
   padding: 0.75rem;
-}
 
-.button--rounded-full.button--icon > * {
-  margin: 0;
-}
+  & .button--icon>* {
+    margin: 0;
+  }
 
-.button--rounded-full.button--icon {
-  justify-content: center;
+  & .button--icon {
+    justify-content: center;
+  }
 }
 
 .button--squared {

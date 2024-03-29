@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">FEV 2024</time>
+<time class="time">MAR 2024</time>
 
 # What I'm doing now
 
@@ -19,11 +19,9 @@ meta:
 
 ✏️ Learning: Rust.
 
-📺 Watching: Sousou no Frieren.
+📺 Watching: Sousou no Frieren and Solo Leveling.
 
-🎮 Currently playing: <em>Persona 3 Reload</em>.
-
-Happy new year! 🥳🚀
+🎮 Currently playing: <em>Sea of Stars</em>.
 
 Latest article: [/articles/writing-smooth-css-transitions](/articles/writing-smooth-css-transitions)
 
@@ -32,15 +30,57 @@ Latest article: [/articles/writing-smooth-css-transitions](/articles/writing-smo
 <video src="@/assets/clip.mp4" height="300" autoplay loop muted />
 
 <style scoped>
+body[data-theme='light'] {
+  .prose {
+    &::before,
+    &::after {
+      --background: var(--light);
+    }
+  }
+
+  .time { 
+    color: var(--color-gray-400);
+  }
+}
+
 .prose {
   display: flex;
   flex-flow: row wrap;
   gap: 3rem;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   width: calc(100% - 2rem);
   margin-inline: auto;
+  padding-block: 4rem;
+}
+
+.prose::after {
+  --dark: var(--color-gray-800);
+  --light: var(--color-gray-100);
+
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-image: radial-gradient(circle at 2px 2px, var(--background, var(--dark)) 1px, transparent 0);
+  background-size: 20px 20px;
+  z-index: -10;
+}
+
+.prose::before {
+  --dark: hsl(216deg 9% 11% / 90%);
+  --light: hsl(228deg 33% 97% / 90%);
+
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(to bottom, var(--background, var(--dark)) 0%, transparent 50%, var(--background, var(--dark)) 90%);
+  z-index: -1;
 }
 
 .article {
@@ -77,5 +117,10 @@ figure {
 figcaption {
   font-style: italic;
   color: var(--color-silver);
+}
+
+video { 
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0px 0 0 20px 0px hsl(226deg 24% 62% / 25%);
 }
 </style>

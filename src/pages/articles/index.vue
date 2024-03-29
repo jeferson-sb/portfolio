@@ -2,17 +2,9 @@
   <GalaxyBackground>
     <ArticlesHero />
     <section class="container collection" id="main-content">
-      <PostPreview
-        v-for="article in allArticles"
-        :key="article.id"
-        :title="article.title"
-        :date="new Date(article.date)"
-        :href="article.path"
-        :articleId="article.articleId"
-        :excerpt="article.excerpt"
-        :tags="article.tags"
-        size="long"
-      />
+      <PostPreview v-for="article in allArticles" :key="article.id" :title="article.title"
+        :date="new Date(article.date)" :href="article.path" :articleId="article.articleId" :excerpt="article.excerpt"
+        :tags="article.tags" size="long" />
     </section>
   </GalaxyBackground>
 </template>
@@ -54,7 +46,8 @@ useHead({
 
 <style scoped>
 .collection {
-  flex-flow: column wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
   gap: 1rem;
   padding: 1.2rem 0;
 }

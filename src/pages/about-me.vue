@@ -1,40 +1,35 @@
 <template>
   <div class="container">
-    <aside>
-      <HeroAvatar>
-        <img
-          src="@/assets/img/profile.jpg"
-          alt="me"
-          width="140"
-          loading="lazy"
-        />
-      </HeroAvatar>
-      <BinaryTextSVG />
-    </aside>
     <main id="main-content">
       <article class="about-content">
+        <picture>
+          <img src="@/assets/img/profile.jpg" alt="me" width="140" height="190" loading="lazy" />
+        </picture>
         <h1 class="about-content__headline">About me</h1>
-        <p>👋 Hey! How are you?</p>
+
         <p>
+          👋 Hey! How are you?
           I'm Jeferson. I'm a
           <strong>software engineer</strong> dedicated to
           <em> crafting </em> things for the web through coding.
         </p>
         <p>
           I wrote my first lines of code back in 2014 of HTML4, CSS and ES5
-          using just a notepad in a very low machine 😅. Like many people I
+          using just a notepad in a very low-end machine 😅. Like many people I
           graduated a few years later and since then I've been on this adventure
           into the world of programming.
         </p>
         <p>
-          I don't have "favorites", but I like to code on JavaScript,
-          Typescript, Python, and Elixir at the moment. I also like to think
-          outside coding, prioritizing tasks/features, and proving the best
+          I don't have "favorites", but I like to code on TypeScript, Elixir, Lua, and I'm starting to tinker with Rust.
+          I also like to think outside coding, such as prioritizing tasks/features, doing reviews, modeling and
+          providing the good
           practices, fundamentals, and consistency throughout the code.
         </p>
-        <p>I'm into computers, ui design, games and anime (of course) :P</p>
-        <SocialMediaIcons boxed />
+        <p>I've worked on websites (both front-end, back-end), CLI's, and most recently mobile development (React
+          Native).</p>
+        <p>Personally, I'm into computers, ui design, games and anime (of course) :P</p>
       </article>
+      <SocialMediaIcons boxed />
     </main>
   </div>
 </template>
@@ -83,6 +78,35 @@ meta:
 }
 
 .about-content {
+  margin-block-end: 2rem;
+
+  & picture {
+    float: left;
+    shape-outside: ellipse(50% 50%);
+    margin: 0 1.125rem 0 0;
+    position: relative;
+
+    & img {
+      max-width: 140px;
+      clip-path: circle(70px at center);
+      object-fit: cover;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 155px;
+      height: 155px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      outline: 3px inset var(--color-silver);
+      border-radius: 9999px;
+      will-change: transform;
+    }
+  }
+
   & .about-content__headline {
     font-size: var(--text-2xl);
   }
@@ -91,22 +115,7 @@ meta:
     font-size: var(--text-lg);
     opacity: 0.8;
     max-width: 71ch;
-  }
-}
-
-.hero-avatar {
-  opacity: 0;
-  animation: tilt-in 900ms 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@keyframes tilt-in {
-  0% {
-    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-    opacity: 1;
+    margin-top: 0.50em;
   }
 }
 

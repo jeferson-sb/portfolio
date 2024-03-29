@@ -6,26 +6,13 @@
         <span>@2021 - Present. All rights reserved.</span>
       </p>
       <div class="built-tech">
-        <AppLink
-          to="https://www.netlify.com/"
-          aria-label="Hosted on Netlify"
-          isExternal
-        >
+        <AppLink to="https://www.netlify.com/" aria-label="Hosted on Netlify" isExternal>
           <NetlifyLogoSVG />
         </AppLink>
-        <AppLink
-          to="https://vuejs.org/"
-          aria-label="Built with Vue"
-          title="Built with Vue.js"
-          isExternal
-        >
+        <AppLink to="https://vuejs.org/" aria-label="Built with Vue" title="Built with Vue.js" isExternal>
           <VueSVG />
         </AppLink>
-        <AppLink
-          to="https://www.github.com/"
-          aria-label="Source Code on Github"
-          isExternal
-        >
+        <AppLink to="https://www.github.com/" aria-label="Source Code on Github" isExternal>
           <OctocatSVG />
         </AppLink>
       </div>
@@ -36,7 +23,7 @@
 <style scoped>
 .footer {
   padding-block: 1rem;
-  border-top: 1px solid hsla(214, 9%, 15%, 0.2);
+  border-top: 1px solid hsla(214, 9%, 25%, 0.2);
   margin-block-start: 40px;
 }
 
@@ -72,7 +59,7 @@
     vertical-align: middle;
   }
 
-  a + a {
+  a+a {
     margin-inline-start: 1rem;
   }
 }

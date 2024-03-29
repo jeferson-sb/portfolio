@@ -32,18 +32,4 @@ defineEmits(['toggle'])
     transition-duration: 500ms;
   }
 }
-
-.hamburger-menu--active {
-  .top {
-    transform: rotate(45deg) translate(10px, 4px);
-  }
-
-  .middle {
-    opacity: 0;
-  }
-
-  .bottom {
-    transform: rotate(-45deg) translate(10px, -4px);
-  }
-}
 </style>

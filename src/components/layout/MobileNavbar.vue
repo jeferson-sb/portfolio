@@ -1,14 +1,38 @@
 <template>
-  <nav class="mobile-navbar" id="mobile-menu">
+  <nav ref="mobileNavbar" class="mobile-navbar" id="mobile-menu">
     <ul class="mobile-navbar-menu">
       <slot></slot>
     </ul>
+    <button class="close" @click="$emit('close')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        role="presentation">
+        <title>Close</title>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
   </nav>
 </template>
 
+<script setup>
+import { onMounted, ref } from 'vue'
+
+const emit = defineEmits(['close'])
+
+const mobileNavbar = ref(null)
+
+onMounted(() => {
+  document.addEventListener('click', e => {
+    if (mobileNavbar.value.contains(e.target)) {
+      emit('close')
+    }
+  })
+})
+</script>
+
 <style>
 .mobile-navbar {
-  background-color: hsl(220deg 13% 12% / 92%);
+  --bg: hsl(220deg 13% 12% / 92%);
+  background-color: var(--bg);
   height: 100vh;
   height: 100dvh;
   position: fixed;
@@ -36,6 +60,18 @@
     transition: transform 500ms ease-out;
   }
 
+  & .close {
+    all: unset;
+
+    & svg {
+      max-width: 48px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: var(--color-gray-800);
+    }
+  }
+
   .navbar-menu__item {
     font-size: 2rem;
     font-weight: var(--fw-bold);
@@ -52,6 +88,13 @@
   .navbar-menu__item:hover .navbar-menu__link,
   .navbar-menu__item:active .navbar-menu__link {
     color: var(--color-accent);
+  }
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .mobile-navbar {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
   }
 }
 

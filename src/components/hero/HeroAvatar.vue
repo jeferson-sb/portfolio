@@ -25,9 +25,25 @@ defineProps({
   align-items: center;
   width: 323px;
   height: 275px;
-  background-color: var(--accent-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
   box-shadow: var(--elevation-2);
+
+  position: relative;
+  background-color: var(--accent-color-lighter, var(--color-gray-800));
+  background-clip: padding-box;
+
+  &::before {
+    background: linear-gradient(11deg, transparent 70%, var(--color-silver)), linear-gradient(190deg, transparent 70%, var(--color-silver));
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    margin: -1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
 }
 
 .hero-avatar__image {

@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import DevTools from 'vite-plugin-vue-devtools'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -11,6 +12,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import Shiki from 'markdown-it-shiki'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import matter from 'gray-matter'
+import generateSitemap from 'vite-ssg-sitemap'
 
 export default defineConfig({
   resolve: {
@@ -89,10 +91,18 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
       },
     }),
+
+    DevTools()
   ],
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
+    crittersOptions: {
+      reduceInlineStyles: false,
+    },
+    onFinished() {
+      generateSitemap()
+    },
   },
   optimizeDeps: {
     include: ['vue', 'vue-router', '@vueuse/head'],

@@ -1,10 +1,5 @@
 <template>
-  <button
-    class="theme-switcher"
-    @click="toggleTheme"
-    aria-label="Switch theme between light and dark"
-    type="button"
-  >
+  <button class="theme-switcher" @click="toggleTheme" aria-label="Switch theme between light and dark" type="button">
     <template v-if="variant === 'fade'">
       <transition name="fade">
         <LampOnSVG v-if="current === 'light'" />
@@ -56,10 +51,10 @@ const toggleTheme = () => {
   outline: 0;
 
   & svg {
-        position: absolute;
+    position: absolute;
     transform: scale(0.9);
-    right: 10px;
-    top: -130%;
+    right: 0;
+    top: -115%;
   }
 
   &:focus-visible svg {

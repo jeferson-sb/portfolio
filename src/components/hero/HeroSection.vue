@@ -1,10 +1,10 @@
 <template>
   <section class="hero container has-ellipse-curve">
     <div class="hero-content">
-      <h1 class="hero__headline">I'm Jeferson Brito</h1>
+      <h1 class="hero__headline">Hey, I'm Jeferson 🖖</h1>
       <p class="hero__description">
         Software Engineer that crafts things for the Web, heavy focused on
-        front-end development enthusiastic and fascinated on UI design ✨
+        front-end development, enthusiastic and fascinated on user interfaces.
       </p>
       <SocialMediaIcons />
     </div>
@@ -12,14 +12,8 @@
       <ScrollIndicator class="is-mobile-only" />
       <h2 class="hero__subheadline">web developer</h2>
       <HeroAvatar>
-        <img
-          src="@/assets/img/profile.jpg"
-          alt="me"
-          class="hero-avatar__image"
-          width="140"
-          height="140"
-          loading="lazy"
-        />
+        <img src="@/assets/img/profile.jpg" alt="me" class="hero-avatar__image" width="140" height="140"
+          loading="lazy" />
       </HeroAvatar>
     </aside>
   </section>
@@ -87,6 +81,7 @@
       left: 0;
       top: 0;
     }
+
     &.has-ellipse-curve::after {
       content: '';
       clip-path: ellipse(100% 55% at 48% 44%);

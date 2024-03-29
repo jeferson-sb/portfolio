@@ -1,9 +1,9 @@
 /* Themes and defaults */
 
-@custom-media --vw-sm (width <= 26.56em);
-@custom-media --vw-md (width <= 48em);
-@custom-media --vw-lg (width <= 64em);
-@custom-media --vw-xl (width <= 90em);
+@custom-media --vw-sm (max-width: 26.56em);
+@custom-media --vw-md (max-width: 48em);
+@custom-media --vw-lg (max-width: 64em);
+@custom-media --vw-xl (max-width: 90em);
 
 @layer global {
   :root {

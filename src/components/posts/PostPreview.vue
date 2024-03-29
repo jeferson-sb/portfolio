@@ -11,16 +11,12 @@
       <h4 class="post-preview__title" :id="articleId">{{ title }}</h4>
     </AppLink>
 
-    <Tag
-      tagName="NEW"
-      variant="accent"
-      v-show="size === 'short' && isRecentPost"
-    />
+    <Tag tagName="NEW" variant="accent" v-show="size === 'short' && isRecentPost" />
     <template v-if="size === 'long'">
       <p class="post-preview__description">
         {{ excerpt }}
       </p>
-      <Button :href="href" :aria-describedby="articleId"> Read more </Button>
+      <Button colorScheme="white" :href="href" :aria-describedby="articleId"> Read more </Button>
     </template>
   </article>
 </template>
@@ -87,9 +83,24 @@ const formattedDate = computed(() =>
   position: relative;
   width: 100%;
   padding: 1.125rem;
-  background-color: var(--bg-color-lighter, var(--color-gray-800));
   border-radius: var(--radius-default);
-  box-shadow: var(--elevation-2);
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+    background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 37%, hsla(218, 11%, 52%, 0.2) 100%);
+    z-index: var(--z-hide);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
 }
 
 .post-preview-metadata:not(.post-preview--long) {
@@ -107,6 +118,7 @@ const formattedDate = computed(() =>
   -webkit-line-clamp: var(--max-lines);
   -webkit-box-orient: vertical;
   overflow: hidden;
+  color: var(--color-gray-200);
 }
 
 .post-preview--long {
@@ -123,8 +135,25 @@ const formattedDate = computed(() =>
 }
 
 .post-preview--short {
+  position: relative;
+  background-color: var(--bg-color-lighter, var(--color-default-black));
+  background-clip: padding-box;
   align-items: center;
   gap: 1rem;
+
+  &::before {
+    --border-color: var(--color-silver);
+    background: linear-gradient(11deg, transparent 70%, var(--border-color)), linear-gradient(190deg, transparent 70%, var(--border-color));
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    margin: -1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
 
   & a {
     margin: 0;
@@ -145,11 +174,13 @@ const formattedDate = computed(() =>
 }
 
 .post-preview {
-  a {
+  a:not(.button) {
     color: inherit;
+
     &:hover {
       text-decoration: unset;
     }
+
     &:hover .post-preview__title {
       color: var(--color-primary);
       transition: color 300ms ease-in-out;
@@ -169,6 +200,10 @@ const formattedDate = computed(() =>
 body[data-theme='light'] {
   & .post-preview {
     box-shadow: var(--elevation-3);
+
+    & .post-preview__description {
+      color: var(--color-gray-600);
+    }
   }
 
   & a:hover .post-preview,
