@@ -145,13 +145,10 @@ const formattedDate = computed(() =>
     --border-color: var(--color-silver);
     background: linear-gradient(11deg, transparent 70%, var(--border-color)), linear-gradient(190deg, transparent 70%, var(--border-color));
     border-radius: inherit;
-    bottom: 0;
     content: "";
-    left: 0;
     margin: -1px;
     position: absolute;
-    right: 0;
-    top: 0;
+    inset: 0;
     z-index: -1;
   }
 

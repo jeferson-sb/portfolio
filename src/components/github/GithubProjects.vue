@@ -3,13 +3,8 @@
     <h3>Open Source</h3>
     <h4>Latest contributions <small>(monthly updated)</small></h4>
     <div class="github-repositories" v-if="pullRequests?.length">
-      <GithubRepoCard
-        v-for="pr in pullRequests"
-        :key="pr.node.id"
-        :repository="pr.node.repository"
-        :url="pr.node.url"
-        :number="pr.node.number"
-      />
+      <GithubRepoCard v-for="pr in pullRequests" :key="pr.node.id" :repository="pr.node.repository" :url="pr.node.url"
+        :number="pr.node.number" />
     </div>
     <GithubCardEmpty v-else />
   </section>
@@ -29,7 +24,7 @@ const pullRequests = useContributions();
 
 <style scoped>
 .github-projects {
-  & > :is(h3, h4) {
+  &> :is(h3, h4) {
     flex-basis: 100%;
     text-transform: uppercase;
   }
@@ -53,5 +48,4 @@ const pullRequests = useContributions();
   grid-template-columns: repeat(auto-fill, minmax(var(--github-card-size), 1fr));
   width: 100%;
 }
-
 </style>

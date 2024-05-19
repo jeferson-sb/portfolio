@@ -87,6 +87,14 @@ onMounted(() => {
     margin-block: 1rem;
   }
 
+  :is(h2, h3, h4, h5):target {
+    text-decoration-color: var(--color-silver);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+  }
+
   & h2 {
     font-size: calc(var(--text-xl) + 0.5vw);
   }
@@ -155,29 +163,6 @@ onMounted(() => {
     margin: 2rem 0;
     opacity: 0.5;
     border-color: var(--color-silver);
-  }
-
-  & a {
-    position: relative;
-    text-decoration: none;
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      left: 0;
-      bottom: 0;
-      opacity: 0;
-      transform: translateY(3px);
-      background: var(--color-primary);
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    &:hover::after {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   & em {

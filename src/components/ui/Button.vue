@@ -82,12 +82,11 @@ export default {
   border-radius: var(--button-radius);
 
   &:hover {
-    text-decoration: none;
     filter: brightness(80%);
   }
 
   &:focus {
-    outline: 0;
+    outline-color: transparent;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
   }

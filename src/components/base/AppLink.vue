@@ -1,12 +1,5 @@
 <template>
-  <a
-    v-if="isExternal"
-    :href="to"
-    v-bind="$attrs"
-    :class="classes"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a v-if="isExternal" :href="to" v-bind="$attrs" :class="classes" target="_blank" rel="noopener noreferrer">
     <slot />
   </a>
   <router-link :to="to" v-else>
@@ -61,7 +54,6 @@ const classes = reactive({
   border-radius: var(--button-radius);
 
   &:hover {
-    text-decoration: none;
     filter: brightness(70%);
   }
 

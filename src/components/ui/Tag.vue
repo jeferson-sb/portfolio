@@ -41,7 +41,6 @@ const href = props.linkable ? `/tags/${props.tagName.trim()}` : ''
 }
 
 .tag-link {
-  text-decoration: none;
   color: inherit;
   transition: opacity 400ms ease-out;
 

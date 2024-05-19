@@ -102,16 +102,24 @@
   h4,
   h5,
   h6 {
+    text-wrap: balance;
     font-family: var(--font-title);
   }
 
   a {
     text-decoration: none;
+    transition: text-decoration-color 400ms ease-out;
     color: var(--color-primary);
   }
 
-  a:hover {
-    text-decoration: underline;
+  a:not([class]):hover,
+  a[class=""]:hover,
+  abbr {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 2px;
+    text-decoration-style: solid;
+    text-underline-offset: 0.3em;
   }
 
   a:focus-visible {

@@ -158,7 +158,7 @@ const toggleMenu = (open) => {
 }
 
 .navbar-menu__link {
-  outline: 0;
+  outline-color: transparent;
 
   &:focus-visible {
     outline: 2px dashed var(--color-primary);
