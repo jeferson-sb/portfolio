@@ -11,19 +11,19 @@ meta:
 
 <article class="article">
 
-<time class="time">MAR 2024</time>
+<time class="time">MAY 2024</time>
 
 # What I'm doing now
 
-📖 Currently reading: <em>Rust in Action</em> by Tim McNamara. 🦀
+📖 Currently reading: <em>Domain Modeling Made Functional</em> by Scott Wlaschin.
 
 ✏️ Learning: Rust.
 
-📺 Watching: Sousou no Frieren and Solo Leveling.
+📺 Watching: Demon Slayer.
 
 🎮 Currently playing: <em>Sea of Stars</em>.
 
-Latest article: [/articles/writing-smooth-css-transitions](/articles/writing-smooth-css-transitions)
+Latest article: [/articles/how-to-keep-up](/articles/how-to-keep-up)
 
 </article>
 
