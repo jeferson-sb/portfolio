@@ -26,7 +26,7 @@ Well, I start by sharing some thoughts I had when I had this feeling.
 
 It is natural to feel excited when new things come out, Gemini, GPT-4o, Blue Origin, and so on. As I started learning programming I wanted to try every new thing that came out that I found interesting which led me from countless hours experimenting to, most of the time, not applying them in real projects. It can feel very frustrating at times.
 
-These are things that can keep you in a fear or missing out (FOMO) loop to having consume much more content than you needed to not stay "behind" or to not feel like missing something critical, when, most of the time, you're weren't. Remember, technology isn't deterministic, things can still change.
+These are things that can keep you in a fear of missing out (FOMO) loop to having consume much more content than you needed to not stay "behind" or to not feel like missing something critical, when, most of the time, you're weren't. Remember, technology isn't deterministic, things can still change.
 
 You see, I needed to let things mature first and move at my own pace while not being completely disconnected from what is happening around the world.
 
