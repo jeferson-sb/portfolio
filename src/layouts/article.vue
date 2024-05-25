@@ -24,7 +24,25 @@ import { useRoute } from 'vue-router'
 import lozad from 'lozad'
 import config from '@/config/siteconfig.json'
 
+const route = useRoute()
+
 useHead({
+  meta: [
+    {
+      name: 'description',
+      content: route.meta.frontmatter.excerpt
+    },
+    {
+      property: 'twitter:description',
+      content: route.meta.frontmatter.excerpt,
+    },
+    { property: 'og:description', content: route.meta.frontmatter.excerpt },
+    { property: 'og:type', content: 'article' },
+    {
+      name: 'keywords',
+      content: route.meta.frontmatter.tags.split(',')
+    },
+  ],
   link: [
     {
       rel: 'stylesheet',
@@ -32,7 +50,6 @@ useHead({
     },
   ],
 })
-const route = useRoute()
 
 const id = route.meta.frontmatter?.id
 const title = route.meta.frontmatter?.title
