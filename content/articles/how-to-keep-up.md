@@ -9,7 +9,7 @@ crosspostedOn: ''
 crosspostLink: ''
 ---
 
-I have a feeling we are in constant flux in the ever-evolving modern world where saying updated is integral to our personal growth. You want to watch every basketball match of your favorite team this season and catch up with new episodes of One Piece but you've stopped on episode 45, watch every talk, follow every new trend, learn every new possible feature, and have a normal life?
+I have a feeling we are in constant flux in the ever-evolving modern world where staying updated is integral to our personal growth. You want to watch every basketball match of your favorite team this season and catch up with new episodes of One Piece but you've stopped on episode 45, watch every talk, follow every new trend, learn every new possible feature, and have a normal life?
 
 How can you possibly keep up with all of this? 
 Short answer: **you can't**. 
