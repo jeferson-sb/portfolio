@@ -97,6 +97,10 @@ body[data-theme='light'] {
     position: absolute;
   }
 
+  & p {
+    font-size: var(--text-lg);
+  }
+
   & .time {
     text-transform: uppercase;
     font-size: var(--text-base);
