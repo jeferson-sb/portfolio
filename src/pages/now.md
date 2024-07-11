@@ -11,23 +11,28 @@ meta:
 
 <article class="article">
 
-<time class="time">MAY 2024</time>
+<time class="time">JUL 2024</time>
 
-# What I'm doing now
+# Current Status
 
-📖 Currently reading: <em>Domain Modeling Made Functional</em> by Scott Wlaschin.
+I'm currently reading: <em>Domain Modeling Made Functional</em> by Scott Wlaschin.
 
-✏️ Learning: Rust.
+I'm currently slowly learning more about Rust 🦀 and writting a simple interpreter/compiler, you can checkout in this [repo](https://github.com/jeferson-sb/silly-inter).
+
+Checkout my latest article: [How to keep up with things](/articles/how-to-keep-up)
+
+If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
 📺 Watching: Demon Slayer.
 
-🎮 Currently playing: <em>Sea of Stars</em>.
-
-Latest article: [/articles/how-to-keep-up](/articles/how-to-keep-up)
+🎮 Currently playing: RPG <em>No Rest for the Wicked</em>.
 
 </article>
 
-<video src="@/assets/clip.mp4" height="300" autoplay loop muted />
+<figure>
+  <img src="https://media.giphy.com/media/4ilFRqgbzbx4c/giphy.gif" alt="gif of the day" />
+  <figcaption>(from Giphy)</figcaption>
+</figure>
 
 <style scoped>
 body[data-theme='light'] {
@@ -44,14 +49,14 @@ body[data-theme='light'] {
 }
 
 .prose {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  --container-size: 1100px;
 
-  width: calc(100% - 2rem);
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+
+  width: min(var(--container-size), 100% - 2rem);
   margin-inline: auto;
   padding-block: 4rem;
 }
@@ -85,33 +90,25 @@ body[data-theme='light'] {
 
 .article {
   padding: 2rem 0;
-}
+  width: min(70ch, 100%);
 
-.time {
-  text-transform: uppercase;
-  font-size: var(--text-base);
-  letter-spacing: 2px;
-  font-family: var(--font-mono);
-  color: var(--color-gray-200);
-}
+  & .header-anchor {
+    opacity: 0;
+    position: absolute;
+  }
 
-.header-anchor {
-  opacity: 0;
-  position: absolute;
-  top: 2px;
-  left: -40px;
-  transition: opacity 500ms ease-out;
-  min-width: 30px;
-  min-height: 30px;
+  & .time {
+    text-transform: uppercase;
+    font-size: var(--text-base);
+    letter-spacing: 2px;
+    font-family: var(--font-mono);
+    color: var(--color-gray-200);
+  }
 }
 
 img {
   object-fit: contain;
   width: min(500px, 100%);
-}
-
-figure {
-  padding-block-start: calc(2rem + 1em)
 }
 
 figcaption {
