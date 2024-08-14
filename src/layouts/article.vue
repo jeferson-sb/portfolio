@@ -197,6 +197,10 @@ onMounted(() => {
     font-size: var(--text-sm);
   }
 
+  & details summary::marker {
+    color: var(--color-silver);
+  }
+
   & .header-anchor {
     opacity: 0;
     position: absolute;

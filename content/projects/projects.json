@@ -36,14 +36,14 @@
     "pinned": true,
     "description": "Dog breed image recognition with Teachable Machine & Tensorflow.js"
   },
-  "gobarber": {
+  "flashmemo": {
     "order": 3,
-    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fgobarber.jpg?alt=media&token=9a733a14-f498-465a-96dd-e034f773513a",
-    "title": "GoBarber",
-    "tags": "Node.js, React, TypeScript",
-    "github": "https://github.com/jeferson-sb/gobarber-web",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fflashmemo.jpg?alt=media&token=355cda40-b248-44fb-92b3-eae0e0bf3a0f",
+    "title": "Flashmemo",
+    "tags": "Ruby on Rails",
+    "github": "https://github.com/jeferson-sb/flashmemo",
     "pinned": true,
-    "description": "React app to manage haircuts appointments"
+    "description": "REST API with rewards system designed to help users practice their knowledge by answering exams."
   },
   "devradar": {
     "order": 4,
@@ -52,6 +52,13 @@
     "tags": "Full Stack",
     "demo": "https://devradar-api.appspot.com/",
     "github": "https://github.com/jeferson-sb/devradar"
+  },
+  "gobarber": {
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fgobarber.jpg?alt=media&token=9a733a14-f498-465a-96dd-e034f773513a",
+    "title": "GoBarber",
+    "tags": "Node.js, React, TypeScript",
+    "github": "https://github.com/jeferson-sb/gobarber-web",
+    "description": "React app to manage haircuts appointments"
   },
   "ecoleta": {
     "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fecoleta.png?alt=media&token=43931213-70df-4a66-9cf4-d6bb6fe50889",
