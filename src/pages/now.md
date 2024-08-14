@@ -11,27 +11,25 @@ meta:
 
 <article class="article">
 
-<time class="time">JUL 2024</time>
+<time class="time">AUG 2024</time>
 
 # Current Status
 
-I'm currently reading: <em>Domain Modeling Made Functional</em> by Scott Wlaschin.
+I'm currently reading: <em>Moonwalking with Einstein</em> by Joshua Foer.
 
-I'm currently slowly learning more about Rust 🦀 and writting a simple interpreter/compiler, you can checkout in this [repo](https://github.com/jeferson-sb/silly-inter).
-
-Checkout my latest article: [How to keep up with things](/articles/how-to-keep-up)
+I'm writting a new blog posts about different patterns in Web Rendering, will release soon.
 
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
-📺 Watching: Demon Slayer.
+📺 Watching: Nier Automata Anime.
 
 🎮 Currently playing: RPG <em>No Rest for the Wicked</em>.
 
 </article>
 
 <figure>
-  <img src="https://media.giphy.com/media/4ilFRqgbzbx4c/giphy.gif" alt="gif of the day" />
-  <figcaption>(from Giphy)</figcaption>
+  <img src="https://media1.tenor.com/m/JyyXt2zMOpsAAAAC/2b.gif" alt="gif of the day" />
+  <figcaption>(from Tenor)</figcaption>
 </figure>
 
 <style scoped>
