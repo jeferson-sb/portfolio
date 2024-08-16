@@ -11,7 +11,8 @@
     "optimize": "vite optimize",
     "lint": "eslint ./src --ext .{vue,ts,js} && stylelint 'src/**/*.css'",
     "prettier": "prettier 'src/**/*.js' -w",
-    "deps:up": "taze major -I"
+    "deps:up": "taze major -I",
+    "start:draft": "node scripts/create-draft.js"
   },
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^4.2.2",
