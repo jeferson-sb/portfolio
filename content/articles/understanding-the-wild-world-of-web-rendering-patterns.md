@@ -17,11 +17,11 @@ Let's go!
 
 ## Static
 
-Early websites on the web were simple and static text documents, which were served from a basic web server architecture where every person would see the same copy of the page served from an HTTP request.
+Early websites on the web were simple and static text documents, which were served from a basic web server architecture where every person would see the same copy of the page served from a HTTP request.
 
 Static pages (or static rendering) can have many *variations* to serve different purposes, from plain HTML files to on-demand generated pages as we'll see later in this post.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/static-diagram.png?alt=media&token=d4fc2106-f848-4112-8e90-b5f9d2f3f16a" alt="server-client diagram" width="870" height="280" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/static-diagram.png?alt=media&token=870098f1-ff0c-46fa-9459-ff8d17b49582" alt="server-client diagram" width="870" height="280" />
 
 In this model, the server receives a request from the client, retrieves a copy of the requested page, and replies with a response containing the page content, status code, headers, and resources, such as images, icons, and fonts.
 
@@ -59,7 +59,7 @@ Ok, let's break those fancy terms down:
 
 When we say to **pre-render** it means that by the time a request comes, we only need to serve the pre-baked page generating everything again and again.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSG.png?alt=media&token=9d7c61cf-a49d-444d-a425-b7411bda1bbf" alt="diagram explaning the ssg build process" width="870" height="500" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSG.png?alt=media&token=0ffb7caf-cbca-4243-a821-9953ba5eda0f" alt="diagram explaning the ssg build process" width="870" height="500" fit="contain" />
 
 The nicest thing is you can run any arbitrary code when generating those pages, including performing database queries, getting content from a CMS, calling external resources, etc. 
 
@@ -91,7 +91,7 @@ It's a suitable pattern for building recommendation feeds, social media, or auth
 The major difference between SSR and Client-side Rendering (or CSR) is that running code on the server can achieve better performance and SEO as we don't need
 **don't rely solely on JS** to be parsed and executed before the user can see the page. Some notable performance metrics that achieve good values by SSR are FCP as well as <abbr title="Largest Contentful Paint">LCP</abbr>.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSR.png?alt=media&token=3023c02e-0cd9-4ecf-816b-1536c25ce3b3" alt="diagram explaning the ssr request-response cycle" width="870" height="300" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSR.png?alt=media&token=59577dd5-4787-4f86-af6a-7cea3df65496" alt="diagram explaning the ssr request-response cycle" width="870" height="300" fit="contain" />
 
 > It is important to note that although I have the power to run code server-side, I can't be careless about unoptimized or insecure code that could lead to errors and delay the response
 of our users too much.
@@ -154,7 +154,7 @@ Cache-Control: public, max-age=300
 
 `public` is a directive to tell the browser that the resource can be cached by anyone, CDNs, third-party servers, etc.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/maxage.png?alt=media&token=b5a9597a-7eca-437d-bde6-49d4566d6fa7" alt="max-age example as 5 min battery" width="870" height="280" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/maxage.png?alt=media&token=df4fbdfa-dccc-4ef9-bd72-0442b41dd8c8" alt="max-age example as 5 min battery" width="870" height="280" fit="contain" />
 
 As if each resource or file labeled with the `max-age` had a battery life that each incoming request will result in the same "charged" file as long
 as the battery don't dry, which in case that happens the next request fetches the full asset instead of using the cache.
@@ -175,7 +175,7 @@ Cache-Control: no-cache
 
 `no-cache` is used to dynamically serve a file by revalidating with the server, if new content is available, the browser serve that new file received, otherwise, it returns the existing cached version.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/nocache.png?alt=media&token=1aa7633a-73bb-4db2-83e7-99ae8fb1d7ca" alt="diagram battery representing no-cache revalidation" width="870" height="280" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/nocache.png?alt=media&token=f96943ce-9985-4955-b4e8-7aebe0e75340" alt="diagram battery representing no-cache revalidation" width="870" height="280" fit="contain" />
 
 ```sh
 Cache-Control: private, max-age=60
@@ -195,7 +195,7 @@ regenerates the page for updates.
 Cache-Control: max-age=300, stale-while-revalidate=60
 ```
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/swr.png?alt=media&token=9c499192-6c47-43fa-8ae1-411c8502315c" width="870" height="280" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/swr.png?alt=media&token=8d855734-16b0-400d-b89b-10ef4228e93b" width="870" height="280" fit="contain" />
 
 In the above example, we tell the browser that the specific resource/file will stay in cache for 5 minutes, and once the user requests that same URL **after** this time, the browser will kick the revalidation process for 1 more minute (60 sec) so the server can regenerate a new page for the subsequent requests. 
 
@@ -218,7 +218,7 @@ ISR or _Incremental Site Regeneration_ is an increment over Static Site Generati
 
 ISR aims to provide a balance between static and fresh content by updating or rendering new pages even after a deploy has been done. If a user requests a new page that wasn't previously rendered, the server can generate it at the time.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/isr.png?alt=media&token=8185c637-ff7c-4ebd-a3ee-e3d3394e307f" alt="diagram showing the request-response cycle of ISR" width="870" height="410" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/isr.png?alt=media&token=584ca029-3c98-4c64-88ef-bb729f3a7746" alt="diagram showing the request-response cycle of ISR" width="870" height="410" fit="contain" />
 
 1. The user makes a request
    - If is under the revalidation time, then the server responds with same cached file
@@ -244,7 +244,7 @@ The island Architecture was popularized by the Framework [Astro](https://docs.as
 
 An island is essentially any interactive component on the page. It is a progressive enhancement over static content.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/islands-arch.png?alt=media&token=003ad8e1-74e1-45c0-9d7b-dd6c32af5d12" width="870" height="500" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/islands-arch.png?alt=media&token=073f3c0b-2c4a-40ea-b828-57ed65941bc0" width="870" height="500" fit="contain" />
 
 Islands run in isolation and can share state with others. For instance, if you had a newsletter component and a subscribers count component as islands, they could operate independently while still communicating with each other as needed.
 
@@ -267,7 +267,7 @@ If you know <i>Node ReadableStreams</i>, this should look familiar to you.
 
 As the name suggests, streaming implies chunks of HTML are streamed from the node server to the client as they are generated. As the client starts receiving “bytes” of HTML in the client soon after rendering starts on the server, the TTFB is reduced and relatively constant.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/streamingssr.png?alt=media&token=9665aff6-d50a-4142-81b2-ede47a1ceeb3" width="870" height="500" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/streamingssr.png?alt=media&token=ce8ceb1c-f729-463a-a3b4-15263c34faab" width="870" height="500" fit="contain" />
 
 
 It is also more consistent irrespective of the page size. Since the client can start parsing HTML as soon as it receives it, the FP and FCP are also lower.
@@ -336,7 +336,7 @@ When writing a server component you're limited to running things on the server, 
 
 Besides, you also need to think about distingush about server and "regular" components or _Client components_ when writing code that contains RSC.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/RSCs.png?alt=media&token=6e4dc351-6ab8-41eb-8521-6fa6606096d1" width="870" height="500" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/RSCs.png?alt=media&token=9cef035c-80d5-4354-b79f-04546ad00dff" width="870" height="500" fit="contain" />
 
 Client components are the denoted by the `'use client'` declaration at the top of the file.
 
@@ -360,7 +360,7 @@ RSCs can interop with client components by, for example, having one parent compo
 
 That means you need to stop and think a little bit how would organize your application to attend both usages.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/components-interop.png?alt=media&token=d66bbe11-5abb-4150-81c7-e85f4246c6db" alt="server and client components in the tree" width="870" height="500" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/components-interop.png?alt=media&token=f1b17b0c-d1d2-44a4-9085-5fb8aca369d8" alt="server and client components in the tree" width="870" height="500" fit="contain" />
 
 ## Partial Prerendering
 
