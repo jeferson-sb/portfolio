@@ -10,6 +10,11 @@ import '@/assets/styles/utility.css'
 
 const routes = setupLayouts(generatedRoutes)
 
+console.log(
+  `%c⚠️ I hope you know what you're doing! :p`,
+  'color: #c9a43e; background: #303030; border-radius: 4px; padding: 0.25rem; font-family: cursive; font-style: italic; font-weight: 700;'
+)
+
 export const createApp = ViteSSG(
   App,
   { routes, base: import.meta.env.BASE_URL },

@@ -201,6 +201,10 @@ onMounted(() => {
     color: var(--color-silver);
   }
 
+  & details summary {
+    cursor: pointer;
+  }
+
   & .header-anchor {
     opacity: 0;
     position: absolute;

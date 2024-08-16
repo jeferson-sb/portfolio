@@ -17,7 +17,7 @@ meta:
 
 I'm currently reading: <em>Moonwalking with Einstein</em> by Joshua Foer.
 
-I'm writting a new blog posts about different patterns in Web Rendering, will release soon.
+My latest post about Web Rendering patterns is out, make sure to check out [here](/articles/understanding-the-wild-world-of-web-rendering-patterns) and grab some coffee.
 
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
@@ -28,7 +28,7 @@ If you have suggestions or wish I write about any other topic, [feel free to sub
 </article>
 
 <figure>
-  <img src="https://media1.tenor.com/m/JyyXt2zMOpsAAAAC/2b.gif" alt="gif of the day" />
+  <img src="https://media1.tenor.com/m/JyyXt2zMOpsAAAAC/2b.gif" height="500" alt="gif of the day" />
   <figcaption>(from Tenor)</figcaption>
 </figure>
 
