@@ -47,7 +47,7 @@
     "prettier": "^3.2.5",
     "stylelint": "^16.3.0",
     "stylelint-config-standard": "^36.0.0",
-    "taze": "^0.13.3",
+    "taze": "^0.16.7",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-markdown": "^0.26.0",
