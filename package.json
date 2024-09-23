@@ -23,7 +23,7 @@
     "lozad": "^1.16.0",
     "prism-theme-vars": "^0.2.4",
     "vite-ssg": "^0.23.6",
-    "vite-ssg-sitemap": "^0.6.1",
+    "vite-ssg-sitemap": "^0.8.1",
     "vue": "^3.4.21",
     "vue-gtag": "^2.0.1",
     "vue-router": "^4.3.0",

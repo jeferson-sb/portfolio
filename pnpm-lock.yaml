@@ -33,8 +33,8 @@ importers:
         specifier: ^0.23.6
         version: 0.23.6(critters@0.0.20)(vite@5.2.6(@types/node@20.8.10)(terser@5.24.0))(vue-router@4.3.0(vue@3.4.21))(vue@3.4.21)
       vite-ssg-sitemap:
-        specifier: ^0.6.1
-        version: 0.6.1
+        specifier: ^0.8.1
+        version: 0.8.1
       vue:
         specifier: ^3.4.21
         version: 3.4.21
@@ -4410,8 +4410,8 @@ packages:
       vue: ^3.2.4
       vue-router: ^4.0.11
 
-  vite-ssg-sitemap@0.6.1:
-    resolution: {integrity: sha512-SMVDf17kwexkN/oSSDYo4rOGvRwmWQeiFQ16Ilvxx9hfm9ojWEVQ1BBZG90cI/XhDiJJTCBtLvB4YpoHz91Glg==}
+  vite-ssg-sitemap@0.8.1:
+    resolution: {integrity: sha512-4IjhsnsC+Kcc/3Z4zOie9KIU633oH0lODZHNIjz3vJvw8aZ2SUor2tvcK16VWpMkkmQkU1iAIY04WWm3DzjM1w==}
 
   vite-ssg@0.23.6:
     resolution: {integrity: sha512-wRMc492AjBYyXNaNMlxcNkOWidxdNRLFnKe2YT1fQd28AD4Ak1GvS6b7hQLMyekYHb7i9+7AvJH6ieGGKgZmTQ==}
@@ -9575,7 +9575,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-ssg-sitemap@0.6.1: {}
+  vite-ssg-sitemap@0.8.1: {}
 
   vite-ssg@0.23.6(critters@0.0.20)(vite@5.2.6(@types/node@20.8.10)(terser@5.24.0))(vue-router@4.3.0(vue@3.4.21))(vue@3.4.21):
     dependencies:
