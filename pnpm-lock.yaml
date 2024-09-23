@@ -45,8 +45,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(vue@3.4.21)
       vuefire:
-        specifier: ^3.1.23
-        version: 3.1.23(firebase@10.9.0)(vue@3.4.21)
+        specifier: ^3.2.0
+        version: 3.2.0(firebase@10.9.0)(vue@3.4.21)
     devDependencies:
       '@csstools/postcss-global-data':
         specifier: ^2.1.1
@@ -4497,8 +4497,8 @@ packages:
       typescript:
         optional: true
 
-  vuefire@3.1.23:
-    resolution: {integrity: sha512-bCz/3hw50+oilLBrUWQRRQccfhj0VeU8E+NZmFRnUe6D70yAMblRahLrQLmG6KBesJJeXexOEpRElP4pMq6zxA==}
+  vuefire@3.2.0:
+    resolution: {integrity: sha512-fcJqNwPeGgL5vx++c0bVjMvYvZUzPHoYLPmlQpB0AS7722P+staJViG3RlcjNGMu7fgA1+HmGm5uwngFwVqnRw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@vue/composition-api': '*'
@@ -9639,7 +9639,7 @@ snapshots:
       '@vue/server-renderer': 3.4.21(vue@3.4.21)
       '@vue/shared': 3.4.21
 
-  vuefire@3.1.23(firebase@10.9.0)(vue@3.4.21):
+  vuefire@3.2.0(firebase@10.9.0)(vue@3.4.21):
     dependencies:
       vue: 3.4.21
       vue-demi: 0.14.10(vue@3.4.21)
