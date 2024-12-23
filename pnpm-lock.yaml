@@ -45,8 +45,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(vue@3.4.21)
       vuefire:
-        specifier: ^3.1.23
-        version: 3.1.23(firebase@10.9.0)(vue@3.4.21)
+        specifier: ^3.2.1
+        version: 3.2.1(firebase@10.9.0)(vue@3.4.21)
     devDependencies:
       '@csstools/postcss-global-data':
         specifier: ^2.1.1
@@ -2518,6 +2518,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -4497,13 +4498,13 @@ packages:
       typescript:
         optional: true
 
-  vuefire@3.1.23:
-    resolution: {integrity: sha512-bCz/3hw50+oilLBrUWQRRQccfhj0VeU8E+NZmFRnUe6D70yAMblRahLrQLmG6KBesJJeXexOEpRElP4pMq6zxA==}
+  vuefire@3.2.1:
+    resolution: {integrity: sha512-APj/iFdEec9kO71Lsiv/7opo9xL0D43l7cjwh84rJ5WMzrmpi9z774zzN+PPhBpD6bXyueLcfg0VlOUhI9/jUA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@vue/composition-api': '*'
       consola: ^3.2.3
-      firebase: ^9.0.0 || ^10.0.0
+      firebase: ^9.0.0 || ^10.0.0 || ^11.0.0
       vue: ^2.7.0 || ^3.2.0
     peerDependenciesMeta:
       '@vue/composition-api':
@@ -9218,7 +9219,7 @@ snapshots:
   terser@5.24.0:
     dependencies:
       '@jridgewell/source-map': 0.3.5
-      acorn: 8.11.3
+      acorn: 8.12.1
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -9639,7 +9640,7 @@ snapshots:
       '@vue/server-renderer': 3.4.21(vue@3.4.21)
       '@vue/shared': 3.4.21
 
-  vuefire@3.1.23(firebase@10.9.0)(vue@3.4.21):
+  vuefire@3.2.1(firebase@10.9.0)(vue@3.4.21):
     dependencies:
       vue: 3.4.21
       vue-demi: 0.14.10(vue@3.4.21)
