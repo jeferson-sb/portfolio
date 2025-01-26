@@ -11,19 +11,19 @@ meta:
 
 <article class="article">
 
-<time class="time">AUG 2024</time>
+<time class="time">JAN 2025</time>
 
 # Current Status
 
 I'm currently reading: <em>Moonwalking with Einstein</em> by Joshua Foer.
-
-My latest post about Web Rendering patterns is out, make sure to check out [here](/articles/understanding-the-wild-world-of-web-rendering-patterns) and grab some coffee.
+I'm preparing an article on _Taking responsive web layouts to the next level_
 
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
+I have a bluesky account now! I'm not really active in social media, but if you want to get in touch: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 
-📺 Watching: Nier Automata Anime.
+📺 Watching: Solo Leveling, Rurouni Kenshin, Dr Stone and DanDaDan
 
-🎮 Currently playing: RPG <em>No Rest for the Wicked</em>.
+🎮 Currently playing: <em>Indiana Jones and Great Circle, Sea of Stars</em>.
 
 </article>
 
