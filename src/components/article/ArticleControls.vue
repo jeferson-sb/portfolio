@@ -19,14 +19,11 @@ import { load } from '@fingerprintjs/fingerprintjs'
 import debounce from '@lib/handling/debounce'
 import { isProd } from '@lib/modes'
 import { useCoffeeStore } from '@/composables/useCoffeeStore'
+import { formatPoints } from '@lib/formatters/formatPoints'
 
 const { articleUrl, articleId } = defineProps(['articleUrl', 'articleId'])
 
 const { coffee, addCoffeePoints } = useCoffeeStore();
-const formatPoints = (n) => Intl.NumberFormat('en-US', {
-  notation: 'compact',
-  compactDisplay: 'short',
-}).format(n)
 
 const points = ref(0);
 const visitor = ref('');

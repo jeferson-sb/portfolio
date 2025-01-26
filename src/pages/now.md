@@ -28,7 +28,7 @@ I have a bluesky account now! I'm not really active in social media, but if you 
 </article>
 
 <figure>
-  <img src="https://media1.tenor.com/m/JyyXt2zMOpsAAAAC/2b.gif" height="500" alt="gif of the day" />
+  <img src="https://media1.tenor.com/m/YRw8jJdqjvIAAAAd/weathering-with-you.gif" height="358" alt="gif of the day" />
   <figcaption>(from Tenor)</figcaption>
 </figure>
 
