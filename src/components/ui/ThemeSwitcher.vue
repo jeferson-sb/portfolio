@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed, defineProps } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 defineProps({
   variant: {

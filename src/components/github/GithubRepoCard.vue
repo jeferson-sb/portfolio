@@ -26,8 +26,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-
 defineProps({
   repository: Object,
   url: String,
@@ -65,7 +63,7 @@ defineProps({
     color: inherit;
   }
 
-  & span + span {
+  & span+span {
     margin-inline-start: 0.75rem;
   }
 

@@ -1,13 +1,8 @@
 <template>
   <div class="project-card">
     <figure class="project-thumbnail">
-      <img-lazy
-        :src="thumbnail"
-        :alt="`${title} project screenshot`"
-        class="project-card__image"
-        width="500"
-        height="200"
-      />
+      <img-lazy :src="thumbnail" :alt="`${title} project screenshot`" class="project-card__image" width="500"
+        height="200" />
     </figure>
     <div class="project-card__content">
       <div class="project-card__header">
@@ -16,14 +11,8 @@
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="tags.split(',')" />
-        <AppLink
-          variant="button"
-          full
-          isExternal
-          :to="github"
-          :id="buttonId"
-          :aria-labelledby="`${titleId} ${buttonId}`"
-        >
+        <AppLink variant="button" full isExternal :to="github" :id="buttonId"
+          :aria-labelledby="`${titleId} ${buttonId}`">
           Github
         </AppLink>
       </div>
@@ -32,7 +21,7 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   thumbnail: String,
@@ -64,6 +53,7 @@ const buttonId = computed(() => `button-${titleSlug}`)
   object-position: top center;
   height: 200px;
   min-height: 100%;
+
   &.lozad {
     filter: blur(0);
   }
@@ -84,6 +74,7 @@ const buttonId = computed(() => `button-${titleSlug}`)
   & h4 {
     font-size: var(--text-lg);
   }
+
   & p {
     margin-block-end: 10px;
     opacity: 0.7;
