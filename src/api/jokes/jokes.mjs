@@ -1,4 +1,4 @@
-exports.handler = async (req, context) => {
+export default async (request, context) => {
   try {
     const response = await fetch('https://v2.jokeapi.dev/joke/programming')
     const data = await response.json()
@@ -8,13 +8,7 @@ exports.handler = async (req, context) => {
       req.socket.remoteAddress ||
       null
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        joke: data.joke || data.delivery,
-        ip,
-      }),
-    }
+    return Response.json({ joke: data.joke || data.delivery, ip }, { status: 200 })
   } catch (error) {
     return {
       statusCode: 500,
