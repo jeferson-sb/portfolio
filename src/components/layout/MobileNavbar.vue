@@ -22,7 +22,7 @@ const mobileNavbar = ref(null)
 
 onMounted(() => {
   document.addEventListener('click', e => {
-    if (mobileNavbar.value.contains(e.target)) {
+    if (mobileNavbar?.value?.contains(e.target)) {
       emit('close')
     }
   })

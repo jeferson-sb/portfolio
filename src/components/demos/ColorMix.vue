@@ -3,64 +3,21 @@
     <svg width="300" height="100" viewBox="0 0 100 100">
       <defs>
         <clipPath id="mask">
-          <circle
-            r="50%"
-            id="circle-right"
-            cy="50%"
-            cx="0%"
-            stroke-width="1"
-            stroke="#000"
-            fill="none"
-          />
+          <circle r="50%" id="circle-right" cy="50%" cx="0%" stroke-width="1" stroke="#000" fill="none" />
         </clipPath>
       </defs>
       <g>
-        <circle
-          id="center"
-          r="50%"
-          cy="50%"
-          cx="-50"
-          fill="var(--mix)"
-          clip-path="url(#mask)"
-        />
-        <circle
-          id="circle-left"
-          r="50%"
-          cx="-50"
-          cy="50%"
-          stroke-width="0"
-          stroke="#000"
-          fill="var(--left)"
-        />
-        <circle
-          id="circle-right"
-          r="50%"
-          cx="0%"
-          cy="50%"
-          stroke-width="0"
-          stroke="#000"
-          fill="var(--right)"
-        />
+        <circle id="center" r="50%" cy="50%" cx="-50" fill="var(--mix)" clip-path="url(#mask)" />
+        <circle id="circle-left" r="50%" cx="-50" cy="50%" stroke-width="0" stroke="#000" fill="var(--left)" />
+        <circle id="circle-right" r="50%" cx="0%" cy="50%" stroke-width="0" stroke="#000" fill="var(--right)" />
       </g>
-      <circle
-        title="Result mix"
-        r="20%"
-        cx="100%"
-        cy="50%"
-        stroke-width="0"
-        stroke="#000"
-        fill="var(--result)"
-      />
+      <circle title="Result mix" r="20%" cx="100%" cy="50%" stroke-width="0" stroke="#000" fill="var(--result)" />
     </svg>
     <div class="controls">
       <div class="colorspace" v-show="controls.includes('colorSpace')">
         <span>in</span>
-        <BaseSelect
-          aria-label="Select a color method"
-          :options="['lch', 'hsl', 'lab', 'srgb']"
-          @change="onChange"
-          :selected="method"
-        />
+        <BaseSelect aria-label="Select a color method" :options="['lch', 'hsl', 'lab', 'srgb']" @change="onChange"
+          :selected="method" />
       </div>
       <div class="range" v-show="controls.includes('stop')">
         <span>L {{ colorStopLeft }}%</span>
@@ -82,16 +39,16 @@ const props = defineProps({
     type: String,
     default: '',
     validator(v) {
-      return ['stop', 'colorSpace'].includes(v)
+      return ['stop', 'colorSpace', 'colorSpace stop', ''].includes(v)
     },
   },
   left: {
-    type: Number,
-    default: 50,
+    type: String,
+    default: "50",
   },
   right: {
-    type: Number,
-    default: 50,
+    type: String,
+    default: "50",
   },
 })
 
@@ -119,11 +76,9 @@ svg {
   --method: v-bind(colorMethod);
   --l-stop: calc(v-bind(colorStopLeft) * 1%);
   --r-stop: calc(v-bind(colorStopRight) * 1%);
-  --mix: color-mix(
-    var(--method),
-    var(--left) var(--l-stop, 50%),
-    var(--right) var(--r-stop, 50%)
-  );
+  --mix: color-mix(var(--method),
+      var(--left) var(--l-stop, 50%),
+      var(--right) var(--r-stop, 50%));
 
   --result: var(--mix);
 }
