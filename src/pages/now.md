@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">JAN 2025</time>
+<time class="time">FEV 2025</time>
 
 # Current Status
 
@@ -21,7 +21,7 @@ I'm preparing an article on _Taking responsive web layouts to the next level_
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 I have a bluesky account now! I'm not really active in social media, but if you want to get in touch: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 
-📺 Watching: Solo Leveling, Rurouni Kenshin, Dr Stone and DanDaDan
+📺 Watching: Solo Leveling, Rurouni Kenshin, Dr Stone and Mashle
 
 🎮 Currently playing: <em>Indiana Jones and Great Circle, Sea of Stars</em>.
 
@@ -41,7 +41,7 @@ body[data-theme='light'] {
     }
   }
 
-  .time { 
+  .time {
     color: var(--color-gray-400);
   }
 }
@@ -118,7 +118,7 @@ figcaption {
   color: var(--color-silver);
 }
 
-video { 
+video {
   border-radius: 1rem;
   box-shadow: 0 0 20px 0px 0 0 20px 0px hsl(226deg 24% 62% / 25%);
 }
