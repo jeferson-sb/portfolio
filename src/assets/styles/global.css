@@ -7,25 +7,26 @@
 
 @layer global {
   :root {
+
     /* Colors */
-    --color-primary: hsl(187, 78%, 46%);
-    --color-accent: hsl(26, 79%, 56%);
-    --color-silver: hsl(225, 15%, 50%);
-    --color-silver-600: hsl(226, 24%, 62%);
-    --color-default-black: hsl(216, 9%, 11%);
-    --color-default-white: hsl(0, 0%, 85%);
-    --color-gray-800: hsl(214, 9%, 15%);
-    --color-gray-700: hsl(210, 5%, 24%);
-    --color-gray-600: hsl(214, 9%, 35%);
-    --color-gray-500: hsl(214, 9%, 45%);
-    --color-gray-400: hsl(214, 9%, 55%);
-    --color-gray-300: hsl(214, 9%, 65%);
-    --color-gray-200: hsl(214, 9%, 75%);
-    --color-gray-100: hsl(214, 9%, 85%);
+    --color-primary: hsl(187deg 78% 46%);
+    --color-accent: hsl(26deg 79% 56%);
+    --color-silver: hsl(225deg 15% 50%);
+    --color-silver-600: hsl(226deg 24% 62%);
+    --color-default-black: hsl(216deg 9% 11%);
+    --color-default-white: hsl(0deg 0% 85%);
+    --color-gray-800: hsl(214deg 9% 15%);
+    --color-gray-700: hsl(210deg 5% 24%);
+    --color-gray-600: hsl(214deg 9% 35%);
+    --color-gray-500: hsl(214deg 9% 45%);
+    --color-gray-400: hsl(214deg 9% 55%);
+    --color-gray-300: hsl(214deg 9% 65%);
+    --color-gray-200: hsl(214deg 9% 75%);
+    --color-gray-100: hsl(214deg 9% 85%);
     --text-color-default: var(--color-default-white);
     --paragraph-color: hsl(0deg 0% 80%);
-    --code-bg-color: hsl(220, 13%, 18%);
-    --code-highlight-color: hsla(187, 78%, 46%, 0.05);
+    --code-bg-color: hsl(220deg 13% 18%);
+    --code-highlight-color: hsl(187deg 78% 46% / 5%);
 
     /* Typography */
     --text-xsm: 0.75rem;
@@ -40,10 +41,10 @@
     --fw-bold: 700;
 
     --font-sans: 'Source Sans Pro', -apple-system, 'Segoe UI',
-      Helvetica sans-serif;
+      helvetica sans-serif;
     --font-title: 'Raleway', sans-serif;
-    --font-serif: 'Roboto Slab', Palatino, Georgia, serif;
-    --font-mono: 'Source Code Pro', 'SF Mono', Consolas, Menlo, monospace;
+    --font-serif: 'Roboto Slab', palatino, georgia, serif;
+    --font-mono: 'Source Code Pro', 'SF Mono', consolas, menlo, monospace;
 
     /* Borders */
     --radius-default: 4px;
@@ -51,15 +52,15 @@
 
     --border-width: 1px;
     --border-style: solid;
-    --border-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgb(0 0 0 / 10%);
     --border: var(--border-width) var(--border-style) var(--border-color);
 
     /* Shadows */
-    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --elevation-2: 0 4px 4px rgba(0, 0, 0, 0.23);
-    --elevation-3: 0 4px 10px rgba(0, 0, 0, 0.07);
-    --elevation-4: 0 10px 19px rgba(0, 0, 0, 0.27);
-    --elevation-5: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    --elevation-1: 0 1px 3px rgb(0 0 0 / 20%);
+    --elevation-2: 0 4px 4px rgb(0 0 0 / 23%);
+    --elevation-3: 0 4px 10px rgb(0 0 0 / 7%);
+    --elevation-4: 0 10px 19px rgb(0 0 0 / 27%);
+    --elevation-5: 0 20px 25px -5px rgb(0 0 0 / 30%);
 
     /* Z-layers */
     --z-10: 10;
@@ -68,10 +69,10 @@
     --z-hide: -1;
 
     /* Others */
-    --scrollbar-bg: hsl(214, 9%, 15%);
-    --scrollbar-thumb-color: hsl(225, 15%, 50%);
+    --scrollbar-bg: hsl(214deg 9% 15%);
+    --scrollbar-thumb-color: hsl(225deg 15% 50%);
     --scrollbar-border: var(--color-gray-800);
-    --selection: hsla(26, 94%, 54%, 0.5);
+    --selection: hsl(26deg 94% 54% / 50%);
   }
 
   body {
@@ -84,7 +85,7 @@
     color: var(--color-default-white);
     color-scheme: light dark;
     scrollbar-gutter: stable;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizelegibility;
     color-rendering: optimizespeed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -112,16 +113,6 @@
     color: var(--color-primary);
   }
 
-  a:not([class]):hover,
-  a[class=""]:hover,
-  abbr {
-    text-decoration-line: underline;
-    text-decoration-color: var(--color-accent);
-    text-decoration-thickness: 2px;
-    text-decoration-style: solid;
-    text-underline-offset: 0.3em;
-  }
-
   a:focus-visible {
     outline: 2px dashed var(--color-primary);
   }
@@ -130,5 +121,15 @@
     color: var(--text-color-default);
     opacity: 0.8;
     cursor: not-allowed;
+  }
+
+  a:not([class]):hover,
+  a[class=""]:hover,
+  abbr {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 2px;
+    text-decoration-style: solid;
+    text-underline-offset: 0.3em;
   }
 }

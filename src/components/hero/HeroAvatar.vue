@@ -27,7 +27,6 @@ defineProps({
   height: 275px;
   border-radius: var(--radius-default);
   box-shadow: var(--elevation-2);
-
   position: relative;
   background-color: var(--accent-color-lighter, var(--color-gray-800));
   background-clip: padding-box;

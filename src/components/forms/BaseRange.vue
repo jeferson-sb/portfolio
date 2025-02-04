@@ -39,7 +39,7 @@ export default {
   --range-thumb-size: 16px;
   --range-thumb-color: #fff;
 
-  -webkit-appearance: none;
+  appearance: none;
   border-radius: 50%;
   height: var(--range-thumb-size);
   width: var(--range-thumb-size);
@@ -47,7 +47,7 @@ export default {
   background: var(--range-thumb-color);
   border: 1px solid var(--range-thumb-color);
   transform: translateY(calc(-50% + 2px));
-  box-shadow: 0 1px 2px hsla(0, 0%, 45%, 0.3), 0 0 3px hsla(0, 0%, 45%, 0.3);
+  box-shadow: 0 1px 2px hsl(0deg 0% 45% / 30%), 0 0 3px hsl(0deg 0% 45% / 30%);
 }
 
 .input-range::-moz-range-thumb {
@@ -63,7 +63,7 @@ export default {
     #fff var(--range-progress)
   );
   border-radius: 2px;
-  margin: 8px 0px;
+  margin: 8px 0;
 }
 
 .input-range::-moz-range-track {

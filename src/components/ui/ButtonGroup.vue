@@ -49,6 +49,7 @@ const classes = computed(() => ({
       border-top-left-radius: var(--radius-default);
       border-bottom-left-radius: var(--radius-default);
     }
+
     &:last-child {
       border-top-right-radius: var(--radius-default);
       border-bottom-right-radius: var(--radius-default);

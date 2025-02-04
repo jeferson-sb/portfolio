@@ -94,7 +94,7 @@ const formattedDate = computed(() =>
     inset: 0;
     opacity: 0;
     transition: opacity 200ms ease-out;
-    background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 37%, hsla(218, 11%, 52%, 0.2) 100%);
+    background: linear-gradient(to bottom, hsl(0deg 0% 100% / 0%) 37%, hsl(218deg 11% 52% / 20%) 100%);
     z-index: var(--z-hide);
   }
 
@@ -143,6 +143,7 @@ const formattedDate = computed(() =>
 
   &::before {
     --border-color: var(--color-silver);
+
     background: linear-gradient(11deg, transparent 70%, var(--border-color)), linear-gradient(190deg, transparent 70%, var(--border-color));
     border-radius: inherit;
     content: "";
@@ -165,7 +166,7 @@ const formattedDate = computed(() =>
     }
 
     &:focus::after {
-      box-shadow: 0 4px 10px hsla(187, 78%, 46%, 0.5);
+      box-shadow: 0 4px 10px hsl(187deg 78% 46% / 50%);
     }
   }
 }
@@ -205,7 +206,7 @@ body[data-theme='light'] {
 
   & a:hover .post-preview,
   & a:focus .post-preview {
-    box-shadow: 0 4px 10px hsla(187, 78%, 46%, 0.2);
+    box-shadow: 0 4px 10px hsl(187deg 78% 46% / 20%);
   }
 }
 </style>

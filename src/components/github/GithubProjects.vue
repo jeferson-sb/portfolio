@@ -32,7 +32,7 @@ const pullRequests = useContributions();
   & h4 {
     color: var(--color-gray-400);
     font-size: var(--text-sm);
-    margin: 10px 0 15px 0;
+    margin: 10px 0 15px;
   }
 }
 
@@ -43,6 +43,7 @@ const pullRequests = useContributions();
 
 .github-repositories {
   --github-card-size: 270px;
+
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(var(--github-card-size), 1fr));

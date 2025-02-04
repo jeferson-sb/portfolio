@@ -41,6 +41,7 @@ provide('points', points)
 
   .button {
     --button-text-color: var(--text-color-default);
+
     border-color: var(--text-color-default);
   }
 }

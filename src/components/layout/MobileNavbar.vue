@@ -32,6 +32,7 @@ onMounted(() => {
 <style>
 .mobile-navbar {
   --bg: hsl(220deg 13% 12% / 92%);
+
   background-color: var(--bg);
   height: 100vh;
   height: 100dvh;
@@ -93,7 +94,7 @@ onMounted(() => {
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .mobile-navbar {
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
   }
 }

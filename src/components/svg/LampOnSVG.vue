@@ -138,11 +138,11 @@
 
 @keyframes turn-off-bulb {
   from {
-    fill: hsl(36, 99%, 70%);
+    fill: hsl(36deg 99% 70%);
   }
 
   to {
-    fill: hsl(0, 0%, 88%);
+    fill: hsl(0deg 0% 88%);
   }
 }
 </style>

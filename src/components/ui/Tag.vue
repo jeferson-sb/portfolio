@@ -55,6 +55,6 @@ const href = props.linkable ? `/tags/${props.tagName.trim()}` : ''
 }
 
 body[data-theme='light'] .tag {
-  background-color: hsla(225, 15%, 50%, 0.1);
+  background-color: hsl(225deg 15% 50% / 10%);
 }
 </style>

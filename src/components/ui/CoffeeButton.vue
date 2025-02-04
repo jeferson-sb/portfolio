@@ -161,7 +161,6 @@ const onClick = () => {
 }
 
 @keyframes wobble-hor-bottom {
-
   0%,
   100% {
     transform: translateX(0%);

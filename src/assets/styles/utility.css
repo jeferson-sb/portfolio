@@ -4,7 +4,6 @@
 
     margin-inline: auto;
     width: calc(100% - 2rem);
-    /* height: 100%; */
     max-width: var(--max-w);
     display: flex;
   }
@@ -13,7 +12,7 @@
     overflow: hidden;
   }
 
-  .sr-only:not(:focus):not(:active) {
+  .sr-only:not(:focus, :active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;

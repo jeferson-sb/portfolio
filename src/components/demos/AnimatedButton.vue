@@ -9,10 +9,9 @@
   border-radius: var(--radius-default);
   width: fit-content;
   background-color: hsl(50deg 70% 61.67%);
-  color: hsl(0, 0%, 11%);
+  color: hsl(0deg 0% 11%);
   margin-inline: auto;
   margin-block: 2rem;
-
   transition: transform 400ms ease-out;
 }
 
@@ -25,7 +24,7 @@
   z-index: -1;
   position: absolute;
   inset: 0;
-  border: 4px solid hsl(50, 43%, 49%);
+  border: 4px solid hsl(50deg 43% 49%);
   border-radius: var(--radius-default);
   transform: scale(1);
 }

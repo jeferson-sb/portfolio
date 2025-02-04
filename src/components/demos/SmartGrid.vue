@@ -91,7 +91,7 @@ export default {
 }
 
 .image {
-  background-color: hsl(250, 50%, 50%);
+  background-color: hsl(250deg 50% 50%);
   border-radius: var(--radius-default);
   max-width: 400px;
 }

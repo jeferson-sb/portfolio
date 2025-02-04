@@ -14,12 +14,10 @@
   background-size: cover;
   backface-visibility: hidden;
   margin-block: 1rem 2rem;
-
   transition: var(--transition);
   transform-origin: var(--origin);
-
-  border: 2px solid hsl(0, 0%, 19%);
-  outline: 6px solid hsl(0, 0%, 96%);
+  border: 2px solid hsl(0deg 0% 19%);
+  outline: 6px solid hsl(0deg 0% 96%);
 }
 
 .book:hover {

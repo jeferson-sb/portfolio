@@ -31,7 +31,7 @@ const supported = window.CSS.supports('background', props.color)
 
 .box.unsupported {
   padding: 1rem;
-  background: hsl(0, 0%, 26%);
+  background: hsl(0deg 0% 26%);
 }
 
 span {

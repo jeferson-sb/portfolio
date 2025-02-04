@@ -68,14 +68,13 @@ const toggleMenu = (open) => {
   width: 100%;
   font-family: var(--font-title);
   z-index: var(--z-base);
-  border: 1px solid hsla(214, 9%, 25%, 0.2);
+  border: 1px solid hsl(214deg 9% 25% / 20%);
 
   & .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 60px;
-
     width: calc(100% - 2rem);
     max-width: 1110px;
     margin-inline: auto;
@@ -125,8 +124,8 @@ const toggleMenu = (open) => {
     bottom: 0;
     left: 0;
     background: radial-gradient(circle at bottom,
-        rgba(26, 188, 209, 0.603) 5%,
-        rgba(0, 0, 0, 0) 60%);
+        rgb(26 188 209 / 60.3%) 5%,
+        rgb(0 0 0 / 0%) 60%);
     width: 100%;
     height: 100%;
     transition: transform 0.2s ease-out;
@@ -179,7 +178,7 @@ body[data-theme='light'] {
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .nav {
     background-color: hsl(216deg 8.77% 11.18% / 30%);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
   }
 }

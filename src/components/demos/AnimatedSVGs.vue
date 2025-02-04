@@ -45,7 +45,7 @@ svg {
 .heart {
   position: relative;
   color: hsl(332deg 50% 50%);
-  filter: drop-shadow(0px 1px 20px hsl(332deg 50% 60%));
+  filter: drop-shadow(0 1px 20px hsl(332deg 50% 60%));
   animation: heart-pulse 400ms ease-out infinite forwards;
 }
 
@@ -60,6 +60,7 @@ svg {
 }
 
 .rocket {
+
   /* Timings */
   --moving: 3s;
   --fire: 5s;

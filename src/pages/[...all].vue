@@ -209,7 +209,7 @@ main {
   color: var(--hacker-color);
   border-radius: 10px;
   box-shadow: inset 0 0 0 7px var(--inner-border-color),
-    inset 0 0 0 12px rgba(0, 0, 0, 0.2);
+    inset 0 0 0 12px rgb(0 0 0 / 20%);
   position: relative;
 }
 
@@ -240,7 +240,7 @@ main {
 
 .console pre {
   position: relative;
-  font-family: 'Cousine', monospace;
+  font-family: Cousine, monospace;
   font-size: 14px;
   padding-left: 30px;
   padding-bottom: 0;
@@ -358,7 +358,6 @@ main {
 }
 
 @keyframes cursor {
-
   0%,
   100% {
     opacity: 1;

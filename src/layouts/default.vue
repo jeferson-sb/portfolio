@@ -37,7 +37,7 @@ body {
 
   &::-webkit-scrollbar-track {
     background-color: var(--scrollbar-bg);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -48,12 +48,12 @@ body {
 }
 
 body[data-theme='light'] {
-  --color-light: hsl(228, 33%, 97%);
+  --color-light: hsl(228deg 33% 97%);
   --text-color-default: var(--color-default-black);
   --secondary-text-color: var(--color-silver);
-  --bg-color-primary-lighter: rgba(26, 187, 209, 0.3);
-  --bg-color-lighter: hsl(0, 0%, 97%);
-  --accent-color-lighter: hsl(225, 31%, 95%);
+  --bg-color-primary-lighter: rgb(26 187 209 / 30%);
+  --bg-color-lighter: hsl(0deg 0% 97%);
+  --accent-color-lighter: hsl(225deg 31% 95%);
   --scrollbar-bg: var(--accent-color-lighter);
   --scrollbar-thumb-color: var(--color-gray-300);
   --scrollbar-border: var(--color-gray-300);
@@ -65,7 +65,7 @@ body[data-theme='light'] {
   transition-timing-function: ease-in-out;
 
   & :is(footer, header) {
-    border-color: rgba(108, 118, 147, 0.3);
+    border-color: rgb(108 118 147 / 30%);
   }
 }
 

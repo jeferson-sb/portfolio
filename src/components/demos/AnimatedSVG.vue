@@ -41,7 +41,6 @@ svg {
   }
 
   &:hover {
-
     #left,
     #right,
     #mid {

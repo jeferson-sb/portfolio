@@ -77,9 +77,9 @@ export default {
 }
 
 .preview-body {
-  --v-text-color: hsl(0, 0%, 19%);
-  --v-bg-color: hsl(0, 0%, 96%);
-  --v-accent-color: hsl(240, 76%, 67%);
+  --v-text-color: hsl(0deg 0% 19%);
+  --v-bg-color: hsl(0deg 0% 96%);
+  --v-accent-color: hsl(240deg 76% 67%);
   --v-font: var(--font-sans);
 
   padding: 1.2rem 2rem;
@@ -90,22 +90,22 @@ export default {
 }
 
 [data-v-theme='dark'] {
-  --v-text-color: hsl(0, 0%, 100%);
-  --v-bg-color: hsl(0, 0%, 0%);
-  --v-accent-color: hsl(145, 63%, 49%);
+  --v-text-color: hsl(0deg 0% 100%);
+  --v-bg-color: hsl(0deg 0% 0%);
+  --v-accent-color: hsl(145deg 63% 49%);
   --v-font: var(--font-mono);
 }
 
 [data-v-theme='spacegray'] {
-  --v-text-color: hsl(0, 0%, 100%);
-  --v-bg-color: hsl(210, 28%, 29%);
-  --v-accent-color: hsl(33, 66%, 49%);
+  --v-text-color: hsl(0deg 0% 100%);
+  --v-bg-color: hsl(210deg 28% 29%);
+  --v-accent-color: hsl(33deg 66% 49%);
 }
 
 [data-v-theme='warm'] {
-  --v-bg-color: hsl(37, 90%, 91%);
-  --v-accent-color: hsl(196, 97%, 49%);
-  --v-text-color: hsl(35, 9%, 37%);
+  --v-bg-color: hsl(37deg 90% 91%);
+  --v-accent-color: hsl(196deg 97% 49%);
+  --v-text-color: hsl(35deg 9% 37%);
   --v-font: var(--font-serif);
 }
 

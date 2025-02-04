@@ -66,7 +66,7 @@ export default {
 
 <style scoped>
 .button {
-  --button-shadow-color: hsla(187, 78%, 46%, 0.842);
+  --button-shadow-color: hsl(187deg 78% 46% / 84.2%);
   --button-fw: 400;
   --button-radius: var(--radius-default);
 
@@ -129,12 +129,14 @@ export default {
 
   &:hover {
     --button-bg-color: var(--color-gray-600);
+
     filter: unset;
   }
 }
 
 .button--icon {
   --offset: 4px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,6 +148,7 @@ export default {
 
 .button--rounded-full {
   --button-radius: 9999px;
+
   padding: 0.75rem;
 
   & .button--icon>* {

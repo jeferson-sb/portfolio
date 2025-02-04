@@ -62,7 +62,6 @@ const classes = computed(() => ({
 <style scoped>
 body[data-theme='light'] {
   .social-media-icons a {
-
     svg,
     svg path {
       fill: var(--color-default-black);

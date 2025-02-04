@@ -107,15 +107,15 @@ export default {
 }
 
 .box {
-  --base-10: hsl(var(--h), var(--s), calc(var(--l) + 5%));
-  --base-20: hsl(var(--h), var(--s), calc(var(--l) + 15%));
-  --base-30: hsl(var(--h), var(--s), calc(var(--l) + 25%));
-  --base-40: hsl(var(--h), var(--s), calc(var(--l) + 35%));
-  --base-50: hsl(var(--h), var(--s), calc(var(--l) + 45%));
-  --base-60: hsl(var(--h), var(--s), calc(var(--l) + 55%));
+  --base-10: hsl(var(--h) var(--s) calc(var(--l) + 5%));
+  --base-20: hsl(var(--h) var(--s) calc(var(--l) + 15%));
+  --base-30: hsl(var(--h) var(--s) calc(var(--l) + 25%));
+  --base-40: hsl(var(--h) var(--s) calc(var(--l) + 35%));
+  --base-50: hsl(var(--h) var(--s) calc(var(--l) + 45%));
+  --base-60: hsl(var(--h) var(--s) calc(var(--l) + 55%));
 
   display: block;
-  background-color: hsl(var(--h), var(--s), var(--l));
+  background-color: hsl(var(--h) var(--s) var(--l));
   border-radius: var(--radius-default);
   width: 60px;
   height: 60px;

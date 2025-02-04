@@ -33,8 +33,8 @@ const props = defineProps({
   --w: 60px;
   --h: 60px;
   --backface: unset;
-  perspective: var(--perspective);
 
+  perspective: var(--perspective);
   width: var(--w);
   height: var(--h);
   outline: 1px dotted var(--outline-color, transparent);
@@ -56,7 +56,6 @@ const props = defineProps({
   border-radius: var(--radius-default);
   width: var(--w);
   height: var(--h);
-
   transition: var(--transition);
   transition-delay: calc(var(--delay) * 1ms);
   transform: var(--initial-transform);

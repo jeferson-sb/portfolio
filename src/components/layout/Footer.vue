@@ -23,7 +23,7 @@
 <style scoped>
 .footer {
   padding-block: 1rem;
-  border-top: 1px solid hsla(214, 9%, 25%, 0.2);
+  border-top: 1px solid hsl(214deg 9% 25% / 20%);
   margin-block-start: 40px;
 }
 
