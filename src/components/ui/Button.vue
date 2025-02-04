@@ -137,6 +137,7 @@ export default {
   --offset: 4px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   & svg {
     margin-inline-end: var(--offset);
