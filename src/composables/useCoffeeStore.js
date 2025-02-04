@@ -5,7 +5,7 @@ import { db } from '@/modules/firebase'
 
 export function useCoffeeStore() {
   const coffeeRef = collection(db, 'coffee')
-  const coffee = useCollection(coffeeRef)
+  const coffee = useCollection(coffeeRef, { once: true })
 
   const addCoffeePoints = async ({ articleId, points, visitorId }) => {
     if (!articleId || !visitorId) return;
