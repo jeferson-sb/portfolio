@@ -15,10 +15,13 @@ export function useCoffeeControl({ articleId, articleUrl }) {
   const { coffee, addCoffeePoints } = useCoffeeStore()
   const points = ref(0)
   const visitor = ref('')
-  const allCupsCoffee = coffee.value.reduce((total, coffeeCup) => {
-    const articlePoints = coffeeCup.articles[articleId]?.points
-    return articlePoints ? articlePoints + total : total
-  }, 0)
+
+  const allCupsCoffee = computed(() => {
+    return coffee.value.reduce((total, coffeeCup) => {
+      const articlePoints = coffeeCup.articles[articleId]?.points
+      return articlePoints ? articlePoints + total : total
+    }, 0)
+  })
 
   onMounted(async () => {
     try {
