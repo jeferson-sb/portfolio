@@ -12,55 +12,14 @@
 </template>
 
 <script setup>
-import { computed, onMounted, watch } from 'vue';
-import { event } from 'vue-gtag'
-import { load } from '@fingerprintjs/fingerprintjs'
-
-import debounce from '@lib/handling/debounce'
-import { isProd } from '@lib/modes'
-import { useCoffeeStore } from '@/composables/useCoffeeStore'
+import { useCoffeeControl } from '@/composables/useCoffeeControl';
 import { formatPoints } from '@lib/formatters/formatPoints'
 
 const { articleUrl, articleId } = defineProps(['articleUrl', 'articleId'])
 
-const { coffee, addCoffeePoints } = useCoffeeStore();
-
-const points = ref(0);
-const visitor = ref('');
-const allCupsCoffee = computed(() =>
-  coffee
-    .value
-    .reduce((total, coffeeCup) => {
-      const articlePoints = coffeeCup.articles[articleId]?.points
-      return articlePoints ? articlePoints + total : total
-    }, 0)
-)
+const { points, allCupsCoffee } = useCoffeeControl({ articleUrl, articleId })
 
 provide('points', points)
-
-onMounted(async () => {
-  try {
-    const value = await load()
-    const { visitorId } = await value.get()
-    const visitorDoc = coffee.value.find(coff => coff.id === visitorId)
-    const visitorGivenPoints = visitorDoc?.articles[articleId]?.points;
-
-    visitor.value = visitorId
-    points.value = visitorGivenPoints || 0
-  } catch (error) {
-    console.error(error);
-  }
-})
-
-const onPointsWatch = debounce(async () => {
-  if (isProd) {
-    await addCoffeePoints({ articleId, points: points.value, visitorId: visitor.value })
-    event('coffee_click', { article: articleUrl })
-  }
-}, 400)
-
-
-watch(points, onPointsWatch)
 </script>
 
 <style scoped>
