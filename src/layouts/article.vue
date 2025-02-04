@@ -21,6 +21,7 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import lozad from 'lozad'
 import config from '@/config/siteconfig.json'
 

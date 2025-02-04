@@ -9,6 +9,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import { useHead } from '@unhead/vue'
 import lozad from 'lozad'
 import { useRoute } from 'vue-router'
 import config from '@/config/siteconfig.json'

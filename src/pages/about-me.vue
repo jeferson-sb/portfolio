@@ -36,6 +36,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import config from '../config/siteconfig.json'
 
 const title = 'About me • Jeferson S. Brito'

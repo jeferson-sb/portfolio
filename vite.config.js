@@ -53,7 +53,7 @@ export default defineConfig({
     Layouts(),
 
     AutoImport({
-      imports: ['vue', 'vue-router', '@vueuse/head'],
+      imports: ['vue', 'vue-router'],
       dirs: ['./composables']
     }),
 
@@ -97,7 +97,7 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    crittersOptions: {
+    beastiesOptions: {
       reduceInlineStyles: false,
     },
     onFinished() {
@@ -105,7 +105,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/head'],
+    include: ['vue', 'vue-router'],
   },
   server: {
     port: 3000,

@@ -1,5 +1,4 @@
 const postcssPresetEnv = require('postcss-preset-env');
-const postcssNested = require('postcss-nested')
 const postcssGlobalData = require('@csstools/postcss-global-data');
 
 module.exports = {
@@ -9,7 +8,6 @@ module.exports = {
         './src/assets/styles/global.css'
       ]
     }),
-    postcssNested(),
     postcssPresetEnv()
   ],
 }

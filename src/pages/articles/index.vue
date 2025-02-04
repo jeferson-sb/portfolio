@@ -12,6 +12,7 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { useArticles } from '@/composables/useArticles'
+import { useHead } from '@unhead/vue'
 
 const title = 'Articles • Jeferson S. Brito'
 const description =
