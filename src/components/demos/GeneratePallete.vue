@@ -1,28 +1,16 @@
 <template>
   <div class="pallete">
     <label for="color">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        viewBox="0 0 16 16"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
         <title>Pick a color</title>
         <path
-          d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.854a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z"
-        />
+          d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.854a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z" />
       </svg>
     </label>
     <input id="color" v-model.lazy="color" type="color" name="color" />
 
     <div class="shades">
-      <span
-        v-for="i in 6"
-        :key="i"
-        class="box"
-        :style="`background-color: var(--base-${i * 10});`"
-      ></span>
+      <span v-for="i in 6" :key="i" class="box" :style="`background-color: var(--base-${i * 10});`"></span>
     </div>
   </div>
 </template>
@@ -37,6 +25,9 @@ export default {
   watch: {
     color() {
       const { hue, saturation, lightness } = this.hexToHSL(this.color)
+      // New! using the color relative function
+      this.$el.querySelector('.shades').style.setProperty('--hex', this.color)
+      // Legacy using the math function
       this.$el.querySelector('.shades').style.setProperty('--h', hue)
       this.$el.querySelector('.shades').style.setProperty('--s', saturation)
       this.$el.querySelector('.shades').style.setProperty('--l', lightness)
@@ -99,6 +90,7 @@ export default {
   --h: 360;
   --s: 50%;
   --l: 50%;
+  --hex: #bf4040;
 
   display: flex;
   flex-wrap: wrap;
@@ -113,19 +105,19 @@ export default {
   --base-40: hsl(var(--h) var(--s) calc(var(--l) + 35%));
   --base-50: hsl(var(--h) var(--s) calc(var(--l) + 45%));
   --base-60: hsl(var(--h) var(--s) calc(var(--l) + 55%));
-
-  display: block;
-  background-color: hsl(var(--h) var(--s) var(--l));
+  --color-space: hsl(var(--h) var(--s) var(--l)) display: block;
+  background-color: var(--color-space);
   border-radius: var(--radius-default);
   width: 60px;
   height: 60px;
 }
 
 label {
+  --label-size: 36px;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 36px;
-  height: 36px;
+  width: var(--label-size);
+  height: var(--label-size);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,5 +126,16 @@ label {
 input[type='color'] {
   visibility: hidden;
   position: absolute;
+}
+
+@supports (color: hsl(from white h s l)) {
+  .box {
+    --base-10: oklch(from var(--hex) 75% c h);
+    --base-20: oklch(from var(--hex) 65% c h);
+    --base-30: oklch(from var(--hex) 45% c h);
+    --base-40: oklch(from var(--hex) 35% c h);
+    --base-50: oklch(from var(--hex) 25% c h);
+    --base-60: oklch(from var(--hex) 20% c h);
+  }
 }
 </style>

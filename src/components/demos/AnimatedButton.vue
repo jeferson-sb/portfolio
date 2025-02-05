@@ -30,9 +30,7 @@
 }
 
 .button:focus::before {
-  transition-property: transform, opacity;
-  transition-delay: 700ms;
-  transition-timing-function: ease-in-out;
+  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
   transform: scale(1.3);
   opacity: 0;
 }

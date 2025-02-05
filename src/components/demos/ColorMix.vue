@@ -16,8 +16,7 @@
     <div class="controls">
       <div v-show="controls.includes('colorSpace')" class="colorspace">
         <span>in</span>
-        <BaseSelect
-aria-label="Select a color method" :options="['lch', 'hsl', 'lab', 'srgb']" :selected="method"
+        <BaseSelect aria-label="Select a color method" :options="['lch', 'hsl', 'lab', 'srgb']" :selected="method"
           @change="onChange" />
       </div>
       <div v-show="controls.includes('stop')" class="range">
@@ -57,7 +56,9 @@ const colorMethod = ref(`in ${props.method}`)
 const colorStopLeft = ref(props.left)
 const colorStopRight = ref(props.right)
 
-const onChange = (v) => (colorMethod.value = `in ${v}`)
+const onChange = (v) => {
+  colorMethod.value = `in ${v}`
+}
 const onRange = (v) => {
   if (typeof v === 'string') {
     colorStopRight.value = Number(v)
