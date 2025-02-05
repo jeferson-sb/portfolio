@@ -1,5 +1,5 @@
 <template>
-  <button class="theme-switcher" @click="toggleTheme" aria-label="Switch theme between light and dark" type="button">
+  <button class="theme-switcher" aria-label="Switch theme between light and dark" type="button" @click="toggleTheme">
     <template v-if="variant === 'fade'">
       <transition name="fade">
         <LampOnSVG v-if="current === 'light'" />

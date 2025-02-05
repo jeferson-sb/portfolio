@@ -1,10 +1,11 @@
 <template>
-  <nav ref="mobileNavbar" class="mobile-navbar" id="mobile-menu">
+  <nav id="mobile-menu" ref="mobileNavbar" class="mobile-navbar">
     <ul class="mobile-navbar-menu">
       <slot></slot>
     </ul>
     <button class="close" @click="$emit('close')">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      <svg
+xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         role="presentation">
         <title>Close</title>
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />

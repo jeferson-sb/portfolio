@@ -1,14 +1,6 @@
 <template>
-  <img
-    loading="lazy"
-    :data-src="src"
-    :data-srcset="srcset"
-    :alt="alt"
-    :class="classes"
-    :width="width"
-    :height="height"
-    :style="`--fallback-bg: ${bgColor};`"
-  />
+  <img loading="lazy" :data-src="src" :data-srcset="srcset" :alt="alt" :class="classes" :width="width" :height="height"
+    :style="`--fallback-bg: ${bgColor};`" />
 </template>
 
 <script setup>
@@ -33,9 +25,11 @@ const props = defineProps({
   },
   width: {
     type: String,
+    default: 'auto'
   },
   height: {
     type: String,
+    default: 'auto',
   },
   bgColor: {
     type: String,

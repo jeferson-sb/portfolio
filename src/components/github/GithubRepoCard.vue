@@ -2,7 +2,7 @@
   <div class="github-repo-card">
     <div class="github-repo-card__heading">
       <h4 class="github-repo-card__title">
-        <AppLink isExternal :to="repository.url">
+        <AppLink is-external :to="repository.url">
           {{ repository.nameWithOwner }}
         </AppLink>
       </h4>
@@ -16,7 +16,7 @@
         <span>{{ repository.primaryLanguage.name }}</span>
       </span>
       <span class="github-repo-pullrequest">
-        <AppLink isExternal :to="url">
+        <AppLink is-external :to="url">
           <PullRequestSVG />
           <span>Last PR #{{ number }}</span>
         </AppLink>
@@ -27,9 +27,18 @@
 
 <script setup>
 defineProps({
-  repository: Object,
-  url: String,
-  number: Number,
+  repository: {
+    type: Object,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  number: {
+    type: Number,
+    required: true,
+  },
 })
 </script>
 

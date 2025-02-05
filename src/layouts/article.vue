@@ -3,10 +3,11 @@
   <Navbar />
   <main id="main-content">
     <article class="article">
-      <ArticleHeading :title="title" :tags="tags" :crosspostedOn="crosspostedOn" :crosspostLink="crosspostLink"
-        :datetime="publishedAt" :displayDate="formattedDate" />
+      <ArticleHeading
+:title="title" :tags="tags" :crossposted-on="crosspostedOn" :crosspost-link="crosspostLink"
+        :datetime="publishedAt" :display-date="formattedDate" />
       <section class="article-grid">
-        <ArticleControls :articleUrl="canonicalUrl" :articleId="id" />
+        <ArticleControls :article-url="canonicalUrl" :article-id="id" />
         <div ref="articleBody" class="article-body">
           <router-view v-slot="{ Component, route }">
             <component :is="Component" :key="route.path" class="article-body-content" />

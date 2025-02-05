@@ -8,11 +8,11 @@ export function useCoffeeStore() {
   const coffee = useCollection(coffeeRef, { once: true })
 
   const addCoffeePoints = async ({ articleId, points, visitorId }) => {
-    if (!articleId || !visitorId) return;
+    if (!articleId || !visitorId) return
 
     try {
-      const userDoc = doc(coffeeRef, visitorId);
-      const userCups = coffee.value.find(cup => cup.id === visitorId);
+      const userDoc = doc(coffeeRef, visitorId)
+      const userCups = coffee.value.find((cup) => cup.id === visitorId)
       const articles = userCups?.articles || {}
 
       await setDoc(userDoc, {
@@ -20,9 +20,9 @@ export function useCoffeeStore() {
           ...articles,
           [articleId]: {
             points,
-            date: Timestamp.fromDate(new Date())
-          }
-        }
+            date: Timestamp.fromDate(new Date()),
+          },
+        },
       })
     } catch (error) {
       console.error('Failed to set coffee points for visitor', error)

@@ -1,12 +1,13 @@
 <template>
-  <AppLink :to="href" class="tag-link" v-if="linkable"><span :class="styles">{{ tagName }}</span></AppLink>
-  <span :class="styles" v-else>{{ tagName }}</span>
+  <AppLink v-if="linkable" :to="href" class="tag-link"><span :class="styles">{{ tagName }}</span></AppLink>
+  <span v-else :class="styles">{{ tagName }}</span>
 </template>
 
 <script setup>
 const props = defineProps({
   tagName: {
     type: String,
+    required: true,
   },
   variant: {
     type: String,

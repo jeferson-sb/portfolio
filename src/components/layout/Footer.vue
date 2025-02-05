@@ -6,13 +6,13 @@
         <span>@2021 - Present. All rights reserved.</span>
       </p>
       <div class="built-tech">
-        <AppLink to="https://www.netlify.com/" aria-label="Hosted on Netlify" isExternal>
+        <AppLink to="https://www.netlify.com/" aria-label="Hosted on Netlify" is-external>
           <NetlifyLogoSVG />
         </AppLink>
-        <AppLink to="https://vuejs.org/" aria-label="Built with Vue" title="Built with Vue.js" isExternal>
+        <AppLink to="https://vuejs.org/" aria-label="Built with Vue" title="Built with Vue.js" is-external>
           <VueSVG />
         </AppLink>
-        <AppLink to="https://www.github.com/" aria-label="Source Code on Github" isExternal>
+        <AppLink to="https://www.github.com/" aria-label="Source Code on Github" is-external>
           <OctocatSVG />
         </AppLink>
       </div>

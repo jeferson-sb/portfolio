@@ -1,6 +1,6 @@
 <template>
   <div class="tags">
-    <Tag v-for="tag in tags" :key="tag" :tagName="tag" :linkable="linkable" />
+    <Tag v-for="tag in tags" :key="tag" :tag-name="tag" :linkable="linkable" />
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 defineProps({
   tags: {
     type: Array,
+    required: true,
   },
   linkable: {
     type: Boolean

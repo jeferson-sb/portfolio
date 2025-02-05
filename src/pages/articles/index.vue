@@ -1,9 +1,10 @@
 <template>
   <GalaxyBackground>
     <ArticlesHero />
-    <section class="container collection" id="main-content">
-      <PostPreview v-for="article in allArticles" :key="article.id" :title="article.title"
-        :date="new Date(article.date)" :href="article.path" :articleId="article.articleId" :excerpt="article.excerpt"
+    <section id="main-content" class="container collection">
+      <PostPreview
+v-for="article in allArticles" :key="article.id" :title="article.title"
+        :date="new Date(article.date)" :href="article.path" :article-id="article.articleId" :excerpt="article.excerpt"
         :tags="article.tags" size="long" />
     </section>
   </GalaxyBackground>

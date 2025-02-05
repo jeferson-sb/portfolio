@@ -2,7 +2,7 @@
   <a v-if="isExternal" :href="to" v-bind="$attrs" :class="classes" target="_blank" rel="noopener noreferrer">
     <slot />
   </a>
-  <router-link :to="to" v-else>
+  <router-link v-else :to="to">
     <slot />
   </router-link>
 </template>
@@ -11,7 +11,10 @@
 import { reactive } from 'vue'
 
 const props = defineProps({
-  to: String,
+  to: {
+    type: String,
+    required: true,
+  },
   isExternal: {
     type: Boolean,
     default: false,

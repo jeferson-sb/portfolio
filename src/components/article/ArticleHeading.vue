@@ -20,21 +20,27 @@
 const props = defineProps({
   title: {
     type: String,
+    required: true,
   },
   datetime: {
     type: String,
+    required: true,
   },
   displayDate: {
     type: String,
+    required: true,
   },
   crosspostedOn: {
     type: String,
+    default: null,
   },
   crosspostLink: {
     type: String,
+    default: null,
   },
   tags: {
     type: Array,
+    required: true,
   },
 })
 </script>

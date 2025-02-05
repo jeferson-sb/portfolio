@@ -5,14 +5,14 @@
         <h1 class="hero__headline"><span class="tag">{{ tag }}</span> Articles</h1>
       </div>
     </div>
-    <section class="container collection" id="main-content">
+    <section id="main-content" class="container collection">
       <PostPreview
         v-for="article in allArticles"
         :key="article.id"
         :title="article.title"
         :date="new Date(article.date)"
         :href="article.path"
-        :articleId="article.articleId"
+        :article-id="article.articleId"
         :excerpt="article.excerpt"
         :tags="article.tags"
         size="long"

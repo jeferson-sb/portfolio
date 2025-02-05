@@ -11,7 +11,7 @@
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="tags.split(',')" />
-        <AppLink variant="button" full isExternal :to="github" :id="buttonId"
+        <AppLink :id="buttonId" variant="button" full is-external :to="github"
           :aria-labelledby="`${titleId} ${buttonId}`">
           Github
         </AppLink>
@@ -24,11 +24,26 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  thumbnail: String,
-  title: String,
-  description: String,
-  tags: String,
-  github: String,
+  thumbnail: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  tags: {
+    type: String,
+    required: true,
+  },
+  github: {
+    type: String,
+    required: true,
+  },
 })
 
 const titleSlug = props.title.toLowerCase().replaceAll(' ', '')

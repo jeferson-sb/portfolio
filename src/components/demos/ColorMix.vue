@@ -3,7 +3,7 @@
     <svg width="300" height="100" viewBox="0 0 100 100">
       <defs>
         <clipPath id="mask">
-          <circle r="50%" id="circle-right" cy="50%" cx="0%" stroke-width="1" stroke="#000" fill="none" />
+          <circle id="circle-right" r="50%" cy="50%" cx="0%" stroke-width="1" stroke="#000" fill="none" />
         </clipPath>
       </defs>
       <g>
@@ -14,12 +14,13 @@
       <circle title="Result mix" r="20%" cx="100%" cy="50%" stroke-width="0" stroke="#000" fill="var(--result)" />
     </svg>
     <div class="controls">
-      <div class="colorspace" v-show="controls.includes('colorSpace')">
+      <div v-show="controls.includes('colorSpace')" class="colorspace">
         <span>in</span>
-        <BaseSelect aria-label="Select a color method" :options="['lch', 'hsl', 'lab', 'srgb']" @change="onChange"
-          :selected="method" />
+        <BaseSelect
+aria-label="Select a color method" :options="['lch', 'hsl', 'lab', 'srgb']" :selected="method"
+          @change="onChange" />
       </div>
-      <div class="range" v-show="controls.includes('stop')">
+      <div v-show="controls.includes('stop')" class="range">
         <span>L {{ colorStopLeft }}%</span>
         <BaseRange @input="onRange" />
         <span>R {{ colorStopRight }}%</span>

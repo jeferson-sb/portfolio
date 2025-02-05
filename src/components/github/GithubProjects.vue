@@ -2,8 +2,9 @@
   <section class="github-projects container">
     <h3>Open Source</h3>
     <h4>Latest contributions <small>(monthly updated)</small></h4>
-    <div class="github-repositories" v-if="pullRequests?.length">
-      <GithubRepoCard v-for="pr in pullRequests" :key="pr.node.id" :repository="pr.node.repository" :url="pr.node.url"
+    <div v-if="pullRequests?.length" class="github-repositories">
+      <GithubRepoCard
+v-for="pr in pullRequests" :key="pr.node.id" :repository="pr.node.repository" :url="pr.node.url"
         :number="pr.node.number" />
     </div>
     <GithubCardEmpty v-else />

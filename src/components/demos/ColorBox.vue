@@ -7,7 +7,10 @@
 
 <script setup>
 const props = defineProps({
-  color: String,
+  color: {
+    type: String,
+    required: true,
+  },
   size: {
     type: String,
     default: "100",

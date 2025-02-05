@@ -2,7 +2,7 @@
   <div class="article-controls">
     <ShareButton :link="articleUrl" />
     <Button circle href="/articles" variant="outline" title="See all articles">
-      <template v-slot:icon>
+      <template #icon>
         <PagesSVG />
       </template>
     </Button>
@@ -15,7 +15,16 @@
 import { useCoffeeControl } from '@/composables/useCoffeeControl';
 import { formatPoints } from '@lib/formatters/formatPoints'
 
-const { articleUrl, articleId } = defineProps(['articleUrl', 'articleId'])
+const { articleUrl, articleId } = defineProps({
+  articleUrl: {
+    type: String,
+    required: true
+  },
+  articleId: {
+    type: String,
+    required: true
+  }
+})
 
 const { points, allCupsCoffee } = useCoffeeControl({ articleUrl, articleId })
 

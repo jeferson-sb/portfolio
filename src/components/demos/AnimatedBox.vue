@@ -6,8 +6,14 @@
 
 <script setup>
 const props = defineProps({
-  transition: String,
-  transform: String,
+  transition: {
+    type: String,
+    required: true,
+  },
+  transform: {
+    type: String,
+    default: 'unset',
+  },
   delay: {
     type: Number,
     default: 0,

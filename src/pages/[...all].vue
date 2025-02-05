@@ -3,17 +3,18 @@
     <transition name="swirl">
       <div v-if="!state.isComputerDead" class="content">
         <img src="@/assets/img/meme.png" alt="Doge" loading="lazy" class="doge" width="200" />
-        <img src="@/assets/img/water_drop.png" alt="water drop" loading="lazy" class="sweat" width="30"
-          v-if="state.isCrashing" />
+        <img
+v-if="state.isCrashing" src="@/assets/img/water_drop.png" alt="water drop" loading="lazy" class="sweat"
+          width="30" />
 
         <div :class="consoleStyles">
-          <pre>me@cia ~ $ {{ state.commandHistory[0] || state.prompt }} <span class="cursor" v-show="state.nextLine === 1"></span></pre>
+          <pre>me@cia ~ $ {{ state.commandHistory[0] || state.prompt }} <span v-show="state.nextLine === 1" class="cursor"></span></pre>
           <pre
-            v-show="state.nextLine >= 2">Enter password: {{ state.commandHistory[1] || state.prompt }} <span class="cursor" v-show="state.nextLine === 2"></span></pre>
+            v-show="state.nextLine >= 2">Enter password: {{ state.commandHistory[1] || state.prompt }} <span v-show="state.nextLine === 2" class="cursor"></span></pre>
           <pre
-            v-show="state.nextLine >= 3">mysql> {{ state.commandHistory[2] || state.prompt }}<span class="cursor" v-show="state.nextLine === 3"></span></pre>
-          <pre class="breakline" v-show="state.nextLine >= 4">uh-oh....</pre>
-          <pre class="breakline" v-show="state.nextLine >= 5">
+            v-show="state.nextLine >= 3">mysql> {{ state.commandHistory[2] || state.prompt }}<span v-show="state.nextLine === 3" class="cursor"></span></pre>
+          <pre v-show="state.nextLine >= 4" class="breakline">uh-oh....</pre>
+          <pre v-show="state.nextLine >= 5" class="breakline">
 [ERROR] ... beep boop ...</pre>
         </div>
 

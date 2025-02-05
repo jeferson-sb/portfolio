@@ -6,7 +6,6 @@ import debounce from '@lib/handling/debounce'
 import { getVisitorId } from '@lib/visitor/getVisitorId'
 import { useCoffeeStore } from '@/composables/useCoffeeStore'
 
-
 export function useCoffeeControl({ articleId, articleUrl }) {
   if (!articleId && !articleUrl) {
     throw new Error('Article url and id are required')

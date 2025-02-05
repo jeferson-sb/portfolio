@@ -1,5 +1,10 @@
 <script setup>
-defineProps(['marker'])
+defineProps({
+  marker: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <template>

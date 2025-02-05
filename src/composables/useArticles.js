@@ -6,7 +6,8 @@ export function useArticles(options) {
   const tag = options?.tag
 
   const articles = computed(() => {
-    return router.getRoutes()
+    return router
+      .getRoutes()
       .filter((route) => {
         const isArticle = route.path.startsWith('/articles/') && route.name
         const tags = route.meta?.frontmatter?.tags
@@ -21,7 +22,9 @@ export function useArticles(options) {
         return isArticle
       })
       .sort((a, b) =>
-        a.meta.frontmatter.published_at < b.meta.frontmatter.published_at ? 1 : -1
+        a.meta.frontmatter.published_at < b.meta.frontmatter.published_at
+          ? 1
+          : -1
       )
       .map((article) => ({
         id: article.meta?.frontmatter?.id,

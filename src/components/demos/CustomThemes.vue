@@ -1,17 +1,17 @@
 <template>
   <div class="theme-control">
-    <input type="radio" name="theme" id="warm" value="warm" v-model="theme" />
+    <input id="warm" v-model="theme" type="radio" name="theme" value="warm" />
     <label for="warm">Warm</label>
 
-    <input type="radio" name="theme" id="dark" value="dark" v-model="theme" />
+    <input id="dark" v-model="theme" type="radio" name="theme" value="dark" />
     <label for="dark">Dark</label>
 
     <input
+      id="spacegray"
+      v-model="theme"
       type="radio"
       name="theme"
-      id="spacegray"
       value="spacegray"
-      v-model="theme"
     />
     <label for="spacegray">Spacegray</label>
 
@@ -47,14 +47,14 @@ export default {
       },
     }
   },
-  mounted() {
-    this.setTheme(this.theme)
-  },
   watch: {
     theme() {
       this.$refs.body.style = ''
       this.setTheme(this.theme)
     },
+  },
+  mounted() {
+    this.setTheme(this.theme)
   },
   methods: {
     setTheme(theme) {

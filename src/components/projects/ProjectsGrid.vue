@@ -1,5 +1,5 @@
 <template>
-  <section class="projects-grid container" id="projects">
+  <section id="projects" class="projects-grid container">
     <h3>Projects</h3>
     <ProjectCard
       v-for="project in highlightedProjects"

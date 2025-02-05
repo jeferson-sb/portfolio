@@ -14,13 +14,13 @@
         />
       </svg>
     </label>
-    <input type="color" name="color" id="color" v-model.lazy="color" />
+    <input id="color" v-model.lazy="color" type="color" name="color" />
 
     <div class="shades">
       <span
-        class="box"
         v-for="i in 6"
         :key="i"
+        class="box"
         :style="`background-color: var(--base-${i * 10});`"
       ></span>
     </div>

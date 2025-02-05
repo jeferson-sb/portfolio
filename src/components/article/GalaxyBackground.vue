@@ -1,5 +1,5 @@
 <template>
-  <main class="main galaxy-pattern" ref="main">
+  <main ref="main" class="main galaxy-pattern">
     <slot />
   </main>
 </template>

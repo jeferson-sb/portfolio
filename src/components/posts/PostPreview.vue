@@ -8,15 +8,15 @@
     </div>
 
     <AppLink :to="href">
-      <h4 class="post-preview__title" :id="articleId">{{ title }}</h4>
+      <h4 :id="articleId" class="post-preview__title">{{ title }}</h4>
     </AppLink>
 
-    <Tag tagName="NEW" variant="accent" v-show="size === 'short' && isRecentPost" />
+    <Tag v-show="size === 'short' && isRecentPost" tag-name="NEW" variant="accent" />
     <template v-if="size === 'long'">
       <p class="post-preview__description">
         {{ excerpt }}
       </p>
-      <Button colorScheme="white" :href="href" :aria-describedby="articleId"> Read more </Button>
+      <Button color-scheme="white" :href="href" :aria-describedby="articleId"> Read more </Button>
     </template>
   </article>
 </template>
@@ -27,15 +27,19 @@ import { computed } from 'vue'
 const props = defineProps({
   date: {
     type: Date,
+    required: true,
   },
   title: {
     type: String,
+    required: true,
   },
   href: {
     type: String,
+    required: true,
   },
   articleId: {
     type: String,
+    required: true,
   },
   excerpt: {
     type: String,
@@ -43,6 +47,7 @@ const props = defineProps({
   },
   tags: {
     type: String,
+    required: true,
   },
   size: {
     type: String,
@@ -117,6 +122,7 @@ const formattedDate = computed(() =>
   display: -webkit-box;
   -webkit-line-clamp: var(--max-lines);
   -webkit-box-orient: vertical;
+  line-clamp: var(--max-lines);
   overflow: hidden;
   color: var(--color-gray-200);
 }
