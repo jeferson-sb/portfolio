@@ -1,7 +1,6 @@
 <template>
   <button aria-label="menu" class="hamburger-menu" @click="$emit('toggle')">
     <span class="bar top"></span>
-    <span class="bar middle"></span>
     <span class="bar bottom"></span>
   </button>
 </template>
@@ -15,7 +14,7 @@ defineEmits(['toggle'])
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  height: 1.5rem;
+  height: 1rem;
   width: 2rem;
   background: transparent;
   border: 1px solid transparent;
