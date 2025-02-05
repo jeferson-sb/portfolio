@@ -3,8 +3,7 @@
   <Navbar />
   <main id="main-content">
     <article class="article">
-      <ArticleHeading
-:title="title" :tags="tags" :crossposted-on="crosspostedOn" :crosspost-link="crosspostLink"
+      <ArticleHeading :title="title" :tags="tags" :crossposted-on="crosspostedOn" :crosspost-link="crosspostLink"
         :datetime="publishedAt" :display-date="formattedDate" />
       <section class="article-grid">
         <ArticleControls :article-url="canonicalUrl" :article-id="id" />
@@ -21,7 +20,6 @@
 
 <script setup>
 import { computed, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import lozad from 'lozad'
 import config from '@/config/siteconfig.json'

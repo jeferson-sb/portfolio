@@ -2,8 +2,7 @@
   <GalaxyBackground>
     <ArticlesHero />
     <section id="main-content" class="container collection">
-      <PostPreview
-v-for="article in allArticles" :key="article.id" :title="article.title"
+      <PostPreview v-for="article in allArticles" :key="article.id" :title="article.title"
         :date="new Date(article.date)" :href="article.path" :article-id="article.articleId" :excerpt="article.excerpt"
         :tags="article.tags" size="long" />
     </section>
@@ -11,9 +10,7 @@ v-for="article in allArticles" :key="article.id" :title="article.title"
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
-import { useArticles } from '@/composables/useArticles'
-import { useHead } from '@unhead/vue'
+import config from '@/config/siteconfig.json'
 
 const title = 'Articles • Jeferson S. Brito'
 const description =
@@ -32,7 +29,7 @@ useHead({
     { property: 'og:type', content: 'article' },
     { property: 'og:title', content: title },
     { property: 'og:description', content: description },
-    { property: 'og:url', content: `https://jefersonsilva.me${path}` },
+    { property: 'og:url', content: `${config.siteUrl}${path}` },
     {
       property: 'twitter:title',
       content: title,

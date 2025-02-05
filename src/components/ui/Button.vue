@@ -19,7 +19,7 @@ export default {
       type: String,
       default: 'gray',
       validator(val) {
-        return ['cyan', 'white', 'gray']
+        return ['cyan', 'white', 'gray'].includes(val)
       }
     },
     size: {

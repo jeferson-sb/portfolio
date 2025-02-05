@@ -3,8 +3,7 @@
     <transition name="swirl">
       <div v-if="!state.isComputerDead" class="content">
         <img src="@/assets/img/meme.png" alt="Doge" loading="lazy" class="doge" width="200" />
-        <img
-v-if="state.isCrashing" src="@/assets/img/water_drop.png" alt="water drop" loading="lazy" class="sweat"
+        <img v-if="state.isCrashing" src="@/assets/img/water_drop.png" alt="water drop" loading="lazy" class="sweat"
           width="30" />
 
         <div :class="consoleStyles">
@@ -34,8 +33,6 @@ v-if="state.isCrashing" src="@/assets/img/water_drop.png" alt="water drop" loadi
 
 <script setup>
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { useHead } from '@unhead/vue'
 
 import config from '../config/siteconfig.json'
 
@@ -359,6 +356,7 @@ main {
 }
 
 @keyframes cursor {
+
   0%,
   100% {
     opacity: 1;

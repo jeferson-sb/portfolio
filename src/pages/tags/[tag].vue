@@ -6,23 +6,14 @@
       </div>
     </div>
     <section id="main-content" class="container collection">
-      <PostPreview
-        v-for="article in allArticles"
-        :key="article.id"
-        :title="article.title"
-        :date="new Date(article.date)"
-        :href="article.path"
-        :article-id="article.articleId"
-        :excerpt="article.excerpt"
-        :tags="article.tags"
-        size="long"
-      />
+      <PostPreview v-for="article in allArticles" :key="article.id" :title="article.title"
+        :date="new Date(article.date)" :href="article.path" :article-id="article.articleId" :excerpt="article.excerpt"
+        :tags="article.tags" size="long" />
     </section>
   </GalaxyBackground>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
 import { useArticles } from '@/composables/useArticles'
 
 const { params } = useRoute()
@@ -32,7 +23,6 @@ const allArticles = useArticles({ tag });
 </script>
 
 <style scoped>
-
 .hero {
   background-color: var(--accent-color-lighter, var(--color-gray-800));
   box-shadow: var(--elevation-2);

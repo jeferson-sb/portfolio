@@ -1,5 +1,5 @@
-import path from 'path'
-import fs from 'fs'
+import path from 'node:path'
+import fs from 'node:fs'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
@@ -53,8 +53,8 @@ export default defineConfig({
     Layouts(),
 
     AutoImport({
-      imports: ['vue', 'vue-router'],
-      dirs: ['./composables']
+      imports: ['vue', 'vue-router', { '@unhead/vue': ['useHead'] }],
+      dirs: ['src/composables']
     }),
 
     Components({

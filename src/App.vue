@@ -1,5 +1,4 @@
 <script setup>
-import { useHead } from '@unhead/vue'
 import config from '@/config/siteconfig.json'
 
 useHead({

@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { useCoffeeControl } from '@/composables/useCoffeeControl';
 import { formatPoints } from '@lib/formatters/formatPoints'
 
 const { articleUrl, articleId } = defineProps({
