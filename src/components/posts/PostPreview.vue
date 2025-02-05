@@ -171,22 +171,20 @@ const formattedDate = computed(() =>
   }
 }
 
-.post-preview {
-  a:not(.button) {
-    color: inherit;
+.post-preview a:not(.button) {
+  color: inherit;
 
-    &:hover {
-      text-decoration: unset;
-    }
+  &:hover {
+    text-decoration: unset;
+  }
 
-    &:hover .post-preview__title {
-      color: var(--color-primary);
-      transition: color 300ms ease-in-out;
-    }
+  &:hover .post-preview__title {
+    color: var(--color-primary);
+    transition: color 300ms ease-in-out;
+  }
 
-    &:focus:not(:focus-visible) {
-      outline-color: transparent;
-    }
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
   }
 }
 

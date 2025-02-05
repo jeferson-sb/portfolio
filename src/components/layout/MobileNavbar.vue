@@ -95,7 +95,6 @@ onMounted(() => {
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .mobile-navbar {
     backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
   }
 }
 
@@ -108,7 +107,7 @@ onMounted(() => {
   }
 
   & .navbar-menu__item {
-    animation: fadeIn 400ms ease-in forwards;
+    animation: fade-in 400ms ease-in forwards;
   }
 }
 
@@ -123,7 +122,7 @@ onMounted(() => {
   }
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   0% {
     transform: translateX(-100px);
     opacity: 0;

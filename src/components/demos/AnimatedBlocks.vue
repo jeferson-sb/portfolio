@@ -1,6 +1,6 @@
 <template>
   <div class="blocks">
-    <span class="block" v-for="i in 3" :key="i" :style="`--order: ${i}`"></span>
+    <span v-for="i in 3" :key="i" class="block" :style="`--order: ${i}`"></span>
   </div>
 </template>
 
@@ -19,7 +19,7 @@
   border-radius: var(--radius-default);
   width: var(--w, 4rem);
   height: var(--h, 4rem);
-  animation: dropIn 4s ease-out infinite forwards;
+  animation: drop-in 4s ease-out infinite forwards;
   animation-delay: calc(var(--order) * 500ms);
 }
 
@@ -31,7 +31,7 @@
   --hsl: 180 50% 50%;
 }
 
-@keyframes dropIn {
+@keyframes drop-in {
   20% {
     opacity: 0;
     transform: translateY(-20%);

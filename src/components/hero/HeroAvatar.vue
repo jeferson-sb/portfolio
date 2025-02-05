@@ -63,12 +63,12 @@ defineProps({
     transform: translate(-50%, -50%) rotate(0deg);
     outline: 8px inset var(--avatar-outline-color);
     border-radius: 9999px;
-    animation: rotateOutline 20s linear infinite normal both;
+    animation: rotate-outline 20s linear infinite normal both;
     will-change: transform;
   }
 }
 
-@keyframes rotateOutline {
+@keyframes rotate-outline {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }

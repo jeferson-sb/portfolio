@@ -142,6 +142,10 @@ onMounted(() => {
     }
   }
 
+  & em {
+    color: var(--color-accent);
+  }
+
   & blockquote {
     border-left: 2px solid var(--color-primary);
     background-color: var(--accent-color-lighter, var(--color-gray-800));
@@ -181,10 +185,6 @@ onMounted(() => {
     margin: 2rem 0;
     opacity: 0.5;
     border-color: var(--color-silver);
-  }
-
-  & em {
-    color: var(--color-accent);
   }
 
   & kbd {

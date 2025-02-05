@@ -60,15 +60,6 @@ const classes = computed(() => ({
 </script>
 
 <style scoped>
-body[data-theme='light'] {
-  .social-media-icons a {
-    svg,
-    svg path {
-      fill: var(--color-default-black);
-    }
-  }
-}
-
 .social-media-icons {
   display: flex;
   align-items: center;
@@ -105,6 +96,16 @@ body[data-theme='light'] {
     transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
     transition-property: transform, fill, box-shadow;
     will-change: transform;
+  }
+}
+
+body[data-theme='light'] {
+  .social-media-icons a {
+
+    svg,
+    svg path {
+      fill: var(--color-default-black);
+    }
   }
 }
 

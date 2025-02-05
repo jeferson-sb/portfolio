@@ -102,12 +102,14 @@ const toggleMenu = (open) => {
   align-items: center;
 }
 
-.navbar-menu:has(:hover) .navbar-menu__item:not(:hover) {
-  opacity: 0.7;
-}
-
 .navbar-menu__link {
   letter-spacing: 1.2px;
+  outline-color: transparent;
+
+  &:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 10px;
+  }
 }
 
 .navbar-menu .navbar-menu__item {
@@ -142,27 +144,14 @@ const toggleMenu = (open) => {
     cursor: pointer;
     text-decoration: none;
   }
-
-  &+.navbar-menu__item {
-    margin-inline-start: 18px;
-  }
 }
 
 .navbar-menu .navbar-menu__item+.navbar-menu__item {
   margin-inline-start: 30px;
 }
 
-.navbar-menu .navbar-menu__item+.navbar-menu__item {
-  margin-inline-start: 30px;
-}
-
-.navbar-menu__link {
-  outline-color: transparent;
-
-  &:focus-visible {
-    outline: 2px dashed var(--color-primary);
-    outline-offset: 10px;
-  }
+.navbar-menu:has(:hover) .navbar-menu__item:not(:hover) {
+  opacity: 0.7;
 }
 
 body[data-theme='light'] {
@@ -178,7 +167,6 @@ body[data-theme='light'] {
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .nav {
     background-color: hsl(216deg 8.77% 11.18% / 30%);
-    backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
   }
 }
