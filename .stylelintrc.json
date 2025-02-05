@@ -2,5 +2,14 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-recommended-vue"
-  ]
+  ],
+  "rules": {
+    "declaration-block-no-redundant-longhand-properties": null,
+    "custom-property-empty-line-before": null,
+    "selector-class-pattern": null,
+    "media-feature-range-notation": "prefix",
+    "comment-empty-line-before": "always",
+    "declaration-no-important": true,
+    "max-nesting-depth": 3
+  }
 }
