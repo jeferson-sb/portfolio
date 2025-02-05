@@ -8,33 +8,37 @@
 
 ## Getting started
 
+> [!IMPORTANT]
+> I appreciate your interest in adapting or modifying this project to fit your needs. Just a gentle reminder, if you do choose to fork or make changes, please ensure proper credit is given for the original work. Thank you!
+
 ### Clone repository
 
 ```bash
-$ git clone https://github.com/jeferson-sb/portfolio.git
+git clone https://github.com/jeferson-sb/portfolio.git
 ```
 
 ### Install dependencies
 
 ```sh
-$ cd portfolio
-$ npm i
+cd portfolio
+pnpm install
 ```
 
 ### Start local dev server
 
 ```sh
-$ npm run dev
+pnpm dev
 ```
 
 ### Linting
 
 ```sh
-$ npm run lint
+pnpm lint:js
+pnpm lint:css
 ```
 
 ### Formatting
 
 ```sh
-$ npm run prettier
+pnpm format
 ```
