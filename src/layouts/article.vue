@@ -7,11 +7,9 @@
         :datetime="publishedAt" :display-date="formattedDate" />
       <section class="article-grid">
         <ArticleControls :article-url="canonicalUrl" :article-id="id" />
-        <div ref="articleBody" class="article-body">
-          <router-view v-slot="{ Component, route }">
-            <component :is="Component" :key="route.path" class="article-body-content" />
-          </router-view>
-        </div>
+        <router-view v-slot="{ Component, route }">
+          <component :is="Component" :key="route.path" class="article-body-content" />
+        </router-view>
       </section>
     </article>
   </main>
@@ -83,22 +81,27 @@ onMounted(() => {
   grid-template-columns: 1fr min(var(--content-width), 100%) 1fr;
   justify-items: end;
   gap: 1rem;
+  /* kind hacky, but does the job */
+  grid-template-rows: 0;
 }
 
-.article-body {
-  margin: 0 auto;
-  font-size: clamp(var(--text-base), 0.9697rem + 0.1294vw, var(--text-lg));
-  font-family: var(--font-serif);
+.article-body-content .fullbleed {
+  width: 100%;
+  grid-column: 1 / -1;
 }
 
 .article-body-content {
-  --article-width: 75ch;
+  --content-width: 75ch;
 
+  grid-column: span 3;
   display: grid;
-  grid-template-columns: 1fr min(var(--article-width), 100%) 1fr;
+  grid-template-columns: subgrid;
+
+  font-size: clamp(var(--text-base), 0.9697rem + 0.1294vw, var(--text-lg));
+  font-family: var(--font-serif);
 
   &>* {
-    grid-column: 1 / -1;
+    grid-column: 2;
   }
 
   & :is(h2, h3) {
@@ -242,10 +245,7 @@ onMounted(() => {
 @media (--vw-md) {
   .article-grid {
     --content-width: 1fr;
-  }
-
-  .article-body-content {
-    --article-width: 1fr;
+    grid-template-rows: auto;
   }
 }
 

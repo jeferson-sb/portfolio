@@ -19,7 +19,7 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  fullBleed: {
+  fullbleed: {
     type: Boolean,
     default: false,
   },
@@ -43,7 +43,7 @@ const props = defineProps({
 
 const classes = computed(() => ({
   lozad: true,
-  'full-bleed': props.fullBleed,
+  'fullbleed': props.fullbleed,
   contain: props.fit === 'contain',
   cover: props.fit === 'cover',
 }))
@@ -52,6 +52,14 @@ const classes = computed(() => ({
 <style scoped>
 .cover {
   object-fit: cover;
+}
+
+.wide-aspect-ratio {
+  aspect-ratio: 16/9;
+}
+
+.low-aspect-ratio {
+  aspect-ratio: 4/3;
 }
 
 .contain {

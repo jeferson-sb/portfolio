@@ -29,7 +29,7 @@ These guidelines are group in four principles:
 - Understandable: Users must be able to understand the information as well as the operation of the interface.
 - Robust: Users must be able to consume the same web content by different browsers and assistive technologies.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-banner.png?alt=media&token=283cad1b-a4d7-43ce-b4d3-c60d062ec636" alt="Human sense banner" width="100%" height="560" fullBleed />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-banner.png?alt=media&token=283cad1b-a4d7-43ce-b4d3-c60d062ec636" alt="Human sense banner" width="100%" height="560" fit="cover" fullbleed />
 
 **WebAIM** is a sort of short version or summary of the WCAG guidelines as a [checklist](https://webaim.org/standards/wcag/checklist) to help identify what you need to implement.
 

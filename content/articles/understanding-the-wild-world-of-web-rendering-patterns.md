@@ -7,7 +7,7 @@ excerpt: SSR, SSG, ISR, PPR—these are acronyms that might initially seem like 
 slug: understanding-the-wild-world-of-web-rendering-patterns
 crosspostedOn: ''
 crosspostLink: ''
-og_image: 'https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Funderstanding-the-wild-world-of-web-rendering-patterns.webp?alt=media&token=c937218e-e20e-4886-9c93-0ced3896b22e'
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Funderstanding-the-wild-world-of-web-rendering-patterns.webp?alt=media&token=c937218e-e20e-4886-9c93-0ced3896b22e
 ---
 
 SSR, SSG, ISR, PPR—these are acronyms that might initially seem like a confusing and intimidating alphabet soup.  However, understanding them doesn't have to be a daunting task. Each of these terms represents a different strategy or methodology, and with a little bit of explanation, they can become much clearer and less frightening.
