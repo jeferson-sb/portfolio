@@ -7,6 +7,7 @@ excerpt: Components are the building blocks of user interfaces and the base foun
 slug: getting-started-low-level-components
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fgetting-started-low-level-components.webp?alt=media&token=27eb78ed-8342-44d1-a093-8c1f95bf369d
 ---
 
 Components are the _building blocks_ of user interfaces and the base foundation of many UI frameworks. They are not just a combination of some markup, props, and state as you need to take care of accessibility features, event handling, user interaction, styling, and testing if you want to guarantee a good user experience.

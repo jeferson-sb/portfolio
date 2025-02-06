@@ -10,7 +10,7 @@ crosspostLink: https://dev.to/jeferson_sb/devtools-features-you-might-not-know-a
 url: https://dev.to/jeferson_sb/devtools-features-you-might-not-know-about-371m
 path: /articles/devtools-features-you-might-not-know-about-371m
 canonicalUrl: https://dev.to/jeferson_sb/devtools-features-you-might-not-know-about-371m
-coverImage: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/603v3sacknru4f8u3dcd.png
+og_image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/603v3sacknru4f8u3dcd.png
 ---
 
 Chrome dev tools is a suite of tools that, we web developers, can use on our daily basis to prototype, analyze and debug our Javascript, CSS, and HTML code.

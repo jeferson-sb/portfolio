@@ -10,7 +10,7 @@ crosspostLink: https://dev.to/jeferson_sb/vue-3-0-is-finally-out-1jj7
 url: https://dev.to/jeferson_sb/vue-3-0-is-finally-out-1jj7
 path: /articles/vue-3-0-is-finally-out-1jj7
 canonicalUrl: https://dev.to/jeferson_sb/vue-3-0-is-finally-out-1jj7
-cover_image: https://res.cloudinary.com/practicaldev/image/fetch/s--rPczvTck--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/tfrvwtetqrzwyp573kwb.png
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fvue-3-is-finally-out.webp?alt=media&token=25764fa4-6582-45ec-83dd-4c5bf0720489
 ---
 
 The new major version of Vue is here! after 2 years of development one of the most popular JavaScript frameworks is full of new capabilities and much more approachable for large applications.
@@ -25,6 +25,7 @@ We will go through some of the exciting new features and see how the new release
 - [New Global API](#new-global-api)
 - [New Features](#new-features)
   - [Composition API](#composition-api)
+  - [How composition works](#how-composition-works)
   - [Benefits:](#benefits)
   - [Better TypeScript support](#better-typescript-support)
   - [Suspense](#suspense)

@@ -7,6 +7,7 @@ excerpt: Did you ever have a hard time trying to override a CSS of an element? W
 slug: cascade-layers
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Forganise-your-css-with-cascade-layers.webp?alt=media&token=e45bc00b-8464-41c3-8105-5677fd3ef246
 ---
 
 Did you ever have a hard time trying to override a CSS of an element? We got this beautify website where we were happy by adding simple selectors and structuring our stylesheets until the team or the product owner decided crank up the site to include widgets, surveys and a bunch of third-party tools.
@@ -40,11 +41,11 @@ But to decide which one gets used we need to understand the steps of the Cascade
 Order of appearance refers to the **order** where the rules are defined, and how they appear is taken into consideration by the cascade. A rule is a combination of a selector + block of declarations.
 
 ```css
-/* 
+/*
 Selector: .component
 Property: background-color
 Declaration: background-color: slateblue;
-Rule: .component { background-color: slateblue } 
+Rule: .component { background-color: slateblue }
 */
 ```
 
@@ -164,7 +165,7 @@ Inline styles are styles added via the html `style` attribute that will override
 
 Cascade Layers are layers of _contained specificity_. They can provide more control over the cascade system.
 
-Layers can be declared using the `@layer` at-rule. 
+Layers can be declared using the `@layer` at-rule.
 
 ```css
 @layer reset, base, layout, components, utilities;
@@ -185,7 +186,7 @@ Based on the previous example:
 @layer base {}
 ```
 
-The first layer (reset) always has the **least** specificity, while the last layer (base) will have the **highest** specificity amongst all **named** layers. 
+The first layer (reset) always has the **least** specificity, while the last layer (base) will have the **highest** specificity amongst all **named** layers.
 
 A single layer can be used multiple times throughout the cascade. Cascade Layers stack in the order they first appear. That means, even if you add another `@layer` statement for an existing layer it won't touch the order of precedence of that layer.
 
@@ -224,7 +225,7 @@ Following the same line, declared layers can contain **nested layers** as well:
 }
 ```
 
-### @import 
+### @import
 
 One of the most exciting  features of Cascade Layers is the possibility to import entire
 stylesheets into new layers:
@@ -250,7 +251,7 @@ Then we can extend or override element's styles without having to worry about ho
     min-height: 44px;
     border-radius: 0;
   }
- 
+
   button:hover,
   button:focus-visible {
     box-shadow: none;
@@ -267,10 +268,10 @@ Earlier, I mentioned that the last declared layers have higher specificity betwe
 
 ```css
 @layer typograghy {
-	h1 { color: slateblue; }  
+	h1 { color: slateblue; }
 }
 
-h1 { color: turquoise; } 
+h1 { color: turquoise; }
 
 /* Result: h1 color will always be turquoise */
 ```
@@ -338,7 +339,7 @@ import "./styles/theme.css";
 ```
 
 We can then start by looking at the `reset.css` stylesheet rules,
-our first and lowest priority layer: 
+our first and lowest priority layer:
 
 ```css
 @layer reset {

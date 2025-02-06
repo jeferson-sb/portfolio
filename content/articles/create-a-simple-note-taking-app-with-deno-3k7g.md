@@ -10,7 +10,7 @@ crosspostLink: https://dev.to/jeferson_sb/create-a-simple-note-taking-app-with-d
 url: https://dev.to/jeferson_sb/create-a-simple-note-taking-app-with-deno-3k7g
 path: /articles/create-a-simple-note-taking-app-with-deno-3k7g
 canonicalUrl: https://dev.to/jeferson_sb/create-a-simple-note-taking-app-with-deno-3k7g
-cover_image: https://res.cloudinary.com/practicaldev/image/fetch/s--C5akmjmD--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/iqgn45udsox4sxpq6olm.png
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fcreate-a-simple-note-taking-app-with-deno.webp?alt=media&token=963ef197-8cc9-4476-9a88-45b8bff590fe
 ---
 
 Since [Deno](https://deno.land/) 1.0 version was released last week it started to really catch the attention of all of us from the JavaScript Community, especially on the server-side of the ecosystem.

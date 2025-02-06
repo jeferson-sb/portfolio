@@ -38,6 +38,7 @@ useHead({
     },
     { property: 'og:description', content: route.meta.frontmatter.excerpt },
     { property: 'og:type', content: 'article' },
+    { property: 'og:image', content: route.meta.frontmatter.og_image },
     {
       name: 'keywords',
       content: route.meta.frontmatter.tags.split(',')
@@ -67,7 +68,7 @@ const formattedDate = computed(() =>
 )
 
 onMounted(() => {
-  const observer = lozad()
+  const observer = lozad('.lozad', { threshold: 0.5, })
   observer.observe()
 })
 </script>

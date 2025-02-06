@@ -7,6 +7,7 @@ excerpt: As developers, we must constantly face daily challenges in our lives an
 slug: go-fast-serverless-netlify-cli
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fnetlify-cli.webp?alt=media&token=9a327625-290a-4e08-8960-c108cda3a2a6
 ---
 
 As developers, we must constantly face daily challenges in our lives and business. From creating new ideas to solving new or existing problems in the real world, we need to have feedback from our consumers, but how can share this solution and get instant feedback?

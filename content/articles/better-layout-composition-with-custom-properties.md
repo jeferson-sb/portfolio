@@ -7,6 +7,7 @@ excerpt: CSS is one of the three Pilars of Modern Web Development, it has evolve
 slug: better-layout-composition-with-custom-properties
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fbetter-layout-composition-with-custom-properties.webp?alt=media&token=4438202d-b773-46e6-b300-d722761a2c86
 ---
 
 CSS is one of the three Pillars of Modern Web Development, it has evolved a lot in the past years both in terms of features and technologies going from preprocessors to CSS-in-JS, CSS modules, and PostCSS. Write good and maintainable CSS code requires study and practice.

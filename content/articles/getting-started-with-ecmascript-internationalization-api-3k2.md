@@ -7,6 +7,7 @@ excerpt: One of the most important aspects of the web is to make it accessible t
 slug: getting-started-with-ecmascript-internationalization-api
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fgetting-started-with-ecmascript-internationalization-api.webp?alt=media&token=9f8dcb71-dd6a-41fb-a09e-e097fedda624
 ---
 
 One of the most important aspects of the web is to make it accessible to everyone, which also means content should be **available in different languages and formats**.

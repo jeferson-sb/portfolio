@@ -7,18 +7,19 @@ excerpt: I have a feeling we are on a constant flux of ever-evoling modern world
 slug: how-to-keep-up
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fhow-to-keep-up.webp?alt=media&token=3236f604-7b3e-41df-b062-c977a1fb633f
 ---
 
 I have a feeling we are in constant flux in the ever-evolving modern world where staying updated is integral to our personal growth. You want to watch every basketball match of your favorite team this season and catch up with new episodes of One Piece but you've stopped on episode 45, watch every talk, follow every new trend, learn every new possible feature, and have a normal life?
 
-How can you possibly keep up with all of this? 
-Short answer: **you can't**. 
+How can you possibly keep up with all of this?
+Short answer: **you can't**.
 
-You could say you were able to do this before, so why suddenly you can't do it anymore? Well, things change all the time, and they change <i>differently</i>. 
+You could say you were able to do this before, so why suddenly you can't do it anymore? Well, things change all the time, and they change <i>differently</i>.
 
 Especially in the **programming realm**, take web development for instance, it seems things are being delivered at an incredible pace right now, and this is for good. Just pause and imagine going back 3 or 4 years ago, how your JavaScript or CSS (especially) code was compared to what it can be today (with no extra tools!), it's crazy how many features we have now.
 
-So, what can you do to still be up to date without being exhausted after being bombarded with information? 
+So, what can you do to still be up to date without being exhausted after being bombarded with information?
 
 Well, I start by sharing some thoughts I had when I had this feeling.
 

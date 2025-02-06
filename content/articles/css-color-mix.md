@@ -7,6 +7,7 @@ excerpt: Color plays a vital role on today's web and also our daily life. And as
 slug: css-color-mix
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fcss-color-mix.webp?alt=media&token=8f77d2f0-72de-4dd1-9483-ac96beb1c9c8
 ---
 
 **Color** plays a _vital role_ in today's web and also our daily life. And as technology progresses, new colors are born in modern displays, monitors, and we need a way to represent them in web too.
@@ -158,18 +159,18 @@ This is especially useful to create gradients without having "dead zones" in the
 Shorter:
 <ColorBox color="
 linear-gradient(
-  to right in lch shorter hue, 
-  lch(41 80 290), 
+  to right in lch shorter hue,
+  lch(41 80 290),
   lch(81 104 150)
-)" size="200" /> 
+)" size="200" />
 
 Longer:
 <ColorBox color="
 linear-gradient(
-  to right in lch longer hue, 
-  lch(41 80 290), 
+  to right in lch longer hue,
+  lch(41 80 290),
   lch(81 104 150)
-)" size="200" /> 
+)" size="200" />
 
 Whether if there is any "best" or go-to colorspace to use it all depends what you're trying to achieve, accuracy and how much support you're expecting from user's devices. Test each one and see what you like the most!
 

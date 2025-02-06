@@ -7,6 +7,7 @@ excerpt: Components can be really powerful to organize your user interface code 
 slug: cdd-part-1
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fcomponent-driven-design.webp?alt=media&token=f6607c93-69f5-4efd-a6b4-ae34bf4a4f89
 ---
 
 A Component is an _identifiable and interchangeable unit_ of a program. It plays an important role not just inside user interfaces but in Software Engineering in general. Components can be highly efficient to organize your user interface code into isolated reusable chunks of code that build the core of the view layer. They are the building blocks of any web application.

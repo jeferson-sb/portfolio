@@ -7,6 +7,7 @@ excerpt: I've previously written about creating components and the various patte
 slug: cdd-part-2
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fcomponent-driven-design-part-2.webp?alt=media&token=3b13949a-6e83-428d-9364-64fdcf4cd685
 ---
 
 I've previously written about creating components and the [various patterns](/articles/component-driven-design) that can be used in different ways to create a variety of outcomes. This time around, we’re going to explore a little more in this field but also understand how things work under the hood to better develop an intuition for creating relisient web applications.

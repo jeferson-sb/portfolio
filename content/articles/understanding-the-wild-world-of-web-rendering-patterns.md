@@ -7,6 +7,7 @@ excerpt: SSR, SSG, ISR, PPR—these are acronyms that might initially seem like 
 slug: understanding-the-wild-world-of-web-rendering-patterns
 crosspostedOn: ''
 crosspostLink: ''
+og_image: 'https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Funderstanding-the-wild-world-of-web-rendering-patterns.webp?alt=media&token=c937218e-e20e-4886-9c93-0ced3896b22e'
 ---
 
 SSR, SSG, ISR, PPR—these are acronyms that might initially seem like a confusing and intimidating alphabet soup.  However, understanding them doesn't have to be a daunting task. Each of these terms represents a different strategy or methodology, and with a little bit of explanation, they can become much clearer and less frightening.
@@ -34,7 +35,7 @@ One of the most important benefits of static pages is that can be easily **cache
     <strong><i>What is the difference between a CDN and Edge?</i></strong>
   </summary>
 
-  Both terms can sound similiar as both CDN and Edge can run globally and deal with high volumes of traffic, 
+  Both terms can sound similar as both CDN and Edge can run globally and deal with high volumes of traffic,
   but generally speaking when we say something is "at the edge" or deployed at the edge we talking about the architecture pattern of edge computing.
 
   In **edge computing**, we can run long tasks/functions in a distributed network close to the user to provide personalized experiences quickly.
@@ -48,12 +49,12 @@ One of the most important benefits of static pages is that can be easily **cache
 
 ### SSG
 
-SSG stands for _Static Site Generation_ and is a rendering pattern used to **pre-render** web pages at **build time**. 
+SSG stands for _Static Site Generation_ and is a rendering pattern used to **pre-render** web pages at **build time**.
 
 Ok, let's break those fancy terms down:
-- _pre-render_ : 
+- _pre-render_ :
   - Pre-rendering refers to the process of generating HTML pages ahead of time before they are ever sent to the users. It usually happens during the build phase of your app.
-- _build time_ : 
+- _build time_ :
   - Build time is when you're _compiling_ the artifacts of your web application. During this phase, you can perform tasks such as data fetching,  transforming, or bundling files.
   - This step is usually triggered by a `npm run build` command.
 
@@ -61,7 +62,7 @@ When we say to **pre-render** it means that by the time a request comes, we only
 
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSG.png?alt=media&token=0ffb7caf-cbca-4243-a821-9953ba5eda0f" alt="diagram explaning the ssg build process" width="870" height="500" fit="contain" />
 
-The nicest thing is you can run any arbitrary code when generating those pages, including performing database queries, getting content from a CMS, calling external resources, etc. 
+The nicest thing is you can run any arbitrary code when generating those pages, including performing database queries, getting content from a CMS, calling external resources, etc.
 
 By default the number of generated HTML pages generated at build time will depend on how many pages you have stored on your app, it can be the products you're listing,
 posts you've written, etc. Usually, the framework you're using will give you the option to dictate which pages need to be generated ahead of time, for example,
@@ -182,7 +183,7 @@ Cache-Control: private, max-age=60
 ```
 
 `private` tells the browser to only keep a copy of that file/response on the client side and prevent the same response from being cached
-by external servers. 
+by external servers.
 
 ### Stale-while-revalidate
 
@@ -197,7 +198,7 @@ Cache-Control: max-age=300, stale-while-revalidate=60
 
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/swr.png?alt=media&token=8d855734-16b0-400d-b89b-10ef4228e93b" width="870" height="280" fit="contain" />
 
-In the above example, we tell the browser that the specific resource/file will stay in cache for 5 minutes, and once the user requests that same URL **after** this time, the browser will kick the revalidation process for 1 more minute (60 sec) so the server can regenerate a new page for the subsequent requests. 
+In the above example, we tell the browser that the specific resource/file will stay in cache for 5 minutes, and once the user requests that same URL **after** this time, the browser will kick the revalidation process for 1 more minute (60 sec) so the server can regenerate a new page for the subsequent requests.
 
 So we're saying that the file can be *stale* for 1 minute before being served with fresh content.
 
@@ -207,14 +208,14 @@ Now that you have a good grasp of how to do caching of network requests, let's p
 
 ### ISR
 
-Remember the first example I showed you about SSG where you could generate N pages during build time? Yeah? 
+Remember the first example I showed you about SSG where you could generate N pages during build time? Yeah?
 
 Well, it is not a
 complete solution, as you might imagined if we're dealing with outdated content that needs frequent updates and bulk of hundred of pages for your site, SSG itself might have some issues it can't solve itself.
 
-Enter the room ISR. 
+Enter the room ISR.
 
-ISR or _Incremental Site Regeneration_ is an increment over Static Site Generation (SSG) to solve issues of having **frequent updates** on static content by implementing different _caching strategies_. 
+ISR or _Incremental Site Regeneration_ is an increment over Static Site Generation (SSG) to solve issues of having **frequent updates** on static content by implementing different _caching strategies_.
 
 ISR aims to provide a balance between static and fresh content by updating or rendering new pages even after a deploy has been done. If a user requests a new page that wasn't previously rendered, the server can generate it at the time.
 
@@ -240,7 +241,7 @@ This can optimize **time** and cloud computing **costs** by only pre-rendering a
 
 Island architecture or component island is a concept of having small focused *islands of interactivity* delivered on top of static pages to reduce the amount of JS code you send to the client while still being interactive.
 
-The island Architecture was popularized by the Framework [Astro](https://docs.astro.build/en/concepts/islands/), which they call **Astro islands**. 
+The island Architecture was popularized by the Framework [Astro](https://docs.astro.build/en/concepts/islands/), which they call **Astro islands**.
 
 An island is essentially any interactive component on the page. It is a progressive enhancement over static content.
 
@@ -248,7 +249,7 @@ An island is essentially any interactive component on the page. It is a progress
 
 Islands run in isolation and can share state with others. For instance, if you had a newsletter component and a subscribers count component as islands, they could operate independently while still communicating with each other as needed.
 
-This idea results in great performance improvements because it eliminates the need to wait for the entire application to be hydrated before it becomes usable. Instead, only the specific interactive components, or islands, are loaded, which reduces the amount of JavaScript sent to the client. 
+This idea results in great performance improvements because it eliminates the need to wait for the entire application to be hydrated before it becomes usable. Instead, only the specific interactive components, or islands, are loaded, which reduces the amount of JavaScript sent to the client.
 
 This not only speeds up the initial load time but also enhances the overall user experience by making the interactive parts of the application responsive more quickly.
 
