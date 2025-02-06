@@ -40,7 +40,7 @@ useHead({
 })
 
 onMounted(() => {
-  const observer = lozad()
+  const observer = lozad('.lozad', { threshold: 0.2, })
   observer.observe()
 })
 </script>
