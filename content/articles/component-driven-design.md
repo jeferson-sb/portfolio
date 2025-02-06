@@ -47,7 +47,7 @@ function ArticleFigure() {
 ```
 
 In order to make our example more configurable, framework and libraries allows us to customize with props and children elements to be display the content however we want.
-You can think of `children` as a special prop that serves as a _placeholder_ for any set of child elements you would need to add inside your component, similiar to a [slot](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot).
+You can think of `children` as a special prop that serves as a _placeholder_ for any set of child elements you would need to add inside your component, similar to a [slot](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot).
 
 ```jsx
 function ArticleFigure({ source, alt, children }) {
@@ -302,7 +302,7 @@ It is important to notice that they don't compete with each other, you can use o
 
 ## What's next?
 
-As lego makers invest their time to craft the most solid and well-crafted piesces to the their consumers, component artisans can do as well. We can assemble and compose components in very different ways, these was just a small part of it.
+As lego makers invest their time to craft the most solid and well-crafted pieces to the their consumers, component artisans can do as well. We can assemble and compose components in very different ways, these was just a small part of it.
 We're going to explore more in the next post with dynamic components, recursive components, render functions and more about component-driven design.
 
 Stay tuned!

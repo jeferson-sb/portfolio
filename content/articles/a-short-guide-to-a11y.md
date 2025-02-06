@@ -33,7 +33,7 @@ These guidelines are group in four principles:
 
 **WebAIM** is a sort of short version or summary of the WCAG guidelines as a [checklist](https://webaim.org/standards/wcag/checklist) to help identify what you need to implement.
 
-The best way to follow these guidelines and accomplish these criterias is to take a look at the [WAI-ARIA Best Practices document](https://www.w3.org/TR/wai-aria-practices-1.1/) to know which attributes do you have to set on your custom element and what type of keyboard support it needs to provide.
+The best way to follow these guidelines and accomplish these criteria is to take a look at the [WAI-ARIA Best Practices document](https://www.w3.org/TR/wai-aria-practices-1.1/) to know which attributes do you have to set on your custom element and what type of keyboard support it needs to provide.
 
 ## Focus
 
@@ -98,7 +98,7 @@ For example:
 
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/a11y-tree.jpg?alt=media&token=d06a85d3-4615-4866-a874-09a345b268a2" alt="accessibility tree" width="870" height="370" />
 
-Browsers, such as chrome, can display the acessibility tree like this:
+Browsers, such as chrome, can display the accessibility tree like this:
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chrome-a11y-tree.png?alt=media&token=ef132039-c57d-4c02-b6fc-b7b340f879e7" alt="chrome accessibility tab open" width="334" height="770" />
 
 Therefore, writing good and semantic HTML elements has a huge impact on how this content will be presented to our end users.

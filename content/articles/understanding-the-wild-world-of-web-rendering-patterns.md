@@ -60,7 +60,7 @@ Ok, let's break those fancy terms down:
 
 When we say to **pre-render** it means that by the time a request comes, we only need to serve the pre-baked page generating everything again and again.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSG.png?alt=media&token=0ffb7caf-cbca-4243-a821-9953ba5eda0f" alt="diagram explaning the ssg build process" width="870" height="500" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSG.png?alt=media&token=0ffb7caf-cbca-4243-a821-9953ba5eda0f" alt="diagram explaining the ssg build process" width="870" height="500" fit="contain" />
 
 The nicest thing is you can run any arbitrary code when generating those pages, including performing database queries, getting content from a CMS, calling external resources, etc.
 
@@ -92,7 +92,7 @@ It's a suitable pattern for building recommendation feeds, social media, or auth
 The major difference between SSR and Client-side Rendering (or CSR) is that running code on the server can achieve better performance and SEO as we don't need
 **don't rely solely on JS** to be parsed and executed before the user can see the page. Some notable performance metrics that achieve good values by SSR are FCP as well as <abbr title="Largest Contentful Paint">LCP</abbr>.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSR.png?alt=media&token=59577dd5-4787-4f86-af6a-7cea3df65496" alt="diagram explaning the ssr request-response cycle" width="870" height="300" fit="contain" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/SSR.png?alt=media&token=59577dd5-4787-4f86-af6a-7cea3df65496" alt="diagram explaining the ssr request-response cycle" width="870" height="300" fit="contain" />
 
 > It is important to note that although I have the power to run code server-side, I can't be careless about unoptimized or insecure code that could lead to errors and delay the response
 of our users too much.
@@ -335,7 +335,7 @@ However, it does bring some intrinsic breaking changes you should be aware of...
 
 When writing a server component you're limited to running things on the server, and no having access to the browser APIs or React client features such as: reactive state, context API or built-in hooks.
 
-Besides, you also need to think about distingush about server and "regular" components or _Client components_ when writing code that contains RSC.
+Besides, you also need to think about distinguish about server and "regular" components or _Client components_ when writing code that contains RSC.
 
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/RSCs.png?alt=media&token=9cef035c-80d5-4354-b79f-04546ad00dff" width="870" height="500" fit="contain" />
 

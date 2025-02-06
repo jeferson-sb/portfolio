@@ -3,7 +3,7 @@ id: mhri2af6i
 title: How to keep up with things
 published_at: 2024-05-17T22:55:34.127Z
 tags: opinion
-excerpt: I have a feeling we are on a constant flux of ever-evoling modern world where saying updated is integral to our personal growth...
+excerpt: I have a feeling we are on a constant flux of ever-evolving modern world where saying updated is integral to our personal growth...
 slug: how-to-keep-up
 crosspostedOn: ''
 crosspostLink: ''

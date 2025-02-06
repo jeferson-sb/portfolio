@@ -42,7 +42,7 @@ const SystemUpgradeAlert = () => (
           Update available
         </AlertDialog.Title>
         <AlertDialog.Description className="py-2 mb-2 text-slate-700">
-          A new software update is avaliable for you to download. Would you like
+          A new software update is available for you to download. Would you like
           to update it now?
         </AlertDialog.Description>
         <AlertDialog.Action
@@ -159,7 +159,7 @@ function App() {
 }
 ```
 
-So that's the skeleton of it, and as you might notice we're importing all primivites components exported from `DropdownMenu` and adding styles over it. Here's the final result:
+So that's the skeleton of it, and as you might notice we're importing all primitives components exported from `DropdownMenu` and adding styles over it. Here's the final result:
 
 <iframe src="https://codesandbox.io/embed/low-level-components-849gq3?fontsize=14&hidenavigation=1&theme=dark&view=preview"
   style="width:100%; height:700px; border:0; border-radius: 4px; overflow:hidden;"

@@ -12,7 +12,7 @@ og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.co
 
 As developers, we must constantly face daily challenges in our lives and business. From creating new ideas to solving new or existing problems in the real world, we need to have feedback from our consumers, but how can share this solution and get instant feedback?
 
-Fortunatelly we have plenty of options available today, I personally love using **Netlify** from adding a new app, maning and deploying from the UI it is quite straightforward.
+Fortunately we have plenty of options available today, I personally love using **Netlify** from adding a new app, managing and deploying from the UI it is quite straightforward.
 But would be useful if we could all that in the command line tool? We can!
 
 > Netlify is an all-in-one platform for automating deployment of modern web projects. It enables you to host, integrate and deploy in a single workflow. Integrate dynamic functionally with serverless functions and plugins.
@@ -87,7 +87,7 @@ netlify deploy
 You'll be prompt to enter your publish directory which in most cases of web apps is either `dist` or `build`.
 This will deploy a **preview** of your site, basically a draft, with a URL.
 
-If you don't want to manually deploy using `netlify deploy` everytime you can connect it to github repository which you allow more features in CI/CD flow so whenever you push to your default branch Netlify automatically starts a new preview deploy.
+If you don't want to manually deploy using `netlify deploy` every time you can connect it to github repository which you allow more features in CI/CD flow so whenever you push to your default branch Netlify automatically starts a new preview deploy.
 
 Once everything is good to go, we deploy it to production:
 
@@ -144,7 +144,7 @@ netlify functions:create
 Trigger a function with invoke, for this will need to start the development server with `netlify dev` first
 
 ```bash
-netlift dev
+netlify dev
 netlify functions:invoke
 ```
 

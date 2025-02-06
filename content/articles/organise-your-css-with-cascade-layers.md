@@ -137,7 +137,7 @@ button {
   border: none !important;
 }
 
-/* does not matter order or specifity */
+/* does not matter order or specificity */
 button#my#highly.specific[data-selector] {
   border: 1px solid green;
 }
@@ -267,7 +267,7 @@ Then we can extend or override element's styles without having to worry about ho
 Earlier, I mentioned that the last declared layers have higher specificity between "named" layers because this rule applies to any style under a layer. But we could also define styles outside of layers, or unlayered styles per se.
 
 ```css
-@layer typograghy {
+@layer typography {
 	h1 { color: slateblue; }
 }
 

@@ -52,7 +52,7 @@ A custom property can have up to 4 possible values:
 3. If a custom property is defined with a not valid value, then the property value will be the same as **unset** (0s).
 4. If custom properties are not supported (e.g. IE 11), then the property value will be the default value or the previous declared one (1s).
 
-At the time of this writing, CSS Varibles are supported in all major browsers:
+At the time of this writing, CSS Variables are supported in all major browsers:
 <img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/caniuse-css-vars.png?alt=media&token=13624719-db53-4dab-86fa-cf420d72e23f" alt="94% of browser support" height="240" width="760" />
 
 Once you define a property on a given element, you can view and debug on the browser devtools, for instance on chrome you can check on
@@ -372,7 +372,7 @@ Start with some base values:
 }
 ```
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/systemized-spacing-1.png?alt=media&token=64e1a573-dd5f-4090-a017-0094d40b0774" alt="marvellous ocean 32px of spacing" height="460" width="558" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/systemized-spacing-1.png?alt=media&token=64e1a573-dd5f-4090-a017-0094d40b0774" alt="marvelous ocean 32px of spacing" height="460" width="558" />
 
 Then to make it responsive you just have to add new values to your media queries:
 
@@ -397,7 +397,7 @@ Then to make it responsive you just have to add new values to your media queries
 ```
 
 Tablet:
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/systemized-spacing-2.png?alt=media&token=3ea0b1ec-b75b-45d3-9585-784f1c932ae6" alt="marvellous ocean 20px of spacing" height="433" width="540" />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/systemized-spacing-2.png?alt=media&token=3ea0b1ec-b75b-45d3-9585-784f1c932ae6" alt="marvelous ocean 20px of spacing" height="433" width="540" />
 
 ### Controlling Animations and Transitions
 

@@ -10,7 +10,7 @@ crosspostLink: ''
 og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fcomponent-driven-design-part-2.webp?alt=media&token=3b13949a-6e83-428d-9364-64fdcf4cd685
 ---
 
-I've previously written about creating components and the [various patterns](/articles/component-driven-design) that can be used in different ways to create a variety of outcomes. This time around, we’re going to explore a little more in this field but also understand how things work under the hood to better develop an intuition for creating relisient web applications.
+I've previously written about creating components and the [various patterns](/articles/component-driven-design) that can be used in different ways to create a variety of outcomes. This time around, we’re going to explore a little more in this field but also understand how things work under the hood to better develop an intuition for creating resilient web applications.
 
 ## Recursive components
 
@@ -224,7 +224,7 @@ Once we understand a little bit about the component implementation, we now can t
 
 ### Scope
 
-In the last post, we talk about the anatomy of a component and how it can communite with others. As part of the data flow, props are the primarly interface where other components will talk to each other. Being powerful as function parameters, we can use props to avoid hardcoded text, create variants, handle events or add any sort of JS expression to the template.
+In the last post, we talk about the anatomy of a component and how it can communicate with others. As part of the data flow, props are the primarily interface where other components will talk to each other. Being powerful as function parameters, we can use props to avoid hardcoded text, create variants, handle events or add any sort of JS expression to the template.
 
 Although they're very convenient, oftentimes you get caught by components like this:
 
@@ -236,7 +236,7 @@ Although they're very convenient, oftentimes you get caught by components like t
   duration={duration}
   progress={progress}
   isPlaying={isMediaPlaying}
-  artwork={metadata.artkwork}
+  artwork={metadata.artwork}
   repeat={repeat}
   title={title}
   onTogglePlay={handleMediaPlay}
@@ -269,7 +269,7 @@ The higher we get at the top of our view layers the closer we get to assembling 
 
 As your project grows, you will notice that many of your designs can be composed by reusing components you already made, speeding up your development. Component composability plays a crucial role in building scalable and maintainable applications.
 
-In order to aproach composability, we can take advantage of any of the patterns we've seen in this series: Compound components, Uncontrolled components, Render props, Slots or Dynamic components. Keep in mind that each pattern is intended to address a particular problem.
+In order to approach composability, we can take advantage of any of the patterns we've seen in this series: Compound components, Uncontrolled components, Render props, Slots or Dynamic components. Keep in mind that each pattern is intended to address a particular problem.
 
 If you're building a component library, you need to make sure components can work in isolation and together when combined with other primitives. This is where tools such as: [Storybook](https://storybook.js.org/) and [bit.dev](https://bit.dev/) can be helpful.
 

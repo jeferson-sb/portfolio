@@ -41,7 +41,7 @@ Both `lch` and `lab` formats are expressed under the CIELAB color space. A recta
 
 <img-lazy src="https://drafts.csswg.org/css-color-4/images/CH-plane-wheel.svg" />
 
-`oklch` - Practically an improvement around `lch` with better chroma uniformity and linear lightness. You can essentialy use `oklch` where `lch` is being used.
+`oklch` - Practically an improvement around `lch` with better chroma uniformity and linear lightness. You can essentially use `oklch` where `lch` is being used.
 Checkout this awesome color picker by Evil Martians team: https://oklch.com/
 
 <ColorBox color="oklch(60% 0.10 0.11)" />
@@ -101,7 +101,7 @@ The following example mixes 60% of blue and 40% yellow in `lch`.
 
 ## Mixing colorspaces
 
-You can mix color from different methods. Color interpolation can be from any of the colorspaces metioned like hsl to lch, lab to oklab, and the color-algorithm will do the calculation to interpolate them to a proximum value.
+You can mix color from different methods. Color interpolation can be from any of the colorspaces mentioned like hsl to lch, lab to oklab, and the color-algorithm will do the calculation to interpolate them to a proximum value.
 
 ```css
 .mix {
@@ -111,14 +111,14 @@ You can mix color from different methods. Color interpolation can be from any of
 
 <ColorMix method="hsl" controls="colorSpace" style="--left: hsl(0 50% 50%); --right: #7acedd;" />
 
-Notice the suttle different tones of purple when switching between colorspaces.
-Behind the scenes both colors are converted to the given colorspace. Some methods may have a wide range of colors than others, thus represeting a distinct mixed color.
+Notice the subtle different tones of purple when switching between colorspaces.
+Behind the scenes both colors are converted to the given colorspace. Some methods may have a wide range of colors than others, thus representing a distinct mixed color.
 
 ## Alpha
 
 There is a significant change when using alpha colors where colors have their components (chroma, lightness, hue) converted to rgb channels and premultiplied with three alpha values, one for each channel (red, green and blue).
 
-Follow the example below where mixes 50% opaque red with 90% opaque green. Since the amount of both colors are ommited, the are both at 50%.
+Follow the example below where mixes 50% opaque red with 90% opaque green. Since the amount of both colors are omitted, the are both at 50%.
 
 ```css
 .mix {
@@ -131,7 +131,7 @@ Where the final computed color will be: `color(srgb 0.936942 0.916944 0.0808208 
 
 You can dive in the details of the calculation on the spec [here](https://drafts.csswg.org/css-color-5/#color-mix-with-alpha).
 
-### Hue inporlation
+### Hue interpolation
 
 Finally, we can also tweak colors to short of wider angles of the color wheel.
 
