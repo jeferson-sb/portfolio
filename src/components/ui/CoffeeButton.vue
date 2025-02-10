@@ -1,5 +1,5 @@
 <template>
-  <button ref="coffeeButton" class="coffee-button" type="button" @click="onClick">
+  <button ref="coffeeButton" class="coffee-button" type="button" aria-label="Give a coffee" @click="onClick">
     <CoffeeSVG class="coffee" width="40" height="40" />
   </button>
 </template>
@@ -46,7 +46,7 @@ watch(
   { immediate: true }
 )
 
-const onClick = () => {  
+const onClick = () => {
   if (points.value < pointsLimit) points.value++
 }
 </script>
@@ -161,6 +161,7 @@ const onClick = () => {
 }
 
 @keyframes wobble-hor-bottom {
+
   0%,
   100% {
     transform: translateX(0%);
