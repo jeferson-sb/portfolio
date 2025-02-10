@@ -13,7 +13,8 @@
     "lint:css": "stylelint 'src/**/*.{css,vue}'",
     "format": "prettier 'src/**/*.js' -w",
     "deps:up": "taze major -I",
-    "start:draft": "node scripts/create-draft.js"
+    "start:draft": "node scripts/create-draft.js",
+    "bundlesize": "npx vite-bundle-visualizer"
   },
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^4.5.1",
@@ -22,10 +23,8 @@
     "firebase": "^11.2.0",
     "graphql": "^16.10.0",
     "lozad": "^1.16.0",
-    "vite-ssg": "^25.0.0",
-    "vite-ssg-sitemap": "^0.8.1",
     "vue": "^3.5.13",
-    "vue-gtag": "^2.0.1",
+    "vue-gtag": "^2.0.2",
     "vue-router": "^4.5.0",
     "vuefire": "^3.2.1"
   },
@@ -54,6 +53,8 @@
     "vite-plugin-pages": "^0.32.4",
     "vite-plugin-pwa": "^0.21.1",
     "vite-plugin-vue-devtools": "^7.7.1",
-    "vite-plugin-vue-layouts": "^0.11.0"
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vite-ssg-sitemap": "^0.8.1",
+    "vite-ssg": "^25.0.0"
   }
 }
