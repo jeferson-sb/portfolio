@@ -30,7 +30,7 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13
       vue-gtag:
-        specifier: ^2.0.2
+        specifier: ^2.0.1
         version: 2.0.2(vue@3.5.13)
       vue-router:
         specifier: ^4.5.0
