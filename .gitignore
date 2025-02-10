@@ -21,3 +21,5 @@ dist
 draft/
 draft/*
 *:Zone.Identifier
+
+.vite-ssg-temp
