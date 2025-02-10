@@ -14,6 +14,8 @@ import MarkdownItAnchor from 'markdown-it-anchor'
 import matter from 'gray-matter'
 import generateSitemap from 'vite-ssg-sitemap'
 
+import { copyPlugin } from './lib/md/copy-code'
+
 export default defineConfig({
   resolve: {
     alias: {
@@ -66,6 +68,7 @@ export default defineConfig({
       wrapperClasses: 'prose',
       headEnabled: true,
       markdownItSetup(md) {
+        md.use(copyPlugin);
         md.use(Shiki, {
           theme: 'css-variables',
           highlightLines: true,

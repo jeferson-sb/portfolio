@@ -15,6 +15,7 @@
   }
 
   .shiki {
+    position: relative;
     border-radius: var(--radius-default);
     padding: 0.875rem;
     overflow-x: auto;
@@ -66,6 +67,34 @@
       border-radius: 10px;
       background-color: var(--scrollbar-thumb-color);
       border: 5px solid var(--scrollbar-border);
+    }
+
+    & .copy-to-clipboard {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      opacity: 0.4;
+      border: 1px solid var(--color-silver);
+      border-radius: var(--radius-default);
+      padding: 0.25rem;
+      transition: opacity 400ms ease-out, scale 500ms ease-in;
+    }
+
+    & .copy-to-clipboard:active {
+      scale: 0.4;
+    }
+
+    & .copy-to-clipboard:hover {
+      opacity: 0.8;
+    }
+
+    & .copy-to-clipboard svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }
