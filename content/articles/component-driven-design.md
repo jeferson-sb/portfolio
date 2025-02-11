@@ -16,7 +16,7 @@ In web development history, we had their first appearances in [Ember](https://gu
 
 Component-driven-development means embracing components as the new **primitive** for the web taking advantage of a modular approach to achieve better scalability, reusability, and team-development independence.
 
-<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/lego.jpg?alt=media&token=d190dea4-0e5d-4196-9313-3724e36c82af" alt="orange lego piecein constrast with background of legos" width="870" height="500" style="object-position: center 30%;" fullBleed />
+<img-lazy src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/lego.jpg?alt=media&token=d190dea4-0e5d-4196-9313-3724e36c82af" alt="orange lego piecein constrast with background of legos" height="500" style="object-position: center 30%;" fit="cover" fullbleed />
 
 ## The Anatomy of a Component
 

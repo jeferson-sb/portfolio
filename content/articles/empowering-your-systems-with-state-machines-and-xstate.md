@@ -36,10 +36,8 @@ When developing UI logic we tend to rely on boolean variables and conditional st
 
 ```jsx
 const isLoading = true;
-
-//..
-
-// what "isLoading" does actually mean? did the request succeed? is content ready to be shown?
+// what "isLoading" does actually mean? did the request succeed?
+// is content ready to be shown?
 if (!isLoading)
 	// do something
 ```
@@ -54,29 +52,29 @@ What you can do instead is **think upfront** and describe which possible states 
 
 A simple state machine can be build-out of a switch statement:
 
-```jsx
+```ts
 // If you've used reducers before this might look familiar to you
 const status = {
-	LOADING: 'LOADING',
-	INVALID: 'INVALID',
-	DISABLED: 'DISABLED',
-	SUBMITTED: 'SUBMITTED'
+  LOADING: 'LOADING',
+  INVALID: 'INVALID',
+  DISABLED: 'DISABLED',
+  SUBMITTED: 'SUBMITTED'
 }
 
 switch (formState) {
-	case formState === status.LOADING:
-		// ...
-		break;
-	case formState === status.INVALID:
-		// ...
-		break;
-	case formState === status.DISABLED:
-		// ...
-		break;
-	case formState === status.SUBMITTED:
-		// ...
-		break;
-	default:
+  case formState === status.LOADING:
+    // ...
+    break;
+  case formState === status.INVALID:
+    // ...
+    break;
+  case formState === status.DISABLED:
+    // ...
+    break;
+  case formState === status.SUBMITTED:
+    // ...
+    break;
+  default:
     break;
 }
 ```
@@ -137,22 +135,22 @@ Back to our example, here's how a FSM is defined using XState:
 import { createMachine, interpret } from 'xstate';
 
 const airplaneMachine = createMachine({
-	id: 'airplane',
-	initial: 'prepared',
-	states: {
-		prepared: {
-			on: { READY: 'lift' }
-		},
-		lift: {
-			on: { TAKE_OFF: 'flying' }
-		},
-		flying: {
-			on: { LAND: 'landing' }
-		},
-		landing: {
-			on: { STOP: 'prepared' }
-		}
-	}
+  id: 'airplane',
+  initial: 'prepared',
+  states: {
+    prepared: {
+      on: { READY: 'lift' }
+    },
+    lift: {
+      on: { TAKE_OFF: 'flying' }
+    },
+    flying: {
+      on: { LAND: 'landing' }
+    },
+    landing: {
+      on: { STOP: 'prepared' }
+    }
+  }
 })
 
 const planeInterpreter = interpret(airplaneMachine).onTransition(({ value }) =>
@@ -182,27 +180,27 @@ Although state machine memory is limited to the number of its behaviors, you can
 import { createMachine, interpret, assign } from 'xstate';
 
 const airplaneMachine = createMachine({
-	id: 'airplane',
-	initial: 'prepared',
-	context: {
-		passengers: 0,
-	},
-	states: {
-		prepared: {
-			on: {
-				INC_PASSENGER: {
-					target: 'prepared',
-					actions: ['incrementPassengers']
-				}
-				READY: 'lift'
-			}
-		},
-		// ...
-	}
-}, {
-	actions: {
-		incrementPassengers: assign({ passengers: context => context.passengers + 1 })
-	}
+  id: 'airplane',
+  initial: 'prepared',
+  context: {
+    passengers: 0,
+  },
+  states: {
+    prepared: {
+      on: {
+        INC_PASSENGER: {
+          target: 'prepared',
+          actions: ['incrementPassengers']
+        }
+        READY: 'lift'
+      }
+    },
+    // ...
+  }
+  }, {
+  actions: {
+    incrementPassengers: assign({ passengers: context => context.passengers + 1 })
+  }
 })
 
 interpret(airplaneMachine)
@@ -227,34 +225,34 @@ import { createMachine, interpret, assign } from 'xstate';
 function fetchLatestFlight() { /* some api call */ }
 
 const airplaneMachine = createMachine({
-	id: 'airplane',
-	initial: 'onboarding',
-	context: {
-		flight: null,
-	},
-	states: {
-		onboarding: {
-			invoke: {
-				src: fetchLatestFlight,
-				onDone: {
-					target: 'prepared',
-					actions: assign({ flight: (_ctx, event) => event.data })
-				},
-				onError: {
-					target: 'failure',
-					actions: () => console.error('Failed to retrieve flight data')
-				}
-			}
-		},
-		prepared: {
-		  on: {
-			READY: "lift",
-			CANCEL: 'onboarding'
-		  },
-		},
-		failure: {}
-		// ...
-	}
+  id: 'airplane',
+  initial: 'onboarding',
+  context: {
+    flight: null,
+  },
+  states: {
+    onboarding: {
+      invoke: {
+        src: fetchLatestFlight,
+        onDone: {
+          target: 'prepared',
+          actions: assign({ flight: (_ctx, event) => event.data })
+        },
+        onError: {
+          target: 'failure',
+          actions: () => console.error('Failed to retrieve flight data')
+        }
+      }
+    },
+    prepared: {
+      on: {
+      READY: "lift",
+      CANCEL: 'onboarding'
+      },
+    },
+    failure: {}
+    // ...
+  }
 })
 
 interpret(airplaneMachine)
