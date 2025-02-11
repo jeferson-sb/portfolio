@@ -44,7 +44,7 @@
       border-radius: var(--radius-default);
     }
 
-    & code .line::before {
+    & code:has(.line:nth-child(3n)) .line::before {
       display: inline-block;
       width: 10px;
       content: counter(step);
@@ -81,7 +81,7 @@
       border: 1px solid var(--color-silver);
       border-radius: var(--radius-default);
       padding: 0.25rem;
-      transition: opacity 400ms ease-out, scale 500ms ease-in;
+      transition: opacity 400ms ease-out, scale 600ms ease-in;
     }
 
     & .copy-to-clipboard:active {
@@ -95,6 +95,10 @@
     & .copy-to-clipboard svg {
       width: 24px;
       height: 24px;
+    }
+
+    & code:not(:has(.line:nth-child(3n)))+.copy-to-clipboard {
+      top: 10px;
     }
   }
 }
