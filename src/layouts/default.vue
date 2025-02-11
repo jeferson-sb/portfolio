@@ -46,32 +46,4 @@ body {
     border: 3px solid var(--scrollbar-border);
   }
 }
-
-body[data-theme='light'] {
-  --color-light: hsl(228deg 33% 97%);
-  --text-color-default: var(--color-default-black);
-  --secondary-text-color: var(--color-silver);
-  --bg-color-primary-lighter: rgb(26 187 209 / 30%);
-  --bg-color-lighter: hsl(0deg 0% 97%);
-  --accent-color-lighter: hsl(225deg 31% 95%);
-  --scrollbar-bg: var(--accent-color-lighter);
-  --scrollbar-thumb-color: var(--color-gray-300);
-  --scrollbar-border: var(--color-gray-300);
-
-  background-color: var(--color-light);
-  color: var(--color-default-black);
-  transition-property: background-color, color;
-  transition-duration: 500ms;
-  transition-timing-function: ease-in-out;
-
-  & :is(footer, header) {
-    border-color: rgb(108 118 147 / 30%);
-  }
-}
-
-body[data-theme='dark'] {
-  img {
-    filter: brightness(0.8);
-  }
-}
 </style>
