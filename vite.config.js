@@ -56,7 +56,10 @@ export default defineConfig({
 
     AutoImport({
       imports: ['vue', 'vue-router', { '@unhead/vue': ['useHead'] }],
-      dirs: ['src/composables']
+      dirs: [
+        'src/composables',
+        'src/components'
+      ]
     }),
 
     Components({
