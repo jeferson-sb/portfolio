@@ -32,7 +32,7 @@
     "@csstools/postcss-global-data": "^3.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "beasties": "^0.2.0",
-    "eslint": "^9.19.0",
+    "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
