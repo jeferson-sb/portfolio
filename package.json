@@ -19,7 +19,7 @@
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^4.5.1",
     "@unhead/vue": "^1.11.18",
-    "@urql/vue": "^1.4.2",
+    "@urql/vue": "^1.4.3",
     "firebase": "^11.2.0",
     "graphql": "^16.10.0",
     "lozad": "^1.16.0",
