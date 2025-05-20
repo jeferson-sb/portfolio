@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^3.0.0",
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue": "^5.2.4",
     "beasties": "^0.2.0",
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.0.1",
