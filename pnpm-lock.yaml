@@ -15,8 +15,8 @@ importers:
         specifier: ^1.11.18
         version: 1.11.18(vue@3.5.13)
       '@urql/vue':
-        specifier: ^1.4.2
-        version: 1.4.2(@urql/core@4.0.11(graphql@16.10.0))(vue@3.5.13)
+        specifier: ^1.4.3
+        version: 1.4.3(@urql/core@4.0.11(graphql@16.10.0))(vue@3.5.13)
       firebase:
         specifier: ^11.2.0
         version: 11.2.0
@@ -1936,8 +1936,8 @@ packages:
   '@urql/core@4.0.11':
     resolution: {integrity: sha512-FFdY97vF5xnUrElcGw9erOLvtu+KGMLfwrLNDfv4IPgdp2IBsiGe+Kb7Aypfd3kH//BETewVSLm3+y2sSzjX6A==}
 
-  '@urql/vue@1.4.2':
-    resolution: {integrity: sha512-ELMlVhWsVPaKyIgocNA2eAxSZgwzBqaw5YB4q3wQTAExxGlx6UNVluiBnuDLhs5ctSDIrGBR6Dfkwl6+M3B0QQ==}
+  '@urql/vue@1.4.3':
+    resolution: {integrity: sha512-+zdMQFBHL1V+tdTKzAqhiIP14cJ6GAUDux7uhC3rAt/rQhaVcdRmLuf0dhco04UHC+rdkd6sZ4epemL9VeTfRA==}
     peerDependencies:
       '@urql/core': ^5.0.0
       vue: ^2.7.0 || ^3.0.0
@@ -5122,9 +5122,6 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  wonka@6.3.2:
-    resolution: {integrity: sha512-2xXbQ1LnwNS7egVm1HPhW2FyKrekolzhpM3mCwXdQr55gO+tAiY76rhb32OL9kKsW8taj++iP7C6hxlVzbnvrw==}
-
   wonka@6.3.5:
     resolution: {integrity: sha512-SSil+ecw6B4/Dm7Pf2sAshKQ5hWFvfyGlfPbEd6A14dOH6VDjrmbY86u6nZvy9omGwwIPFR8V41+of1EezgoUw==}
 
@@ -7221,11 +7218,11 @@ snapshots:
     transitivePeerDependencies:
       - graphql
 
-  '@urql/vue@1.4.2(@urql/core@4.0.11(graphql@16.10.0))(vue@3.5.13)':
+  '@urql/vue@1.4.3(@urql/core@4.0.11(graphql@16.10.0))(vue@3.5.13)':
     dependencies:
       '@urql/core': 4.0.11(graphql@16.10.0)
       vue: 3.5.13
-      wonka: 6.3.2
+      wonka: 6.3.5
 
   '@vitejs/plugin-vue@5.2.4(vite@5.4.14(@types/node@22.15.21)(terser@5.39.2))(vue@3.5.13)':
     dependencies:
@@ -11067,8 +11064,6 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  wonka@6.3.2: {}
 
   wonka@6.3.5: {}
 
