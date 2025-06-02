@@ -17,7 +17,7 @@
     "bundlesize": "npx vite-bundle-visualizer"
   },
   "dependencies": {
-    "@fingerprintjs/fingerprintjs": "^4.5.1",
+    "@fingerprintjs/fingerprintjs": "^4.6.2",
     "@unhead/vue": "^1.11.18",
     "@urql/vue": "^1.4.2",
     "firebase": "^11.2.0",
