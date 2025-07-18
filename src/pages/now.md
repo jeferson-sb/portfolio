@@ -11,24 +11,29 @@ meta:
 
 <article class="article">
 
-<time class="time">FEV 2025</time>
+<time class="time">JUL 2025</time>
 
 # Current Status
 
-I'm currently reading: <em>Moonwalking with Einstein</em> by Joshua Foer.
-I'm preparing an article on _Taking responsive web layouts to the next level_
+I'm currently reading: <em>Software Architecture: The Hard Parts</em> by Neal Ford & cia.
 
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
-I have a bluesky account now! I'm not really active in social media, but if you want to get in touch: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 
-📺 Watching: Solo Leveling, Rurouni Kenshin, Dr Stone and Mashle
+I'm not really active in social media, but if you want to get in touch:
 
-🎮 Currently playing: <em>Indiana Jones and Great Circle, Sea of Stars</em>.
+🌍 Socials:
+
+- Bluesky: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
+- Mastodon: [@jeferson_brito](https://mastodon.social/@jeferson_brito)
+
+📺 Watching: Wind Breaker, DanDaDan, Apothecary diaries
+
+🎮 Currently playing: <em>Spiderman Remastered, Persona Phantom X</em>.
 
 </article>
 
 <figure>
-  <img src="https://media1.tenor.com/m/YRw8jJdqjvIAAAAd/weathering-with-you.gif" height="358" alt="gif of the day" />
+  <img src="https://media1.tenor.com/m/pqjX4ltW468AAAAC/kikis-delivery-service-ghibli.gif" height="280" alt="gif of the day" />
   <figcaption>(from Tenor)</figcaption>
 </figure>
 
@@ -121,5 +126,10 @@ figcaption {
 video {
   border-radius: 1rem;
   box-shadow: 0 0 20px 0px 0 0 20px 0px hsl(226deg 24% 62% / 25%);
+}
+
+ul {
+  list-style-type: none;
+  font-size: var(--text-lg);
 }
 </style>
