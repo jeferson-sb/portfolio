@@ -232,7 +232,8 @@ onMounted(() => {
     }
   }
 
-  & p code {
+  & p code,
+  & li code {
     font-family: var(--font-mono);
     padding: 2px 6px;
     background-color: var(--accent-color-lighter, var(--code-bg-color));
