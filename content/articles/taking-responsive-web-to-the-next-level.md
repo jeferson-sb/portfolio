@@ -1,6 +1,6 @@
 ---
 id: sxbfo63tw
-published_at: 2025-07-22T23:56:36.432Z
+published_at: 2025-07-31T15:53:10.651Z
 excerpt: Responsive web design has come a long way since its inception. With the advent of modern CSS techniques, creating responsive layouts has become more efficient and...
 crosspostedOn:
 crosspostLink:
