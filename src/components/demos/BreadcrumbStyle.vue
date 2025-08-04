@@ -35,6 +35,7 @@
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 1rem;
+  overflow-x: auto;
 }
 
 pre {

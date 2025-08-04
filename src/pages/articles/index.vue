@@ -1,12 +1,11 @@
 <template>
-  <GalaxyBackground>
-    <ArticlesHero />
-    <section id="main-content" class="container collection">
-      <PostPreview v-for="article in allArticles" :key="article.id" :title="article.title"
-        :date="new Date(article.date)" :href="article.path" :article-id="article.articleId" :excerpt="article.excerpt"
-        :tags="article.tags" size="long" />
-    </section>
-  </GalaxyBackground>
+  <ParticlesBackground />
+  <ArticlesHero />
+  <section id="main-content" class="container collection">
+    <PostPreview v-for="article in allArticles" :key="article.id" :title="article.title" :date="new Date(article.date)"
+      :href="article.path" :article-id="article.articleId" :excerpt="article.excerpt" :tags="article.tags"
+      size="long" />
+  </section>
 </template>
 
 <script setup>
