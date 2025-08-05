@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <ParticlesBackground :quantity="100" :staticity="10" :ease="100" :vx="0" :vy="0" />
     <main id="main-content">
       <article class="about-content">
         <picture>

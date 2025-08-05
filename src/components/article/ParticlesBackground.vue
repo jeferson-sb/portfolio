@@ -7,14 +7,33 @@
 <script setup>
 import { ref, onMounted, onUnmounted, watch, useTemplateRef } from 'vue'
 
-const defaults = {
-  quantity: 300,
-  staticity: 20,
-  ease: 50,
-  size: 1,
-  vx: 0,
-  vy: 1,
-}
+const defaults = defineProps({
+  quantity: {
+    type: Number,
+    default: 400,
+  },
+  staticity: {
+    type: Number,
+    default: 20,
+  },
+  ease: {
+    type: Number,
+    default: 50,
+  },
+  size: {
+    type: Number,
+    default: 1,
+  },
+  vx: {
+    type: Number,
+    default: 0,
+  },
+  vy: {
+    type: Number,
+    default: 1,
+  }
+})
+
 const containerRef = useTemplateRef('canvasContainer')
 const canvasRef = useTemplateRef('canvas')
 const context = ref(null)
@@ -81,7 +100,7 @@ const clearContext = () => {
 
 const drawCircle = (circle, update = false) => {
   if (!context.value) return
-  const { x, y, translateX, translateY, size, alpha } = circle
+  const { x, y, translateX, translateY, size } = circle
   context.value.translate(translateX, translateY)
   context.value.beginPath()
   context.value.arc(x, y, size, 0, 2 * Math.PI)
