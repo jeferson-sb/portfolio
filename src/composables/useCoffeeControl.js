@@ -36,6 +36,8 @@ export function useCoffeeControl({ articleId, articleUrl }) {
   })
 
   const onPointsWatch = debounce(async () => {
+    console.log({ isProd, visitor: visitor.value, points: points.value })
+
     if (isProd) {
       await addCoffeePoints({
         articleId,
