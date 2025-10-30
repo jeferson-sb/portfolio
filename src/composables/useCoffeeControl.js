@@ -19,7 +19,7 @@ export function useCoffeeControl({ articleId, articleUrl }) {
     return coffee.value.reduce((total, coffeeCup) => {
       const articlePoints = coffeeCup.articles[articleId]?.points
       return articlePoints ? articlePoints + total : total
-    }, 0)
+    }, points.value)
   })
 
   onMounted(async () => {
@@ -36,8 +36,6 @@ export function useCoffeeControl({ articleId, articleUrl }) {
   })
 
   const onPointsWatch = debounce(async () => {
-    console.log({ isProd, visitor: visitor.value, points: points.value })
-
     if (isProd) {
       await addCoffeePoints({
         articleId,

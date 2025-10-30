@@ -5,6 +5,7 @@ import { ReCaptchaV3Provider } from 'firebase/app-check'
 
 // Initialize Firebase
 export const firebaseApp = initializeApp({
+  appId: "1:545804876347:web:22693f5fb3da8f3ebbba1e",
   apiKey: "AIzaSyBmwcdM6SlakmUiBIf_hGrKXDv-5U_WbSU",
   authDomain: "portfolio-d3c7c.firebaseapp.com",
   projectId: "portfolio-d3c7c",
