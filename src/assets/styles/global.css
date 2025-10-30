@@ -9,24 +9,24 @@
   :root {
 
     /* Colors */
-    --color-primary: hsl(187deg 78% 46%);
-    --color-accent: hsl(26deg 79% 56%);
-    --color-silver: hsl(225deg 15% 50%);
-    --color-silver-600: hsl(226deg 24% 62%);
-    --color-default-black: hsl(216deg 9% 11%);
-    --color-default-white: hsl(0deg 0% 85%);
-    --color-gray-800: hsl(214deg 9% 15%);
-    --color-gray-700: hsl(210deg 5% 24%);
-    --color-gray-600: hsl(214deg 9% 35%);
-    --color-gray-500: hsl(214deg 9% 45%);
-    --color-gray-400: hsl(214deg 9% 55%);
-    --color-gray-300: hsl(214deg 9% 65%);
-    --color-gray-200: hsl(214deg 9% 75%);
-    --color-gray-100: hsl(214deg 9% 85%);
+    --color-primary: oklch(0.7282 0.1222 209.58);
+    --color-accent: oklch(70.662% 0.15099 54.296);
+    --color-silver: oklch(56.83% 0.04657 270.021);
+    --color-silver-600: oklch(66.362% 0.05373 271.257);
+    --color-default-black: oklch(22.559% 0.00659 258.421);
+    --color-default-white: oklch(88.531% 0.0001 271.152);
+    --color-gray-800: oklch(26.721% 0.00866 255.642);
+    --color-gray-700: oklch(35.827% 0.00663 248.157);
+    --color-gray-600: oklch(45.747% 0.0172 254.764);
+    --color-gray-500: oklch(54.52% 0.02174 255.656);
+    --color-gray-400: oklch(63.336% 0.02095 255.643);
+    --color-gray-300: oklch(71.914% 0.01538 254.731);
+    --color-gray-200: oklch(80.047% 0.01089 261.871);
+    --color-gray-100: oklch(88.108% 0.00648 255.725);
     --text-color-default: var(--color-default-white);
-    --paragraph-color: hsl(0deg 0% 80%);
-    --code-bg-color: hsl(220deg 13% 18%);
-    --code-highlight-color: hsl(187deg 78% 46% / 5%);
+    --paragraph-color: oklch(84.522% 0.0001 271.152);
+    --code-bg-color: oklch(29.252% 0.0157 264.319);
+    --code-highlight-color: oklch(72.72% 0.12217 210.085 / 0.05);
 
     /* Typography */
     --text-xsm: 0.75rem;
@@ -52,15 +52,15 @@
 
     --border-width: 1px;
     --border-style: solid;
-    --border-color: rgb(0 0 0 / 10%);
+    --border-color: oklch(0% 0 0 / 0.1);
     --border: var(--border-width) var(--border-style) var(--border-color);
 
     /* Shadows */
-    --elevation-1: 0 1px 3px rgb(0 0 0 / 20%);
-    --elevation-2: 0 4px 4px rgb(0 0 0 / 23%);
-    --elevation-3: 0 4px 10px rgb(0 0 0 / 7%);
-    --elevation-4: 0 10px 19px rgb(0 0 0 / 27%);
-    --elevation-5: 0 20px 25px -5px rgb(0 0 0 / 30%);
+    --elevation-1: 0 1px 3px oklch(0% 0 0 / 0.2);
+    --elevation-2: 0 4px 4px oklch(0% 0 0 / 0.23);
+    --elevation-3: 0 4px 10px oklch(0% 0 0 / 0.07);
+    --elevation-4: 0 10px 19px oklch(0% 0 0 / 0.27);
+    --elevation-5: 0 20px 25px -5px oklch(0% 0 0 / 0.3);
 
     /* Z-layers */
     --z-10: 10;
@@ -69,10 +69,10 @@
     --z-hide: -1;
 
     /* Others */
-    --scrollbar-bg: hsl(214deg 9% 15%);
-    --scrollbar-thumb-color: hsl(225deg 15% 50%);
+    --scrollbar-bg: oklch(26.721% 0.00866 255.642);
+    --scrollbar-thumb-color: oklch(56.83% 0.04657 270.021);
     --scrollbar-border: var(--color-gray-800);
-    --selection: hsl(26deg 94% 54% / 50%);
+    --selection: oklch(71.531% 0.17937 50.596 / 0.5);
   }
 
   body {
@@ -136,12 +136,12 @@
 
 @layer theme {
   body[data-theme='light'] {
-    --color-light: hsl(228deg 33% 97%);
+    --color-light: oklch(97.352% 0.00553 274.897);
     --text-color-default: var(--color-default-black);
     --secondary-text-color: var(--color-silver);
-    --bg-color-primary-lighter: rgb(26 187 209 / 30%);
-    --bg-color-lighter: hsl(0deg 0% 97%);
-    --accent-color-lighter: hsl(225deg 31% 95%);
+    --bg-color-primary-lighter: oklch(72.72% 0.12217 210.085 / 0.3);
+    --bg-color-lighter: oklch(97.614% 0.00011 271.152);
+    --accent-color-lighter: oklch(95.533% 0.00842 271.332);
     --scrollbar-bg: var(--accent-color-lighter);
     --scrollbar-thumb-color: var(--color-gray-300);
     --scrollbar-border: var(--color-gray-300);
@@ -153,7 +153,7 @@
     transition-timing-function: ease-in-out;
 
     & :is(footer, header) {
-      border-color: rgb(108 118 147 / 30%);
+      border-color: oklch(56.83% 0.04657 270.021 / 0.3);
     }
   }
 

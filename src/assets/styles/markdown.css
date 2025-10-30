@@ -11,7 +11,7 @@
     --shiki-token-string-expression: hsl(190deg 91% 48%);
     --shiki-token-punctuation: hsl(0deg 0% 83%);
     --shiki-token-link: hsl(0deg 100% 47%);
-    --shiki-highlited-line: hsla(258deg 50% 52% / 40%);
+    --shiki-highlited-line: hsl(258deg 50% 52% / 40%);
   }
 
   .shiki {
