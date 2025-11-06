@@ -16,13 +16,13 @@ importers:
         version: 2.0.19(vue@3.5.22)
       '@urql/vue':
         specifier: ^1.4.3
-        version: 1.4.3(@urql/core@5.2.0(graphql@16.11.0))(vue@3.5.22)
+        version: 1.4.3(@urql/core@5.2.0(graphql@16.12.0))(vue@3.5.22)
       firebase:
         specifier: ^11.10.0
         version: 11.10.0
       graphql:
-        specifier: ^16.11.0
-        version: 16.11.0
+        specifier: ^16.12.0
+        version: 16.12.0
       lozad:
         specifier: ^1.16.0
         version: 1.16.0
@@ -2743,8 +2743,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  graphql@16.11.0:
-    resolution: {integrity: sha512-mS1lbMsxgQj6hge1XZ6p7GPhbrtFwUFYi3wRzXAC/FmYnyXMTvvI3td3rjmQ2u8ewXueaSvRPWaEcgVVOT9Jnw==}
+  graphql@16.12.0:
+    resolution: {integrity: sha512-DKKrynuQRne0PNpEbzuEdHlYOMksHSUI8Zc9Unei5gTsMNA2/vMpoMz/yKba50pejK56qj98qM0SjYxAKi13gQ==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   gray-matter@4.0.3:
@@ -4611,9 +4611,9 @@ packages:
 
 snapshots:
 
-  '@0no-co/graphql.web@1.2.0(graphql@16.11.0)':
+  '@0no-co/graphql.web@1.2.0(graphql@16.12.0)':
     optionalDependencies:
-      graphql: 16.11.0
+      graphql: 16.12.0
 
   '@ampproject/remapping@2.3.0':
     dependencies:
@@ -6521,16 +6521,16 @@ snapshots:
       unhead: 2.0.19
       vue: 3.5.22
 
-  '@urql/core@5.2.0(graphql@16.11.0)':
+  '@urql/core@5.2.0(graphql@16.12.0)':
     dependencies:
-      '@0no-co/graphql.web': 1.2.0(graphql@16.11.0)
+      '@0no-co/graphql.web': 1.2.0(graphql@16.12.0)
       wonka: 6.3.5
     transitivePeerDependencies:
       - graphql
 
-  '@urql/vue@1.4.3(@urql/core@5.2.0(graphql@16.11.0))(vue@3.5.22)':
+  '@urql/vue@1.4.3(@urql/core@5.2.0(graphql@16.12.0))(vue@3.5.22)':
     dependencies:
-      '@urql/core': 5.2.0(graphql@16.11.0)
+      '@urql/core': 5.2.0(graphql@16.12.0)
       vue: 3.5.22
       wonka: 6.3.5
 
@@ -7695,7 +7695,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  graphql@16.11.0: {}
+  graphql@16.12.0: {}
 
   gray-matter@4.0.3:
     dependencies:
