@@ -45,7 +45,7 @@
     "stylelint": "^16.26.0",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard": "^38.0.0",
-    "taze": "^19.9.0",
+    "taze": "^19.9.2",
     "unplugin-auto-import": "^19.3.0",
     "unplugin-vue-components": "^28.8.0",
     "unplugin-vue-markdown": "^29.2.0",
