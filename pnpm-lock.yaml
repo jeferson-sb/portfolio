@@ -59,7 +59,7 @@ importers:
         version: 2.32.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: ^5.5.4
-        version: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.6.2)
+        version: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.3)
       eslint-plugin-vue:
         specifier: ^10.5.1
         version: 10.5.1(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
@@ -76,8 +76,8 @@ importers:
         specifier: ^10.4.0
         version: 10.4.0(postcss@8.5.6)
       prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
+        specifier: ^3.7.3
+        version: 3.7.3
       stylelint:
         specifier: ^16.26.0
         version: 16.26.0
@@ -116,7 +116,7 @@ importers:
         version: 0.11.0(vite@7.2.6(@types/node@24.1.0)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue-router@4.6.3(vue@3.5.25))(vue@3.5.25)
       vite-ssg:
         specifier: ^28.2.2
-        version: 28.2.2(beasties@0.3.5)(postcss@8.5.6)(prettier@3.6.2)(unhead@2.0.19)(vite@7.2.6(@types/node@24.1.0)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue-router@4.6.3(vue@3.5.25))(vue@3.5.25)
+        version: 28.2.2(beasties@0.3.5)(postcss@8.5.6)(prettier@3.7.3)(unhead@2.0.19)(vite@7.2.6(@types/node@24.1.0)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue-router@4.6.3(vue@3.5.25))(vue@3.5.25)
       vite-ssg-sitemap:
         specifier: ^0.9.0
         version: 0.9.0
@@ -2334,8 +2334,8 @@ packages:
   electron-to-chromium@1.5.243:
     resolution: {integrity: sha512-ZCphxFW3Q1TVhcgS9blfut1PX8lusVi2SvXQgmEEnK4TCmE1JhH2JkjJN+DNt0pJJwfBri5AROBnz2b/C+YU9g==}
 
-  electron-to-chromium@1.5.262:
-    resolution: {integrity: sha512-NlAsMteRHek05jRUxUR0a5jpjYq9ykk6+kO0yRaMi5moe7u0fVIOeQ3Y30A8dIiWFBNUoQGi1ljb1i5VtS9WQQ==}
+  electron-to-chromium@1.5.263:
+    resolution: {integrity: sha512-DrqJ11Knd+lo+dv+lltvfMDLU27g14LMdH2b0O3Pio4uk0x+z7OR+JrmyacTPN2M8w3BrZ7/RTwG3R9B7irPlg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3624,8 +3624,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.6.2:
-    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+  prettier@3.7.3:
+    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6844,7 +6844,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.8.32
       caniuse-lite: 1.0.30001757
-      electron-to-chromium: 1.5.262
+      electron-to-chromium: 1.5.263
       node-releases: 2.0.27
       update-browserslist-db: 1.1.4(browserslist@4.28.0)
 
@@ -7126,7 +7126,7 @@ snapshots:
 
   electron-to-chromium@1.5.243: {}
 
-  electron-to-chromium@1.5.262: {}
+  electron-to-chromium@1.5.263: {}
 
   emoji-regex@8.0.0: {}
 
@@ -7307,10 +7307,10 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.6.2):
+  eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.3):
     dependencies:
       eslint: 9.39.1(jiti@2.6.1)
-      prettier: 3.6.2
+      prettier: 3.7.3
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
@@ -8604,7 +8604,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.6.2: {}
+  prettier@3.7.3: {}
 
   pretty-bytes@5.6.0: {}
 
@@ -9454,7 +9454,7 @@ snapshots:
 
   vite-ssg-sitemap@0.9.0: {}
 
-  vite-ssg@28.2.2(beasties@0.3.5)(postcss@8.5.6)(prettier@3.6.2)(unhead@2.0.19)(vite@7.2.6(@types/node@24.1.0)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue-router@4.6.3(vue@3.5.25))(vue@3.5.25):
+  vite-ssg@28.2.2(beasties@0.3.5)(postcss@8.5.6)(prettier@3.7.3)(unhead@2.0.19)(vite@7.2.6(@types/node@24.1.0)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue-router@4.6.3(vue@3.5.25))(vue@3.5.25):
     dependencies:
       '@unhead/dom': 2.0.19(unhead@2.0.19)
       '@unhead/vue': 2.0.19(vue@3.5.25)
@@ -9467,7 +9467,7 @@ snapshots:
       vue: 3.5.25
     optionalDependencies:
       beasties: 0.3.5
-      prettier: 3.6.2
+      prettier: 3.7.3
       vue-router: 4.6.3(vue@3.5.25)
     transitivePeerDependencies:
       - bufferutil
