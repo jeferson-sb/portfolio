@@ -36,7 +36,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
-    "eslint-plugin-vue": "^10.5.1",
+    "eslint-plugin-vue": "^10.6.2",
     "gray-matter": "^4.0.3",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-shiki": "^0.9.0",
