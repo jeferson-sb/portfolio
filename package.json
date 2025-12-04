@@ -52,7 +52,7 @@
     "vite": "^7.2.6",
     "vite-plugin-pages": "^0.33.1",
     "vite-plugin-pwa": "^1.1.0",
-    "vite-plugin-vue-devtools": "^7.7.7",
+    "vite-plugin-vue-devtools": "^8.0.5",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vite-ssg": "^28.2.2",
     "vite-ssg-sitemap": "^0.9.0"
