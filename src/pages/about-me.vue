@@ -4,7 +4,7 @@
     <main id="main-content">
       <article class="about-content">
         <picture>
-          <img src="@/assets/img/profile.jpg" alt="me" width="140" height="190" loading="lazy" />
+          <img src="@/assets/img/style_profile.png" alt="me" loading="lazy" />
         </picture>
         <h1 class="about-content__headline">About me</h1>
 
