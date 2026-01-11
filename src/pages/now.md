@@ -11,11 +11,11 @@ meta:
 
 <article class="article">
 
-<time class="time">JUL 2025</time>
+<time class="time">JAN 2026</time>
 
 # Current Status
 
-I'm currently reading: <em>Software Architecture: The Hard Parts</em> by Neal Ford & cia.
+I'm currently reading: <em>Fundamentals of Software Architecture</em> by Mark Richards & Neal Ford.
 
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
@@ -26,14 +26,14 @@ I'm not really active in social media, but if you want to get in touch:
 - Bluesky: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 - Mastodon: [@jeferson_brito](https://mastodon.social/@jeferson_brito)
 
-📺 Watching: Wind Breaker, DanDaDan, Apothecary diaries
+📺 Watching: Jujutsu Kaisen Season 3, Lord of Mysteries
 
-🎮 Currently playing: <em>Spiderman Remastered, Persona Phantom X</em>.
+🎮 Currently playing: <em>Metaphor: ReFantazio</em>.
 
 </article>
 
 <figure>
-  <img src="https://media1.tenor.com/m/pqjX4ltW468AAAAC/kikis-delivery-service-ghibli.gif" height="280" alt="gif of the day" />
+  <img src="https://media1.tenor.com/m/EGdE4nEPoKsAAAAd/anime-studying-anime-study.gif" alt="gif of the day" />
   <figcaption>(from Tenor)</figcaption>
 </figure>
 
