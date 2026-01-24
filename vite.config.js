@@ -12,7 +12,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 import Shiki from 'markdown-it-shiki'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import matter from 'gray-matter'
-import generateSitemap from 'vite-ssg-sitemap'
 
 import { copyPlugin } from './lib/md/copy-code'
 
@@ -21,7 +20,7 @@ export default defineConfig({
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
       '@content': `${path.resolve(__dirname, 'content')}/`,
-      '@lib': `${path.resolve(__dirname, 'lib')}`
+      '@lib': `${path.resolve(__dirname, 'lib')}`,
     },
   },
   plugins: [
@@ -56,10 +55,7 @@ export default defineConfig({
 
     AutoImport({
       imports: ['vue', 'vue-router', { '@unhead/vue': ['useHead'] }],
-      dirs: [
-        'src/composables',
-        'src/components'
-      ]
+      dirs: ['src/composables', 'src/components'],
     }),
 
     Components({
@@ -71,7 +67,7 @@ export default defineConfig({
       wrapperClasses: 'prose',
       headEnabled: true,
       markdownItSetup(md) {
-        md.use(copyPlugin);
+        md.use(copyPlugin)
         md.use(Shiki, {
           theme: 'css-variables',
           highlightLines: true,
@@ -98,16 +94,13 @@ export default defineConfig({
       },
     }),
 
-    DevTools()
+    DevTools(),
   ],
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
     beastiesOptions: {
       reduceInlineStyles: false,
-    },
-    onFinished() {
-      generateSitemap()
     },
   },
   optimizeDeps: {
