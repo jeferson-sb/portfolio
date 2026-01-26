@@ -41,7 +41,7 @@
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-shiki": "^0.9.0",
     "postcss-preset-env": "^10.6.0",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.1",
     "stylelint": "^16.26.1",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard": "^38.0.0",
