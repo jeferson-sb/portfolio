@@ -7,6 +7,7 @@ crosspostLink:
 title: My Automated Machine Setup for 2026
 tags: linux
 slug: my-automated-dev-setup-for-a-new-machine-in-2026
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/my-automated-dev-setup-for-a-new-machine-in-2026.webp?alt=media&token=37e3dcd3-8ee3-4d5f-9d98-d060e7e13394
 ---
 
 Long time ago, I decided to migrate to my first Linux distro ever: Linux Mint. I had a pretty smooth experience initially and decided to tweak some settings here and there to make it look better. Then, I did the same thing on Manjaro, Ubuntu, ElementaryOS, and others. Even though I got used to changing settings every so often, sometimes I didn’t feel like doing it all from scratch again.
