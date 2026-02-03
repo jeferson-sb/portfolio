@@ -11,11 +11,13 @@ meta:
 
 <article class="article">
 
-<time class="time">JAN 2026</time>
+<time class="time">FEV 2026</time>
 
 # Current Status
 
-I'm currently reading: <em>Fundamentals of Software Architecture</em> by Mark Richards & Neal Ford.
+I'm currently reading: <em>The creative act a way of being</em> by Rick Rubin.
+
+I'm posted two posts last month, please check them out at [/articles](/articles)
 
 If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
@@ -26,7 +28,7 @@ I'm not really active in social media, but if you want to get in touch:
 - Bluesky: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 - Mastodon: [@jeferson_brito](https://mastodon.social/@jeferson_brito)
 
-📺 Watching: Jujutsu Kaisen Season 3, Lord of Mysteries
+📺 Watching: Jujutsu Kaisen Season 3, Frieren, Lord of Mysteries
 
 🎮 Currently playing: <em>Metaphor: ReFantazio</em>.
 
