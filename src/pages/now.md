@@ -15,11 +15,11 @@ meta:
 
 # Current Status
 
-I'm currently reading: <em>The creative act a way of being</em> by Rick Rubin.
+I'm currently reading: <em>The Creative Act: A Way of Being</em> by Rick Rubin.
 
-I'm posted two posts last month, please check them out at [/articles](/articles)
+I posted two posts last month. Please check them out at [/articles](/articles)
 
-If you have suggestions or wish I write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
+If you have suggestions or wish me to write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
 I'm not really active in social media, but if you want to get in touch:
 
