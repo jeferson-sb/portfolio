@@ -1,8 +1,7 @@
 <template>
   <div class="posts-list container">
     <h3 id="posts-heading">Latest Posts</h3>
-    <PostPreview
-v-for="article in topRecentArticles" :key="article.id" :title="article.title"
+    <PostPreview v-for="article in topRecentArticles" :key="article.id" :title="article.title"
       :date="new Date(article.date)" :href="article.path" :article-id="article.articleId" />
     <Button id="view-all-posts" variant="outline" href="/articles" aria-labelledby="view-all-posts posts-heading">View
       all</Button>

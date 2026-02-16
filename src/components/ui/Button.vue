@@ -92,6 +92,10 @@ export default {
     box-shadow: 0 0 0 0.19rem var(--button-shadow-color);
   }
 
+  &:active {
+    scale: 0.97;
+  }
+
   &::after {
     all: unset;
   }

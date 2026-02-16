@@ -15,11 +15,9 @@
         <CircleFillSVG />
         <span>{{ repository.primaryLanguage.name }}</span>
       </span>
-      <span class="github-repo-pullrequest">
-        <AppLink is-external :to="url">
-          <PullRequestSVG />
-          <span>Last PR #{{ number }}</span>
-        </AppLink>
+      <span class="github-repo-stars">
+        <StarSVG />
+        <span>{{ repository.stargazerCount }}</span>
       </span>
     </p>
   </div>
@@ -30,15 +28,7 @@ defineProps({
   repository: {
     type: Object,
     required: true,
-  },
-  url: {
-    type: String,
-    required: true,
-  },
-  number: {
-    type: Number,
-    required: true,
-  },
+  }
 })
 </script>
 
@@ -64,16 +54,13 @@ defineProps({
 
 .github-repo-details {
   display: flex;
+  justify-content: space-between;
   margin-block-start: 1.125rem;
   color: var(--text-color-default);
 
   & span {
     font-weight: var(--fw-bold);
     color: inherit;
-  }
-
-  & span+span {
-    margin-inline-start: 0.75rem;
   }
 
   svg {
@@ -83,7 +70,7 @@ defineProps({
 }
 
 .github-repo-language,
-.github-repo-pullrequest a {
+.github-repo-stars a {
   display: flex;
   align-items: center;
 }
@@ -91,6 +78,10 @@ defineProps({
 .github-repo-language svg {
   height: 12px;
   width: 12px;
+}
+
+.github-repo-stars {
+  display: flex;
 }
 
 body[data-theme='light'] {

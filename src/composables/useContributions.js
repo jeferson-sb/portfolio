@@ -1,26 +1,23 @@
 import { computed } from 'vue'
 import { useQuery } from '@urql/vue'
 
-const pullRequestQuery = `
+const contributedReposQuery = `
   query {
-    user(login: "jeferson-sb") {
-      pullRequests(first: 100, orderBy: { field: CREATED_AT, direction: DESC }, states: [OPEN, MERGED]) {
-        edges {
-          node {
-            id
-            number
+    search(query: "author:jeferson-sb type:pr is:merged -user:jeferson-sb", type: ISSUE, first: 100) {
+      issueCount
+      nodes {
+        ... on PullRequest {
+          repository {
+            nameWithOwner
             url
-            createdAt
-            isCrossRepository
-            repository {
-              id
-              isPrivate
-              nameWithOwner
-              url
-              description
-              primaryLanguage {
-                name
-              }
+            description
+            isPrivate
+            stargazerCount
+            primaryLanguage {
+              name
+            }
+            owner {
+              login
             }
           }
         }
@@ -30,26 +27,33 @@ const pullRequestQuery = `
 `
 
 export function useContributions() {
+  const excludeList = [
+    'bradtraversy/vanilla-parcel-boilerplate',
+    'bradtraversy/design-resources-for-developers',
+    'denolib/awesome-deno',
+    'is-a-dev/register',
+    'talyssonoc/node-api-boilerplate',
+    'Evavic44/portfolio-ideas',
+  ]
   const { data } = useQuery({
-    query: pullRequestQuery,
+    query: contributedReposQuery,
   })
 
-  const lastThreeMonths = () => {
-    const today = new Date()
-    today.setMonth(today.getMonth() - 3)
-    return today
-  }
+  const repos = computed(() => {
+    const seen = new Set()
+    const unique = []
+    const nodes = data?.value?.search.nodes || []
 
-  const pullRequests = computed(() =>
-    data.value?.user?.pullRequests?.edges?.filter((pr, index, arr) => {
-      const isFork = pr.node.isCrossRepository
-      const isRecent = new Date(pr.node.createdAt) >= lastThreeMonths()
-      const nonDuplicate =
-        arr.findIndex((x) => x.node.repository.id === pr.node.repository.id) ===
-        index
-      return isFork && isRecent && nonDuplicate
-    })
-  )
+    for (const { repository } of nodes) {
+      if (excludeList.indexOf(repository.nameWithOwner) !== -1) continue
+      if (!seen.has(repository.nameWithOwner)) {
+        seen.add(repository.nameWithOwner)
+        unique.push(repository)
+      }
+    }
 
-  return pullRequests
+    return unique
+  })
+
+  return repos
 }

@@ -1,11 +1,13 @@
 <template>
   <section class="github-projects container">
     <h3>Open Source</h3>
-    <h4>Latest contributions <small>(monthly updated)</small></h4>
-    <div v-if="pullRequests?.length" class="github-repositories">
-      <GithubRepoCard
-v-for="pr in pullRequests" :key="pr.node.id" :repository="pr.node.repository" :url="pr.node.url"
-        :number="pr.node.number" />
+    <p class="subtitle">
+      List of contributions (PRs) that I've made in recent years. I am always engaged to do more and have an admiration
+      for
+      the Open Source community.
+    </p>
+    <div v-if="repositories?.length" class="github-repositories">
+      <GithubRepoCard v-for="r in repositories" :key="r.nameWithOwner" :repository="r" />
     </div>
     <GithubCardEmpty v-else />
   </section>
@@ -20,20 +22,23 @@ const GithubRepoCard = defineAsyncComponent({
   loadingComponent: '<p>Loading...</p>',
 })
 
-const pullRequests = useContributions();
+const repositories = useContributions();
 </script>
 
 <style scoped>
 .github-projects {
-  &> :is(h3, h4) {
+  &> :is(h3, .subtitle) {
     flex-basis: 100%;
+  }
+
+  & h3 {
     text-transform: uppercase;
   }
 
-  & h4 {
-    color: var(--color-gray-400);
-    font-size: var(--text-sm);
-    margin: 10px 0 15px;
+  & .subtitle {
+    font-size: clamp(var(--text-base), 1vw + var(--text-base), var(--text-lg));
+    color: var(--color-silver-600);
+    margin-block-end: 1rem;
   }
 }
 

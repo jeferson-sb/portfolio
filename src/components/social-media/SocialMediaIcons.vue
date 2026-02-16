@@ -7,8 +7,7 @@
           fill="#F4F4F4" />
       </svg>
     </AppLink>
-    <AppLink
-is-external to="https://www.linkedin.com/in/jeferson-sb/" aria-label="My LinkedIn Account"
+    <AppLink is-external to="https://www.linkedin.com/in/jeferson-sb/" aria-label="My LinkedIn Account"
       title="My LinkedIn">
       <svg width="30" height="30" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -23,8 +22,7 @@ is-external to="https://www.linkedin.com/in/jeferson-sb/" aria-label="My LinkedI
           fill="#F4F4F4" />
       </svg>
     </AppLink>
-    <AppLink
-is-external to="https://exercism.org/profiles/jeferson-brito" aria-label="My exercism profile"
+    <AppLink is-external to="https://exercism.org/profiles/jeferson-brito" aria-label="My exercism profile"
       title="My Exercism">
       <svg width="250" height="204" viewBox="0 0 250 204" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_414_41)">
@@ -59,6 +57,16 @@ const classes = computed(() => ({
   'social-media-icons': true,
   'social-media-icons--boxed': props.boxed,
 }))
+
+const socials = {
+  gh: 'https://github.com/jeferson-sb',
+  in: 'https://www.linkedin.com/in/jeferson-sb/',
+  exercism: 'https://exercism.org/profiles/jeferson-brito',
+  rawg: 'rawg.io/@jeferson_brito',
+  mastodon: 'mastodon.social/@jeferson_brito',
+  bsky: 'bsky.app/profile/jeferson-brito.bsky.social'
+}
+
 </script>
 
 <style scoped>
