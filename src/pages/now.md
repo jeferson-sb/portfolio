@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">FEV 2026</time>
+<time class="time">MAR 2026</time>
 
 # Current Status
 
