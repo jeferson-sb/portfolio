@@ -30,8 +30,8 @@ importers:
         specifier: ^3.5.30
         version: 3.5.30
       vue-gtag:
-        specifier: ^3.6.3
-        version: 3.6.3(vue-router@4.6.4(vue@3.5.30))(vue@3.5.30)
+        specifier: ^3.7.1
+        version: 3.7.1(vue-router@4.6.4(vue@3.5.30))(vue@3.5.30)
       vue-router:
         specifier: ^4.6.4
         version: 4.6.4(vue@3.5.30)
@@ -4541,11 +4541,11 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  vue-gtag@3.6.3:
-    resolution: {integrity: sha512-IuSPUjHG63BVqUEpV1xHeKQd/jVe2tQVdrwyoy8flxEem0wLRoEWmxmD+1I+zjezvxQbt1NsGhf7zCwRrxbOTQ==}
+  vue-gtag@3.7.1:
+    resolution: {integrity: sha512-V4S+ks1p/VdfTrxZrgrAjwdcBp3rGjuR4Ts/9KmNOeGlcATOsLZRjIxkrIDWW6oHy7HM4zcviYDEb2QOR9+AKQ==}
     peerDependencies:
       vue: ^3.5.13
-      vue-router: ^4.5.0
+      vue-router: ^4.5.0 || ^5.0.0
     peerDependenciesMeta:
       vue-router:
         optional: true
@@ -9893,7 +9893,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-gtag@3.6.3(vue-router@4.6.4(vue@3.5.30))(vue@3.5.30):
+  vue-gtag@3.7.1(vue-router@4.6.4(vue@3.5.30))(vue@3.5.30):
     dependencies:
       vue: 3.5.30
     optionalDependencies:
