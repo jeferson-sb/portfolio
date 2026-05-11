@@ -20,7 +20,7 @@
     "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@unhead/vue": "^2.1.12",
     "@urql/vue": "^1.4.3",
-    "firebase": "^11.10.0",
+    "firebase": "^12.13.0",
     "graphql": "^16.13.2",
     "lozad": "^1.16.0",
     "vue": "^3.5.30",
