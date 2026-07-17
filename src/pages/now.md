@@ -11,13 +11,11 @@ meta:
 
 <article class="article">
 
-<time class="time">MAR 2026</time>
+<time class="time">JUL 2026</time>
 
 # Current Status
 
-I'm currently reading: <em>The Creative Act: A Way of Being</em> by Rick Rubin.
-
-I posted two posts last month. Please check them out at [/articles](/articles)
+I'm currently reading: <em>Designing Data-Intensive Applications</em> by Martin Kleppmann.
 
 If you have suggestions or wish me to write about any other topic, [feel free to submit here](https://forms.gle/ftUPgfqW7ghzQgTY9).
 
@@ -28,14 +26,12 @@ I'm not really active in social media, but if you want to get in touch:
 - Bluesky: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 - Mastodon: [@jeferson_brito](https://mastodon.social/@jeferson_brito)
 
-📺 Watching: Jujutsu Kaisen Season 3, Frieren, Lord of Mysteries
-
-🎮 Currently playing: <em>Metaphor: ReFantazio</em>.
+I am watching Noragami and playing Kingdom Come Deliverance II.
 
 </article>
 
 <figure>
-  <img src="https://media1.tenor.com/m/EGdE4nEPoKsAAAAd/anime-studying-anime-study.gif" alt="gif of the day" />
+  <img src="https://media1.tenor.com/m/YwH0Fax7R_8AAAAC/sai-dr-stone.gif" alt="gif of the day" />
   <figcaption>(from Tenor)</figcaption>
 </figure>
 
