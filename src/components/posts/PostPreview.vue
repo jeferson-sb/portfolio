@@ -146,18 +146,7 @@ const formattedDate = computed(() =>
   background-clip: padding-box;
   align-items: center;
   gap: 1rem;
-
-  &::before {
-    --border-color: var(--color-silver);
-
-    background: linear-gradient(11deg, transparent 70%, var(--border-color)), linear-gradient(190deg, transparent 70%, var(--border-color));
-    border-radius: inherit;
-    content: "";
-    margin: -1px;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
+  border-bottom: 1px solid var(--color-gray-600);
 
   & a {
     margin: 0;

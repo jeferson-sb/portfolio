@@ -11,7 +11,7 @@
   position: absolute;
   margin: auto;
   left: 50%;
-  top: 65%;
+  top: 80%;
   transform: translateX(-50%);
 
   & .mouse {

@@ -1,73 +1,50 @@
 <template>
-  <section class="hero container has-ellipse-curve">
-    <div class="hero-content">
-      <h1 class="hero__headline">Hey, I'm Jeferson 🖖</h1>
-      <p class="hero__description">
-        Software Engineer that crafts things for the Web, heavy focused on
-        front-end development, enthusiastic and fascinated on user interfaces.
-      </p>
-      <SocialMediaIcons />
-    </div>
+  <section class="hero container">
     <aside class="hero-aside">
       <ScrollIndicator class="is-mobile-only" />
-      <h2 class="hero__subheadline">web developer</h2>
       <HeroAvatar>
         <img
 src="@/assets/img/profile.jpg" alt="me" class="hero-avatar__image" width="140" height="140"
           loading="lazy" />
       </HeroAvatar>
     </aside>
+    <div class="hero-content">
+      <h1 class="hero__headline">Jeferson Brito</h1>
+      <p class="hero__description">
+        Fullstack Engineer, based in Sao Paulo 🇧🇷
+      </p>
+      <p class="hero__description">
+        OSS, UI/UX, a11y, and backend systems. JS/TS, Elixir, Ruby, Rust and Lua.
+      </p>
+      <SocialMediaIcons />
+    </div>
   </section>
 </template>
 
 <style scoped>
 .hero {
-  display: grid;
-  grid-template-columns: minmax(50%, 700px) auto;
   align-items: center;
+  justify-content: center;
   padding: 3rem 0;
 }
 
 .hero__headline {
-  font-size: var(--text-3xl);
-  font-size: clamp(var(--text-xl), 1vw + var(--text-2xl), var(--text-3xl));
+  font-size: clamp(var(--text-base), 1vw + var(--text-lg), var(--text-xl));
   font-weight: var(--fw-bold);
-}
-
-.hero__subheadline {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 1em;
-  font-size: var(--text-sm);
-  font-family: var(--font-mono);
-  font-weight: var(--fw-normal);
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: var(--color-gray-400);
-  margin: 0 1rem;
-
-  &::before,
-  &::after {
-    content: '';
-    border-bottom: 1px solid var(--color-gray-400);
-    align-self: center;
-    justify-self: center;
-    min-width: 24px;
-    transform: rotate(90deg);
-  }
+  margin-block-end: 0.25rem;
 }
 
 .hero__description {
-  font-size: clamp(var(--text-base), 1vw + var(--text-lg), var(--text-xl));
-  margin-block-end: 1.5rem;
+  font-size: clamp(var(--text-sm), 1vw + var(--text-base), var(--text-lg));
   color: var(--color-silver-600);
+  &:last-of-type {
+    margin-block-end: 1rem;
+  }
 }
 
 .hero-aside {
   display: flex;
   justify-self: end;
-  padding: 0 17px;
 }
 
 @media screen and (min-width: 64em) {
