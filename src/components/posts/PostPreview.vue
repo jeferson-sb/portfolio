@@ -75,7 +75,6 @@ const formattedDate = computed(() =>
   props.date.toLocaleString(['en-US'], {
     day: '2-digit',
     month: 'short',
-    year: 'numeric',
   })
 )
 </script>
@@ -145,10 +144,21 @@ const formattedDate = computed(() =>
   background-color: var(--bg-color-lighter, var(--color-default-black));
   background-clip: padding-box;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   border-bottom: 1px solid var(--color-gray-600);
+  transition: border-color 300ms ease-in-out;
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+
+  & .post-preview-metadata {
+    order: 2;
+  }
 
   & a {
+    order: 1;
     margin: 0;
 
     &::after {

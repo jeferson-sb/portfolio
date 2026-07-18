@@ -1,7 +1,7 @@
 <template>
   <div class="project-card">
     <figure class="project-thumbnail">
-      <img-lazy :src="thumbnail" :alt="`${title} project screenshot`" class="project-card__image" width="500"
+      <img-lazy :src="thumbnail" :alt="`${title} project screenshot`" class="project-card__image" fit="cover" width="500"
         height="200" />
     </figure>
     <div class="project-card__content">
@@ -11,7 +11,7 @@
       </div>
       <div class="project-card__footer">
         <TagGroup :tags="tags.split(',')" />
-        <AppLink :id="buttonId" variant="button" full is-external :to="github"
+        <AppLink :id="buttonId" is-external :to="github"
           :aria-labelledby="`${titleId} ${buttonId}`">
           Github
         </AppLink>
@@ -55,19 +55,24 @@ const buttonId = computed(() => `button-${titleSlug}`)
 <style scoped>
 .project-card {
   display: flex;
+  flex-flow: column;
+  border-radius: var(--radius-default);
+  overflow: hidden;
 }
 
 .project-thumbnail {
-  flex-basis: 50%;
-  border-radius: var(--radius-default) 0 0 var(--radius-default);
+  position: relative;
+  flex: none;
+  aspect-ratio: 3 / 1;
 }
 
 .project-card__image {
-  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: top center;
-  height: 200px;
-  min-height: 100%;
+  object-position: 20% center;
 
   &.lozad {
     filter: blur(0);
@@ -78,11 +83,9 @@ const buttonId = computed(() => `button-${titleSlug}`)
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  flex-basis: 50%;
+  flex: 1;
   background-color: var(--bg-color-lighter, var(--color-gray-800));
   padding: 1.125rem;
-  border-radius: 0 var(--radius-default) var(--radius-default) 0;
-  border: 1px solid transparent;
 }
 
 .project-card__header {
@@ -103,14 +106,8 @@ const buttonId = computed(() => `button-${titleSlug}`)
 }
 
 body[data-theme='light'] {
-  .project-card__content {
-    border: var(--border);
-  }
-}
-
-@media (--vw-sm) {
   .project-card {
-    flex-direction: column;
+    border: var(--border);
   }
 }
 </style>

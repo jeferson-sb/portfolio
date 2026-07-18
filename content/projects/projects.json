@@ -7,8 +7,17 @@
     "demo": "https://aircnc-web.herokuapp.com/",
     "github": "https://github.com/jeferson-sb/aircnc"
   },
+  "syntaxlab": {
+    "order": 1,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fsyntaxlab.png?alt=media&token=aad936c4-2f16-46d2-84de-33f49909641e",
+    "title": "Syntaxlab",
+    "tags": "Nuxt, TypeScript",
+    "github": "https://github.com/jeferson-sb/syntaxlab",
+    "pinned": true,
+    "description": "Visual canvas workspace for developers and product engineers"
+  },
   "chatme": {
-    "order": 2,
+    "order": 4,
     "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2Fchatme.png?alt=media&token=f1a2d950-6c59-4fe6-a9ea-e9d11b8ee255",
     "title": "ChatMe",
     "tags": "Node.js, Vue.js, Socket.io",
@@ -23,11 +32,10 @@
     "tags": "Next.js, tRPC, Prisma",
     "demo": "https://whatconf.vercel.app/",
     "github": "https://github.com/jeferson-sb/whatconf",
-    "pinned": true,
     "description": "Tech conferences feed that users can check its date and details and subscribe to receive web notifications!"
   },
   "dogAI": {
-    "order": 1,
+    "order": 2,
     "thumbnail": "https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/posts_media%2FdogAI.jpg?alt=media&token=8a340fd4-749b-41c8-8200-f51db8df27cf",
     "title": "Dog AI",
     "tags": "Front-end, React, Tensorflow",

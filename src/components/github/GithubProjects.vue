@@ -27,6 +27,8 @@ const repositories = useContributions();
 
 <style scoped>
 .github-projects {
+  margin-block-end: clamp(3rem, 6vw, 6rem);
+
   &> :is(h3, .subtitle) {
     flex-basis: 100%;
   }

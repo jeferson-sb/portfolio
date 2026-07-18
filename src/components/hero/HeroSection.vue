@@ -25,7 +25,7 @@ src="@/assets/img/profile.jpg" alt="me" class="hero-avatar__image" width="140" h
 .hero {
   align-items: center;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 .hero__headline {
