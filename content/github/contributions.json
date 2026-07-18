@@ -1,0 +1,197 @@
+[
+  {
+    "nameWithOwner": "expo/expo",
+    "url": "https://github.com/expo/expo",
+    "description": "An open-source framework for making universal native apps with React. Expo runs on Android, iOS, and the web.",
+    "isPrivate": false,
+    "stargazerCount": 50733,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "expo"
+    }
+  },
+  {
+    "nameWithOwner": "chakra-ui/chakra-ui",
+    "url": "https://github.com/chakra-ui/chakra-ui",
+    "description": "Chakra UI is a component system for building SaaS products with speed ⚡️",
+    "isPrivate": false,
+    "stargazerCount": 40512,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "chakra-ui"
+    }
+  },
+  {
+    "nameWithOwner": "chakra-ui/ark",
+    "url": "https://github.com/chakra-ui/ark",
+    "description": "Unstyled, accessible UI components for your design System. Works in React, Vue, Solid, and Svelte.",
+    "isPrivate": false,
+    "stargazerCount": 5287,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "chakra-ui"
+    }
+  },
+  {
+    "nameWithOwner": "chakra-ui/zag",
+    "url": "https://github.com/chakra-ui/zag",
+    "description": "Build your design system in React, Solid, Vue or Svelte. Powered by finite state machines",
+    "isPrivate": false,
+    "stargazerCount": 5162,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "chakra-ui"
+    }
+  },
+  {
+    "nameWithOwner": "chakra-ui/park-ui",
+    "url": "https://github.com/chakra-ui/park-ui",
+    "description": "Beautifully designed components built with Ark UI and Panda CSS that work with a variety of JS frameworks.",
+    "isPrivate": false,
+    "stargazerCount": 2338,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "chakra-ui"
+    }
+  },
+  {
+    "nameWithOwner": "vuejs/vitepress",
+    "url": "https://github.com/vuejs/vitepress",
+    "description": "Vite & Vue powered static site generator.",
+    "isPrivate": false,
+    "stargazerCount": 18039,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "vuejs"
+    }
+  },
+  {
+    "nameWithOwner": "react-native-community/cli",
+    "url": "https://github.com/react-native-community/cli",
+    "description": "The React Native Community CLI — Command line tools to help you build React Native apps",
+    "isPrivate": false,
+    "stargazerCount": 2905,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "react-native-community"
+    }
+  },
+  {
+    "nameWithOwner": "forem/forem",
+    "url": "https://github.com/forem/forem",
+    "description": "For empowering community 🌱",
+    "isPrivate": false,
+    "stargazerCount": 22751,
+    "primaryLanguage": {
+      "name": "Ruby"
+    },
+    "owner": {
+      "login": "forem"
+    }
+  },
+  {
+    "nameWithOwner": "callstack/react-native-paper",
+    "url": "https://github.com/callstack/react-native-paper",
+    "description": "Material Design for React Native (Android & iOS)",
+    "isPrivate": false,
+    "stargazerCount": 14424,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "callstack"
+    }
+  },
+  {
+    "nameWithOwner": "wix/react-native-ui-lib",
+    "url": "https://github.com/wix/react-native-ui-lib",
+    "description": "UI Components Library for React Native",
+    "isPrivate": false,
+    "stargazerCount": 7147,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "wix"
+    }
+  },
+  {
+    "nameWithOwner": "grommet/grommet",
+    "url": "https://github.com/grommet/grommet",
+    "description": "a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package",
+    "isPrivate": false,
+    "stargazerCount": 8356,
+    "primaryLanguage": {
+      "name": "JavaScript"
+    },
+    "owner": {
+      "login": "grommet"
+    }
+  },
+  {
+    "nameWithOwner": "facebook/docusaurus",
+    "url": "https://github.com/facebook/docusaurus",
+    "description": "Easy to maintain open source documentation websites.",
+    "isPrivate": false,
+    "stargazerCount": 65668,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "owner": {
+      "login": "facebook"
+    }
+  },
+  {
+    "nameWithOwner": "vercel/next.js",
+    "url": "https://github.com/vercel/next.js",
+    "description": "The React Framework",
+    "isPrivate": false,
+    "stargazerCount": 141000,
+    "primaryLanguage": {
+      "name": "JavaScript"
+    },
+    "owner": {
+      "login": "vercel"
+    }
+  },
+  {
+    "nameWithOwner": "grommet/grommet-site",
+    "url": "https://github.com/grommet/grommet-site",
+    "description": "Site for Grommet v2",
+    "isPrivate": false,
+    "stargazerCount": 31,
+    "primaryLanguage": {
+      "name": "JavaScript"
+    },
+    "owner": {
+      "login": "grommet"
+    }
+  },
+  {
+    "nameWithOwner": "mui/material-ui",
+    "url": "https://github.com/mui/material-ui",
+    "description": "Material UI: Comprehensive React component library that implements Google's Material Design. Free forever.",
+    "isPrivate": false,
+    "stargazerCount": 98615,
+    "primaryLanguage": {
+      "name": "JavaScript"
+    },
+    "owner": {
+      "login": "mui"
+    }
+  }
+]

@@ -15,14 +15,12 @@
 
 <script setup>
 import { defineAsyncComponent } from 'vue'
-import { useContributions } from '@/composables/useContributions';
+import repositories from '@content/github/contributions.json'
 
 const GithubRepoCard = defineAsyncComponent({
   loader: () => import('@/components/github/GithubRepoCard.vue'),
   loadingComponent: '<p>Loading...</p>',
 })
-
-const repositories = useContributions();
 </script>
 
 <style scoped>

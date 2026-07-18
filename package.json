@@ -5,8 +5,8 @@
   "license": "Apache License 2.0",
   "type": "module",
   "scripts": {
-    "build": "vite-ssg build",
-    "dev": "vite",
+    "build": "node scripts/fetch-github-contributions.js && vite-ssg build",
+    "dev": "node scripts/fetch-github-contributions.js && vite",
     "preview": "vite preview",
     "optimize": "vite optimize",
     "lint:js": "eslint 'src/**/*.{js,vue}'",
@@ -19,9 +19,7 @@
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^5.2.0",
     "@unhead/vue": "^2.1.12",
-    "@urql/vue": "^1.4.3",
     "firebase": "^11.10.0",
-    "graphql": "^16.13.2",
     "lozad": "^1.16.0",
     "vue": "^3.5.39",
     "vue-gtag": "^3.7.1",
