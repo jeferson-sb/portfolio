@@ -67,8 +67,6 @@ defineProps({
 
 [data-theme='light'] {
   .hero-avatar {
-    box-shadow: var(--elevation-3);
-
     & picture::before {
       --avatar-outline-color: var(--color-primary);
     }

@@ -200,8 +200,6 @@ const formattedDate = computed(() =>
 
 body[data-theme='light'] {
   & .post-preview {
-    box-shadow: var(--elevation-3);
-
     & .post-preview__description {
       color: var(--color-gray-600);
     }

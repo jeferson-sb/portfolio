@@ -7,6 +7,7 @@ import '@/assets/styles/reset.css'
 import '@/assets/styles/global.css'
 import '@/assets/styles/markdown.css'
 import '@/assets/styles/utility.css'
+import '@/assets/styles/view-transitions.css'
 
 const routes = setupLayouts(generatedRoutes)
 

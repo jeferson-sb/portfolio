@@ -25,3 +25,7 @@ draft/*
 .vite-ssg-temp
 
 TODO.md
+
+# AI (ugh-)
+.agents
+.claude

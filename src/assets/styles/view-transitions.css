@@ -1,0 +1,50 @@
+@layer view-transitions {
+  @media (prefers-reduced-motion: no-preference) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation-duration: 400ms;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+
+    ::view-transition-old(root) {
+      animation-name: view-transition-fade-out, view-transition-scale-out;
+    }
+
+    ::view-transition-new(root) {
+      animation-name: view-transition-fade-in, view-transition-scale-in;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none;
+    }
+  }
+
+  @keyframes view-transition-fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes view-transition-fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes view-transition-scale-out {
+    to {
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes view-transition-scale-in {
+    from {
+      transform: scale(0.98);
+    }
+  }
+}
