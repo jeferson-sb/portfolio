@@ -11,7 +11,7 @@ meta:
 
 <article class="article">
 
-<time class="time">JUL 2026</time>
+<time class="time">AUG 2026</time>
 
 # Current Status
 
@@ -26,7 +26,52 @@ I'm not really active in social media, but if you want to get in touch:
 - Bluesky: [@jeferson-brito.bsky.social](https://bsky.app/profile/jeferson-brito.bsky.social)
 - Mastodon: [@jeferson_brito](https://mastodon.social/@jeferson_brito)
 
-I am watching Noragami and playing Kingdom Come Deliverance II.
+I am watching Witch Hat Atelier and playing Nier Replicant.
+
+## Tools I use
+
+<dl class="tools">
+  <div class="tool">
+    <dt>Drawing</dt>
+    <dd><a href="https://tldraw.com">tldraw</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Note taking</dt>
+    <dd><a href="https://www.notion.com">Notion</a>, <a href="https://www.onenote.com">OneNote</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Bookmarks</dt>
+    <dd><a href="https://raindrop.io">Raindrop</a> extension</dd>
+  </div>
+  <div class="tool">
+    <dt>Terminal</dt>
+    <dd><a href="https://www.warp.dev">Warp</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Browser</dt>
+    <dd><a href="https://brave.com">Brave</a>, <a href="https://zen-browser.app">Zen</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Code editor</dt>
+    <dd><a href="https://neovim.io">Neovim</a>, <a href="https://code.visualstudio.com">VS Code</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Code AI assistant</dt>
+    <dd><a href="https://pi.dev">pi.dev</a>, <a href="https://claude.com/claude-code">Claude Code</a></dd>
+  </div>
+  <div class="tool">
+    <dt>API dev</dt>
+    <dd><a href="https://www.usebruno.com">Bruno</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Music</dt>
+    <dd><a href="https://open.spotify.com">Spotify</a></dd>
+  </div>
+  <div class="tool">
+    <dt>Design</dt>
+    <dd><a href="https://figma.com">Figma</a></dd>
+  </div>
+</dl>
 
 </article>
 
@@ -46,6 +91,10 @@ body[data-theme='light'] {
 
   .time {
     color: var(--color-gray-400);
+  }
+
+  .tools dt {
+    color: var(--color-gray-500);
   }
 }
 
@@ -109,6 +158,35 @@ body[data-theme='light'] {
     font-family: var(--font-mono);
     color: var(--color-gray-200);
   }
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0 2rem;
+  margin-block: 0;
+}
+
+.tools .tool {
+  display: flex;
+  flex-flow: column;
+  gap: 0.125rem;
+  padding-block: 0.75rem;
+  border-block-start: var(--border-width) var(--border-style)
+    color-mix(in oklch, var(--color-silver) 35%, transparent);
+}
+
+.tools dt {
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: var(--text-xsm);
+  letter-spacing: 1px;
+  color: var(--color-gray-400);
+}
+
+.tools dd {
+  margin-inline-start: 0;
+  font-size: var(--text-lg);
 }
 
 img {
