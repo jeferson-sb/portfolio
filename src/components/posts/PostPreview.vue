@@ -75,6 +75,7 @@ const formattedDate = computed(() =>
   props.date.toLocaleString(['en-US'], {
     day: '2-digit',
     month: 'short',
+    ...(props.size === 'long' && { year: 'numeric' }),
   })
 )
 </script>
