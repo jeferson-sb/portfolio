@@ -7,6 +7,7 @@ excerpt: "Most mobile app logic is I/O-bound. This is the story of the exception
 slug: decoupling-a-cpu-bound-core
 crosspostedOn: ''
 crosspostLink: ''
+og_image: https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/og%2Fdecoupling-a-cpu-bound-core.webp?alt=media&token=73e6de05-ef2d-41bc-93dc-c31727b5c3e4
 ---
 
 Most of what a mobile app does is I/O with a UI wrapped around it: fetch data, render it, respond to a tap, fetch more data. The CPU is rarely the bottleneck; the network and the human are. This project had a genuine exception to that: a feature whose core was real numerical computation — planetary positions, house cusps, aspects between bodies, all derived from an astronomical library rather than a database call.
